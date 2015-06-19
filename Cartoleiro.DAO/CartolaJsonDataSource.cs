@@ -1,6 +1,7 @@
 using System;
 using System.Collections.Generic;
 using System.IO;
+using System.Text;
 using Cartoleiro.Core.Cartola;
 using Cartoleiro.Core.Data;
 using Newtonsoft.Json;
@@ -33,7 +34,7 @@ namespace Cartoleiro.DAO
         {
             var jogadores = new List<Jogador>();
 
-            using (var reader = new StreamReader(CaminhoDataSource))
+            using (var reader = new StreamReader(CaminhoDataSource, Encoding.Default))
             {
                 while (!reader.EndOfStream)
                 {
