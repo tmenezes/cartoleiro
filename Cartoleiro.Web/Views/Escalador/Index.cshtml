@@ -1,0 +1,84 @@
+﻿@using Cartoleiro.Web.Models
+@model Cartoleiro.Web.Models.EscaladorModels.EscaladorViewModel
+@{
+    ViewBag.Title = "Escalador";
+}
+
+<h2 class="page-header">@ViewBag.Title de times <small>Simule escalação do seu time</small></h2>
+
+@using (Html.BeginForm("Escalar", "Escalador", FormMethod.Post, new { @class = "form-horizontal", role = "form" }))
+{
+    @Html.AntiForgeryToken()
+    @Html.ValidationSummary("", new { @class = "text-danger" })
+    <div class="form-group">
+        @Html.LabelFor(m => m.EsquemaTatico, new { @class = "col-md-2 control-label" })
+        <div class="col-md-10">
+            @Html.DropDownListFor(m => m.EsquemaTatico, ViewModelHelper.EsquemasTaticos, "Selecione", new { @class = "form-control" })
+        </div>
+    </div>
+    <div class="form-group has-feedback">
+        @Html.LabelFor(m => m.Patrimonio, new { @class = "col-md-2 control-label" })
+        <div class="col-md-10">
+            <div class="input-group" style="width: 280px">
+                <span class="input-group-addon">$</span>
+                @Html.TextBoxFor(m => m.Patrimonio, new Dictionary<string, object>() { { "class", "form-control" }, { "aria-describedby", "inputGroupSuccess1Status" } })
+                <span class="input-group-addon">.00</span>
+            </div>
+        </div>
+    </div>
+    <div class="form-group">
+        @Html.LabelFor(m => m.PosicaoEmFoco, new { @class = "col-md-2 control-label" })
+        <div class="col-md-10">
+            @Html.DropDownListFor(m => m.PosicaoEmFoco, ViewModelHelper.Posicoes, "Selecione", new { @class = "form-control" })
+        </div>
+    </div>
+    <div class="form-group">
+        <div class="col-sm-offset-2 col-sm-10">
+            <div class="checkbox">
+                <label>
+                    @Html.CheckBoxFor(m => m.ProporcionalNaPosicao) Dividir proporcional na posição?
+                </label>
+            </div>
+        </div>
+    </div>
+
+    <div class="row-fluid">
+        <fieldset class="">
+            <legend>Analisadores</legend>
+        </fieldset>
+        <div class="form-group">
+            <div class="col-sm-offset-2 col-sm-10">
+                <div class="checkbox">
+                    <label>
+                        @Html.CheckBoxFor(m => m.AnalisadorPontuacaoMedia) Pontuação média
+                    </label>
+                </div>
+                <div class="checkbox">
+                    <label>
+                        @Html.CheckBoxFor(m => m.AnalisadorUltimaPontuacao) Última pontuação
+                    </label>
+                </div>
+            </div>
+        </div>
+    </div>
+    <hr />
+
+    <div class="form-group">
+        <div class="col-md-offset-2 col-md-10">
+            <input type="submit" class="btn btn-primary" value="Escalar time" />
+        </div>
+    </div>
+
+    if (ViewData.GetTimeEscalado() != null)
+    {
+        <div class="row-fluid">
+            <fieldset class="">
+                <legend>Time Escalado</legend>
+            </fieldset>
+            @Html.Partial("_TimeComoTabela")
+        </div>
+    }
+}
+@section Scripts {
+    @Scripts.Render("~/bundles/jqueryval")
+}

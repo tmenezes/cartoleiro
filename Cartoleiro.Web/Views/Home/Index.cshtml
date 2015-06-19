@@ -1,0 +1,49 @@
+﻿@{
+    ViewBag.Title = "Home";
+}
+
+@section header{
+    <div class="splash" style="background-position: 0px 0px;">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <img class="logo" src="~/Images/cartola.png">
+                    <h1>Cartoleiro</h1>
+                    <p class="lead">Cartoleiro é a sua ferramenta para simular a escalação times no Cartola FC com o seu patrimônio e utilizando analisadores estatísticos de partidas anteriores.</p>
+                    <p>
+                        <a href="Escalador" class="btn btn-outline-inverse btn-primary btn-lg">Escalar Time &raquo;</a>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+}
+<div class="row">
+    <div class="col-md-8">
+        <h2 class="page-header">Jogadores <small>50 com maiores médias</small></h2>
+        <p>
+            @Html.Partial("_MelhoresJogadores")
+        </p>
+        <p>
+            <a class="btn btn-default" href="#">Ver mais &raquo;</a>
+        </p>
+    </div>
+    <div class="col-md-4">
+        <h2 class="page-header">Escalação <small>melhor time 4-4-2</small></h2>
+        <p>
+            @Html.Partial("_TimeMaiorMedia")
+        </p>
+        <p>
+            <a class="btn btn-default" href="#">Ver mais &raquo;</a>
+        </p>
+    </div>
+</div>
+@section scripts{
+    <script>
+        $(document).ready(function () {
+            $('body').prop('id', 'home');
+            $('#home > .navbar').addClass('navbar-transparent');
+            $('#home > .navbar').addClass('navbar-transparent');
+        })
+    </script>
+}
