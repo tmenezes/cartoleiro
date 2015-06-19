@@ -247,7 +247,6 @@
     <Content Include="Views\Shared\_LoginPartial.cshtml" />
     <Content Include="Views\Escalador\Index.cshtml" />
     <Content Include="Views\Shared\_TimeComoTabela.cshtml" />
-    <Content Include="Views\Shared\_TimeMaiorMedia.cshtml" />
     <Content Include="Views\Shared\_MelhoresJogadores.cshtml" />
   </ItemGroup>
   <ItemGroup />

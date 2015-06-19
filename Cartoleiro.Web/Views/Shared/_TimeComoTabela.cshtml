@@ -1,9 +1,8 @@
-﻿@using Cartoleiro.Web.Models
+﻿@model Cartoleiro.Core.Escalador.Time
 
-@{
-    var time = ViewData.GetTimeEscalado();
-}
-@if (time != null)
+@using Cartoleiro.Web.Models
+
+@if (Model != null)
 {
     <table class="table table-striped table-bordered">
         <thead>
@@ -14,7 +13,7 @@
                 <th>Média</th>
             </tr>
         </thead>
-        @foreach (var jogador in time.TodosJogadores)
+        @foreach (var jogador in Model.TodosJogadores)
         {
             <tr>
                 <td>@jogador.Posicao</td>
@@ -24,4 +23,19 @@
             </tr>
         }
     </table>
+    <div class="panel panel-primary">
+        <div class="panel-heading">
+            <h3 class="panel-title">Custo e pontuação</h3>
+        </div>
+        <div class="panel-body">
+            <div class="row">
+                <div class="col-md-3 text-right">Custo do time:</div>
+                <div class="">C$ @Model.TodosJogadores.Sum(j => j.Preco.Atual)</div>
+            </div>
+            <div class="row">
+                <div class="col-md-3 text-right">Pontuação na última rodada:</div>
+                <div class="">@Model.TodosJogadores.Sum(j => j.Pontuacao.Ultima) pontos</div>
+            </div>
+        </div>
+    </div>
 }

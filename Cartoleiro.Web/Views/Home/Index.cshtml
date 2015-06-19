@@ -1,4 +1,5 @@
-﻿@{
+﻿@using Cartoleiro.Web.Models
+@{
     ViewBag.Title = "Home";
 }
 
@@ -31,7 +32,7 @@
     <div class="col-md-4">
         <h2 class="page-header">Escalação <small>melhor time 4-4-2</small></h2>
         <p>
-            @Html.Partial("_TimeMaiorMedia")
+            @Html.Partial("_TimeComoTabela", CartoleiroApp.TimeDeMaiorMedia)
         </p>
         <p>
             <a class="btn btn-default" href="#">Ver mais &raquo;</a>
