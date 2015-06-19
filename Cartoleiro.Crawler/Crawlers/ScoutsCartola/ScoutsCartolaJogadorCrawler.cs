@@ -10,8 +10,6 @@ namespace Cartoleiro.Crawler.Crawlers.ScoutsCartola
     {
         private CultureInfo _cultura = CultureInfo.GetCultureInfo("en-US");
 
-        public string Pagina { get; set; }
-        public string Nome { get; set; }
         public Clube Clube { get; set; }
 
         public ScoutsCartolaJogadorCrawler(IWebDriver webDriver)
@@ -42,9 +40,9 @@ namespace Cartoleiro.Crawler.Crawlers.ScoutsCartola
             var divValores = divAtletaInfo.FindElement(By.XPath(@"div[@id=""bloco1""]"));
             var spansInfo = divAtletaInfo.FindElements(By.XPath(@"div[@id=""bloco2""]//span"));
 
-            var teste = spansInfo.Select(i => i.Text).Aggregate((um, outro) => um + "-" + outro);
+            var posicao = GetPosicao(spansInfo.First().Text);
 
-            var jogador = new Jogador(Nome + teste, Clube, Posicao.Atacante)
+            var jogador = new Jogador(Nome, Clube, posicao)
                           {
                               Preco = GetPreco(divValores),
                               Pontuacao = GetPontuacao(divValores)
@@ -74,6 +72,41 @@ namespace Cartoleiro.Crawler.Crawlers.ScoutsCartola
             var pontuacaoMedia = Convert.ToDouble(spanPontuacaoMedia.Text, _cultura);
 
             return new Pontuacao(pontuacaoMedia, pontuacaoAtual);
+        }
+
+        private Posicao GetPosicao(string posicao)
+        {
+            if (posicao.ToLower() == "meia")
+            {
+                return Posicao.MeioCampo;
+            }
+
+            if (posicao.ToLower() == "lateral")
+            {
+                return Posicao.Lateral;
+            }
+
+            if (posicao.ToLower() == "goleiro")
+            {
+                return Posicao.Goleiro;
+            }
+
+            if (posicao.ToLower() == "atacante")
+            {
+                return Posicao.Atacante;
+            }
+
+            if (posicao.ToLower() == "zagueiro")
+            {
+                return Posicao.Zagueiro;
+            }
+
+            if (posicao.ToLower() == "técnico")
+            {
+                return Posicao.Tecnico;
+            }
+
+            return Posicao.MeioCampo;
         }
     }
 }

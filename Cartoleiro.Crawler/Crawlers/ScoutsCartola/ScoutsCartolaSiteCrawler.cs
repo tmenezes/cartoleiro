@@ -46,12 +46,13 @@ namespace Cartoleiro.Crawler.Crawlers.ScoutsCartola
             var divJogadores = driver.FindElementById("boxAlfabetica");
             var linksDeJogadores = divJogadores.FindElements(By.TagName("a")).ToList();
 
+            if (quantidade < int.MaxValue)
+                linksDeJogadores = linksDeJogadores.Take(quantidade).ToList();
+
+
             if (linksDeJogadores.Any())
             {
-                var jogadoresEncontrados = linksDeJogadores.Select(a => new ScoutsCartolaJogadorCrawler(driver).MapearElementoHtml(a));
-                jogadoresEncontrados = (quantidade < int.MaxValue)
-                    ? jogadoresEncontrados.Take(quantidade).ToList()
-                    : jogadoresEncontrados.ToList();
+                var jogadoresEncontrados = GetJogadoresEncontrados(linksDeJogadores, driver);
 
                 foreach (var jogadorCrawler in jogadoresEncontrados)
                 {
@@ -66,6 +67,23 @@ namespace Cartoleiro.Crawler.Crawlers.ScoutsCartola
             driver.Quit();
 
             return jogadores;
+        }
+
+
+        private IEnumerable<JogadorCrawler> GetJogadoresEncontrados(List<IWebElement> linksDeJogadores, IWebDriver driver)
+        {
+            var jogadoresEncontrados = new List<JogadorCrawler>(linksDeJogadores.Count);
+
+            foreach (var link in linksDeJogadores)
+            {
+                var jogador = new ScoutsCartolaJogadorCrawler(driver).MapearElementoHtml(link);
+
+                jogadoresEncontrados.Add(jogador);
+
+                OnObjetoCarregado(new CrawlingInfo(linksDeJogadores.Count, jogadoresEncontrados.Count, jogador.ToString()));
+            }
+
+            return jogadoresEncontrados;
         }
 
         protected virtual void OnObjetoCarregado(CrawlingInfo e)

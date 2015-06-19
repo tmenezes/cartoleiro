@@ -13,6 +13,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Cartoleiro.Web", "Cartoleir
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Cartoleiro.Crawler", "Cartoleiro.Crawler\Cartoleiro.Crawler.csproj", "{C36B08B4-3B85-483E-8DEF-01AB3055EB2E}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Cartoleiro.CrawlerConsole", "Cartoleiro.CrawlerConsole\Cartoleiro.CrawlerConsole.csproj", "{4ED14848-B815-41D5-9881-544C027CAAC7}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -39,6 +41,10 @@ Global
 		{C36B08B4-3B85-483E-8DEF-01AB3055EB2E}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{C36B08B4-3B85-483E-8DEF-01AB3055EB2E}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{C36B08B4-3B85-483E-8DEF-01AB3055EB2E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4ED14848-B815-41D5-9881-544C027CAAC7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4ED14848-B815-41D5-9881-544C027CAAC7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4ED14848-B815-41D5-9881-544C027CAAC7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4ED14848-B815-41D5-9881-544C027CAAC7}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

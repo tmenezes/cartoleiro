@@ -6,20 +6,20 @@ using Cartoleiro.Crawler.Crawlers.ScoutsCartola;
 
 namespace Cartoleiro.Crawler
 {
-    public class Crawler
+    public class CartoleiroCrawler
     {
-        readonly ISiteCrawler _siteCrawler;
+        readonly ScoutsCartolaSiteCrawler _siteCrawler;
         
         public event EventHandler<CrawlingInfo> ObjetoCarregado;
 
-        public Crawler()
+        public CartoleiroCrawler()
         {
             var uri = new Uri("http://www.scoutscartola.com");
             _siteCrawler = new ScoutsCartolaSiteCrawler(uri);
 
             _siteCrawler.ObjetoCarregado += Crawler_ObjetoCarregado;
         }
-        ~Crawler()
+        ~CartoleiroCrawler()
         {
             _siteCrawler.ObjetoCarregado -= Crawler_ObjetoCarregado;
         }

@@ -6,6 +6,8 @@ namespace Cartoleiro.Crawler
     public abstract class JogadorCrawler
     {
         protected IWebDriver WebDriver { get; set; }
+        public string Pagina { get; set; }
+        public string Nome { get; set; }
 
         protected JogadorCrawler(IWebDriver webDriver)
         {
@@ -14,5 +16,10 @@ namespace Cartoleiro.Crawler
 
         public abstract JogadorCrawler MapearElementoHtml(IWebElement elementoHtml);
         public abstract Jogador ObterJogador();
+
+        public override string ToString()
+        {
+            return string.Format("Nome: {0}, Pagina: {1}", Nome, Pagina);
+        }
     }
 }
