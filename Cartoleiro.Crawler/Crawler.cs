@@ -9,7 +9,7 @@ namespace Cartoleiro.Crawler
     public class CartoleiroCrawler
     {
         readonly ScoutsCartolaSiteCrawler _siteCrawler;
-        
+
         public event EventHandler<CrawlingInfo> ObjetoCarregado;
 
         public CartoleiroCrawler()
