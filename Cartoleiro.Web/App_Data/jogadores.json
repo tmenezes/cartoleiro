@@ -10,3 +10,848 @@
 {"Nome":"Alan Kardec","Clube":{"Nome":"São Paulo"},"Posicao":4,"Preco":{"Atual":9.0,"Variacao":0.0},"Pontuacao":{"Media":0.0,"Ultima":0.0}}
 {"Nome":"Alan Patrick","Clube":{"Nome":"Flamengo"},"Posicao":3,"Preco":{"Atual":5.9,"Variacao":0.0},"Pontuacao":{"Media":1.55,"Ultima":0.0}}
 {"Nome":"Alan Ruschel","Clube":{"Nome":"Internacional"},"Posicao":1,"Preco":{"Atual":4.5,"Variacao":0.0},"Pontuacao":{"Media":2.15,"Ultima":0.0}}
+{"Nome":"Alan Santos","Clube":{"Nome":"Coritiba"},"Posicao":3,"Preco":{"Atual":8.0,"Variacao":0.0},"Pontuacao":{"Media":0.0,"Ultima":0.0}}
+{"Nome":"Alberto Valentim","Clube":{"Nome":"Palmeiras"},"Posicao":5,"Preco":{"Atual":12.0,"Variacao":0.0},"Pontuacao":{"Media":5.34,"Ultima":5.34}}
+{"Nome":"Alecsandro","Clube":{"Nome":"Palmeiras"},"Posicao":4,"Preco":{"Atual":13.73,"Variacao":0.0},"Pontuacao":{"Media":2.88,"Ultima":4.1}}
+{"Nome":"Alef","Clube":{"Nome":"Joinville"},"Posicao":2,"Preco":{"Atual":4.0,"Variacao":0.0},"Pontuacao":{"Media":0.0,"Ultima":0.0}}
+{"Nome":"Alessandro","Clube":{"Nome":"Atlético-PR"},"Posicao":1,"Preco":{"Atual":4.0,"Variacao":0.0},"Pontuacao":{"Media":0.0,"Ultima":0.0}}
+{"Nome":"Alex","Clube":{"Nome":"Cruzeiro"},"Posicao":2,"Preco":{"Atual":2.0,"Variacao":0.0},"Pontuacao":{"Media":0.0,"Ultima":0.0}}
+{"Nome":"Alex","Clube":{"Nome":"Internacional"},"Posicao":3,"Preco":{"Atual":12.46,"Variacao":0.0},"Pontuacao":{"Media":1.44,"Ultima":1.5}}
+{"Nome":"Alex Alves","Clube":{"Nome":"Goiás"},"Posicao":2,"Preco":{"Atual":8.16,"Variacao":0.0},"Pontuacao":{"Media":2.03,"Ultima":0.0}}
+{"Nome":"Alex Muralha","Clube":{"Nome":"Figueirense"},"Posicao":0,"Preco":{"Atual":12.76,"Variacao":0.0},"Pontuacao":{"Media":6.1,"Ultima":1.0}}
+{"Nome":"Alex Silva","Clube":{"Nome":"Sport"},"Posicao":1,"Preco":{"Atual":5.0,"Variacao":0.0},"Pontuacao":{"Media":0.0,"Ultima":0.0}}
+{"Nome":"Alexandre Cajuru","Clube":{"Nome":"Atlético-PR"},"Posicao":0,"Preco":{"Atual":1.0,"Variacao":0.0},"Pontuacao":{"Media":0.0,"Ultima":0.0}}
+{"Nome":"Alexandre Pato","Clube":{"Nome":"São Paulo"},"Posicao":4,"Preco":{"Atual":12.58,"Variacao":0.0},"Pontuacao":{"Media":3.77,"Ultima":-1.5}}
+{"Nome":"Alison","Clube":{"Nome":"Santos"},"Posicao":3,"Preco":{"Atual":6.0,"Variacao":0.0},"Pontuacao":{"Media":0.0,"Ultima":0.0}}
+{"Nome":"Alisson","Clube":{"Nome":"Sport"},"Posicao":4,"Preco":{"Atual":1.0,"Variacao":0.0},"Pontuacao":{"Media":0.0,"Ultima":0.0}}
+{"Nome":"Alisson","Clube":{"Nome":"Cruzeiro"},"Posicao":4,"Preco":{"Atual":7.2,"Variacao":0.0},"Pontuacao":{"Media":2.08,"Ultima":0.0}}
+{"Nome":"Alisson Becker","Clube":{"Nome":"Internacional"},"Posicao":0,"Preco":{"Atual":4.97,"Variacao":0.0},"Pontuacao":{"Media":2.8,"Ultima":-1.0}}
+{"Nome":"Alisson Farias","Clube":{"Nome":"Internacional"},"Posicao":3,"Preco":{"Atual":2.9,"Variacao":0.0},"Pontuacao":{"Media":1.0,"Ultima":0.0}}
+{"Nome":"Allano","Clube":{"Nome":"Cruzeiro"},"Posicao":4,"Preco":{"Atual":3.99,"Variacao":0.0},"Pontuacao":{"Media":2.83,"Ultima":4.2}}
+{"Nome":"Allione","Clube":{"Nome":"Palmeiras"},"Posicao":3,"Preco":{"Atual":8.0,"Variacao":0.0},"Pontuacao":{"Media":0.0,"Ultima":0.0}}
+{"Nome":"Almir","Clube":{"Nome":"Flamengo"},"Posicao":3,"Preco":{"Atual":5.6,"Variacao":0.0},"Pontuacao":{"Media":1.2,"Ultima":0.0}}
+{"Nome":"Amaral","Clube":{"Nome":"Palmeiras"},"Posicao":3,"Preco":{"Atual":4.27,"Variacao":0.0},"Pontuacao":{"Media":-0.75,"Ultima":0.0}}
+{"Nome":"Ananias","Clube":{"Nome":"Chapecoense"},"Posicao":4,"Preco":{"Atual":13.12,"Variacao":0.0},"Pontuacao":{"Media":3.81,"Ultima":1.9}}
+{"Nome":"Anderson","Clube":{"Nome":"Internacional"},"Posicao":3,"Preco":{"Atual":11.05,"Variacao":0.0},"Pontuacao":{"Media":1.5,"Ultima":0.0}}
+{"Nome":"Anderson Lopes","Clube":{"Nome":"Avaí"},"Posicao":4,"Preco":{"Atual":6.08,"Variacao":0.0},"Pontuacao":{"Media":2.89,"Ultima":7.7}}
+{"Nome":"Anderson Pico","Clube":{"Nome":"Flamengo"},"Posicao":1,"Preco":{"Atual":6.95,"Variacao":0.0},"Pontuacao":{"Media":1.77,"Ultima":0.0}}
+{"Nome":"Anderson Salles","Clube":{"Nome":"Vasco"},"Posicao":2,"Preco":{"Atual":6.0,"Variacao":0.0},"Pontuacao":{"Media":0.0,"Ultima":0.0}}
+{"Nome":"André","Clube":{"Nome":"Sport"},"Posicao":4,"Preco":{"Atual":3.98,"Variacao":0.0},"Pontuacao":{"Media":-0.5,"Ultima":-0.5}}
+{"Nome":"André Baumer","Clube":{"Nome":"Joinville"},"Posicao":2,"Preco":{"Atual":1.0,"Variacao":0.0},"Pontuacao":{"Media":0.0,"Ultima":0.0}}
+{"Nome":"André Lima","Clube":{"Nome":"Avaí"},"Posicao":4,"Preco":{"Atual":9.69,"Variacao":0.0},"Pontuacao":{"Media":2.86,"Ultima":3.1}}
+{"Nome":"André Paulino","Clube":{"Nome":"Chapecoense"},"Posicao":2,"Preco":{"Atual":4.0,"Variacao":0.0},"Pontuacao":{"Media":0.0,"Ultima":0.0}}
+{"Nome":"Andrei Girotto","Clube":{"Nome":"Palmeiras"},"Posicao":3,"Preco":{"Atual":4.0,"Variacao":0.0},"Pontuacao":{"Media":0.0,"Ultima":0.0}}
+{"Nome":"Andrigo","Clube":{"Nome":"Internacional"},"Posicao":3,"Preco":{"Atual":3.0,"Variacao":0.0},"Pontuacao":{"Media":0.0,"Ultima":0.0}}
+{"Nome":"Ángel Romero","Clube":{"Nome":"Corinthians"},"Posicao":4,"Preco":{"Atual":8.58,"Variacao":0.0},"Pontuacao":{"Media":2.28,"Ultima":-1.4}}
+{"Nome":"Anselmo","Clube":{"Nome":"Joinville"},"Posicao":3,"Preco":{"Atual":6.7,"Variacao":0.0},"Pontuacao":{"Media":1.89,"Ultima":0.7}}
+{"Nome":"Antônio Carlos","Clube":{"Nome":"Avaí"},"Posicao":2,"Preco":{"Atual":2.53,"Variacao":0.0},"Pontuacao":{"Media":-0.26,"Ultima":0.0}}
+{"Nome":"Antônio Carlos","Clube":{"Nome":"Fluminense"},"Posicao":2,"Preco":{"Atual":8.3,"Variacao":0.0},"Pontuacao":{"Media":3.47,"Ultima":-2.9}}
+{"Nome":"Apodi","Clube":{"Nome":"Chapecoense"},"Posicao":1,"Preco":{"Atual":8.77,"Variacao":0.0},"Pontuacao":{"Media":2.58,"Ultima":-0.8}}
+{"Nome":"Arancibia","Clube":{"Nome":"Palmeiras"},"Posicao":3,"Preco":{"Atual":2.0,"Variacao":0.0},"Pontuacao":{"Media":0.0,"Ultima":0.0}}
+{"Nome":"Aránguiz","Clube":{"Nome":"Internacional"},"Posicao":3,"Preco":{"Atual":19.0,"Variacao":0.0},"Pontuacao":{"Media":0.0,"Ultima":0.0}}
+{"Nome":"Aranha","Clube":{"Nome":"Palmeiras"},"Posicao":0,"Preco":{"Atual":6.0,"Variacao":0.0},"Pontuacao":{"Media":0.0,"Ultima":0.0}}
+{"Nome":"Araújo","Clube":{"Nome":"Grêmio"},"Posicao":3,"Preco":{"Atual":3.21,"Variacao":0.0},"Pontuacao":{"Media":2.8,"Ultima":0.0}}
+{"Nome":"Argel Fucks","Clube":{"Nome":"Figueirense"},"Posicao":5,"Preco":{"Atual":6.61,"Variacao":0.0},"Pontuacao":{"Media":2.55,"Ultima":2.16}}
+{"Nome":"Armero","Clube":{"Nome":"Flamengo"},"Posicao":1,"Preco":{"Atual":9.95,"Variacao":0.0},"Pontuacao":{"Media":1.55,"Ultima":0.0}}
+{"Nome":"Arouca","Clube":{"Nome":"Palmeiras"},"Posicao":3,"Preco":{"Atual":4.72,"Variacao":0.0},"Pontuacao":{"Media":1.3,"Ultima":2.9}}
+{"Nome":"Arrascaeta","Clube":{"Nome":"Cruzeiro"},"Posicao":3,"Preco":{"Atual":17.77,"Variacao":0.0},"Pontuacao":{"Media":2.35,"Ultima":0.0}}
+{"Nome":"Arthur","Clube":{"Nome":"Grêmio"},"Posicao":3,"Preco":{"Atual":2.0,"Variacao":0.0},"Pontuacao":{"Media":0.0,"Ultima":0.0}}
+{"Nome":"Arthur","Clube":{"Nome":"Goiás"},"Posicao":3,"Preco":{"Atual":2.19,"Variacao":0.0},"Pontuacao":{"Media":0.47,"Ultima":0.0}}
+{"Nome":"Arthur Maia","Clube":{"Nome":"Flamengo"},"Posicao":3,"Preco":{"Atual":4.82,"Variacao":0.0},"Pontuacao":{"Media":0.3,"Ultima":-0.7}}
+{"Nome":"Artur","Clube":{"Nome":"Internacional"},"Posicao":1,"Preco":{"Atual":2.69,"Variacao":0.0},"Pontuacao":{"Media":1.95,"Ultima":0.0}}
+{"Nome":"Artur","Clube":{"Nome":"Fluminense"},"Posicao":2,"Preco":{"Atual":2.0,"Variacao":0.0},"Pontuacao":{"Media":0.0,"Ultima":0.0}}
+{"Nome":"Augusto César","Clube":{"Nome":"Joinville"},"Posicao":3,"Preco":{"Atual":4.72,"Variacao":0.0},"Pontuacao":{"Media":1.08,"Ultima":-0.1}}
+{"Nome":"Auro","Clube":{"Nome":"São Paulo"},"Posicao":1,"Preco":{"Atual":4.43,"Variacao":0.0},"Pontuacao":{"Media":4.4,"Ultima":4.4}}
+{"Nome":"Ayrton","Clube":{"Nome":"Flamengo"},"Posicao":1,"Preco":{"Atual":4.77,"Variacao":0.0},"Pontuacao":{"Media":3.03,"Ultima":0.0}}
+{"Nome":"Bady","Clube":{"Nome":"Atlético-PR"},"Posicao":3,"Preco":{"Atual":4.56,"Variacao":0.0},"Pontuacao":{"Media":-0.4,"Ultima":0.0}}
+{"Nome":"Baiano","Clube":{"Nome":"Goiás"},"Posicao":2,"Preco":{"Atual":2.0,"Variacao":0.0},"Pontuacao":{"Media":0.0,"Ultima":0.0}}
+{"Nome":"Balbino","Clube":{"Nome":"Grêmio"},"Posicao":3,"Preco":{"Atual":2.0,"Variacao":0.0},"Pontuacao":{"Media":0.0,"Ultima":0.0}}
+{"Nome":"Bernardo","Clube":{"Nome":"Vasco"},"Posicao":3,"Preco":{"Atual":4.67,"Variacao":0.0},"Pontuacao":{"Media":-0.2,"Ultima":0.0}}
+{"Nome":"Bernardo","Clube":{"Nome":"Ponte Preta"},"Posicao":2,"Preco":{"Atual":2.0,"Variacao":0.0},"Pontuacao":{"Media":0.0,"Ultima":0.0}}
+{"Nome":"Biro Biro","Clube":{"Nome":"Ponte Preta"},"Posicao":4,"Preco":{"Atual":12.89,"Variacao":0.0},"Pontuacao":{"Media":4.57,"Ultima":1.5}}
+{"Nome":"Bocão","Clube":{"Nome":"Goiás"},"Posicao":1,"Preco":{"Atual":1.0,"Variacao":0.0},"Pontuacao":{"Media":0.0,"Ultima":0.0}}
+{"Nome":"Bonfim","Clube":{"Nome":"Coritiba"},"Posicao":2,"Preco":{"Atual":5.0,"Variacao":0.0},"Pontuacao":{"Media":0.0,"Ultima":0.0}}
+{"Nome":"Borges","Clube":{"Nome":"Ponte Preta"},"Posicao":4,"Preco":{"Atual":13.23,"Variacao":0.0},"Pontuacao":{"Media":1.78,"Ultima":0.0}}
+{"Nome":"Boschilia","Clube":{"Nome":"São Paulo"},"Posicao":3,"Preco":{"Atual":6.57,"Variacao":0.0},"Pontuacao":{"Media":2.3,"Ultima":0.0}}
+{"Nome":"Braian Rodríguez","Clube":{"Nome":"Grêmio"},"Posicao":4,"Preco":{"Atual":7.16,"Variacao":0.0},"Pontuacao":{"Media":2.63,"Ultima":0.5}}
+{"Nome":"Breno","Clube":{"Nome":"São Paulo"},"Posicao":2,"Preco":{"Atual":3.0,"Variacao":0.0},"Pontuacao":{"Media":0.0,"Ultima":0.0}}
+{"Nome":"Breno","Clube":{"Nome":"Atlético-PR"},"Posicao":1,"Preco":{"Atual":1.0,"Variacao":0.0},"Pontuacao":{"Media":0.0,"Ultima":0.0}}
+{"Nome":"Breno Lopes","Clube":{"Nome":"Fluminense"},"Posicao":1,"Preco":{"Atual":4.29,"Variacao":0.0},"Pontuacao":{"Media":12.0,"Ultima":0.0}}
+{"Nome":"Bressan","Clube":{"Nome":"Flamengo"},"Posicao":2,"Preco":{"Atual":5.11,"Variacao":0.0},"Pontuacao":{"Media":1.03,"Ultima":0.0}}
+{"Nome":"Bruninho","Clube":{"Nome":"Fluminense"},"Posicao":4,"Preco":{"Atual":1.0,"Variacao":0.0},"Pontuacao":{"Media":0.0,"Ultima":0.0}}
+{"Nome":"Bruno","Clube":{"Nome":"São Paulo"},"Posicao":1,"Preco":{"Atual":8.3,"Variacao":0.0},"Pontuacao":{"Media":3.65,"Ultima":-0.5}}
+{"Nome":"Bruno","Clube":{"Nome":"Coritiba"},"Posicao":0,"Preco":{"Atual":2.49,"Variacao":0.0},"Pontuacao":{"Media":-0.01,"Ultima":-2.0}}
+{"Nome":"Bruno Aguiar","Clube":{"Nome":"Joinville"},"Posicao":2,"Preco":{"Atual":6.93,"Variacao":0.0},"Pontuacao":{"Media":1.58,"Ultima":0.0}}
+{"Nome":"Bruno Alves","Clube":{"Nome":"Figueirense"},"Posicao":2,"Preco":{"Atual":1.24,"Variacao":0.0},"Pontuacao":{"Media":-0.23,"Ultima":4.3}}
+{"Nome":"Bruno Edgar","Clube":{"Nome":"Cruzeiro"},"Posicao":3,"Preco":{"Atual":0.82,"Variacao":0.0},"Pontuacao":{"Media":-0.4,"Ultima":-0.3}}
+{"Nome":"Bruno Furlan","Clube":{"Nome":"Joinville"},"Posicao":4,"Preco":{"Atual":5.0,"Variacao":0.0},"Pontuacao":{"Media":0.0,"Ultima":0.0}}
+{"Nome":"Bruno Gomes","Clube":{"Nome":"Internacional"},"Posicao":4,"Preco":{"Atual":1.0,"Variacao":0.0},"Pontuacao":{"Media":0.0,"Ultima":0.0}}
+{"Nome":"Bruno Grassi","Clube":{"Nome":"Grêmio"},"Posicao":0,"Preco":{"Atual":1.0,"Variacao":0.0},"Pontuacao":{"Media":0.0,"Ultima":0.0}}
+{"Nome":"Bruno Henrique","Clube":{"Nome":"Corinthians"},"Posicao":3,"Preco":{"Atual":4.4,"Variacao":0.0},"Pontuacao":{"Media":1.57,"Ultima":0.0}}
+{"Nome":"Bruno Henrique","Clube":{"Nome":"Goiás"},"Posicao":4,"Preco":{"Atual":13.31,"Variacao":0.0},"Pontuacao":{"Media":4.73,"Ultima":2.6}}
+{"Nome":"Bruno Mendes","Clube":{"Nome":"Avaí"},"Posicao":4,"Preco":{"Atual":5.0,"Variacao":0.0},"Pontuacao":{"Media":0.0,"Ultima":0.0}}
+{"Nome":"Bruno Mota","Clube":{"Nome":"Atlético-PR"},"Posicao":3,"Preco":{"Atual":5.0,"Variacao":0.0},"Pontuacao":{"Media":0.0,"Ultima":0.0}}
+{"Nome":"Bruno Pelissari","Clube":{"Nome":"Atlético-PR"},"Posicao":3,"Preco":{"Atual":3.0,"Variacao":0.0},"Pontuacao":{"Media":0.0,"Ultima":0.0}}
+{"Nome":"Bruno Rangel","Clube":{"Nome":"Chapecoense"},"Posicao":4,"Preco":{"Atual":4.08,"Variacao":0.0},"Pontuacao":{"Media":0.0,"Ultima":0.0}}
+{"Nome":"Bruno Rodrigo","Clube":{"Nome":"Cruzeiro"},"Posicao":2,"Preco":{"Atual":4.57,"Variacao":0.0},"Pontuacao":{"Media":0.1,"Ultima":1.1}}
+{"Nome":"Bruno Santos","Clube":{"Nome":"Figueirense"},"Posicao":1,"Preco":{"Atual":2.0,"Variacao":0.0},"Pontuacao":{"Media":0.0,"Ultima":0.0}}
+{"Nome":"Bruno Silva","Clube":{"Nome":"Chapecoense"},"Posicao":3,"Preco":{"Atual":9.99,"Variacao":0.0},"Pontuacao":{"Media":2.63,"Ultima":2.1}}
+{"Nome":"Bryan Olivera","Clube":{"Nome":"Fluminense"},"Posicao":3,"Preco":{"Atual":1.0,"Variacao":0.0},"Pontuacao":{"Media":0.0,"Ultima":0.0}}
+{"Nome":"Caique","Clube":{"Nome":"Corinthians"},"Posicao":0,"Preco":{"Atual":1.0,"Variacao":0.0},"Pontuacao":{"Media":0.0,"Ultima":0.0}}
+{"Nome":"Caíque","Clube":{"Nome":"Atlético-PR"},"Posicao":4,"Preco":{"Atual":5.0,"Variacao":0.0},"Pontuacao":{"Media":0.0,"Ultima":0.0}}
+{"Nome":"Caju","Clube":{"Nome":"Santos"},"Posicao":1,"Preco":{"Atual":5.0,"Variacao":0.0},"Pontuacao":{"Media":0.0,"Ultima":0.0}}
+{"Nome":"Camilo","Clube":{"Nome":"Chapecoense"},"Posicao":3,"Preco":{"Atual":12.71,"Variacao":0.0},"Pontuacao":{"Media":3.03,"Ultima":0.5}}
+{"Nome":"Canteros","Clube":{"Nome":"Flamengo"},"Posicao":3,"Preco":{"Atual":8.77,"Variacao":0.0},"Pontuacao":{"Media":0.73,"Ultima":3.9}}
+{"Nome":"Caramelo","Clube":{"Nome":"Chapecoense"},"Posicao":1,"Preco":{"Atual":3.0,"Variacao":0.0},"Pontuacao":{"Media":0.0,"Ultima":0.0}}
+{"Nome":"Cárdenas","Clube":{"Nome":"Atlético-MG"},"Posicao":3,"Preco":{"Atual":4.11,"Variacao":0.0},"Pontuacao":{"Media":0.2,"Ultima":0.0}}
+{"Nome":"Carlinhos","Clube":{"Nome":"Coritiba"},"Posicao":1,"Preco":{"Atual":7.12,"Variacao":0.0},"Pontuacao":{"Media":1.0,"Ultima":0.0}}
+{"Nome":"Carlinhos","Clube":{"Nome":"São Paulo"},"Posicao":1,"Preco":{"Atual":10.88,"Variacao":0.0},"Pontuacao":{"Media":6.13,"Ultima":5.3}}
+{"Nome":"Carlos","Clube":{"Nome":"Goiás"},"Posicao":4,"Preco":{"Atual":1.72,"Variacao":0.0},"Pontuacao":{"Media":0.47,"Ultima":-0.5}}
+{"Nome":"Carlos","Clube":{"Nome":"Atlético-MG"},"Posicao":4,"Preco":{"Atual":12.33,"Variacao":0.0},"Pontuacao":{"Media":5.18,"Ultima":0.0}}
+{"Nome":"Carlos Alberto","Clube":{"Nome":"Figueirense"},"Posicao":3,"Preco":{"Atual":9.92,"Variacao":0.0},"Pontuacao":{"Media":5.93,"Ultima":0.0}}
+{"Nome":"Carlos Cesar","Clube":{"Nome":"Atlético-MG"},"Posicao":1,"Preco":{"Atual":4.52,"Variacao":0.0},"Pontuacao":{"Media":6.4,"Ultima":0.0}}
+{"Nome":"Carlos Henrique","Clube":{"Nome":"Figueirense"},"Posicao":4,"Preco":{"Atual":4.0,"Variacao":0.0},"Pontuacao":{"Media":0.0,"Ultima":0.0}}
+{"Nome":"Cássio","Clube":{"Nome":"Avaí"},"Posicao":2,"Preco":{"Atual":6.0,"Variacao":0.0},"Pontuacao":{"Media":0.0,"Ultima":0.0}}
+{"Nome":"Cássio","Clube":{"Nome":"Corinthians"},"Posicao":0,"Preco":{"Atual":20.78,"Variacao":0.0},"Pontuacao":{"Media":5.34,"Ultima":1.2}}
+{"Nome":"Ceará","Clube":{"Nome":"Cruzeiro"},"Posicao":1,"Preco":{"Atual":4.13,"Variacao":0.0},"Pontuacao":{"Media":-1.9,"Ultima":0.0}}
+{"Nome":"Centurión","Clube":{"Nome":"São Paulo"},"Posicao":4,"Preco":{"Atual":10.3,"Variacao":0.0},"Pontuacao":{"Media":1.17,"Ultima":0.0}}
+{"Nome":"Cereceda","Clube":{"Nome":"Figueirense"},"Posicao":1,"Preco":{"Atual":7.45,"Variacao":0.0},"Pontuacao":{"Media":2.2,"Ultima":3.9}}
+{"Nome":"César","Clube":{"Nome":"Flamengo"},"Posicao":0,"Preco":{"Atual":4.0,"Variacao":0.0},"Pontuacao":{"Media":0.0,"Ultima":0.0}}
+{"Nome":"Cesinha","Clube":{"Nome":"Ponte Preta"},"Posicao":4,"Preco":{"Atual":3.2,"Variacao":0.0},"Pontuacao":{"Media":1.58,"Ultima":-0.3}}
+{"Nome":"Charles","Clube":{"Nome":"Vasco"},"Posicao":0,"Preco":{"Atual":0.82,"Variacao":0.0},"Pontuacao":{"Media":-1.67,"Ultima":-6.0}}
+{"Nome":"Charles","Clube":{"Nome":"Cruzeiro"},"Posicao":3,"Preco":{"Atual":8.07,"Variacao":0.0},"Pontuacao":{"Media":2.42,"Ultima":5.7}}
+{"Nome":"Chiquinho","Clube":{"Nome":"Santos"},"Posicao":1,"Preco":{"Atual":7.58,"Variacao":0.0},"Pontuacao":{"Media":1.26,"Ultima":0.0}}
+{"Nome":"Choco","Clube":{"Nome":"Atlético-PR"},"Posicao":4,"Preco":{"Atual":1.0,"Variacao":0.0},"Pontuacao":{"Media":0.0,"Ultima":0.0}}
+{"Nome":"Christiano","Clube":{"Nome":"Vasco"},"Posicao":1,"Preco":{"Atual":11.19,"Variacao":0.0},"Pontuacao":{"Media":4.22,"Ultima":0.0}}
+{"Nome":"Cicinho","Clube":{"Nome":"Santos"},"Posicao":1,"Preco":{"Atual":2.37,"Variacao":0.0},"Pontuacao":{"Media":-2.0,"Ultima":0.0}}
+{"Nome":"Citta Júnior","Clube":{"Nome":"Ponte Preta"},"Posicao":3,"Preco":{"Atual":2.0,"Variacao":0.0},"Pontuacao":{"Media":0.0,"Ultima":0.0}}
+{"Nome":"Claudinei","Clube":{"Nome":"Avaí"},"Posicao":3,"Preco":{"Atual":5.0,"Variacao":0.0},"Pontuacao":{"Media":0.0,"Ultima":0.0}}
+{"Nome":"Claudio Winck","Clube":{"Nome":"Internacional"},"Posicao":1,"Preco":{"Atual":6.17,"Variacao":0.0},"Pontuacao":{"Media":0.8,"Ultima":0.0}}
+{"Nome":"Claudiomiro","Clube":{"Nome":"Joinville"},"Posicao":5,"Preco":{"Atual":5.31,"Variacao":0.0},"Pontuacao":{"Media":0.0,"Ultima":0.0}}
+{"Nome":"Clayton","Clube":{"Nome":"Figueirense"},"Posicao":4,"Preco":{"Atual":7.3,"Variacao":0.0},"Pontuacao":{"Media":0.72,"Ultima":3.5}}
+{"Nome":"Clayton Sales","Clube":{"Nome":"Goiás"},"Posicao":1,"Preco":{"Atual":3.99,"Variacao":0.0},"Pontuacao":{"Media":5.9,"Ultima":5.9}}
+{"Nome":"Cleberson","Clube":{"Nome":"Atlético-PR"},"Posicao":2,"Preco":{"Atual":8.0,"Variacao":0.0},"Pontuacao":{"Media":0.0,"Ultima":0.0}}
+{"Nome":"Cleiton Xavier","Clube":{"Nome":"Palmeiras"},"Posicao":3,"Preco":{"Atual":14.68,"Variacao":0.0},"Pontuacao":{"Media":1.17,"Ultima":3.3}}
+{"Nome":"Cléo","Clube":{"Nome":"Atlético-PR"},"Posicao":4,"Preco":{"Atual":7.95,"Variacao":0.0},"Pontuacao":{"Media":2.37,"Ultima":0.0}}
+{"Nome":"Conrado","Clube":{"Nome":"Avaí"},"Posicao":4,"Preco":{"Atual":3.0,"Variacao":0.0},"Pontuacao":{"Media":0.0,"Ultima":0.0}}
+{"Nome":"Cristaldo","Clube":{"Nome":"Palmeiras"},"Posicao":4,"Preco":{"Atual":10.72,"Variacao":0.0},"Pontuacao":{"Media":3.55,"Ultima":11.5}}
+{"Nome":"Cristian","Clube":{"Nome":"Corinthians"},"Posicao":3,"Preco":{"Atual":10.07,"Variacao":0.0},"Pontuacao":{"Media":2.75,"Ultima":2.9}}
+{"Nome":"Cristian Rodríguez","Clube":{"Nome":"Grêmio"},"Posicao":3,"Preco":{"Atual":15.0,"Variacao":0.0},"Pontuacao":{"Media":0.0,"Ultima":0.0}}
+{"Nome":"Cristóvão Borges","Clube":{"Nome":"Flamengo"},"Posicao":5,"Preco":{"Atual":9.33,"Variacao":0.0},"Pontuacao":{"Media":2.56,"Ultima":4.35}}
+{"Nome":"Crysan","Clube":{"Nome":"Atlético-PR"},"Posicao":4,"Preco":{"Atual":3.0,"Variacao":0.0},"Pontuacao":{"Media":0.0,"Ultima":0.0}}
+{"Nome":"Crystian","Clube":{"Nome":"Santos"},"Posicao":1,"Preco":{"Atual":2.0,"Variacao":0.0},"Pontuacao":{"Media":0.0,"Ultima":0.0}}
+{"Nome":"D'Alessandro","Clube":{"Nome":"Internacional"},"Posicao":3,"Preco":{"Atual":27.0,"Variacao":0.0},"Pontuacao":{"Media":0.0,"Ultima":0.0}}
+{"Nome":"Dagoberto","Clube":{"Nome":"Vasco"},"Posicao":4,"Preco":{"Atual":7.79,"Variacao":0.0},"Pontuacao":{"Media":-0.7,"Ultima":0.0}}
+{"Nome":"Daniel","Clube":{"Nome":"Flamengo"},"Posicao":0,"Preco":{"Atual":1.0,"Variacao":0.0},"Pontuacao":{"Media":0.0,"Ultima":0.0}}
+{"Nome":"Daniel","Clube":{"Nome":"Figueirense"},"Posicao":4,"Preco":{"Atual":2.0,"Variacao":0.0},"Pontuacao":{"Media":0.0,"Ultima":0.0}}
+{"Nome":"Daniel","Clube":{"Nome":"São Paulo"},"Posicao":3,"Preco":{"Atual":6.0,"Variacao":0.0},"Pontuacao":{"Media":0.0,"Ultima":0.0}}
+{"Nome":"Daniel Borges","Clube":{"Nome":"Atlético-PR"},"Posicao":1,"Preco":{"Atual":4.0,"Variacao":0.0},"Pontuacao":{"Media":0.0,"Ultima":0.0}}
+{"Nome":"Daniel Guedes","Clube":{"Nome":"Santos"},"Posicao":1,"Preco":{"Atual":4.01,"Variacao":0.0},"Pontuacao":{"Media":2.8,"Ultima":0.0}}
+{"Nome":"Danilo","Clube":{"Nome":"Chapecoense"},"Posicao":0,"Preco":{"Atual":11.95,"Variacao":0.0},"Pontuacao":{"Media":3.09,"Ultima":-2.0}}
+{"Nome":"Danilo","Clube":{"Nome":"Corinthians"},"Posicao":3,"Preco":{"Atual":7.89,"Variacao":0.0},"Pontuacao":{"Media":0.06,"Ultima":2.1}}
+{"Nome":"Danilo","Clube":{"Nome":"Goiás"},"Posicao":4,"Preco":{"Atual":4.0,"Variacao":0.0},"Pontuacao":{"Media":0.0,"Ultima":0.0}}
+{"Nome":"Danilo","Clube":{"Nome":"Sport"},"Posicao":3,"Preco":{"Atual":7.74,"Variacao":0.0},"Pontuacao":{"Media":0.07,"Ultima":0.0}}
+{"Nome":"Danilo Fernandes","Clube":{"Nome":"Sport"},"Posicao":0,"Preco":{"Atual":8.87,"Variacao":0.0},"Pontuacao":{"Media":6.62,"Ultima":3.7}}
+{"Nome":"Danilo Neves","Clube":{"Nome":"Ponte Preta"},"Posicao":3,"Preco":{"Atual":2.0,"Variacao":0.0},"Pontuacao":{"Media":0.0,"Ultima":0.0}}
+{"Nome":"Danilo Pires","Clube":{"Nome":"Atlético-MG"},"Posicao":3,"Preco":{"Atual":0.79,"Variacao":0.0},"Pontuacao":{"Media":-0.8,"Ultima":0.0}}
+{"Nome":"Dankler","Clube":{"Nome":"Joinville"},"Posicao":2,"Preco":{"Atual":2.16,"Variacao":0.0},"Pontuacao":{"Media":0.43,"Ultima":0.8}}
+{"Nome":"Danrlei","Clube":{"Nome":"Joinville"},"Posicao":2,"Preco":{"Atual":2.0,"Variacao":0.0},"Pontuacao":{"Media":0.0,"Ultima":0.0}}
+{"Nome":"Dátolo","Clube":{"Nome":"Atlético-MG"},"Posicao":3,"Preco":{"Atual":18.11,"Variacao":0.0},"Pontuacao":{"Media":5.43,"Ultima":0.0}}
+{"Nome":"David","Clube":{"Nome":"Goiás"},"Posicao":3,"Preco":{"Atual":10.0,"Variacao":0.0},"Pontuacao":{"Media":0.0,"Ultima":0.0}}
+{"Nome":"David Braz","Clube":{"Nome":"Santos"},"Posicao":2,"Preco":{"Atual":10.25,"Variacao":0.0},"Pontuacao":{"Media":1.6,"Ultima":0.0}}
+{"Nome":"Dedé","Clube":{"Nome":"Cruzeiro"},"Posicao":2,"Preco":{"Atual":12.0,"Variacao":0.0},"Pontuacao":{"Media":0.0,"Ultima":0.0}}
+{"Nome":"Dedé","Clube":{"Nome":"Ponte Preta"},"Posicao":3,"Preco":{"Atual":5.0,"Variacao":0.0},"Pontuacao":{"Media":0.0,"Ultima":0.0}}
+{"Nome":"Deivid","Clube":{"Nome":"Atlético-PR"},"Posicao":3,"Preco":{"Atual":12.5,"Variacao":0.0},"Pontuacao":{"Media":3.95,"Ultima":0.0}}
+{"Nome":"Deivid Duarte","Clube":{"Nome":"Goiás"},"Posicao":2,"Preco":{"Atual":2.0,"Variacao":0.0},"Pontuacao":{"Media":0.0,"Ultima":0.0}}
+{"Nome":"Dellatorre","Clube":{"Nome":"Atlético-PR"},"Posicao":4,"Preco":{"Atual":6.24,"Variacao":0.0},"Pontuacao":{"Media":-0.6,"Ultima":0.0}}
+{"Nome":"Dener","Clube":{"Nome":"Figueirense"},"Posicao":3,"Preco":{"Atual":1.68,"Variacao":0.0},"Pontuacao":{"Media":-0.03,"Ultima":2.6}}
+{"Nome":"Dener Assunção","Clube":{"Nome":"Chapecoense"},"Posicao":1,"Preco":{"Atual":9.72,"Variacao":0.0},"Pontuacao":{"Media":5.25,"Ultima":4.9}}
+{"Nome":"Denilson","Clube":{"Nome":"São Paulo"},"Posicao":3,"Preco":{"Atual":9.72,"Variacao":0.0},"Pontuacao":{"Media":1.73,"Ultima":0.0}}
+{"Nome":"Denis","Clube":{"Nome":"São Paulo"},"Posicao":0,"Preco":{"Atual":5.0,"Variacao":0.0},"Pontuacao":{"Media":0.0,"Ultima":0.0}}
+{"Nome":"Denner","Clube":{"Nome":"Avaí"},"Posicao":3,"Preco":{"Atual":3.14,"Variacao":0.0},"Pontuacao":{"Media":0.9,"Ultima":0.0}}
+{"Nome":"Dida","Clube":{"Nome":"Internacional"},"Posicao":0,"Preco":{"Atual":5.0,"Variacao":0.0},"Pontuacao":{"Media":0.0,"Ultima":0.0}}
+{"Nome":"Diego","Clube":{"Nome":"Joinville"},"Posicao":1,"Preco":{"Atual":2.08,"Variacao":0.0},"Pontuacao":{"Media":1.6,"Ultima":1.6}}
+{"Nome":"Diego","Clube":{"Nome":"Avaí"},"Posicao":0,"Preco":{"Atual":3.0,"Variacao":0.0},"Pontuacao":{"Media":0.0,"Ultima":0.0}}
+{"Nome":"Diego Aguirre","Clube":{"Nome":"Internacional"},"Posicao":5,"Preco":{"Atual":11.62,"Variacao":0.0},"Pontuacao":{"Media":3.39,"Ultima":2.34}}
+{"Nome":"Diego Cardoso","Clube":{"Nome":"Santos"},"Posicao":4,"Preco":{"Atual":5.0,"Variacao":0.0},"Pontuacao":{"Media":0.0,"Ultima":0.0}}
+{"Nome":"Diego Cavalieri","Clube":{"Nome":"Fluminense"},"Posicao":0,"Preco":{"Atual":14.41,"Variacao":0.0},"Pontuacao":{"Media":4.59,"Ultima":8.7}}
+{"Nome":"Diego Ivo","Clube":{"Nome":"Ponte Preta"},"Posicao":2,"Preco":{"Atual":4.0,"Variacao":0.0},"Pontuacao":{"Media":0.0,"Ultima":0.0}}
+{"Nome":"Diego Oliveira","Clube":{"Nome":"Ponte Preta"},"Posicao":4,"Preco":{"Atual":12.09,"Variacao":0.0},"Pontuacao":{"Media":3.36,"Ultima":1.4}}
+{"Nome":"Diego Souza","Clube":{"Nome":"Sport"},"Posicao":3,"Preco":{"Atual":28.52,"Variacao":0.0},"Pontuacao":{"Media":3.91,"Ultima":-1.9}}
+{"Nome":"Diguinho","Clube":{"Nome":"Vasco"},"Posicao":3,"Preco":{"Atual":5.6,"Variacao":0.0},"Pontuacao":{"Media":2.17,"Ultima":-0.5}}
+{"Nome":"Diogo","Clube":{"Nome":"Internacional"},"Posicao":1,"Preco":{"Atual":4.0,"Variacao":0.0},"Pontuacao":{"Media":0.0,"Ultima":0.0}}
+{"Nome":"Diogo Barbosa","Clube":{"Nome":"Goiás"},"Posicao":1,"Preco":{"Atual":5.89,"Variacao":0.0},"Pontuacao":{"Media":2.97,"Ultima":6.6}}
+{"Nome":"Diogo Sodré","Clube":{"Nome":"Coritiba"},"Posicao":3,"Preco":{"Atual":4.0,"Variacao":0.0},"Pontuacao":{"Media":0.0,"Ultima":0.0}}
+{"Nome":"Dodô","Clube":{"Nome":"Atlético-MG"},"Posicao":3,"Preco":{"Atual":4.3,"Variacao":0.0},"Pontuacao":{"Media":1.1,"Ultima":0.0}}
+{"Nome":"Donato","Clube":{"Nome":"Atlético-MG"},"Posicao":2,"Preco":{"Atual":1.0,"Variacao":0.0},"Pontuacao":{"Media":0.0,"Ultima":0.0}}
+{"Nome":"Dória","Clube":{"Nome":"São Paulo"},"Posicao":2,"Preco":{"Atual":15.02,"Variacao":0.0},"Pontuacao":{"Media":4.4,"Ultima":4.2}}
+{"Nome":"Doriva","Clube":{"Nome":"Vasco"},"Posicao":5,"Preco":{"Atual":9.54,"Variacao":0.0},"Pontuacao":{"Media":2.44,"Ultima":1.75}}
+{"Nome":"Douglas","Clube":{"Nome":"Grêmio"},"Posicao":3,"Preco":{"Atual":9.59,"Variacao":0.0},"Pontuacao":{"Media":0.87,"Ultima":5.4}}
+{"Nome":"Douglas Baggio","Clube":{"Nome":"Flamengo"},"Posicao":4,"Preco":{"Atual":1.0,"Variacao":0.0},"Pontuacao":{"Media":0.0,"Ultima":0.0}}
+{"Nome":"Douglas Coutinho","Clube":{"Nome":"Atlético-PR"},"Posicao":4,"Preco":{"Atual":7.96,"Variacao":0.0},"Pontuacao":{"Media":2.33,"Ultima":0.1}}
+{"Nome":"Douglas Grolli","Clube":{"Nome":"Cruzeiro"},"Posicao":2,"Preco":{"Atual":5.0,"Variacao":0.0},"Pontuacao":{"Media":0.0,"Ultima":0.0}}
+{"Nome":"Douglas Santos","Clube":{"Nome":"Atlético-MG"},"Posicao":1,"Preco":{"Atual":5.36,"Variacao":0.0},"Pontuacao":{"Media":1.5,"Ultima":0.0}}
+{"Nome":"Douglas Silva","Clube":{"Nome":"Joinville"},"Posicao":2,"Preco":{"Atual":6.0,"Variacao":0.0},"Pontuacao":{"Media":0.0,"Ultima":0.0}}
+{"Nome":"Dráusio","Clube":{"Nome":"Joinville"},"Posicao":2,"Preco":{"Atual":5.0,"Variacao":0.0},"Pontuacao":{"Media":0.0,"Ultima":0.0}}
+{"Nome":"Dudu","Clube":{"Nome":"Palmeiras"},"Posicao":4,"Preco":{"Atual":13.72,"Variacao":0.0},"Pontuacao":{"Media":2.44,"Ultima":4.8}}
+{"Nome":"Dudu","Clube":{"Nome":"Figueirense"},"Posicao":4,"Preco":{"Atual":3.0,"Variacao":0.0},"Pontuacao":{"Media":-0.55,"Ultima":0.0}}
+{"Nome":"Durval","Clube":{"Nome":"Sport"},"Posicao":2,"Preco":{"Atual":12.81,"Variacao":0.0},"Pontuacao":{"Media":3.66,"Ultima":-0.1}}
+{"Nome":"Eberson","Clube":{"Nome":"Coritiba"},"Posicao":2,"Preco":{"Atual":3.0,"Variacao":0.0},"Pontuacao":{"Media":0.0,"Ultima":0.0}}
+{"Nome":"Edcarlos","Clube":{"Nome":"Atlético-MG"},"Posicao":2,"Preco":{"Atual":4.27,"Variacao":0.0},"Pontuacao":{"Media":1.4,"Ultima":0.0}}
+{"Nome":"Edigar Junio","Clube":{"Nome":"Atlético-PR"},"Posicao":4,"Preco":{"Atual":5.11,"Variacao":0.0},"Pontuacao":{"Media":0.25,"Ultima":0.0}}
+{"Nome":"Edílson","Clube":{"Nome":"Corinthians"},"Posicao":1,"Preco":{"Atual":14.28,"Variacao":0.0},"Pontuacao":{"Media":4.68,"Ultima":0.0}}
+{"Nome":"Edinho","Clube":{"Nome":"Grêmio"},"Posicao":3,"Preco":{"Atual":4.0,"Variacao":0.0},"Pontuacao":{"Media":0.0,"Ultima":0.0}}
+{"Nome":"Edmílson","Clube":{"Nome":"Chapecoense"},"Posicao":4,"Preco":{"Atual":8.87,"Variacao":0.0},"Pontuacao":{"Media":2.68,"Ultima":7.6}}
+{"Nome":"Edson","Clube":{"Nome":"Fluminense"},"Posicao":3,"Preco":{"Atual":22.69,"Variacao":0.0},"Pontuacao":{"Media":5.01,"Ultima":3.5}}
+{"Nome":"Edson Silva","Clube":{"Nome":"São Paulo"},"Posicao":2,"Preco":{"Atual":5.0,"Variacao":0.0},"Pontuacao":{"Media":0.0,"Ultima":0.0}}
+{"Nome":"Edu Dracena","Clube":{"Nome":"Corinthians"},"Posicao":2,"Preco":{"Atual":11.55,"Variacao":0.0},"Pontuacao":{"Media":3.74,"Ultima":-0.6}}
+{"Nome":"Eduardo","Clube":{"Nome":"Internacional"},"Posicao":2,"Preco":{"Atual":3.49,"Variacao":0.0},"Pontuacao":{"Media":2.5,"Ultima":0.0}}
+{"Nome":"Eduardo","Clube":{"Nome":"Atlético-MG"},"Posicao":3,"Preco":{"Atual":4.67,"Variacao":0.0},"Pontuacao":{"Media":4.9,"Ultima":0.0}}
+{"Nome":"Eduardo","Clube":{"Nome":"Atlético-PR"},"Posicao":1,"Preco":{"Atual":8.51,"Variacao":0.0},"Pontuacao":{"Media":3.81,"Ultima":-2.8}}
+{"Nome":"Eduardo","Clube":{"Nome":"Joinville"},"Posicao":3,"Preco":{"Atual":9.0,"Variacao":0.0},"Pontuacao":{"Media":0.0,"Ultima":0.0}}
+{"Nome":"Eduardo Baptista","Clube":{"Nome":"Sport"},"Posicao":5,"Preco":{"Atual":11.08,"Variacao":0.0},"Pontuacao":{"Media":4.29,"Ultima":3.36}}
+{"Nome":"Eduardo Costa","Clube":{"Nome":"Avaí"},"Posicao":3,"Preco":{"Atual":7.02,"Variacao":0.0},"Pontuacao":{"Media":1.7,"Ultima":1.7}}
+{"Nome":"Eduardo Da Silva","Clube":{"Nome":"Flamengo"},"Posicao":4,"Preco":{"Atual":9.15,"Variacao":0.0},"Pontuacao":{"Media":3.0,"Ultima":7.7}}
+{"Nome":"Eduardo Neto","Clube":{"Nome":"Avaí"},"Posicao":3,"Preco":{"Atual":4.61,"Variacao":0.0},"Pontuacao":{"Media":2.12,"Ultima":3.0}}
+{"Nome":"Eduardo Sasha","Clube":{"Nome":"Internacional"},"Posicao":4,"Preco":{"Atual":15.0,"Variacao":0.0},"Pontuacao":{"Media":0.0,"Ultima":0.0}}
+{"Nome":"Egídio","Clube":{"Nome":"Palmeiras"},"Posicao":1,"Preco":{"Atual":11.25,"Variacao":0.0},"Pontuacao":{"Media":2.91,"Ultima":2.9}}
+{"Nome":"Elano","Clube":{"Nome":"Santos"},"Posicao":3,"Preco":{"Atual":10.57,"Variacao":0.0},"Pontuacao":{"Media":2.85,"Ultima":0.0}}
+{"Nome":"Élber","Clube":{"Nome":"Sport"},"Posicao":3,"Preco":{"Atual":19.12,"Variacao":0.0},"Pontuacao":{"Media":5.58,"Ultima":0.0}}
+{"Nome":"Elias","Clube":{"Nome":"Figueirense"},"Posicao":4,"Preco":{"Atual":4.52,"Variacao":0.0},"Pontuacao":{"Media":1.7,"Ultima":0.0}}
+{"Nome":"Elias","Clube":{"Nome":"Corinthians"},"Posicao":3,"Preco":{"Atual":10.88,"Variacao":0.0},"Pontuacao":{"Media":0.0,"Ultima":0.0}}
+{"Nome":"Elicarlos","Clube":{"Nome":"Chapecoense"},"Posicao":3,"Preco":{"Atual":12.91,"Variacao":0.0},"Pontuacao":{"Media":3.07,"Ultima":0.7}}
+{"Nome":"Elisson","Clube":{"Nome":"Cruzeiro"},"Posicao":0,"Preco":{"Atual":1.0,"Variacao":0.0},"Pontuacao":{"Media":0.0,"Ultima":0.0}}
+{"Nome":"Eltinho","Clube":{"Nome":"Avaí"},"Posicao":1,"Preco":{"Atual":0.79,"Variacao":0.0},"Pontuacao":{"Media":-2.1,"Ultima":0.0}}
+{"Nome":"Emanuel Biancucchi","Clube":{"Nome":"Vasco"},"Posicao":3,"Preco":{"Atual":7.77,"Variacao":0.0},"Pontuacao":{"Media":1.1,"Ultima":2.4}}
+{"Nome":"Emerson","Clube":{"Nome":"Avaí"},"Posicao":2,"Preco":{"Atual":2.7,"Variacao":0.0},"Pontuacao":{"Media":2.25,"Ultima":2.0}}
+{"Nome":"Emerson","Clube":{"Nome":"Flamengo"},"Posicao":4,"Preco":{"Atual":10.46,"Variacao":0.0},"Pontuacao":{"Media":-0.4,"Ultima":0.0}}
+{"Nome":"Emerson Conceição","Clube":{"Nome":"Atlético-MG"},"Posicao":1,"Preco":{"Atual":2.0,"Variacao":0.0},"Pontuacao":{"Media":0.0,"Ultima":0.0}}
+{"Nome":"Enderson Moreira","Clube":{"Nome":"Fluminense"},"Posicao":5,"Preco":{"Atual":12.1,"Variacao":0.0},"Pontuacao":{"Media":3.66,"Ultima":1.17}}
+{"Nome":"Erazo","Clube":{"Nome":"Grêmio"},"Posicao":2,"Preco":{"Atual":3.31,"Variacao":0.0},"Pontuacao":{"Media":-0.15,"Ultima":0.0}}
+{"Nome":"Erick Daltro","Clube":{"Nome":"Vasco"},"Posicao":1,"Preco":{"Atual":2.0,"Variacao":0.0},"Pontuacao":{"Media":0.0,"Ultima":0.0}}
+{"Nome":"Erick Samuel","Clube":{"Nome":"Grêmio"},"Posicao":4,"Preco":{"Atual":2.0,"Variacao":0.0},"Pontuacao":{"Media":0.0,"Ultima":0.0}}
+{"Nome":"Érico Júnior","Clube":{"Nome":"Sport"},"Posicao":4,"Preco":{"Atual":3.0,"Variacao":0.0},"Pontuacao":{"Media":0.0,"Ultima":0.0}}
+{"Nome":"Erik","Clube":{"Nome":"Goiás"},"Posicao":4,"Preco":{"Atual":10.84,"Variacao":0.0},"Pontuacao":{"Media":1.23,"Ultima":0.0}}
+{"Nome":"Eriks","Clube":{"Nome":"Internacional"},"Posicao":2,"Preco":{"Atual":2.0,"Variacao":0.0},"Pontuacao":{"Media":0.0,"Ultima":0.0}}
+{"Nome":"Ernando","Clube":{"Nome":"Internacional"},"Posicao":2,"Preco":{"Atual":8.27,"Variacao":0.0},"Pontuacao":{"Media":4.23,"Ultima":3.6}}
+{"Nome":"Eron","Clube":{"Nome":"Atlético-MG"},"Posicao":1,"Preco":{"Atual":1.0,"Variacao":0.0},"Pontuacao":{"Media":0.0,"Ultima":0.0}}
+{"Nome":"Esquerdinha","Clube":{"Nome":"Coritiba"},"Posicao":3,"Preco":{"Atual":6.72,"Variacao":0.0},"Pontuacao":{"Media":-0.5,"Ultima":0.0}}
+{"Nome":"Eurico","Clube":{"Nome":"Cruzeiro"},"Posicao":3,"Preco":{"Atual":2.16,"Variacao":0.0},"Pontuacao":{"Media":-0.05,"Ultima":0.0}}
+{"Nome":"Evandro","Clube":{"Nome":"Sport"},"Posicao":1,"Preco":{"Atual":3.0,"Variacao":0.0},"Pontuacao":{"Media":0.0,"Ultima":0.0}}
+{"Nome":"Everaldo","Clube":{"Nome":"Figueirense"},"Posicao":4,"Preco":{"Atual":3.89,"Variacao":0.0},"Pontuacao":{"Media":0.98,"Ultima":0.0}}
+{"Nome":"Everton","Clube":{"Nome":"Grêmio"},"Posicao":4,"Preco":{"Atual":4.83,"Variacao":0.0},"Pontuacao":{"Media":1.37,"Ultima":0.0}}
+{"Nome":"Everton","Clube":{"Nome":"Goiás"},"Posicao":1,"Preco":{"Atual":6.69,"Variacao":0.0},"Pontuacao":{"Media":2.07,"Ultima":0.0}}
+{"Nome":"Everton","Clube":{"Nome":"Flamengo"},"Posicao":3,"Preco":{"Atual":22.11,"Variacao":0.0},"Pontuacao":{"Media":3.27,"Ultima":0.2}}
+{"Nome":"Everton Silva","Clube":{"Nome":"Avaí"},"Posicao":1,"Preco":{"Atual":2.77,"Variacao":0.0},"Pontuacao":{"Media":-0.5,"Ultima":0.0}}
+{"Nome":"Ewandro","Clube":{"Nome":"São Paulo"},"Posicao":4,"Preco":{"Atual":3.0,"Variacao":0.0},"Pontuacao":{"Media":0.0,"Ultima":0.0}}
+{"Nome":"Ewerton Páscoa","Clube":{"Nome":"Sport"},"Posicao":2,"Preco":{"Atual":5.68,"Variacao":0.0},"Pontuacao":{"Media":-0.3,"Ultima":-0.3}}
+{"Nome":"Fabiano","Clube":{"Nome":"Cruzeiro"},"Posicao":1,"Preco":{"Atual":4.41,"Variacao":0.0},"Pontuacao":{"Media":0.8,"Ultima":1.4}}
+{"Nome":"Fabinho","Clube":{"Nome":"Joinville"},"Posicao":4,"Preco":{"Atual":7.0,"Variacao":0.0},"Pontuacao":{"Media":0.0,"Ultima":0.0}}
+{"Nome":"Fabinho","Clube":{"Nome":"Figueirense"},"Posicao":3,"Preco":{"Atual":3.66,"Variacao":0.0},"Pontuacao":{"Media":1.58,"Ultima":0.0}}
+{"Nome":"Fabio","Clube":{"Nome":"Palmeiras"},"Posicao":0,"Preco":{"Atual":3.0,"Variacao":0.0},"Pontuacao":{"Media":0.0,"Ultima":0.0}}
+{"Nome":"Fábio","Clube":{"Nome":"Cruzeiro"},"Posicao":0,"Preco":{"Atual":10.97,"Variacao":0.0},"Pontuacao":{"Media":1.62,"Ultima":1.0}}
+{"Nome":"Fábio Santos","Clube":{"Nome":"Corinthians"},"Posicao":1,"Preco":{"Atual":15.85,"Variacao":0.0},"Pontuacao":{"Media":4.92,"Ultima":-1.7}}
+{"Nome":"Fabrício","Clube":{"Nome":"Cruzeiro"},"Posicao":1,"Preco":{"Atual":8.34,"Variacao":0.0},"Pontuacao":{"Media":-1.45,"Ultima":0.0}}
+{"Nome":"Fabrício Baiano","Clube":{"Nome":"Coritiba"},"Posicao":3,"Preco":{"Atual":0.82,"Variacao":0.0},"Pontuacao":{"Media":-1.9,"Ultima":-2.4}}
+{"Nome":"Fagner","Clube":{"Nome":"Corinthians"},"Posicao":1,"Preco":{"Atual":10.61,"Variacao":0.0},"Pontuacao":{"Media":2.85,"Ultima":0.7}}
+{"Nome":"Felipe","Clube":{"Nome":"Atlético-PR"},"Posicao":3,"Preco":{"Atual":10.17,"Variacao":0.0},"Pontuacao":{"Media":1.73,"Ultima":1.4}}
+{"Nome":"Felipe","Clube":{"Nome":"Corinthians"},"Posicao":2,"Preco":{"Atual":8.0,"Variacao":0.0},"Pontuacao":{"Media":0.0,"Ultima":0.0}}
+{"Nome":"Felipe","Clube":{"Nome":"Figueirense"},"Posicao":0,"Preco":{"Atual":10.0,"Variacao":0.0},"Pontuacao":{"Media":0.0,"Ultima":0.0}}
+{"Nome":"Felipe Azevedo","Clube":{"Nome":"Ponte Preta"},"Posicao":4,"Preco":{"Atual":4.76,"Variacao":0.0},"Pontuacao":{"Media":0.71,"Ultima":-0.6}}
+{"Nome":"Felipe Macedo","Clube":{"Nome":"Goiás"},"Posicao":2,"Preco":{"Atual":12.16,"Variacao":0.0},"Pontuacao":{"Media":3.83,"Ultima":9.0}}
+{"Nome":"Felipe Menezes","Clube":{"Nome":"Goiás"},"Posicao":3,"Preco":{"Atual":10.79,"Variacao":0.0},"Pontuacao":{"Media":2.75,"Ultima":3.4}}
+{"Nome":"Felipe Saturnino","Clube":{"Nome":"Goiás"},"Posicao":1,"Preco":{"Atual":4.0,"Variacao":0.0},"Pontuacao":{"Media":0.0,"Ultima":0.0}}
+{"Nome":"Felipe Zang","Clube":{"Nome":"Chapecoense"},"Posicao":2,"Preco":{"Atual":2.0,"Variacao":0.0},"Pontuacao":{"Media":0.0,"Ultima":0.0}}
+{"Nome":"Fellipe Bastos","Clube":{"Nome":"Grêmio"},"Posicao":3,"Preco":{"Atual":7.35,"Variacao":0.0},"Pontuacao":{"Media":0.64,"Ultima":0.0}}
+{"Nome":"Fellype Gabriel","Clube":{"Nome":"Palmeiras"},"Posicao":3,"Preco":{"Atual":10.0,"Variacao":0.0},"Pontuacao":{"Media":0.0,"Ultima":0.0}}
+{"Nome":"Fernando Bob","Clube":{"Nome":"Ponte Preta"},"Posicao":3,"Preco":{"Atual":16.28,"Variacao":0.0},"Pontuacao":{"Media":4.2,"Ultima":7.5}}
+{"Nome":"Fernando Prass","Clube":{"Nome":"Palmeiras"},"Posicao":0,"Preco":{"Atual":12.79,"Variacao":0.0},"Pontuacao":{"Media":3.64,"Ultima":3.7}}
+{"Nome":"Fernando Viana","Clube":{"Nome":"Joinville"},"Posicao":4,"Preco":{"Atual":4.0,"Variacao":0.0},"Pontuacao":{"Media":0.0,"Ultima":0.0}}
+{"Nome":"Ferron","Clube":{"Nome":"Figueirense"},"Posicao":2,"Preco":{"Atual":7.0,"Variacao":0.0},"Pontuacao":{"Media":0.0,"Ultima":0.0}}
+{"Nome":"França","Clube":{"Nome":"Figueirense"},"Posicao":3,"Preco":{"Atual":9.0,"Variacao":0.0},"Pontuacao":{"Media":0.0,"Ultima":0.0}}
+{"Nome":"Frauches","Clube":{"Nome":"Flamengo"},"Posicao":2,"Preco":{"Atual":2.83,"Variacao":0.0},"Pontuacao":{"Media":4.4,"Ultima":0.0}}
+{"Nome":"Fred","Clube":{"Nome":"Fluminense"},"Posicao":4,"Preco":{"Atual":25.42,"Variacao":0.0},"Pontuacao":{"Media":6.23,"Ultima":0.0}}
+{"Nome":"Fred","Clube":{"Nome":"Goiás"},"Posicao":2,"Preco":{"Atual":4.75,"Variacao":0.0},"Pontuacao":{"Media":3.63,"Ultima":6.2}}
+{"Nome":"Gabriel","Clube":{"Nome":"Flamengo"},"Posicao":3,"Preco":{"Atual":7.45,"Variacao":0.0},"Pontuacao":{"Media":2.99,"Ultima":-0.5}}
+{"Nome":"Gabriel","Clube":{"Nome":"Atlético-MG"},"Posicao":2,"Preco":{"Atual":1.0,"Variacao":0.0},"Pontuacao":{"Media":0.0,"Ultima":0.0}}
+{"Nome":"Gabriel","Clube":{"Nome":"Palmeiras"},"Posicao":3,"Preco":{"Atual":13.27,"Variacao":0.0},"Pontuacao":{"Media":3.7,"Ultima":3.6}}
+{"Nome":"Gabriel","Clube":{"Nome":"Santos"},"Posicao":4,"Preco":{"Atual":7.01,"Variacao":0.0},"Pontuacao":{"Media":0.55,"Ultima":0.0}}
+{"Nome":"Gabriel","Clube":{"Nome":"Grêmio"},"Posicao":2,"Preco":{"Atual":4.0,"Variacao":0.0},"Pontuacao":{"Media":0.0,"Ultima":0.0}}
+{"Nome":"Gabriel Félix","Clube":{"Nome":"Vasco"},"Posicao":0,"Preco":{"Atual":1.0,"Variacao":0.0},"Pontuacao":{"Media":0.0,"Ultima":0.0}}
+{"Nome":"Gabriel Gasparotto","Clube":{"Nome":"Santos"},"Posicao":0,"Preco":{"Atual":2.0,"Variacao":0.0},"Pontuacao":{"Media":0.0,"Ultima":0.0}}
+{"Nome":"Gabriel Jesus","Clube":{"Nome":"Palmeiras"},"Posicao":4,"Preco":{"Atual":4.43,"Variacao":0.0},"Pontuacao":{"Media":-0.4,"Ultima":0.0}}
+{"Nome":"Gabriel Leite","Clube":{"Nome":"Palmeiras"},"Posicao":3,"Preco":{"Atual":1.0,"Variacao":0.0},"Pontuacao":{"Media":0.0,"Ultima":0.0}}
+{"Nome":"Gabriel Silva","Clube":{"Nome":"Grêmio"},"Posicao":2,"Preco":{"Atual":1.0,"Variacao":0.0},"Pontuacao":{"Media":0.0,"Ultima":0.0}}
+{"Nome":"Gabriel Xavier","Clube":{"Nome":"Cruzeiro"},"Posicao":3,"Preco":{"Atual":7.16,"Variacao":0.0},"Pontuacao":{"Media":2.48,"Ultima":0.0}}
+{"Nome":"Ganso","Clube":{"Nome":"São Paulo"},"Posicao":3,"Preco":{"Atual":15.32,"Variacao":0.0},"Pontuacao":{"Media":2.58,"Ultima":0.0}}
+{"Nome":"Geandro","Clube":{"Nome":"Joinville"},"Posicao":3,"Preco":{"Atual":6.0,"Variacao":0.0},"Pontuacao":{"Media":0.0,"Ultima":0.0}}
+{"Nome":"Geferson","Clube":{"Nome":"Internacional"},"Posicao":1,"Preco":{"Atual":2.67,"Variacao":0.0},"Pontuacao":{"Media":3.1,"Ultima":0.0}}
+{"Nome":"Gelson","Clube":{"Nome":"Goiás"},"Posicao":3,"Preco":{"Atual":2.0,"Variacao":0.0},"Pontuacao":{"Media":0.0,"Ultima":0.0}}
+{"Nome":"Gerson","Clube":{"Nome":"Fluminense"},"Posicao":3,"Preco":{"Atual":13.28,"Variacao":0.0},"Pontuacao":{"Media":2.16,"Ultima":0.4}}
+{"Nome":"Geuvânio","Clube":{"Nome":"Santos"},"Posicao":4,"Preco":{"Atual":19.24,"Variacao":0.0},"Pontuacao":{"Media":5.08,"Ultima":0.0}}
+{"Nome":"Gil","Clube":{"Nome":"Chapecoense"},"Posicao":3,"Preco":{"Atual":11.18,"Variacao":0.0},"Pontuacao":{"Media":3.36,"Ultima":1.7}}
+{"Nome":"Gil","Clube":{"Nome":"Corinthians"},"Posicao":2,"Preco":{"Atual":19.26,"Variacao":0.0},"Pontuacao":{"Media":3.4,"Ultima":-0.9}}
+{"Nome":"Gilberto","Clube":{"Nome":"Vasco"},"Posicao":4,"Preco":{"Atual":4.68,"Variacao":0.0},"Pontuacao":{"Media":0.12,"Ultima":0.9}}
+{"Nome":"Gilson","Clube":{"Nome":"Ponte Preta"},"Posicao":1,"Preco":{"Atual":14.77,"Variacao":0.0},"Pontuacao":{"Media":4.63,"Ultima":7.7}}
+{"Nome":"Gilson Kleina","Clube":{"Nome":"Avaí"},"Posicao":5,"Preco":{"Atual":5.43,"Variacao":0.0},"Pontuacao":{"Media":2.22,"Ultima":0.95}}
+{"Nome":"Giovanni","Clube":{"Nome":"Atlético-PR"},"Posicao":3,"Preco":{"Atual":3.11,"Variacao":0.0},"Pontuacao":{"Media":1.3,"Ultima":0.9}}
+{"Nome":"Giovanni","Clube":{"Nome":"Fluminense"},"Posicao":1,"Preco":{"Atual":14.52,"Variacao":0.0},"Pontuacao":{"Media":3.8,"Ultima":1.8}}
+{"Nome":"Giovanni","Clube":{"Nome":"Atlético-MG"},"Posicao":0,"Preco":{"Atual":3.0,"Variacao":0.0},"Pontuacao":{"Media":0.0,"Ultima":0.0}}
+{"Nome":"Giovanni Augusto","Clube":{"Nome":"Atlético-MG"},"Posicao":3,"Preco":{"Atual":5.89,"Variacao":0.0},"Pontuacao":{"Media":1.58,"Ultima":0.0}}
+{"Nome":"Giuliano","Clube":{"Nome":"Grêmio"},"Posicao":3,"Preco":{"Atual":15.8,"Variacao":0.0},"Pontuacao":{"Media":6.06,"Ultima":6.0}}
+{"Nome":"Giva","Clube":{"Nome":"Coritiba"},"Posicao":4,"Preco":{"Atual":3.96,"Variacao":0.0},"Pontuacao":{"Media":-0.3,"Ultima":0.0}}
+{"Nome":"Guilherme","Clube":{"Nome":"Atlético-MG"},"Posicao":3,"Preco":{"Atual":13.97,"Variacao":0.0},"Pontuacao":{"Media":0.4,"Ultima":0.0}}
+{"Nome":"Guilherme","Clube":{"Nome":"Corinthians"},"Posicao":0,"Preco":{"Atual":2.0,"Variacao":0.0},"Pontuacao":{"Media":0.0,"Ultima":0.0}}
+{"Nome":"Guilherme Andrade","Clube":{"Nome":"Corinthians"},"Posicao":1,"Preco":{"Atual":3.0,"Variacao":0.0},"Pontuacao":{"Media":0.0,"Ultima":0.0}}
+{"Nome":"Guilherme Arana","Clube":{"Nome":"Atlético-PR"},"Posicao":1,"Preco":{"Atual":5.53,"Variacao":0.0},"Pontuacao":{"Media":6.03,"Ultima":3.3}}
+{"Nome":"Guilherme Batata","Clube":{"Nome":"Atlético-PR"},"Posicao":3,"Preco":{"Atual":3.0,"Variacao":0.0},"Pontuacao":{"Media":0.0,"Ultima":0.0}}
+{"Nome":"Guilherme Lazaroni","Clube":{"Nome":"Figueirense"},"Posicao":1,"Preco":{"Atual":4.0,"Variacao":0.0},"Pontuacao":{"Media":0.0,"Ultima":0.0}}
+{"Nome":"Guilherme Mattis","Clube":{"Nome":"Fluminense"},"Posicao":2,"Preco":{"Atual":5.0,"Variacao":0.0},"Pontuacao":{"Media":0.0,"Ultima":0.0}}
+{"Nome":"Guilherme Santos","Clube":{"Nome":"Avaí"},"Posicao":1,"Preco":{"Atual":5.0,"Variacao":0.0},"Pontuacao":{"Media":0.0,"Ultima":0.0}}
+{"Nome":"Guiñazu","Clube":{"Nome":"Vasco"},"Posicao":3,"Preco":{"Atual":16.34,"Variacao":0.0},"Pontuacao":{"Media":3.4,"Ultima":5.4}}
+{"Nome":"Gum","Clube":{"Nome":"Fluminense"},"Posicao":2,"Preco":{"Atual":13.91,"Variacao":0.0},"Pontuacao":{"Media":2.81,"Ultima":-7.0}}
+{"Nome":"Gustavo","Clube":{"Nome":"Atlético-PR"},"Posicao":2,"Preco":{"Atual":9.48,"Variacao":0.0},"Pontuacao":{"Media":3.19,"Ultima":0.0}}
+{"Nome":"Gustavo Ferrareis","Clube":{"Nome":"Internacional"},"Posicao":4,"Preco":{"Atual":2.0,"Variacao":0.0},"Pontuacao":{"Media":0.0,"Ultima":0.0}}
+{"Nome":"Gustavo Henrique","Clube":{"Nome":"Santos"},"Posicao":2,"Preco":{"Atual":0.79,"Variacao":0.0},"Pontuacao":{"Media":-6.6,"Ultima":0.0}}
+{"Nome":"Gustavo Marmentini","Clube":{"Nome":"Atlético-PR"},"Posicao":3,"Preco":{"Atual":1.0,"Variacao":0.0},"Pontuacao":{"Media":0.0,"Ultima":0.0}}
+{"Nome":"Gustavo Scarpa","Clube":{"Nome":"Fluminense"},"Posicao":3,"Preco":{"Atual":3.0,"Variacao":0.0},"Pontuacao":{"Media":0.0,"Ultima":0.0}}
+{"Nome":"Gustavo Tocantins","Clube":{"Nome":"Corinthians"},"Posicao":4,"Preco":{"Atual":3.0,"Variacao":0.0},"Pontuacao":{"Media":0.0,"Ultima":0.0}}
+{"Nome":"Guti","Clube":{"Nome":"Joinville"},"Posicao":2,"Preco":{"Atual":8.69,"Variacao":0.0},"Pontuacao":{"Media":2.33,"Ultima":-1.2}}
+{"Nome":"Guto Ferreira","Clube":{"Nome":"Ponte Preta"},"Posicao":5,"Preco":{"Atual":13.07,"Variacao":0.0},"Pontuacao":{"Media":4.97,"Ultima":4.33}}
+{"Nome":"Harrison","Clube":{"Nome":"Atlético-PR"},"Posicao":3,"Preco":{"Atual":4.0,"Variacao":0.0},"Pontuacao":{"Media":0.0,"Ultima":0.0}}
+{"Nome":"Hélder","Clube":{"Nome":"Coritiba"},"Posicao":3,"Preco":{"Atual":6.94,"Variacao":0.0},"Pontuacao":{"Media":1.02,"Ultima":0.5}}
+{"Nome":"Hélio Dos Anjos","Clube":{"Nome":"Goiás"},"Posicao":5,"Preco":{"Atual":8.05,"Variacao":0.0},"Pontuacao":{"Media":3.23,"Ultima":5.89}}
+{"Nome":"Hemerson Maria","Clube":{"Nome":"Joinville"},"Posicao":5,"Preco":{"Atual":5.56,"Variacao":0.0},"Pontuacao":{"Media":2.1,"Ultima":2.86}}
+{"Nome":"Henrique","Clube":{"Nome":"Cruzeiro"},"Posicao":3,"Preco":{"Atual":12.82,"Variacao":0.0},"Pontuacao":{"Media":6.23,"Ultima":0.0}}
+{"Nome":"Henrique","Clube":{"Nome":"Vasco"},"Posicao":1,"Preco":{"Atual":5.0,"Variacao":0.0},"Pontuacao":{"Media":0.0,"Ultima":0.0}}
+{"Nome":"Henrique","Clube":{"Nome":"Coritiba"},"Posicao":1,"Preco":{"Atual":0.82,"Variacao":0.0},"Pontuacao":{"Media":-1.77,"Ultima":-2.3}}
+{"Nome":"Henrique","Clube":{"Nome":"Figueirense"},"Posicao":2,"Preco":{"Atual":1.98,"Variacao":0.0},"Pontuacao":{"Media":1.5,"Ultima":0.0}}
+{"Nome":"Henrique","Clube":{"Nome":"Fluminense"},"Posicao":2,"Preco":{"Atual":4.94,"Variacao":0.0},"Pontuacao":{"Media":0.0,"Ultima":0.0}}
+{"Nome":"Henrique Dourado","Clube":{"Nome":"Cruzeiro"},"Posicao":4,"Preco":{"Atual":4.32,"Variacao":0.0},"Pontuacao":{"Media":0.55,"Ultima":0.0}}
+{"Nome":"Henrique Mattos","Clube":{"Nome":"Sport"},"Posicao":2,"Preco":{"Atual":5.0,"Variacao":0.0},"Pontuacao":{"Media":0.0,"Ultima":0.0}}
+{"Nome":"Heracles","Clube":{"Nome":"Joinville"},"Posicao":1,"Preco":{"Atual":3.92,"Variacao":0.0},"Pontuacao":{"Media":1.8,"Ultima":0.0}}
+{"Nome":"Hernane","Clube":{"Nome":"Sport"},"Posicao":4,"Preco":{"Atual":13.0,"Variacao":0.0},"Pontuacao":{"Media":0.0,"Ultima":0.0}}
+{"Nome":"Hernani","Clube":{"Nome":"Atlético-PR"},"Posicao":3,"Preco":{"Atual":4.78,"Variacao":0.0},"Pontuacao":{"Media":1.67,"Ultima":6.6}}
+{"Nome":"Horácio","Clube":{"Nome":"Sport"},"Posicao":3,"Preco":{"Atual":2.0,"Variacao":0.0},"Pontuacao":{"Media":0.0,"Ultima":0.0}}
+{"Nome":"Hudson","Clube":{"Nome":"São Paulo"},"Posicao":3,"Preco":{"Atual":1.19,"Variacao":0.0},"Pontuacao":{"Media":-0.43,"Ultima":-4.9}}
+{"Nome":"Hugo","Clube":{"Nome":"Avaí"},"Posicao":4,"Preco":{"Atual":9.43,"Variacao":0.0},"Pontuacao":{"Media":5.9,"Ultima":0.0}}
+{"Nome":"Hugo Gumiero","Clube":{"Nome":"Atlético-PR"},"Posicao":0,"Preco":{"Atual":2.0,"Variacao":0.0},"Pontuacao":{"Media":0.0,"Ultima":0.0}}
+{"Nome":"Hyoran","Clube":{"Nome":"Chapecoense"},"Posicao":3,"Preco":{"Atual":4.46,"Variacao":0.0},"Pontuacao":{"Media":0.78,"Ultima":0.0}}
+{"Nome":"Ian","Clube":{"Nome":"Ponte Preta"},"Posicao":3,"Preco":{"Atual":2.0,"Variacao":0.0},"Pontuacao":{"Media":0.0,"Ultima":0.0}}
+{"Nome":"Ícaro","Clube":{"Nome":"Coritiba"},"Posicao":3,"Preco":{"Atual":2.31,"Variacao":0.0},"Pontuacao":{"Media":-0.5,"Ultima":0.0}}
+{"Nome":"Igor","Clube":{"Nome":"Chapecoense"},"Posicao":2,"Preco":{"Atual":2.0,"Variacao":0.0},"Pontuacao":{"Media":0.0,"Ultima":0.0}}
+{"Nome":"Igor","Clube":{"Nome":"Joinville"},"Posicao":2,"Preco":{"Atual":1.0,"Variacao":0.0},"Pontuacao":{"Media":0.0,"Ultima":0.0}}
+{"Nome":"Igor Julião","Clube":{"Nome":"Fluminense"},"Posicao":1,"Preco":{"Atual":3.0,"Variacao":0.0},"Pontuacao":{"Media":0.0,"Ultima":0.0}}
+{"Nome":"Ítalo","Clube":{"Nome":"Joinville"},"Posicao":3,"Preco":{"Atual":1.79,"Variacao":0.0},"Pontuacao":{"Media":0.5,"Ultima":0.0}}
+{"Nome":"Ítalo","Clube":{"Nome":"Sport"},"Posicao":4,"Preco":{"Atual":2.0,"Variacao":0.0},"Pontuacao":{"Media":0.0,"Ultima":0.0}}
+{"Nome":"Iury","Clube":{"Nome":"Avaí"},"Posicao":4,"Preco":{"Atual":1.0,"Variacao":0.0},"Pontuacao":{"Media":0.0,"Ultima":0.0}}
+{"Nome":"Ivan","Clube":{"Nome":"Coritiba"},"Posicao":1,"Preco":{"Atual":6.13,"Variacao":0.0},"Pontuacao":{"Media":2.2,"Ultima":6.0}}
+{"Nome":"Ivan","Clube":{"Nome":"Ponte Preta"},"Posicao":0,"Preco":{"Atual":2.0,"Variacao":0.0},"Pontuacao":{"Media":0.0,"Ultima":0.0}}
+{"Nome":"Jackson","Clube":{"Nome":"Palmeiras"},"Posicao":2,"Preco":{"Atual":4.79,"Variacao":0.0},"Pontuacao":{"Media":3.4,"Ultima":0.0}}
+{"Nome":"Jackson Caucaia","Clube":{"Nome":"Vasco"},"Posicao":3,"Preco":{"Atual":4.7,"Variacao":0.0},"Pontuacao":{"Media":4.23,"Ultima":2.8}}
+{"Nome":"Jacsson","Clube":{"Nome":"Internacional"},"Posicao":0,"Preco":{"Atual":1.0,"Variacao":0.0},"Pontuacao":{"Media":0.0,"Ultima":0.0}}
+{"Nome":"Jadson","Clube":{"Nome":"Corinthians"},"Posicao":3,"Preco":{"Atual":18.73,"Variacao":0.0},"Pontuacao":{"Media":5.05,"Ultima":8.6}}
+{"Nome":"Jadson","Clube":{"Nome":"Atlético-PR"},"Posicao":3,"Preco":{"Atual":2.77,"Variacao":0.0},"Pontuacao":{"Media":-1.12,"Ultima":0.0}}
+{"Nome":"Jael","Clube":{"Nome":"Joinville"},"Posicao":4,"Preco":{"Atual":4.94,"Variacao":0.0},"Pontuacao":{"Media":0.07,"Ultima":-0.5}}
+{"Nome":"Jailson","Clube":{"Nome":"Palmeiras"},"Posicao":0,"Preco":{"Atual":1.0,"Variacao":0.0},"Pontuacao":{"Media":0.0,"Ultima":0.0}}
+{"Nome":"Jair","Clube":{"Nome":"Internacional"},"Posicao":3,"Preco":{"Atual":4.0,"Variacao":0.0},"Pontuacao":{"Media":0.0,"Ultima":0.0}}
+{"Nome":"Jajá","Clube":{"Nome":"Flamengo"},"Posicao":3,"Preco":{"Atual":1.0,"Variacao":0.0},"Pontuacao":{"Media":0.0,"Ultima":0.0}}
+{"Nome":"Jajá","Clube":{"Nome":"Chapecoense"},"Posicao":3,"Preco":{"Atual":1.0,"Variacao":0.0},"Pontuacao":{"Media":0.0,"Ultima":0.0}}
+{"Nome":"James Dean","Clube":{"Nome":"Sport"},"Posicao":4,"Preco":{"Atual":1.0,"Variacao":0.0},"Pontuacao":{"Media":0.0,"Ultima":0.0}}
+{"Nome":"James Freitas","Clube":{"Nome":"Grêmio"},"Posicao":5,"Preco":{"Atual":10.52,"Variacao":0.0},"Pontuacao":{"Media":4.35,"Ultima":4.35}}
+{"Nome":"Jarlan","Clube":{"Nome":"Goiás"},"Posicao":4,"Preco":{"Atual":0.82,"Variacao":0.0},"Pontuacao":{"Media":-3.3,"Ultima":0.0}}
+{"Nome":"Jatobá","Clube":{"Nome":"Figueirense"},"Posicao":2,"Preco":{"Atual":1.0,"Variacao":0.0},"Pontuacao":{"Media":0.0,"Ultima":0.0}}
+{"Nome":"Jayme De Almeida","Clube":{"Nome":"Flamengo"},"Posicao":5,"Preco":{"Atual":10.11,"Variacao":0.0},"Pontuacao":{"Media":0.0,"Ultima":0.0}}
+{"Nome":"Jean","Clube":{"Nome":"Fluminense"},"Posicao":3,"Preco":{"Atual":14.82,"Variacao":0.0},"Pontuacao":{"Media":1.57,"Ultima":3.8}}
+{"Nome":"Jean Deretti","Clube":{"Nome":"Figueirense"},"Posicao":3,"Preco":{"Atual":3.88,"Variacao":0.0},"Pontuacao":{"Media":-1.1,"Ultima":0.0}}
+{"Nome":"Jean Felipe","Clube":{"Nome":"Atlético-PR"},"Posicao":1,"Preco":{"Atual":1.0,"Variacao":0.0},"Pontuacao":{"Media":0.0,"Ultima":0.0}}
+{"Nome":"Jean Patrick","Clube":{"Nome":"Vasco"},"Posicao":3,"Preco":{"Atual":6.0,"Variacao":0.0},"Pontuacao":{"Media":0.0,"Ultima":0.0}}
+{"Nome":"Jéci","Clube":{"Nome":"Avaí"},"Posicao":2,"Preco":{"Atual":2.72,"Variacao":0.0},"Pontuacao":{"Media":0.43,"Ultima":-1.1}}
+{"Nome":"Jeferson","Clube":{"Nome":"Ponte Preta"},"Posicao":1,"Preco":{"Atual":1.0,"Variacao":0.0},"Pontuacao":{"Media":0.0,"Ultima":0.0}}
+{"Nome":"Jefferson","Clube":{"Nome":"Figueirense"},"Posicao":3,"Preco":{"Atual":5.88,"Variacao":0.0},"Pontuacao":{"Media":1.43,"Ultima":0.0}}
+{"Nome":"Jemerson","Clube":{"Nome":"Atlético-MG"},"Posicao":2,"Preco":{"Atual":16.68,"Variacao":0.0},"Pontuacao":{"Media":4.9,"Ultima":0.0}}
+{"Nome":"Jesiel","Clube":{"Nome":"Atlético-MG"},"Posicao":2,"Preco":{"Atual":1.0,"Variacao":0.0},"Pontuacao":{"Media":0.0,"Ultima":0.0}}
+{"Nome":"Jhon Cley","Clube":{"Nome":"Vasco"},"Posicao":3,"Preco":{"Atual":5.21,"Variacao":0.0},"Pontuacao":{"Media":0.77,"Ultima":0.9}}
+{"Nome":"Jhonatan","Clube":{"Nome":"Joinville"},"Posicao":0,"Preco":{"Atual":1.0,"Variacao":0.0},"Pontuacao":{"Media":0.0,"Ultima":0.0}}
+{"Nome":"Jô","Clube":{"Nome":"Atlético-MG"},"Posicao":4,"Preco":{"Atual":11.32,"Variacao":0.0},"Pontuacao":{"Media":2.8,"Ultima":0.0}}
+{"Nome":"João Afonso","Clube":{"Nome":"Chapecoense"},"Posicao":3,"Preco":{"Atual":4.0,"Variacao":0.0},"Pontuacao":{"Media":0.0,"Ultima":0.0}}
+{"Nome":"João Carlos","Clube":{"Nome":"Ponte Preta"},"Posicao":0,"Preco":{"Atual":1.0,"Variacao":0.0},"Pontuacao":{"Media":0.0,"Ultima":0.0}}
+{"Nome":"João Filipe","Clube":{"Nome":"Fluminense"},"Posicao":2,"Preco":{"Atual":6.0,"Variacao":0.0},"Pontuacao":{"Media":0.0,"Ultima":0.0}}
+{"Nome":"João Paulo","Clube":{"Nome":"São Paulo"},"Posicao":4,"Preco":{"Atual":1.34,"Variacao":0.0},"Pontuacao":{"Media":-0.15,"Ultima":0.0}}
+{"Nome":"João Paulo","Clube":{"Nome":"Palmeiras"},"Posicao":1,"Preco":{"Atual":7.0,"Variacao":0.0},"Pontuacao":{"Media":0.0,"Ultima":0.0}}
+{"Nome":"João Paulo","Clube":{"Nome":"Coritiba"},"Posicao":3,"Preco":{"Atual":2.63,"Variacao":0.0},"Pontuacao":{"Media":-0.45,"Ultima":0.0}}
+{"Nome":"João Paulo","Clube":{"Nome":"Santos"},"Posicao":0,"Preco":{"Atual":1.0,"Variacao":0.0},"Pontuacao":{"Media":0.0,"Ultima":0.0}}
+{"Nome":"João Paulo","Clube":{"Nome":"Ponte Preta"},"Posicao":1,"Preco":{"Atual":6.0,"Variacao":0.0},"Pontuacao":{"Media":0.0,"Ultima":0.0}}
+{"Nome":"João Paulo","Clube":{"Nome":"Chapecoense"},"Posicao":0,"Preco":{"Atual":1.0,"Variacao":0.0},"Pontuacao":{"Media":0.0,"Ultima":0.0}}
+{"Nome":"João Pedro","Clube":{"Nome":"Palmeiras"},"Posicao":1,"Preco":{"Atual":4.0,"Variacao":0.0},"Pontuacao":{"Media":0.0,"Ultima":0.0}}
+{"Nome":"João Pedro","Clube":{"Nome":"Atlético-PR"},"Posicao":3,"Preco":{"Atual":1.0,"Variacao":0.0},"Pontuacao":{"Media":0.0,"Ultima":0.0}}
+{"Nome":"Joãozinho","Clube":{"Nome":"Joinville"},"Posicao":1,"Preco":{"Atual":2.0,"Variacao":0.0},"Pontuacao":{"Media":0.0,"Ultima":0.0}}
+{"Nome":"Joel","Clube":{"Nome":"Cruzeiro"},"Posicao":4,"Preco":{"Atual":4.35,"Variacao":0.0},"Pontuacao":{"Media":0.04,"Ultima":-1.8}}
+{"Nome":"Joelinton","Clube":{"Nome":"Sport"},"Posicao":4,"Preco":{"Atual":14.15,"Variacao":0.0},"Pontuacao":{"Media":5.54,"Ultima":1.8}}
+{"Nome":"Jomar","Clube":{"Nome":"Vasco"},"Posicao":2,"Preco":{"Atual":4.0,"Variacao":0.0},"Pontuacao":{"Media":0.0,"Ultima":0.0}}
+{"Nome":"Jonas","Clube":{"Nome":"Flamengo"},"Posicao":3,"Preco":{"Atual":11.01,"Variacao":0.0},"Pontuacao":{"Media":2.84,"Ultima":-3.1}}
+{"Nome":"Jonatan Lucca","Clube":{"Nome":"Atlético-PR"},"Posicao":3,"Preco":{"Atual":3.0,"Variacao":0.0},"Pontuacao":{"Media":0.0,"Ultima":0.0}}
+{"Nome":"Jonatan Ponciano","Clube":{"Nome":"Figueirense"},"Posicao":4,"Preco":{"Atual":2.0,"Variacao":0.0},"Pontuacao":{"Media":0.0,"Ultima":0.0}}
+{"Nome":"Jonatas Paulista","Clube":{"Nome":"Vasco"},"Posicao":3,"Preco":{"Atual":1.0,"Variacao":0.0},"Pontuacao":{"Media":0.0,"Ultima":0.0}}
+{"Nome":"Jonathan","Clube":{"Nome":"Ponte Preta"},"Posicao":2,"Preco":{"Atual":2.0,"Variacao":0.0},"Pontuacao":{"Media":0.0,"Ultima":0.0}}
+{"Nome":"Jonathan Cafu","Clube":{"Nome":"São Paulo"},"Posicao":4,"Preco":{"Atual":3.41,"Variacao":0.0},"Pontuacao":{"Media":0.5,"Ultima":0.0}}
+{"Nome":"Jordi","Clube":{"Nome":"Vasco"},"Posicao":0,"Preco":{"Atual":0.81,"Variacao":0.0},"Pontuacao":{"Media":-4.5,"Ultima":0.0}}
+{"Nome":"Jorge","Clube":{"Nome":"Flamengo"},"Posicao":1,"Preco":{"Atual":2.0,"Variacao":0.0},"Pontuacao":{"Media":0.0,"Ultima":0.0}}
+{"Nome":"Jorge Henrique","Clube":{"Nome":"Internacional"},"Posicao":4,"Preco":{"Atual":7.95,"Variacao":0.0},"Pontuacao":{"Media":2.1,"Ultima":2.1}}
+{"Nome":"José Ivaldo","Clube":{"Nome":"Atlético-PR"},"Posicao":2,"Preco":{"Atual":1.0,"Variacao":0.0},"Pontuacao":{"Media":0.0,"Ultima":0.0}}
+{"Nome":"Josimar","Clube":{"Nome":"Ponte Preta"},"Posicao":3,"Preco":{"Atual":7.79,"Variacao":0.0},"Pontuacao":{"Media":2.09,"Ultima":2.8}}
+{"Nome":"Josué","Clube":{"Nome":"Atlético-MG"},"Posicao":3,"Preco":{"Atual":11.06,"Variacao":0.0},"Pontuacao":{"Media":4.2,"Ultima":0.0}}
+{"Nome":"Juan","Clube":{"Nome":"Internacional"},"Posicao":2,"Preco":{"Atual":11.26,"Variacao":0.0},"Pontuacao":{"Media":1.2,"Ultima":0.8}}
+{"Nome":"Juan Carlos Osorio","Clube":{"Nome":"São Paulo"},"Posicao":5,"Preco":{"Atual":12.34,"Variacao":0.0},"Pontuacao":{"Media":3.84,"Ultima":2.35}}
+{"Nome":"Jubal","Clube":{"Nome":"Avaí"},"Posicao":2,"Preco":{"Atual":4.0,"Variacao":0.0},"Pontuacao":{"Media":0.0,"Ultima":0.0}}
+{"Nome":"Judivan","Clube":{"Nome":"Cruzeiro"},"Posicao":4,"Preco":{"Atual":2.77,"Variacao":0.0},"Pontuacao":{"Media":-0.5,"Ultima":0.0}}
+{"Nome":"Julen","Clube":{"Nome":"Palmeiras"},"Posicao":3,"Preco":{"Atual":1.0,"Variacao":0.0},"Pontuacao":{"Media":0.0,"Ultima":0.0}}
+{"Nome":"Juliano","Clube":{"Nome":"Goiás"},"Posicao":3,"Preco":{"Atual":3.76,"Variacao":0.0},"Pontuacao":{"Media":0.0,"Ultima":0.0}}
+{"Nome":"Júlio Baptista","Clube":{"Nome":"Cruzeiro"},"Posicao":3,"Preco":{"Atual":10.0,"Variacao":0.0},"Pontuacao":{"Media":0.0,"Ultima":0.0}}
+{"Nome":"Julio Cesar","Clube":{"Nome":"Vasco"},"Posicao":1,"Preco":{"Atual":3.51,"Variacao":0.0},"Pontuacao":{"Media":0.55,"Ultima":1.4}}
+{"Nome":"Júlio César","Clube":{"Nome":"Fluminense"},"Posicao":0,"Preco":{"Atual":2.0,"Variacao":0.0},"Pontuacao":{"Media":0.0,"Ultima":0.0}}
+{"Nome":"Julio Dos Santos","Clube":{"Nome":"Vasco"},"Posicao":3,"Preco":{"Atual":9.62,"Variacao":0.0},"Pontuacao":{"Media":1.36,"Ultima":-1.2}}
+{"Nome":"Juninho","Clube":{"Nome":"Joinville"},"Posicao":3,"Preco":{"Atual":2.0,"Variacao":0.0},"Pontuacao":{"Media":0.0,"Ultima":0.0}}
+{"Nome":"Juninho","Clube":{"Nome":"Palmeiras"},"Posicao":3,"Preco":{"Atual":2.0,"Variacao":0.0},"Pontuacao":{"Media":0.0,"Ultima":0.0}}
+{"Nome":"Juninho","Clube":{"Nome":"Ponte Preta"},"Posicao":3,"Preco":{"Atual":2.5,"Variacao":0.0},"Pontuacao":{"Media":0.07,"Ultima":-0.3}}
+{"Nome":"Juninho","Clube":{"Nome":"Avaí"},"Posicao":3,"Preco":{"Atual":2.0,"Variacao":0.0},"Pontuacao":{"Media":0.0,"Ultima":0.0}}
+{"Nome":"Juninho","Clube":{"Nome":"Figueirense"},"Posicao":3,"Preco":{"Atual":10.0,"Variacao":0.0},"Pontuacao":{"Media":0.0,"Ultima":0.0}}
+{"Nome":"Junio","Clube":{"Nome":"Ponte Preta"},"Posicao":1,"Preco":{"Atual":1.0,"Variacao":0.0},"Pontuacao":{"Media":0.0,"Ultima":0.0}}
+{"Nome":"Júnior","Clube":{"Nome":"Figueirense"},"Posicao":0,"Preco":{"Atual":1.0,"Variacao":0.0},"Pontuacao":{"Media":0.0,"Ultima":0.0}}
+{"Nome":"Júnior","Clube":{"Nome":"Grêmio"},"Posicao":1,"Preco":{"Atual":1.69,"Variacao":0.0},"Pontuacao":{"Media":-0.35,"Ultima":0.0}}
+{"Nome":"Júnior De Barros","Clube":{"Nome":"Atlético-PR"},"Posicao":4,"Preco":{"Atual":1.0,"Variacao":0.0},"Pontuacao":{"Media":0.0,"Ultima":0.0}}
+{"Nome":"Júnior Lopes","Clube":{"Nome":"Goiás"},"Posicao":2,"Preco":{"Atual":3.0,"Variacao":0.0},"Pontuacao":{"Media":0.0,"Ultima":0.0}}
+{"Nome":"Kadu","Clube":{"Nome":"Atlético-PR"},"Posicao":2,"Preco":{"Atual":12.86,"Variacao":0.0},"Pontuacao":{"Media":4.07,"Ultima":1.7}}
+{"Nome":"Kadu","Clube":{"Nome":"Joinville"},"Posicao":3,"Preco":{"Atual":3.0,"Variacao":0.0},"Pontuacao":{"Media":0.0,"Ultima":0.0}}
+{"Nome":"Kauê","Clube":{"Nome":"Ponte Preta"},"Posicao":3,"Preco":{"Atual":1.0,"Variacao":0.0},"Pontuacao":{"Media":0.0,"Ultima":0.0}}
+{"Nome":"Keirrison","Clube":{"Nome":"Coritiba"},"Posicao":4,"Preco":{"Atual":9.0,"Variacao":0.0},"Pontuacao":{"Media":0.0,"Ultima":0.0}}
+{"Nome":"Kelvenny","Clube":{"Nome":"Sport"},"Posicao":4,"Preco":{"Atual":1.0,"Variacao":0.0},"Pontuacao":{"Media":0.0,"Ultima":0.0}}
+{"Nome":"Kelvin","Clube":{"Nome":"Palmeiras"},"Posicao":4,"Preco":{"Atual":6.73,"Variacao":0.0},"Pontuacao":{"Media":1.77,"Ultima":0.0}}
+{"Nome":"Kempes","Clube":{"Nome":"Joinville"},"Posicao":4,"Preco":{"Atual":2.39,"Variacao":0.0},"Pontuacao":{"Media":-0.53,"Ultima":2.6}}
+{"Nome":"Kenedy","Clube":{"Nome":"Fluminense"},"Posicao":4,"Preco":{"Atual":12.58,"Variacao":0.0},"Pontuacao":{"Media":2.9,"Ultima":0.0}}
+{"Nome":"Kevin","Clube":{"Nome":"Avaí"},"Posicao":1,"Preco":{"Atual":1.0,"Variacao":0.0},"Pontuacao":{"Media":0.0,"Ultima":0.0}}
+{"Nome":"Kleber","Clube":{"Nome":"Coritiba"},"Posicao":4,"Preco":{"Atual":7.0,"Variacao":0.0},"Pontuacao":{"Media":0.0,"Ultima":0.0}}
+{"Nome":"Klever","Clube":{"Nome":"Fluminense"},"Posicao":0,"Preco":{"Atual":3.0,"Variacao":0.0},"Pontuacao":{"Media":0.0,"Ultima":0.0}}
+{"Nome":"Leandrinho","Clube":{"Nome":"Santos"},"Posicao":3,"Preco":{"Atual":5.19,"Variacao":0.0},"Pontuacao":{"Media":5.2,"Ultima":0.0}}
+{"Nome":"Leandro","Clube":{"Nome":"Palmeiras"},"Posicao":4,"Preco":{"Atual":3.27,"Variacao":0.0},"Pontuacao":{"Media":-1.0,"Ultima":0.0}}
+{"Nome":"Leandro","Clube":{"Nome":"Internacional"},"Posicao":4,"Preco":{"Atual":1.0,"Variacao":0.0},"Pontuacao":{"Media":0.0,"Ultima":0.0}}
+{"Nome":"Leandro","Clube":{"Nome":"Ponte Preta"},"Posicao":4,"Preco":{"Atual":5.0,"Variacao":0.0},"Pontuacao":{"Media":0.0,"Ultima":0.0}}
+{"Nome":"Leandro Almeida","Clube":{"Nome":"Coritiba"},"Posicao":2,"Preco":{"Atual":6.91,"Variacao":0.0},"Pontuacao":{"Media":-0.02,"Ultima":0.0}}
+{"Nome":"Leandro Damião","Clube":{"Nome":"Cruzeiro"},"Posicao":4,"Preco":{"Atual":24.65,"Variacao":0.0},"Pontuacao":{"Media":6.8,"Ultima":15.0}}
+{"Nome":"Leandro Donizete","Clube":{"Nome":"Atlético-MG"},"Posicao":3,"Preco":{"Atual":9.1,"Variacao":0.0},"Pontuacao":{"Media":-0.3,"Ultima":0.0}}
+{"Nome":"Leandro Pereira","Clube":{"Nome":"Palmeiras"},"Posicao":4,"Preco":{"Atual":5.32,"Variacao":0.0},"Pontuacao":{"Media":-1.5,"Ultima":0.0}}
+{"Nome":"Leandro Silva","Clube":{"Nome":"Figueirense"},"Posicao":1,"Preco":{"Atual":5.12,"Variacao":0.0},"Pontuacao":{"Media":2.04,"Ultima":-2.9}}
+{"Nome":"Leandro Silva","Clube":{"Nome":"Coritiba"},"Posicao":2,"Preco":{"Atual":1.65,"Variacao":0.0},"Pontuacao":{"Media":0.0,"Ultima":0.0}}
+{"Nome":"Léo","Clube":{"Nome":"Internacional"},"Posicao":1,"Preco":{"Atual":9.55,"Variacao":0.0},"Pontuacao":{"Media":5.15,"Ultima":0.0}}
+{"Nome":"Leo","Clube":{"Nome":"São Paulo"},"Posicao":0,"Preco":{"Atual":1.0,"Variacao":0.0},"Pontuacao":{"Media":0.0,"Ultima":0.0}}
+{"Nome":"Léo","Clube":{"Nome":"Cruzeiro"},"Posicao":2,"Preco":{"Atual":13.08,"Variacao":0.0},"Pontuacao":{"Media":0.4,"Ultima":0.0}}
+{"Nome":"Léo","Clube":{"Nome":"Grêmio"},"Posicao":0,"Preco":{"Atual":1.0,"Variacao":0.0},"Pontuacao":{"Media":0.0,"Ultima":0.0}}
+{"Nome":"Léo Cittadini","Clube":{"Nome":"Santos"},"Posicao":3,"Preco":{"Atual":2.0,"Variacao":0.0},"Pontuacao":{"Media":0.0,"Ultima":0.0}}
+{"Nome":"Léo Lisboa","Clube":{"Nome":"Figueirense"},"Posicao":3,"Preco":{"Atual":3.72,"Variacao":0.0},"Pontuacao":{"Media":-0.3,"Ultima":0.0}}
+{"Nome":"Léo Pereira","Clube":{"Nome":"Atlético-PR"},"Posicao":2,"Preco":{"Atual":5.0,"Variacao":0.0},"Pontuacao":{"Media":0.0,"Ultima":0.0}}
+{"Nome":"Léo Rodrigues","Clube":{"Nome":"Figueirense"},"Posicao":1,"Preco":{"Atual":2.0,"Variacao":0.0},"Pontuacao":{"Media":0.0,"Ultima":0.0}}
+{"Nome":"Leonardo","Clube":{"Nome":"Santos"},"Posicao":2,"Preco":{"Atual":3.0,"Variacao":0.0},"Pontuacao":{"Media":0.0,"Ultima":0.0}}
+{"Nome":"Leonardo","Clube":{"Nome":"Fluminense"},"Posicao":1,"Preco":{"Atual":2.0,"Variacao":0.0},"Pontuacao":{"Media":0.0,"Ultima":0.0}}
+{"Nome":"Leonardo Silva","Clube":{"Nome":"Atlético-MG"},"Posicao":2,"Preco":{"Atual":13.8,"Variacao":0.0},"Pontuacao":{"Media":4.64,"Ultima":0.0}}
+{"Nome":"Levir Culpi","Clube":{"Nome":"Atlético-MG"},"Posicao":5,"Preco":{"Atual":14.5,"Variacao":0.0},"Pontuacao":{"Media":4.26,"Ultima":0.0}}
+{"Nome":"Lincoln","Clube":{"Nome":"Grêmio"},"Posicao":3,"Preco":{"Atual":3.91,"Variacao":0.0},"Pontuacao":{"Media":0.4,"Ultima":0.0}}
+{"Nome":"Liniker","Clube":{"Nome":"Goiás"},"Posicao":3,"Preco":{"Atual":2.0,"Variacao":0.0},"Pontuacao":{"Media":0.0,"Ultima":0.0}}
+{"Nome":"Lisandro López","Clube":{"Nome":"Internacional"},"Posicao":4,"Preco":{"Atual":11.22,"Variacao":0.0},"Pontuacao":{"Media":-1.75,"Ultima":0.0}}
+{"Nome":"Lorran","Clube":{"Nome":"Vasco"},"Posicao":1,"Preco":{"Atual":4.0,"Variacao":0.0},"Pontuacao":{"Media":0.0,"Ultima":0.0}}
+{"Nome":"Luan","Clube":{"Nome":"Figueirense"},"Posicao":3,"Preco":{"Atual":4.0,"Variacao":0.0},"Pontuacao":{"Media":0.0,"Ultima":0.0}}
+{"Nome":"Luan","Clube":{"Nome":"Atlético-MG"},"Posicao":4,"Preco":{"Atual":28.21,"Variacao":0.0},"Pontuacao":{"Media":8.38,"Ultima":0.0}}
+{"Nome":"Luan","Clube":{"Nome":"Grêmio"},"Posicao":4,"Preco":{"Atual":28.44,"Variacao":0.0},"Pontuacao":{"Media":5.41,"Ultima":4.2}}
+{"Nome":"Luan","Clube":{"Nome":"Vasco"},"Posicao":2,"Preco":{"Atual":15.25,"Variacao":0.0},"Pontuacao":{"Media":2.51,"Ultima":-1.2}}
+{"Nome":"Luan Polli","Clube":{"Nome":"Figueirense"},"Posicao":0,"Preco":{"Atual":1.58,"Variacao":0.0},"Pontuacao":{"Media":1.0,"Ultima":0.0}}
+{"Nome":"Lucão","Clube":{"Nome":"São Paulo"},"Posicao":2,"Preco":{"Atual":1.74,"Variacao":0.0},"Pontuacao":{"Media":0.2,"Ultima":0.0}}
+{"Nome":"Lucas","Clube":{"Nome":"Palmeiras"},"Posicao":1,"Preco":{"Atual":11.03,"Variacao":0.0},"Pontuacao":{"Media":2.75,"Ultima":4.8}}
+{"Nome":"Lucas","Clube":{"Nome":"Vasco"},"Posicao":3,"Preco":{"Atual":7.58,"Variacao":0.0},"Pontuacao":{"Media":3.37,"Ultima":0.0}}
+{"Nome":"Lucas Cândido","Clube":{"Nome":"Atlético-MG"},"Posicao":3,"Preco":{"Atual":3.0,"Variacao":0.0},"Pontuacao":{"Media":0.0,"Ultima":0.0}}
+{"Nome":"Lucas Coelho","Clube":{"Nome":"Goiás"},"Posicao":4,"Preco":{"Atual":4.68,"Variacao":0.0},"Pontuacao":{"Media":-0.05,"Ultima":0.0}}
+{"Nome":"Lucas Crispim","Clube":{"Nome":"Joinville"},"Posicao":3,"Preco":{"Atual":3.0,"Variacao":0.0},"Pontuacao":{"Media":0.0,"Ultima":0.0}}
+{"Nome":"Lucas Gomes","Clube":{"Nome":"Fluminense"},"Posicao":4,"Preco":{"Atual":3.86,"Variacao":0.0},"Pontuacao":{"Media":-0.03,"Ultima":0.5}}
+{"Nome":"Lucas Lima","Clube":{"Nome":"Santos"},"Posicao":3,"Preco":{"Atual":10.02,"Variacao":0.0},"Pontuacao":{"Media":3.7,"Ultima":0.0}}
+{"Nome":"Lucas Macanhan","Clube":{"Nome":"Atlético-PR"},"Posicao":0,"Preco":{"Atual":1.0,"Variacao":0.0},"Pontuacao":{"Media":0.0,"Ultima":0.0}}
+{"Nome":"Lucas Machado","Clube":{"Nome":"Chapecoense"},"Posicao":3,"Preco":{"Atual":2.0,"Variacao":0.0},"Pontuacao":{"Media":0.0,"Ultima":0.0}}
+{"Nome":"Lucas Marques","Clube":{"Nome":"Internacional"},"Posicao":3,"Preco":{"Atual":1.66,"Variacao":0.0},"Pontuacao":{"Media":0.1,"Ultima":0.0}}
+{"Nome":"Lucas Mugni","Clube":{"Nome":"Flamengo"},"Posicao":3,"Preco":{"Atual":0.79,"Variacao":0.0},"Pontuacao":{"Media":-2.3,"Ultima":0.0}}
+{"Nome":"Lucas Olaza","Clube":{"Nome":"Atlético-PR"},"Posicao":1,"Preco":{"Atual":4.0,"Variacao":0.0},"Pontuacao":{"Media":0.0,"Ultima":0.0}}
+{"Nome":"Lucas Otávio","Clube":{"Nome":"Santos"},"Posicao":3,"Preco":{"Atual":4.85,"Variacao":0.0},"Pontuacao":{"Media":2.76,"Ultima":0.0}}
+{"Nome":"Lucas Perri","Clube":{"Nome":"São Paulo"},"Posicao":0,"Preco":{"Atual":1.0,"Variacao":0.0},"Pontuacao":{"Media":0.0,"Ultima":0.0}}
+{"Nome":"Lucas Pratto","Clube":{"Nome":"Atlético-MG"},"Posicao":4,"Preco":{"Atual":21.94,"Variacao":0.0},"Pontuacao":{"Media":5.46,"Ultima":0.0}}
+{"Nome":"Lucas Ramon","Clube":{"Nome":"Grêmio"},"Posicao":1,"Preco":{"Atual":1.84,"Variacao":0.0},"Pontuacao":{"Media":0.5,"Ultima":0.5}}
+{"Nome":"Luccas Barreto","Clube":{"Nome":"Coritiba"},"Posicao":3,"Preco":{"Atual":3.0,"Variacao":0.0},"Pontuacao":{"Media":0.0,"Ultima":0.0}}
+{"Nome":"Luccas Claro","Clube":{"Nome":"Coritiba"},"Posicao":2,"Preco":{"Atual":6.18,"Variacao":0.0},"Pontuacao":{"Media":0.48,"Ultima":4.1}}
+{"Nome":"Luciano","Clube":{"Nome":"Corinthians"},"Posicao":4,"Preco":{"Atual":6.0,"Variacao":0.0},"Pontuacao":{"Media":0.0,"Ultima":0.0}}
+{"Nome":"Lúcio Flávio","Clube":{"Nome":"Coritiba"},"Posicao":3,"Preco":{"Atual":5.0,"Variacao":0.0},"Pontuacao":{"Media":0.0,"Ultima":0.0}}
+{"Nome":"Luís Cáceres","Clube":{"Nome":"Coritiba"},"Posicao":3,"Preco":{"Atual":7.35,"Variacao":0.0},"Pontuacao":{"Media":2.23,"Ultima":2.3}}
+{"Nome":"Luis Fabiano","Clube":{"Nome":"São Paulo"},"Posicao":4,"Preco":{"Atual":16.63,"Variacao":0.0},"Pontuacao":{"Media":2.04,"Ultima":0.8}}
+{"Nome":"Luis Felipe","Clube":{"Nome":"Joinville"},"Posicao":1,"Preco":{"Atual":5.0,"Variacao":0.0},"Pontuacao":{"Media":0.0,"Ultima":0.0}}
+{"Nome":"Luiz Antonio","Clube":{"Nome":"Flamengo"},"Posicao":3,"Preco":{"Atual":5.55,"Variacao":0.0},"Pontuacao":{"Media":1.4,"Ultima":6.5}}
+{"Nome":"Luiz Carlos","Clube":{"Nome":"Sport"},"Posicao":0,"Preco":{"Atual":3.0,"Variacao":0.0},"Pontuacao":{"Media":0.0,"Ultima":0.0}}
+{"Nome":"Luiz Felipe Scolari","Clube":{"Nome":"Grêmio"},"Posicao":5,"Preco":{"Atual":10.41,"Variacao":0.0},"Pontuacao":{"Media":2.31,"Ultima":0.42}}
+{"Nome":"Luiz Fernando","Clube":{"Nome":"Fluminense"},"Posicao":3,"Preco":{"Atual":4.0,"Variacao":0.0},"Pontuacao":{"Media":0.0,"Ultima":0.0}}
+{"Nome":"Luiz Meneses","Clube":{"Nome":"Joinville"},"Posicao":3,"Preco":{"Atual":1.0,"Variacao":0.0},"Pontuacao":{"Media":0.0,"Ultima":0.0}}
+{"Nome":"Luiz Paulo","Clube":{"Nome":"Atlético-PR"},"Posicao":1,"Preco":{"Atual":2.0,"Variacao":0.0},"Pontuacao":{"Media":0.0,"Ultima":0.0}}
+{"Nome":"Lula","Clube":{"Nome":"Atlético-PR"},"Posicao":2,"Preco":{"Atual":6.0,"Variacao":0.0},"Pontuacao":{"Media":0.0,"Ultima":0.0}}
+{"Nome":"Madson","Clube":{"Nome":"Vasco"},"Posicao":1,"Preco":{"Atual":13.6,"Variacao":0.0},"Pontuacao":{"Media":2.64,"Ultima":5.5}}
+{"Nome":"Magno Alves","Clube":{"Nome":"Fluminense"},"Posicao":4,"Preco":{"Atual":4.59,"Variacao":0.0},"Pontuacao":{"Media":0.46,"Ultima":1.6}}
+{"Nome":"Magrão","Clube":{"Nome":"Sport"},"Posicao":0,"Preco":{"Atual":9.09,"Variacao":0.0},"Pontuacao":{"Media":-0.65,"Ultima":0.0}}
+{"Nome":"Maicon","Clube":{"Nome":"Grêmio"},"Posicao":3,"Preco":{"Atual":4.11,"Variacao":0.0},"Pontuacao":{"Media":-0.21,"Ultima":2.2}}
+{"Nome":"Maicon Talhetti","Clube":{"Nome":"Figueirense"},"Posicao":3,"Preco":{"Atual":3.0,"Variacao":0.0},"Pontuacao":{"Media":0.0,"Ultima":0.0}}
+{"Nome":"Maicosuel","Clube":{"Nome":"Atlético-MG"},"Posicao":3,"Preco":{"Atual":6.68,"Variacao":0.0},"Pontuacao":{"Media":0.9,"Ultima":0.0}}
+{"Nome":"Maikon Leite","Clube":{"Nome":"Sport"},"Posicao":4,"Preco":{"Atual":9.37,"Variacao":0.0},"Pontuacao":{"Media":7.58,"Ultima":16.9}}
+{"Nome":"Malcom","Clube":{"Nome":"Corinthians"},"Posicao":4,"Preco":{"Atual":7.05,"Variacao":0.0},"Pontuacao":{"Media":1.6,"Ultima":0.0}}
+{"Nome":"Malcoon","Clube":{"Nome":"Ponte Preta"},"Posicao":1,"Preco":{"Atual":1.0,"Variacao":0.0},"Pontuacao":{"Media":0.0,"Ultima":0.0}}
+{"Nome":"Manoel","Clube":{"Nome":"Cruzeiro"},"Posicao":2,"Preco":{"Atual":7.49,"Variacao":0.0},"Pontuacao":{"Media":2.82,"Ultima":-0.6}}
+{"Nome":"Maranhão","Clube":{"Nome":"Chapecoense"},"Posicao":3,"Preco":{"Atual":2.46,"Variacao":0.0},"Pontuacao":{"Media":-0.55,"Ultima":-0.3}}
+{"Nome":"Marcão","Clube":{"Nome":"Figueirense"},"Posicao":4,"Preco":{"Atual":6.69,"Variacao":0.0},"Pontuacao":{"Media":-0.86,"Ultima":-2.0}}
+{"Nome":"Marcelinho Paraíba","Clube":{"Nome":"Joinville"},"Posicao":3,"Preco":{"Atual":9.08,"Variacao":0.0},"Pontuacao":{"Media":1.93,"Ultima":9.1}}
+{"Nome":"Marcelo","Clube":{"Nome":"Flamengo"},"Posicao":2,"Preco":{"Atual":2.63,"Variacao":0.0},"Pontuacao":{"Media":2.7,"Ultima":0.0}}
+{"Nome":"Marcelo Cirino","Clube":{"Nome":"Flamengo"},"Posicao":4,"Preco":{"Atual":7.94,"Variacao":0.0},"Pontuacao":{"Media":-0.08,"Ultima":-1.4}}
+{"Nome":"Marcelo Costa","Clube":{"Nome":"Joinville"},"Posicao":3,"Preco":{"Atual":6.99,"Variacao":0.0},"Pontuacao":{"Media":0.33,"Ultima":0.0}}
+{"Nome":"Marcelo Fernandes","Clube":{"Nome":"Santos"},"Posicao":5,"Preco":{"Atual":9.08,"Variacao":0.0},"Pontuacao":{"Media":3.16,"Ultima":0.0}}
+{"Nome":"Marcelo Grohe","Clube":{"Nome":"Grêmio"},"Posicao":0,"Preco":{"Atual":18.29,"Variacao":0.0},"Pontuacao":{"Media":1.5,"Ultima":0.0}}
+{"Nome":"Marcelo Hermes","Clube":{"Nome":"Grêmio"},"Posicao":1,"Preco":{"Atual":3.0,"Variacao":0.0},"Pontuacao":{"Media":0.0,"Ultima":0.0}}
+{"Nome":"Marcelo Lomba","Clube":{"Nome":"Ponte Preta"},"Posicao":0,"Preco":{"Atual":21.17,"Variacao":0.0},"Pontuacao":{"Media":8.41,"Ultima":14.0}}
+{"Nome":"Marcelo Oliveira","Clube":{"Nome":"Palmeiras"},"Posicao":5,"Preco":{"Atual":10.33,"Variacao":0.0},"Pontuacao":{"Media":1.06,"Ultima":0.0}}
+{"Nome":"Marcelo Oliveira","Clube":{"Nome":"Grêmio"},"Posicao":1,"Preco":{"Atual":8.46,"Variacao":0.0},"Pontuacao":{"Media":3.03,"Ultima":1.4}}
+{"Nome":"Marciel","Clube":{"Nome":"Corinthians"},"Posicao":3,"Preco":{"Atual":3.0,"Variacao":0.0},"Pontuacao":{"Media":0.0,"Ultima":0.0}}
+{"Nome":"Marcinho","Clube":{"Nome":"Vasco"},"Posicao":3,"Preco":{"Atual":5.4,"Variacao":0.0},"Pontuacao":{"Media":0.2,"Ultima":0.0}}
+{"Nome":"Márcio Araújo","Clube":{"Nome":"Flamengo"},"Posicao":3,"Preco":{"Atual":7.25,"Variacao":0.0},"Pontuacao":{"Media":1.6,"Ultima":4.1}}
+{"Nome":"Marco Damasceno","Clube":{"Nome":"Atlético-PR"},"Posicao":4,"Preco":{"Atual":4.51,"Variacao":0.0},"Pontuacao":{"Media":0.7,"Ultima":0.0}}
+{"Nome":"Marcos Aurélio","Clube":{"Nome":"Coritiba"},"Posicao":3,"Preco":{"Atual":6.29,"Variacao":0.0},"Pontuacao":{"Media":-0.9,"Ultima":-0.9}}
+{"Nome":"Marcos Felipe","Clube":{"Nome":"Fluminense"},"Posicao":0,"Preco":{"Atual":1.0,"Variacao":0.0},"Pontuacao":{"Media":0.0,"Ultima":0.0}}
+{"Nome":"Marcos Guilherme","Clube":{"Nome":"Atlético-PR"},"Posicao":3,"Preco":{"Atual":14.95,"Variacao":0.0},"Pontuacao":{"Media":5.9,"Ultima":0.0}}
+{"Nome":"Marcos Junior","Clube":{"Nome":"Fluminense"},"Posicao":4,"Preco":{"Atual":3.31,"Variacao":0.0},"Pontuacao":{"Media":1.13,"Ultima":-3.0}}
+{"Nome":"Marcos Rocha","Clube":{"Nome":"Atlético-MG"},"Posicao":1,"Preco":{"Atual":16.0,"Variacao":0.0},"Pontuacao":{"Media":0.0,"Ultima":0.0}}
+{"Nome":"Marcos Vinícius","Clube":{"Nome":"Cruzeiro"},"Posicao":3,"Preco":{"Atual":3.0,"Variacao":0.0},"Pontuacao":{"Media":0.0,"Ultima":0.0}}
+{"Nome":"Mário Sérgio","Clube":{"Nome":"Joinville"},"Posicao":1,"Preco":{"Atual":6.2,"Variacao":0.0},"Pontuacao":{"Media":4.2,"Ultima":4.3}}
+{"Nome":"Mário Sérgio","Clube":{"Nome":"Goiás"},"Posicao":1,"Preco":{"Atual":3.0,"Variacao":0.0},"Pontuacao":{"Media":0.0,"Ultima":0.0}}
+{"Nome":"Marion","Clube":{"Nome":"Joinville"},"Posicao":4,"Preco":{"Atual":5.0,"Variacao":0.0},"Pontuacao":{"Media":0.0,"Ultima":0.0}}
+{"Nome":"Marlon","Clube":{"Nome":"Fluminense"},"Posicao":2,"Preco":{"Atual":20.33,"Variacao":0.0},"Pontuacao":{"Media":11.7,"Ultima":0.0}}
+{"Nome":"Marlone","Clube":{"Nome":"Sport"},"Posicao":3,"Preco":{"Atual":5.03,"Variacao":0.0},"Pontuacao":{"Media":0.5,"Ultima":0.0}}
+{"Nome":"Marquinhos","Clube":{"Nome":"Santos"},"Posicao":3,"Preco":{"Atual":3.29,"Variacao":0.0},"Pontuacao":{"Media":1.8,"Ultima":0.0}}
+{"Nome":"Marquinhos","Clube":{"Nome":"Figueirense"},"Posicao":2,"Preco":{"Atual":10.82,"Variacao":0.0},"Pontuacao":{"Media":3.93,"Ultima":3.9}}
+{"Nome":"Marquinhos","Clube":{"Nome":"Avaí"},"Posicao":3,"Preco":{"Atual":15.23,"Variacao":0.0},"Pontuacao":{"Media":2.24,"Ultima":-0.9}}
+{"Nome":"Marquinhos","Clube":{"Nome":"Vasco"},"Posicao":4,"Preco":{"Atual":1.0,"Variacao":0.0},"Pontuacao":{"Media":0.0,"Ultima":0.0}}
+{"Nome":"Marquinhos","Clube":{"Nome":"Cruzeiro"},"Posicao":4,"Preco":{"Atual":13.3,"Variacao":0.0},"Pontuacao":{"Media":5.13,"Ultima":7.0}}
+{"Nome":"Marquinhos Gabriel","Clube":{"Nome":"Santos"},"Posicao":3,"Preco":{"Atual":6.75,"Variacao":0.0},"Pontuacao":{"Media":-4.5,"Ultima":0.0}}
+{"Nome":"Marquinhos Pedroso","Clube":{"Nome":"Figueirense"},"Posicao":1,"Preco":{"Atual":7.81,"Variacao":0.0},"Pontuacao":{"Media":3.9,"Ultima":0.0}}
+{"Nome":"Marquinhos Santos","Clube":{"Nome":"Coritiba"},"Posicao":5,"Preco":{"Atual":6.26,"Variacao":0.0},"Pontuacao":{"Media":1.89,"Ultima":0.35}}
+{"Nome":"Marrone","Clube":{"Nome":"Avaí"},"Posicao":1,"Preco":{"Atual":3.1,"Variacao":0.0},"Pontuacao":{"Media":-2.5,"Ultima":0.0}}
+{"Nome":"Martín Luque","Clube":{"Nome":"Internacional"},"Posicao":3,"Preco":{"Atual":5.09,"Variacao":0.0},"Pontuacao":{"Media":0.7,"Ultima":0.0}}
+{"Nome":"Martín Silva","Clube":{"Nome":"Vasco"},"Posicao":0,"Preco":{"Atual":18.51,"Variacao":0.0},"Pontuacao":{"Media":4.48,"Ultima":0.0}}
+{"Nome":"Martinuccio","Clube":{"Nome":"Fluminense"},"Posicao":4,"Preco":{"Atual":5.0,"Variacao":0.0},"Pontuacao":{"Media":0.0,"Ultima":0.0}}
+{"Nome":"Mateus Oliveira","Clube":{"Nome":"Coritiba"},"Posicao":4,"Preco":{"Atual":2.37,"Variacao":0.0},"Pontuacao":{"Media":0.0,"Ultima":0.0}}
+{"Nome":"Mateus Silva","Clube":{"Nome":"Joinville"},"Posicao":4,"Preco":{"Atual":2.0,"Variacao":0.0},"Pontuacao":{"Media":0.0,"Ultima":0.0}}
+{"Nome":"Matheus","Clube":{"Nome":"Joinville"},"Posicao":0,"Preco":{"Atual":1.0,"Variacao":0.0},"Pontuacao":{"Media":0.0,"Ultima":0.0}}
+{"Nome":"Matheus","Clube":{"Nome":"Chapecoense"},"Posicao":4,"Preco":{"Atual":2.0,"Variacao":0.0},"Pontuacao":{"Media":0.0,"Ultima":0.0}}
+{"Nome":"Matheus","Clube":{"Nome":"São Paulo"},"Posicao":1,"Preco":{"Atual":1.0,"Variacao":0.0},"Pontuacao":{"Media":0.0,"Ultima":0.0}}
+{"Nome":"Matheus Alves","Clube":{"Nome":"Goiás"},"Posicao":0,"Preco":{"Atual":1.0,"Variacao":0.0},"Pontuacao":{"Media":0.0,"Ultima":0.0}}
+{"Nome":"Matheus Bertotto","Clube":{"Nome":"Internacional"},"Posicao":3,"Preco":{"Atual":5.0,"Variacao":0.0},"Pontuacao":{"Media":0.0,"Ultima":0.0}}
+{"Nome":"Matheus Biteco","Clube":{"Nome":"Grêmio"},"Posicao":3,"Preco":{"Atual":5.0,"Variacao":0.0},"Pontuacao":{"Media":0.0,"Ultima":0.0}}
+{"Nome":"Matheus Cassini","Clube":{"Nome":"Corinthians"},"Posicao":3,"Preco":{"Atual":2.0,"Variacao":0.0},"Pontuacao":{"Media":0.0,"Ultima":0.0}}
+{"Nome":"Matheus Ferraz","Clube":{"Nome":"Sport"},"Posicao":2,"Preco":{"Atual":13.54,"Variacao":0.0},"Pontuacao":{"Media":3.8,"Ultima":0.4}}
+{"Nome":"Matheus Galdezani","Clube":{"Nome":"Sport"},"Posicao":3,"Preco":{"Atual":1.0,"Variacao":0.0},"Pontuacao":{"Media":0.0,"Ultima":0.0}}
+{"Nome":"Matheus Inácio","Clube":{"Nome":"Ponte Preta"},"Posicao":0,"Preco":{"Atual":5.0,"Variacao":0.0},"Pontuacao":{"Media":0.0,"Ultima":0.0}}
+{"Nome":"Matheus Índio","Clube":{"Nome":"Vasco"},"Posicao":3,"Preco":{"Atual":1.0,"Variacao":0.0},"Pontuacao":{"Media":0.0,"Ultima":0.0}}
+{"Nome":"Matheus Pereira","Clube":{"Nome":"Corinthians"},"Posicao":3,"Preco":{"Atual":1.0,"Variacao":0.0},"Pontuacao":{"Media":0.0,"Ultima":0.0}}
+{"Nome":"Matheus Ribeiro","Clube":{"Nome":"Atlético-PR"},"Posicao":1,"Preco":{"Atual":1.0,"Variacao":0.0},"Pontuacao":{"Media":0.0,"Ultima":0.0}}
+{"Nome":"Matheus Sávio","Clube":{"Nome":"Flamengo"},"Posicao":4,"Preco":{"Atual":3.0,"Variacao":0.0},"Pontuacao":{"Media":0.0,"Ultima":0.0}}
+{"Nome":"Matheus Vidotto","Clube":{"Nome":"Corinthians"},"Posicao":0,"Preco":{"Atual":1.0,"Variacao":0.0},"Pontuacao":{"Media":0.0,"Ultima":0.0}}
+{"Nome":"Matheuzinho","Clube":{"Nome":"Figueirense"},"Posicao":3,"Preco":{"Atual":1.0,"Variacao":0.0},"Pontuacao":{"Media":0.0,"Ultima":0.0}}
+{"Nome":"Matías Rodríguez","Clube":{"Nome":"Grêmio"},"Posicao":1,"Preco":{"Atual":12.97,"Variacao":0.0},"Pontuacao":{"Media":5.4,"Ultima":2.1}}
+{"Nome":"Matteus","Clube":{"Nome":"Atlético-PR"},"Posicao":3,"Preco":{"Atual":2.0,"Variacao":0.0},"Pontuacao":{"Media":0.0,"Ultima":0.0}}
+{"Nome":"Mayke","Clube":{"Nome":"Cruzeiro"},"Posicao":1,"Preco":{"Atual":9.69,"Variacao":0.0},"Pontuacao":{"Media":0.68,"Ultima":0.1}}
+{"Nome":"Maylson","Clube":{"Nome":"Chapecoense"},"Posicao":3,"Preco":{"Atual":4.75,"Variacao":0.0},"Pontuacao":{"Media":0.0,"Ultima":0.0}}
+{"Nome":"Mazinho","Clube":{"Nome":"Coritiba"},"Posicao":4,"Preco":{"Atual":7.0,"Variacao":0.0},"Pontuacao":{"Media":0.0,"Ultima":0.0}}
+{"Nome":"Mazola","Clube":{"Nome":"Figueirense"},"Posicao":4,"Preco":{"Atual":4.96,"Variacao":0.0},"Pontuacao":{"Media":0.58,"Ultima":0.0}}
+{"Nome":"Mena","Clube":{"Nome":"Cruzeiro"},"Posicao":1,"Preco":{"Atual":6.0,"Variacao":0.0},"Pontuacao":{"Media":0.0,"Ultima":0.0}}
+{"Nome":"Mendoza","Clube":{"Nome":"Corinthians"},"Posicao":4,"Preco":{"Atual":7.54,"Variacao":0.0},"Pontuacao":{"Media":3.24,"Ultima":4.9}}
+{"Nome":"Michael","Clube":{"Nome":"Fluminense"},"Posicao":4,"Preco":{"Atual":2.0,"Variacao":0.0},"Pontuacao":{"Media":0.0,"Ultima":0.0}}
+{"Nome":"Michel","Clube":{"Nome":"Chapecoense"},"Posicao":1,"Preco":{"Atual":2.0,"Variacao":0.0},"Pontuacao":{"Media":0.0,"Ultima":0.0}}
+{"Nome":"Michel Bastos","Clube":{"Nome":"São Paulo"},"Posicao":3,"Preco":{"Atual":14.42,"Variacao":0.0},"Pontuacao":{"Media":3.72,"Ultima":-0.3}}
+{"Nome":"Mike","Clube":{"Nome":"Sport"},"Posicao":4,"Preco":{"Atual":6.81,"Variacao":0.0},"Pontuacao":{"Media":0.97,"Ultima":0.0}}
+{"Nome":"Milton Cruz","Clube":{"Nome":"São Paulo"},"Posicao":5,"Preco":{"Atual":13.47,"Variacao":0.0},"Pontuacao":{"Media":3.83,"Ultima":4.17}}
+{"Nome":"Milton Mendes","Clube":{"Nome":"Atlético-PR"},"Posicao":5,"Preco":{"Atual":11.4,"Variacao":0.0},"Pontuacao":{"Media":3.96,"Ultima":1.24}}
+{"Nome":"Moisés","Clube":{"Nome":"Grêmio"},"Posicao":3,"Preco":{"Atual":3.0,"Variacao":0.0},"Pontuacao":{"Media":0.0,"Ultima":0.0}}
+{"Nome":"Montoya","Clube":{"Nome":"Vasco"},"Posicao":3,"Preco":{"Atual":4.0,"Variacao":0.0},"Pontuacao":{"Media":0.0,"Ultima":0.0}}
+{"Nome":"Mosquito","Clube":{"Nome":"Vasco"},"Posicao":4,"Preco":{"Atual":3.0,"Variacao":0.0},"Pontuacao":{"Media":0.0,"Ultima":0.0}}
+{"Nome":"Mouche","Clube":{"Nome":"Palmeiras"},"Posicao":4,"Preco":{"Atual":4.0,"Variacao":0.0},"Pontuacao":{"Media":0.0,"Ultima":0.0}}
+{"Nome":"Muriel","Clube":{"Nome":"Internacional"},"Posicao":0,"Preco":{"Atual":5.7,"Variacao":0.0},"Pontuacao":{"Media":4.35,"Ultima":0.0}}
+{"Nome":"Murilo Henrique","Clube":{"Nome":"Goiás"},"Posicao":3,"Preco":{"Atual":7.0,"Variacao":0.0},"Pontuacao":{"Media":0.0,"Ultima":0.0}}
+{"Nome":"Naldinho","Clube":{"Nome":"Sport"},"Posicao":3,"Preco":{"Atual":3.0,"Variacao":0.0},"Pontuacao":{"Media":0.0,"Ultima":0.0}}
+{"Nome":"Naldo","Clube":{"Nome":"Joinville"},"Posicao":3,"Preco":{"Atual":0.82,"Variacao":0.0},"Pontuacao":{"Media":-1.16,"Ultima":0.8}}
+{"Nome":"Natanael","Clube":{"Nome":"Atlético-PR"},"Posicao":1,"Preco":{"Atual":16.92,"Variacao":0.0},"Pontuacao":{"Media":5.17,"Ultima":0.0}}
+{"Nome":"Nathan","Clube":{"Nome":"Palmeiras"},"Posicao":2,"Preco":{"Atual":5.0,"Variacao":0.0},"Pontuacao":{"Media":0.0,"Ultima":0.0}}
+{"Nome":"Nathan Índio","Clube":{"Nome":"Ponte Preta"},"Posicao":3,"Preco":{"Atual":2.0,"Variacao":0.0},"Pontuacao":{"Media":0.0,"Ultima":0.0}}
+{"Nome":"Negueba","Clube":{"Nome":"Coritiba"},"Posicao":4,"Preco":{"Atual":4.51,"Variacao":0.0},"Pontuacao":{"Media":0.75,"Ultima":1.4}}
+{"Nome":"Nei","Clube":{"Nome":"Vasco"},"Posicao":1,"Preco":{"Atual":4.0,"Variacao":0.0},"Pontuacao":{"Media":0.0,"Ultima":0.0}}
+{"Nome":"Neilton","Clube":{"Nome":"Cruzeiro"},"Posicao":4,"Preco":{"Atual":2.99,"Variacao":0.0},"Pontuacao":{"Media":1.5,"Ultima":0.0}}
+{"Nome":"Nenén","Clube":{"Nome":"Chapecoense"},"Posicao":3,"Preco":{"Atual":3.54,"Variacao":0.0},"Pontuacao":{"Media":0.25,"Ultima":0.0}}
+{"Nome":"Neto","Clube":{"Nome":"Chapecoense"},"Posicao":2,"Preco":{"Atual":3.62,"Variacao":0.0},"Pontuacao":{"Media":-0.9,"Ultima":-1.0}}
+{"Nome":"Neto Berola","Clube":{"Nome":"Santos"},"Posicao":4,"Preco":{"Atual":5.08,"Variacao":0.0},"Pontuacao":{"Media":6.7,"Ultima":0.0}}
+{"Nome":"Neto Moura","Clube":{"Nome":"Sport"},"Posicao":3,"Preco":{"Atual":4.02,"Variacao":0.0},"Pontuacao":{"Media":2.0,"Ultima":3.3}}
+{"Nome":"Ney Franco","Clube":{"Nome":"Coritiba"},"Posicao":5,"Preco":{"Atual":5.23,"Variacao":0.0},"Pontuacao":{"Media":0.89,"Ultima":0.89}}
+{"Nome":"Nicolás Freitas","Clube":{"Nome":"Internacional"},"Posicao":3,"Preco":{"Atual":4.55,"Variacao":0.0},"Pontuacao":{"Media":1.18,"Ultima":-3.6}}
+{"Nome":"Nikão","Clube":{"Nome":"Atlético-PR"},"Posicao":3,"Preco":{"Atual":9.82,"Variacao":0.0},"Pontuacao":{"Media":4.11,"Ultima":-2.9}}
+{"Nome":"Nilmar","Clube":{"Nome":"Internacional"},"Posicao":4,"Preco":{"Atual":17.94,"Variacao":0.0},"Pontuacao":{"Media":7.5,"Ultima":10.0}}
+{"Nome":"Nilson","Clube":{"Nome":"Santos"},"Posicao":4,"Preco":{"Atual":2.0,"Variacao":0.0},"Pontuacao":{"Media":0.0,"Ultima":0.0}}
+{"Nome":"Niltinho","Clube":{"Nome":"Joinville"},"Posicao":4,"Preco":{"Atual":2.48,"Variacao":0.0},"Pontuacao":{"Media":0.45,"Ultima":0.0}}
+{"Nome":"Nilton","Clube":{"Nome":"Internacional"},"Posicao":3,"Preco":{"Atual":9.17,"Variacao":0.0},"Pontuacao":{"Media":1.65,"Ultima":-0.2}}
+{"Nome":"Nino Paraíba","Clube":{"Nome":"Avaí"},"Posicao":1,"Preco":{"Atual":3.82,"Variacao":0.0},"Pontuacao":{"Media":1.32,"Ultima":-3.6}}
+{"Nome":"Nirley","Clube":{"Nome":"Figueirense"},"Posicao":2,"Preco":{"Atual":2.29,"Variacao":0.0},"Pontuacao":{"Media":-2.1,"Ultima":0.0}}
+{"Nome":"Nivaldo","Clube":{"Nome":"Chapecoense"},"Posicao":0,"Preco":{"Atual":3.0,"Variacao":0.0},"Pontuacao":{"Media":0.0,"Ultima":0.0}}
+{"Nome":"Nixon","Clube":{"Nome":"Flamengo"},"Posicao":4,"Preco":{"Atual":6.0,"Variacao":0.0},"Pontuacao":{"Media":0.0,"Ultima":0.0}}
+{"Nome":"Norberto","Clube":{"Nome":"Coritiba"},"Posicao":1,"Preco":{"Atual":6.69,"Variacao":0.0},"Pontuacao":{"Media":2.0,"Ultima":0.0}}
+{"Nome":"Núbio Flávio","Clube":{"Nome":"Atlético-PR"},"Posicao":4,"Preco":{"Atual":3.0,"Variacao":0.0},"Pontuacao":{"Media":0.0,"Ultima":0.0}}
+{"Nome":"Oliveira","Clube":{"Nome":"Joinville"},"Posicao":0,"Preco":{"Atual":15.92,"Variacao":0.0},"Pontuacao":{"Media":3.55,"Ultima":0.0}}
+{"Nome":"Oswaldo","Clube":{"Nome":"Sport"},"Posicao":2,"Preco":{"Atual":2.69,"Variacao":0.0},"Pontuacao":{"Media":-0.6,"Ultima":0.0}}
+{"Nome":"Oswaldo De Oliveira","Clube":{"Nome":"Palmeiras"},"Posicao":5,"Preco":{"Atual":11.38,"Variacao":0.0},"Pontuacao":{"Media":3.45,"Ultima":1.18}}
+{"Nome":"Otávio","Clube":{"Nome":"Atlético-PR"},"Posicao":3,"Preco":{"Atual":8.07,"Variacao":0.0},"Pontuacao":{"Media":5.96,"Ultima":1.3}}
+{"Nome":"Pablo","Clube":{"Nome":"Avaí"},"Posicao":1,"Preco":{"Atual":7.63,"Variacao":0.0},"Pontuacao":{"Media":2.63,"Ultima":2.4}}
+{"Nome":"Pablo","Clube":{"Nome":"Ponte Preta"},"Posicao":2,"Preco":{"Atual":8.0,"Variacao":0.0},"Pontuacao":{"Media":3.11,"Ultima":2.9}}
+{"Nome":"Pablo Dyego","Clube":{"Nome":"Fluminense"},"Posicao":4,"Preco":{"Atual":1.0,"Variacao":0.0},"Pontuacao":{"Media":0.0,"Ultima":0.0}}
+{"Nome":"Paolo Guerrero","Clube":{"Nome":"Flamengo"},"Posicao":4,"Preco":{"Atual":23.49,"Variacao":0.0},"Pontuacao":{"Media":2.15,"Ultima":0.0}}
+{"Nome":"Pará","Clube":{"Nome":"Flamengo"},"Posicao":1,"Preco":{"Atual":6.29,"Variacao":0.0},"Pontuacao":{"Media":0.49,"Ultima":2.9}}
+{"Nome":"Pará","Clube":{"Nome":"Cruzeiro"},"Posicao":1,"Preco":{"Atual":2.14,"Variacao":0.0},"Pontuacao":{"Media":1.5,"Ultima":-3.8}}
+{"Nome":"Patric","Clube":{"Nome":"Atlético-MG"},"Posicao":1,"Preco":{"Atual":12.06,"Variacao":0.0},"Pontuacao":{"Media":4.32,"Ultima":0.0}}
+{"Nome":"Patrick","Clube":{"Nome":"Goiás"},"Posicao":3,"Preco":{"Atual":10.53,"Variacao":0.0},"Pontuacao":{"Media":5.92,"Ultima":2.8}}
+{"Nome":"Paulão","Clube":{"Nome":"Internacional"},"Posicao":2,"Preco":{"Atual":4.65,"Variacao":0.0},"Pontuacao":{"Media":1.96,"Ultima":0.0}}
+{"Nome":"Paulinho","Clube":{"Nome":"Flamengo"},"Posicao":4,"Preco":{"Atual":8.46,"Variacao":0.0},"Pontuacao":{"Media":-0.38,"Ultima":-0.7}}
+{"Nome":"Paulinho","Clube":{"Nome":"Atlético-MG"},"Posicao":3,"Preco":{"Atual":1.0,"Variacao":0.0},"Pontuacao":{"Media":0.0,"Ultima":0.0}}
+{"Nome":"Paulinho","Clube":{"Nome":"Ponte Preta"},"Posicao":3,"Preco":{"Atual":4.98,"Variacao":0.0},"Pontuacao":{"Media":3.3,"Ultima":0.0}}
+{"Nome":"Paulinho","Clube":{"Nome":"Coritiba"},"Posicao":4,"Preco":{"Atual":7.11,"Variacao":0.0},"Pontuacao":{"Media":5.63,"Ultima":0.0}}
+{"Nome":"Paulinho Dias","Clube":{"Nome":"Atlético-PR"},"Posicao":3,"Preco":{"Atual":4.73,"Variacao":0.0},"Pontuacao":{"Media":-0.3,"Ultima":0.0}}
+{"Nome":"Paulo","Clube":{"Nome":"Goiás"},"Posicao":4,"Preco":{"Atual":2.37,"Variacao":0.0},"Pontuacao":{"Media":0.0,"Ultima":0.0}}
+{"Nome":"Paulo André","Clube":{"Nome":"Cruzeiro"},"Posicao":2,"Preco":{"Atual":7.3,"Variacao":0.0},"Pontuacao":{"Media":-4.2,"Ultima":0.0}}
+{"Nome":"Paulo Henrique","Clube":{"Nome":"Goiás"},"Posicao":0,"Preco":{"Atual":1.0,"Variacao":0.0},"Pontuacao":{"Media":0.0,"Ultima":0.0}}
+{"Nome":"Paulo Miranda","Clube":{"Nome":"São Paulo"},"Posicao":2,"Preco":{"Atual":10.64,"Variacao":0.0},"Pontuacao":{"Media":5.2,"Ultima":0.0}}
+{"Nome":"Paulo Otávio","Clube":{"Nome":"Coritiba"},"Posicao":1,"Preco":{"Atual":1.0,"Variacao":0.0},"Pontuacao":{"Media":0.0,"Ultima":0.0}}
+{"Nome":"Paulo Ricardo","Clube":{"Nome":"Santos"},"Posicao":2,"Preco":{"Atual":1.0,"Variacao":0.0},"Pontuacao":{"Media":0.0,"Ultima":0.0}}
+{"Nome":"Paulo Roberto","Clube":{"Nome":"Figueirense"},"Posicao":3,"Preco":{"Atual":8.29,"Variacao":0.0},"Pontuacao":{"Media":4.18,"Ultima":3.2}}
+{"Nome":"Paulo Victor","Clube":{"Nome":"Coritiba"},"Posicao":4,"Preco":{"Atual":2.0,"Variacao":0.0},"Pontuacao":{"Media":0.0,"Ultima":0.0}}
+{"Nome":"Paulo Victor","Clube":{"Nome":"Flamengo"},"Posicao":0,"Preco":{"Atual":4.12,"Variacao":0.0},"Pontuacao":{"Media":1.04,"Ultima":9.7}}
+{"Nome":"Pedro","Clube":{"Nome":"Chapecoense"},"Posicao":1,"Preco":{"Atual":1.0,"Variacao":0.0},"Pontuacao":{"Media":0.0,"Ultima":0.0}}
+{"Nome":"Pedro Botelho","Clube":{"Nome":"Atlético-MG"},"Posicao":1,"Preco":{"Atual":0.79,"Variacao":0.0},"Pontuacao":{"Media":-2.1,"Ultima":0.0}}
+{"Nome":"Pedro Geromel","Clube":{"Nome":"Grêmio"},"Posicao":2,"Preco":{"Atual":5.17,"Variacao":0.0},"Pontuacao":{"Media":0.7,"Ultima":-0.6}}
+{"Nome":"Pedro Ken","Clube":{"Nome":"Coritiba"},"Posicao":3,"Preco":{"Atual":11.86,"Variacao":0.0},"Pontuacao":{"Media":5.0,"Ultima":0.0}}
+{"Nome":"Pedro Paulo","Clube":{"Nome":"Atlético-PR"},"Posicao":4,"Preco":{"Atual":2.0,"Variacao":0.0},"Pontuacao":{"Media":0.0,"Ultima":0.0}}
+{"Nome":"Pedro Rocha","Clube":{"Nome":"Grêmio"},"Posicao":4,"Preco":{"Atual":3.09,"Variacao":0.0},"Pontuacao":{"Media":1.77,"Ultima":3.6}}
+{"Nome":"Péricles","Clube":{"Nome":"Goiás"},"Posicao":3,"Preco":{"Atual":2.22,"Variacao":0.0},"Pontuacao":{"Media":0.52,"Ultima":2.2}}
+{"Nome":"Petros","Clube":{"Nome":"Corinthians"},"Posicao":3,"Preco":{"Atual":11.71,"Variacao":0.0},"Pontuacao":{"Media":3.14,"Ultima":2.3}}
+{"Nome":"Philipe Maia","Clube":{"Nome":"Avaí"},"Posicao":2,"Preco":{"Atual":1.0,"Variacao":0.0},"Pontuacao":{"Media":0.0,"Ultima":0.0}}
+{"Nome":"Pierre","Clube":{"Nome":"Fluminense"},"Posicao":3,"Preco":{"Atual":6.49,"Variacao":0.0},"Pontuacao":{"Media":1.9,"Ultima":5.5}}
+{"Nome":"Rafael","Clube":{"Nome":"Cruzeiro"},"Posicao":0,"Preco":{"Atual":5.44,"Variacao":0.0},"Pontuacao":{"Media":3.7,"Ultima":0.0}}
+{"Nome":"Rafael Bastos","Clube":{"Nome":"Figueirense"},"Posicao":3,"Preco":{"Atual":4.87,"Variacao":0.0},"Pontuacao":{"Media":0.0,"Ultima":0.0}}
+{"Nome":"Rafael Carioca","Clube":{"Nome":"Atlético-MG"},"Posicao":3,"Preco":{"Atual":6.92,"Variacao":0.0},"Pontuacao":{"Media":4.02,"Ultima":0.0}}
+{"Nome":"Rafael Copetti","Clube":{"Nome":"Vasco"},"Posicao":0,"Preco":{"Atual":1.0,"Variacao":0.0},"Pontuacao":{"Media":0.0,"Ultima":0.0}}
+{"Nome":"Rafael Costa","Clube":{"Nome":"Joinville"},"Posicao":4,"Preco":{"Atual":8.68,"Variacao":0.0},"Pontuacao":{"Media":5.08,"Ultima":1.4}}
+{"Nome":"Rafael Donato","Clube":{"Nome":"Joinville"},"Posicao":2,"Preco":{"Atual":3.0,"Variacao":0.0},"Pontuacao":{"Media":0.0,"Ultima":0.0}}
+{"Nome":"Rafael Forster","Clube":{"Nome":"Goiás"},"Posicao":1,"Preco":{"Atual":7.93,"Variacao":0.0},"Pontuacao":{"Media":3.0,"Ultima":7.8}}
+{"Nome":"Rafael Furlan","Clube":{"Nome":"Joinville"},"Posicao":4,"Preco":{"Atual":3.0,"Variacao":0.0},"Pontuacao":{"Media":0.0,"Ultima":0.0}}
+{"Nome":"Rafael Galhardo","Clube":{"Nome":"Grêmio"},"Posicao":1,"Preco":{"Atual":8.8,"Variacao":0.0},"Pontuacao":{"Media":4.38,"Ultima":1.7}}
+{"Nome":"Rafael Lima","Clube":{"Nome":"Chapecoense"},"Posicao":2,"Preco":{"Atual":9.67,"Variacao":0.0},"Pontuacao":{"Media":2.37,"Ultima":1.3}}
+{"Nome":"Rafael Longuine","Clube":{"Nome":"Santos"},"Posicao":3,"Preco":{"Atual":4.78,"Variacao":0.0},"Pontuacao":{"Media":0.53,"Ultima":0.0}}
+{"Nome":"Rafael Marques","Clube":{"Nome":"Palmeiras"},"Posicao":4,"Preco":{"Atual":18.78,"Variacao":0.0},"Pontuacao":{"Media":5.17,"Ultima":10.3}}
+{"Nome":"Rafael Martins","Clube":{"Nome":"Coritiba"},"Posicao":0,"Preco":{"Atual":1.0,"Variacao":0.0},"Pontuacao":{"Media":0.0,"Ultima":0.0}}
+{"Nome":"Rafael Moura","Clube":{"Nome":"Internacional"},"Posicao":4,"Preco":{"Atual":10.88,"Variacao":0.0},"Pontuacao":{"Media":4.38,"Ultima":8.9}}
+{"Nome":"Rafael Silva","Clube":{"Nome":"Vasco"},"Posicao":4,"Preco":{"Atual":6.4,"Variacao":0.0},"Pontuacao":{"Media":2.8,"Ultima":0.0}}
+{"Nome":"Rafael Thyere","Clube":{"Nome":"Grêmio"},"Posicao":2,"Preco":{"Atual":1.0,"Variacao":0.0},"Pontuacao":{"Media":0.0,"Ultima":0.0}}
+{"Nome":"Rafael Toloi","Clube":{"Nome":"São Paulo"},"Posicao":2,"Preco":{"Atual":12.1,"Variacao":0.0},"Pontuacao":{"Media":3.75,"Ultima":7.8}}
+{"Nome":"Rafael Vaz","Clube":{"Nome":"Vasco"},"Posicao":2,"Preco":{"Atual":2.0,"Variacao":0.0},"Pontuacao":{"Media":0.0,"Ultima":0.0}}
+{"Nome":"Rafael Zuchi","Clube":{"Nome":"Atlético-PR"},"Posicao":2,"Preco":{"Atual":2.0,"Variacao":0.0},"Pontuacao":{"Media":0.0,"Ultima":0.0}}
+{"Nome":"Rafhael Lucas","Clube":{"Nome":"Coritiba"},"Posicao":4,"Preco":{"Atual":18.46,"Variacao":0.0},"Pontuacao":{"Media":2.23,"Ultima":-0.8}}
+{"Nome":"Rafinha","Clube":{"Nome":"Atlético-PR"},"Posicao":3,"Preco":{"Atual":4.0,"Variacao":0.0},"Pontuacao":{"Media":0.0,"Ultima":0.0}}
+{"Nome":"Rafinha","Clube":{"Nome":"Fluminense"},"Posicao":3,"Preco":{"Atual":4.0,"Variacao":0.0},"Pontuacao":{"Media":0.0,"Ultima":0.0}}
+{"Nome":"Ralf","Clube":{"Nome":"Corinthians"},"Posicao":3,"Preco":{"Atual":12.25,"Variacao":0.0},"Pontuacao":{"Media":1.78,"Ultima":1.8}}
+{"Nome":"Ramiro","Clube":{"Nome":"Grêmio"},"Posicao":3,"Preco":{"Atual":8.0,"Variacao":0.0},"Pontuacao":{"Media":0.0,"Ultima":0.0}}
+{"Nome":"Ramon","Clube":{"Nome":"Goiás"},"Posicao":3,"Preco":{"Atual":6.0,"Variacao":0.0},"Pontuacao":{"Media":0.0,"Ultima":0.0}}
+{"Nome":"Raul","Clube":{"Nome":"Grêmio"},"Posicao":1,"Preco":{"Atual":1.0,"Variacao":0.0},"Pontuacao":{"Media":0.0,"Ultima":0.0}}
+{"Nome":"Régis","Clube":{"Nome":"Sport"},"Posicao":3,"Preco":{"Atual":8.62,"Variacao":0.0},"Pontuacao":{"Media":1.66,"Ultima":0.0}}
+{"Nome":"Reinaldo","Clube":{"Nome":"São Paulo"},"Posicao":1,"Preco":{"Atual":3.98,"Variacao":0.0},"Pontuacao":{"Media":1.78,"Ultima":2.7}}
+{"Nome":"Renan","Clube":{"Nome":"Avaí"},"Posicao":3,"Preco":{"Atual":5.68,"Variacao":0.0},"Pontuacao":{"Media":1.59,"Ultima":-0.3}}
+{"Nome":"Renan","Clube":{"Nome":"Goiás"},"Posicao":0,"Preco":{"Atual":22.65,"Variacao":0.0},"Pontuacao":{"Media":7.16,"Ultima":8.0}}
+{"Nome":"Renan Oliveira","Clube":{"Nome":"Avaí"},"Posicao":3,"Preco":{"Atual":10.01,"Variacao":0.0},"Pontuacao":{"Media":2.63,"Ultima":0.0}}
+{"Nome":"Renan Ribeiro","Clube":{"Nome":"São Paulo"},"Posicao":0,"Preco":{"Atual":2.0,"Variacao":0.0},"Pontuacao":{"Media":0.0,"Ultima":0.0}}
+{"Nome":"Renato","Clube":{"Nome":"Fluminense"},"Posicao":1,"Preco":{"Atual":5.49,"Variacao":0.0},"Pontuacao":{"Media":3.74,"Ultima":-0.3}}
+{"Nome":"Renato","Clube":{"Nome":"Joinville"},"Posicao":3,"Preco":{"Atual":4.36,"Variacao":0.0},"Pontuacao":{"Media":1.15,"Ultima":0.0}}
+{"Nome":"Renato","Clube":{"Nome":"Santos"},"Posicao":3,"Preco":{"Atual":11.83,"Variacao":0.0},"Pontuacao":{"Media":2.83,"Ultima":0.0}}
+{"Nome":"Renato","Clube":{"Nome":"Avaí"},"Posicao":3,"Preco":{"Atual":2.0,"Variacao":0.0},"Pontuacao":{"Media":0.0,"Ultima":0.0}}
+{"Nome":"Renato Augusto","Clube":{"Nome":"Corinthians"},"Posicao":3,"Preco":{"Atual":13.04,"Variacao":0.0},"Pontuacao":{"Media":2.38,"Ultima":5.3}}
+{"Nome":"Renato Cajá","Clube":{"Nome":"Ponte Preta"},"Posicao":3,"Preco":{"Atual":29.01,"Variacao":0.0},"Pontuacao":{"Media":9.01,"Ultima":1.1}}
+{"Nome":"Renato Chaves","Clube":{"Nome":"Ponte Preta"},"Posicao":2,"Preco":{"Atual":6.76,"Variacao":0.0},"Pontuacao":{"Media":5.9,"Ultima":0.0}}
+{"Nome":"Renê","Clube":{"Nome":"Sport"},"Posicao":1,"Preco":{"Atual":5.88,"Variacao":0.0},"Pontuacao":{"Media":3.91,"Ultima":4.7}}
+{"Nome":"Réver","Clube":{"Nome":"Internacional"},"Posicao":2,"Preco":{"Atual":11.49,"Variacao":0.0},"Pontuacao":{"Media":3.18,"Ultima":0.0}}
+{"Nome":"Revson","Clube":{"Nome":"Avaí"},"Posicao":3,"Preco":{"Atual":3.0,"Variacao":0.0},"Pontuacao":{"Media":0.0,"Ultima":0.0}}
+{"Nome":"Reynaldo","Clube":{"Nome":"Ponte Preta"},"Posicao":0,"Preco":{"Atual":1.0,"Variacao":0.0},"Pontuacao":{"Media":0.0,"Ultima":0.0}}
+{"Nome":"Rhodolfo","Clube":{"Nome":"Grêmio"},"Posicao":2,"Preco":{"Atual":8.35,"Variacao":0.0},"Pontuacao":{"Media":3.72,"Ultima":10.1}}
+{"Nome":"Riascos","Clube":{"Nome":"Vasco"},"Posicao":4,"Preco":{"Atual":6.1,"Variacao":0.0},"Pontuacao":{"Media":1.57,"Ultima":0.0}}
+{"Nome":"Ricardinho","Clube":{"Nome":"Figueirense"},"Posicao":3,"Preco":{"Atual":8.58,"Variacao":0.0},"Pontuacao":{"Media":3.24,"Ultima":6.0}}
+{"Nome":"Ricardo Drubscky","Clube":{"Nome":"Fluminense"},"Posicao":5,"Preco":{"Atual":12.1,"Variacao":0.0},"Pontuacao":{"Media":4.16,"Ultima":1.65}}
+{"Nome":"Ricardo Oliveira","Clube":{"Nome":"Santos"},"Posicao":4,"Preco":{"Atual":18.07,"Variacao":0.0},"Pontuacao":{"Media":3.63,"Ultima":0.0}}
+{"Nome":"Ricardo Silva","Clube":{"Nome":"Atlético-PR"},"Posicao":2,"Preco":{"Atual":4.0,"Variacao":0.0},"Pontuacao":{"Media":0.0,"Ultima":0.0}}
+{"Nome":"Richarlyson","Clube":{"Nome":"Chapecoense"},"Posicao":3,"Preco":{"Atual":10.0,"Variacao":0.0},"Pontuacao":{"Media":0.0,"Ultima":0.0}}
+{"Nome":"Rildo","Clube":{"Nome":"Ponte Preta"},"Posicao":4,"Preco":{"Atual":17.24,"Variacao":0.0},"Pontuacao":{"Media":4.95,"Ultima":0.0}}
+{"Nome":"Rithely","Clube":{"Nome":"Sport"},"Posicao":3,"Preco":{"Atual":14.96,"Variacao":0.0},"Pontuacao":{"Media":4.63,"Ultima":6.3}}
+{"Nome":"Robert","Clube":{"Nome":"Goiás"},"Posicao":4,"Preco":{"Atual":1.15,"Variacao":0.0},"Pontuacao":{"Media":0.6,"Ultima":0.0}}
+{"Nome":"Robert","Clube":{"Nome":"Fluminense"},"Posicao":3,"Preco":{"Atual":4.98,"Variacao":0.0},"Pontuacao":{"Media":1.3,"Ultima":0.0}}
+{"Nome":"Roberto","Clube":{"Nome":"Avaí"},"Posicao":4,"Preco":{"Atual":5.6,"Variacao":0.0},"Pontuacao":{"Media":2.15,"Ultima":0.0}}
+{"Nome":"Robinho","Clube":{"Nome":"Santos"},"Posicao":4,"Preco":{"Atual":28.72,"Variacao":0.0},"Pontuacao":{"Media":6.1,"Ultima":0.0}}
+{"Nome":"Robinho","Clube":{"Nome":"Palmeiras"},"Posicao":3,"Preco":{"Atual":9.61,"Variacao":0.0},"Pontuacao":{"Media":0.58,"Ultima":0.0}}
+{"Nome":"Rodinei","Clube":{"Nome":"Ponte Preta"},"Posicao":1,"Preco":{"Atual":23.67,"Variacao":0.0},"Pontuacao":{"Media":7.81,"Ultima":6.8}}
+{"Nome":"Rodolfo","Clube":{"Nome":"Coritiba"},"Posicao":3,"Preco":{"Atual":4.11,"Variacao":0.0},"Pontuacao":{"Media":0.2,"Ultima":0.0}}
+{"Nome":"Rodrigo","Clube":{"Nome":"Goiás"},"Posicao":3,"Preco":{"Atual":8.06,"Variacao":0.0},"Pontuacao":{"Media":3.67,"Ultima":5.5}}
+{"Nome":"Rodrigo","Clube":{"Nome":"Vasco"},"Posicao":2,"Preco":{"Atual":20.59,"Variacao":0.0},"Pontuacao":{"Media":4.93,"Ultima":7.9}}
+{"Nome":"Rodrigo Biro","Clube":{"Nome":"Ponte Preta"},"Posicao":1,"Preco":{"Atual":5.0,"Variacao":0.0},"Pontuacao":{"Media":0.0,"Ultima":0.0}}
+{"Nome":"Rodrigo Caio","Clube":{"Nome":"São Paulo"},"Posicao":3,"Preco":{"Atual":5.9,"Variacao":0.0},"Pontuacao":{"Media":1.5,"Ultima":0.0}}
+{"Nome":"Rodrigo Dourado","Clube":{"Nome":"Internacional"},"Posicao":3,"Preco":{"Atual":5.06,"Variacao":0.0},"Pontuacao":{"Media":4.07,"Ultima":1.5}}
+{"Nome":"Rodrigo Lobão","Clube":{"Nome":"Ponte Preta"},"Posicao":2,"Preco":{"Atual":1.0,"Variacao":0.0},"Pontuacao":{"Media":0.0,"Ultima":0.0}}
+{"Nome":"Rodrigo Mancha","Clube":{"Nome":"Sport"},"Posicao":3,"Preco":{"Atual":3.77,"Variacao":0.0},"Pontuacao":{"Media":0.56,"Ultima":0.2}}
+{"Nome":"Rodrigo Ramos","Clube":{"Nome":"Coritiba"},"Posicao":1,"Preco":{"Atual":2.0,"Variacao":0.0},"Pontuacao":{"Media":0.0,"Ultima":0.0}}
+{"Nome":"Rodrigo Sam","Clube":{"Nome":"Corinthians"},"Posicao":2,"Preco":{"Atual":1.0,"Variacao":0.0},"Pontuacao":{"Media":0.0,"Ultima":0.0}}
+{"Nome":"Roger","Clube":{"Nome":"Chapecoense"},"Posicao":4,"Preco":{"Atual":13.62,"Variacao":0.0},"Pontuacao":{"Media":3.18,"Ultima":0.0}}
+{"Nome":"Roger Machado","Clube":{"Nome":"Grêmio"},"Posicao":5,"Preco":{"Atual":10.64,"Variacao":0.0},"Pontuacao":{"Media":3.36,"Ultima":3.85}}
+{"Nome":"Rogério","Clube":{"Nome":"Joinville"},"Posicao":1,"Preco":{"Atual":4.6,"Variacao":0.0},"Pontuacao":{"Media":0.87,"Ultima":0.0}}
+{"Nome":"Rogério Ceni","Clube":{"Nome":"São Paulo"},"Posicao":0,"Preco":{"Atual":27.96,"Variacao":0.0},"Pontuacao":{"Media":8.31,"Ultima":5.0}}
+{"Nome":"Romarinho","Clube":{"Nome":"Vasco"},"Posicao":4,"Preco":{"Atual":1.0,"Variacao":0.0},"Pontuacao":{"Media":0.0,"Ultima":0.0}}
+{"Nome":"Romário","Clube":{"Nome":"Avaí"},"Posicao":1,"Preco":{"Atual":2.4,"Variacao":0.0},"Pontuacao":{"Media":1.18,"Ultima":-2.5}}
+{"Nome":"Romeo Fernandes","Clube":{"Nome":"Atlético-PR"},"Posicao":4,"Preco":{"Atual":4.0,"Variacao":0.0},"Pontuacao":{"Media":0.0,"Ultima":0.0}}
+{"Nome":"Rômulo","Clube":{"Nome":"Avaí"},"Posicao":4,"Preco":{"Atual":1.81,"Variacao":0.0},"Pontuacao":{"Media":1.13,"Ultima":0.0}}
+{"Nome":"Ronaldo","Clube":{"Nome":"Sport"},"Posicao":3,"Preco":{"Atual":3.0,"Variacao":0.0},"Pontuacao":{"Media":0.0,"Ultima":0.0}}
+{"Nome":"Ronaldo Alves","Clube":{"Nome":"Avaí"},"Posicao":2,"Preco":{"Atual":5.0,"Variacao":0.0},"Pontuacao":{"Media":0.0,"Ultima":0.0}}
+{"Nome":"Ronan","Clube":{"Nome":"Fluminense"},"Posicao":1,"Preco":{"Atual":1.0,"Variacao":0.0},"Pontuacao":{"Media":0.0,"Ultima":0.0}}
+{"Nome":"Roni","Clube":{"Nome":"Ponte Preta"},"Posicao":3,"Preco":{"Atual":5.65,"Variacao":0.0},"Pontuacao":{"Media":0.03,"Ultima":0.2}}
+{"Nome":"Rosinei","Clube":{"Nome":"Coritiba"},"Posicao":3,"Preco":{"Atual":4.93,"Variacao":0.0},"Pontuacao":{"Media":0.67,"Ultima":0.0}}
+{"Nome":"Ruan","Clube":{"Nome":"Goiás"},"Posicao":4,"Preco":{"Atual":6.24,"Variacao":0.0},"Pontuacao":{"Media":-0.8,"Ultima":0.0}}
+{"Nome":"Rudnei","Clube":{"Nome":"Avaí"},"Posicao":3,"Preco":{"Atual":3.0,"Variacao":0.0},"Pontuacao":{"Media":0.0,"Ultima":0.0}}
+{"Nome":"Ruy","Clube":{"Nome":"Coritiba"},"Posicao":3,"Preco":{"Atual":4.92,"Variacao":0.0},"Pontuacao":{"Media":1.32,"Ultima":0.8}}
+{"Nome":"Ryder","Clube":{"Nome":"Palmeiras"},"Posicao":3,"Preco":{"Atual":3.0,"Variacao":0.0},"Pontuacao":{"Media":0.0,"Ultima":0.0}}
+{"Nome":"Saimon","Clube":{"Nome":"Figueirense"},"Posicao":2,"Preco":{"Atual":2.82,"Variacao":0.0},"Pontuacao":{"Media":1.2,"Ultima":1.2}}
+{"Nome":"Samir","Clube":{"Nome":"Flamengo"},"Posicao":2,"Preco":{"Atual":10.09,"Variacao":0.0},"Pontuacao":{"Media":7.1,"Ultima":8.4}}
+{"Nome":"Samuel","Clube":{"Nome":"Coritiba"},"Posicao":0,"Preco":{"Atual":1.0,"Variacao":0.0},"Pontuacao":{"Media":0.0,"Ultima":0.0}}
+{"Nome":"Samuel","Clube":{"Nome":"Sport"},"Posicao":4,"Preco":{"Atual":9.26,"Variacao":0.0},"Pontuacao":{"Media":1.63,"Ultima":3.8}}
+{"Nome":"Samuel Xavier","Clube":{"Nome":"Sport"},"Posicao":1,"Preco":{"Atual":8.5,"Variacao":0.0},"Pontuacao":{"Media":5.65,"Ultima":0.5}}
+{"Nome":"Sander","Clube":{"Nome":"Avaí"},"Posicao":1,"Preco":{"Atual":4.0,"Variacao":0.0},"Pontuacao":{"Media":0.0,"Ultima":0.0}}
+{"Nome":"Sandro Silva","Clube":{"Nome":"Vasco"},"Posicao":3,"Preco":{"Atual":5.0,"Variacao":0.0},"Pontuacao":{"Media":0.0,"Ultima":0.0}}
+{"Nome":"Santos","Clube":{"Nome":"Atlético-PR"},"Posicao":0,"Preco":{"Atual":3.0,"Variacao":0.0},"Pontuacao":{"Media":0.0,"Ultima":0.0}}
+{"Nome":"Serginho","Clube":{"Nome":"Vasco"},"Posicao":3,"Preco":{"Atual":5.19,"Variacao":0.0},"Pontuacao":{"Media":0.6,"Ultima":0.0}}
+{"Nome":"Serginho","Clube":{"Nome":"Santos"},"Posicao":3,"Preco":{"Atual":2.0,"Variacao":0.0},"Pontuacao":{"Media":0.0,"Ultima":0.0}}
+{"Nome":"Seymour","Clube":{"Nome":"Cruzeiro"},"Posicao":3,"Preco":{"Atual":8.0,"Variacao":0.0},"Pontuacao":{"Media":0.0,"Ultima":0.0}}
+{"Nome":"Silas","Clube":{"Nome":"Internacional"},"Posicao":3,"Preco":{"Atual":1.0,"Variacao":0.0},"Pontuacao":{"Media":0.0,"Ultima":0.0}}
+{"Nome":"Silva","Clube":{"Nome":"Internacional"},"Posicao":3,"Preco":{"Atual":0.79,"Variacao":0.0},"Pontuacao":{"Media":-1.2,"Ultima":0.0}}
+{"Nome":"Silvio","Clube":{"Nome":"Chapecoense"},"Posicao":0,"Preco":{"Atual":1.0,"Variacao":0.0},"Pontuacao":{"Media":0.0,"Ultima":0.0}}
+{"Nome":"Sinho","Clube":{"Nome":"Sport"},"Posicao":1,"Preco":{"Atual":2.0,"Variacao":0.0},"Pontuacao":{"Media":0.0,"Ultima":0.0}}
+{"Nome":"Souza","Clube":{"Nome":"São Paulo"},"Posicao":3,"Preco":{"Atual":18.51,"Variacao":0.0},"Pontuacao":{"Media":4.22,"Ultima":9.4}}
+{"Nome":"Sueliton","Clube":{"Nome":"Joinville"},"Posicao":1,"Preco":{"Atual":10.21,"Variacao":0.0},"Pontuacao":{"Media":2.62,"Ultima":0.0}}
+{"Nome":"Taiberson","Clube":{"Nome":"Internacional"},"Posicao":4,"Preco":{"Atual":6.06,"Variacao":0.0},"Pontuacao":{"Media":1.32,"Ultima":1.4}}
+{"Nome":"Tauã","Clube":{"Nome":"Avaí"},"Posicao":4,"Preco":{"Atual":3.0,"Variacao":0.0},"Pontuacao":{"Media":0.0,"Ultima":0.0}}
+{"Nome":"Thalles","Clube":{"Nome":"Vasco"},"Posicao":4,"Preco":{"Atual":8.65,"Variacao":0.0},"Pontuacao":{"Media":1.23,"Ultima":1.0}}
+{"Nome":"Thallyson","Clube":{"Nome":"Flamengo"},"Posicao":1,"Preco":{"Atual":1.0,"Variacao":0.0},"Pontuacao":{"Media":0.0,"Ultima":0.0}}
+{"Nome":"Thiago","Clube":{"Nome":"Flamengo"},"Posicao":0,"Preco":{"Atual":1.0,"Variacao":0.0},"Pontuacao":{"Media":0.0,"Ultima":0.0}}
+{"Nome":"Thiago Carvalho","Clube":{"Nome":"Cruzeiro"},"Posicao":2,"Preco":{"Atual":4.0,"Variacao":0.0},"Pontuacao":{"Media":0.0,"Ultima":0.0}}
+{"Nome":"Thiago Galhardo","Clube":{"Nome":"Coritiba"},"Posicao":3,"Preco":{"Atual":5.06,"Variacao":0.0},"Pontuacao":{"Media":0.75,"Ultima":2.8}}
+{"Nome":"Thiago Heleno","Clube":{"Nome":"Figueirense"},"Posicao":2,"Preco":{"Atual":13.01,"Variacao":0.0},"Pontuacao":{"Media":5.7,"Ultima":0.0}}
+{"Nome":"Thiago Maia","Clube":{"Nome":"Santos"},"Posicao":3,"Preco":{"Atual":0.82,"Variacao":0.0},"Pontuacao":{"Media":-0.3,"Ultima":0.0}}
+{"Nome":"Thiago Mendes","Clube":{"Nome":"São Paulo"},"Posicao":3,"Preco":{"Atual":4.96,"Variacao":0.0},"Pontuacao":{"Media":2.22,"Ultima":-5.6}}
+{"Nome":"Thiago Ribeiro","Clube":{"Nome":"Atlético-MG"},"Posicao":4,"Preco":{"Atual":11.91,"Variacao":0.0},"Pontuacao":{"Media":3.74,"Ultima":0.0}}
+{"Nome":"Thiago Santana","Clube":{"Nome":"Figueirense"},"Posicao":4,"Preco":{"Atual":4.22,"Variacao":0.0},"Pontuacao":{"Media":4.2,"Ultima":-0.6}}
+{"Nome":"Thiego","Clube":{"Nome":"Chapecoense"},"Posicao":2,"Preco":{"Atual":4.0,"Variacao":0.0},"Pontuacao":{"Media":0.0,"Ultima":0.0}}
+{"Nome":"Thomás","Clube":{"Nome":"Ponte Preta"},"Posicao":3,"Preco":{"Atual":4.0,"Variacao":0.0},"Pontuacao":{"Media":0.0,"Ultima":0.0}}
+{"Nome":"Tiago","Clube":{"Nome":"Grêmio"},"Posicao":0,"Preco":{"Atual":3.82,"Variacao":0.0},"Pontuacao":{"Media":3.13,"Ultima":1.0}}
+{"Nome":"Tiago","Clube":{"Nome":"Atlético-MG"},"Posicao":2,"Preco":{"Atual":1.58,"Variacao":0.0},"Pontuacao":{"Media":0.0,"Ultima":0.0}}
+{"Nome":"Tiago Alves","Clube":{"Nome":"Ponte Preta"},"Posicao":2,"Preco":{"Atual":4.3,"Variacao":0.0},"Pontuacao":{"Media":2.85,"Ultima":2.9}}
+{"Nome":"Tiago Costa","Clube":{"Nome":"Chapecoense"},"Posicao":1,"Preco":{"Atual":3.0,"Variacao":0.0},"Pontuacao":{"Media":0.0,"Ultima":0.0}}
+{"Nome":"Tiago Luis","Clube":{"Nome":"Joinville"},"Posicao":4,"Preco":{"Atual":6.44,"Variacao":0.0},"Pontuacao":{"Media":0.63,"Ultima":2.5}}
+{"Nome":"Tinga","Clube":{"Nome":"Avaí"},"Posicao":3,"Preco":{"Atual":7.0,"Variacao":0.0},"Pontuacao":{"Media":0.0,"Ultima":0.0}}
+{"Nome":"Tinga","Clube":{"Nome":"Grêmio"},"Posicao":1,"Preco":{"Atual":2.0,"Variacao":0.0},"Pontuacao":{"Media":0.0,"Ultima":0.0}}
+{"Nome":"Tite","Clube":{"Nome":"Corinthians"},"Posicao":5,"Preco":{"Atual":16.09,"Variacao":0.0},"Pontuacao":{"Media":3.81,"Ultima":3.08}}
+{"Nome":"Tobio","Clube":{"Nome":"Palmeiras"},"Posicao":2,"Preco":{"Atual":6.17,"Variacao":0.0},"Pontuacao":{"Media":-1.3,"Ultima":0.0}}
+{"Nome":"Toshi","Clube":{"Nome":"Avaí"},"Posicao":3,"Preco":{"Atual":1.0,"Variacao":0.0},"Pontuacao":{"Media":0.0,"Ultima":0.0}}
+{"Nome":"Trípodi","Clube":{"Nome":"Joinville"},"Posicao":4,"Preco":{"Atual":3.0,"Variacao":0.0},"Pontuacao":{"Media":0.0,"Ultima":0.0}}
+{"Nome":"Túlio","Clube":{"Nome":"Goiás"},"Posicao":3,"Preco":{"Atual":1.0,"Variacao":0.0},"Pontuacao":{"Media":0.0,"Ultima":0.0}}
+{"Nome":"Uelliton","Clube":{"Nome":"Avaí"},"Posicao":3,"Preco":{"Atual":5.22,"Variacao":0.0},"Pontuacao":{"Media":0.6,"Ultima":0.0}}
+{"Nome":"Uendel","Clube":{"Nome":"Corinthians"},"Posicao":1,"Preco":{"Atual":11.39,"Variacao":0.0},"Pontuacao":{"Media":8.4,"Ultima":0.0}}
+{"Nome":"Uilson","Clube":{"Nome":"Atlético-MG"},"Posicao":0,"Preco":{"Atual":1.0,"Variacao":0.0},"Pontuacao":{"Media":0.0,"Ultima":0.0}}
+{"Nome":"Vagner","Clube":{"Nome":"Avaí"},"Posicao":0,"Preco":{"Atual":4.46,"Variacao":0.0},"Pontuacao":{"Media":1.97,"Ultima":-2.0}}
+{"Nome":"Vagner Love","Clube":{"Nome":"Corinthians"},"Posicao":4,"Preco":{"Atual":9.09,"Variacao":0.0},"Pontuacao":{"Media":1.48,"Ultima":8.7}}
+{"Nome":"Valdivia","Clube":{"Nome":"Internacional"},"Posicao":3,"Preco":{"Atual":9.25,"Variacao":0.0},"Pontuacao":{"Media":2.1,"Ultima":0.0}}
+{"Nome":"Valdivia","Clube":{"Nome":"Palmeiras"},"Posicao":3,"Preco":{"Atual":14.07,"Variacao":0.0},"Pontuacao":{"Media":2.05,"Ultima":0.0}}
+{"Nome":"Valencia","Clube":{"Nome":"Santos"},"Posicao":3,"Preco":{"Atual":6.5,"Variacao":0.0},"Pontuacao":{"Media":1.65,"Ultima":0.0}}
+{"Nome":"Valmir Lucas","Clube":{"Nome":"Goiás"},"Posicao":2,"Preco":{"Atual":6.0,"Variacao":0.0},"Pontuacao":{"Media":0.0,"Ultima":0.0}}
+{"Nome":"Vaná","Clube":{"Nome":"Coritiba"},"Posicao":0,"Preco":{"Atual":5.0,"Variacao":0.0},"Pontuacao":{"Media":0.0,"Ultima":0.0}}
+{"Nome":"Vanderlei","Clube":{"Nome":"Santos"},"Posicao":0,"Preco":{"Atual":10.84,"Variacao":0.0},"Pontuacao":{"Media":-4.3,"Ultima":0.0}}
+{"Nome":"Vanderlei Luxemburgo","Clube":{"Nome":"Cruzeiro"},"Posicao":5,"Preco":{"Atual":11.06,"Variacao":0.0},"Pontuacao":{"Media":3.31,"Ultima":3.05}}
+{"Nome":"Victor","Clube":{"Nome":"Atlético-MG"},"Posicao":0,"Preco":{"Atual":13.58,"Variacao":0.0},"Pontuacao":{"Media":0.55,"Ultima":0.0}}
+{"Nome":"Victor Bolt","Clube":{"Nome":"Vasco"},"Posicao":3,"Preco":{"Atual":2.0,"Variacao":0.0},"Pontuacao":{"Media":0.0,"Ultima":0.0}}
+{"Nome":"Víctor Cáceres","Clube":{"Nome":"Flamengo"},"Posicao":3,"Preco":{"Atual":5.81,"Variacao":0.0},"Pontuacao":{"Media":2.3,"Ultima":0.0}}
+{"Nome":"Victor Ferraz","Clube":{"Nome":"Santos"},"Posicao":1,"Preco":{"Atual":12.52,"Variacao":0.0},"Pontuacao":{"Media":3.27,"Ultima":0.0}}
+{"Nome":"Victor Luis","Clube":{"Nome":"Palmeiras"},"Posicao":3,"Preco":{"Atual":5.0,"Variacao":0.0},"Pontuacao":{"Media":0.0,"Ultima":0.0}}
+{"Nome":"Victor Oliveira","Clube":{"Nome":"Fluminense"},"Posicao":2,"Preco":{"Atual":2.0,"Variacao":0.0},"Pontuacao":{"Media":0.0,"Ultima":0.0}}
+{"Nome":"Victor Ramos","Clube":{"Nome":"Palmeiras"},"Posicao":2,"Preco":{"Atual":1.46,"Variacao":0.0},"Pontuacao":{"Media":-1.38,"Ultima":0.3}}
+{"Nome":"Vilches","Clube":{"Nome":"Atlético-PR"},"Posicao":2,"Preco":{"Atual":8.0,"Variacao":0.0},"Pontuacao":{"Media":0.0,"Ultima":0.0}}
+{"Nome":"Vilson","Clube":{"Nome":"Chapecoense"},"Posicao":2,"Preco":{"Atual":2.6,"Variacao":0.0},"Pontuacao":{"Media":0.28,"Ultima":0.0}}
+{"Nome":"Vinícius","Clube":{"Nome":"Fluminense"},"Posicao":3,"Preco":{"Atual":11.68,"Variacao":0.0},"Pontuacao":{"Media":3.06,"Ultima":0.3}}
+{"Nome":"Vinícius Eutrópio","Clube":{"Nome":"Chapecoense"},"Posicao":5,"Preco":{"Atual":7.98,"Variacao":0.0},"Pontuacao":{"Media":3.06,"Ultima":1.99}}
+{"Nome":"Vinícius Silvestre","Clube":{"Nome":"Palmeiras"},"Posicao":0,"Preco":{"Atual":1.0,"Variacao":0.0},"Pontuacao":{"Media":0.0,"Ultima":0.0}}
+{"Nome":"Vitinho","Clube":{"Nome":"Internacional"},"Posicao":4,"Preco":{"Atual":14.58,"Variacao":0.0},"Pontuacao":{"Media":2.91,"Ultima":-0.9}}
+{"Nome":"Vitinho","Clube":{"Nome":"Grêmio"},"Posicao":4,"Preco":{"Atual":3.87,"Variacao":0.0},"Pontuacao":{"Media":-0.15,"Ultima":0.0}}
+{"Nome":"Vítor","Clube":{"Nome":"Sport"},"Posicao":1,"Preco":{"Atual":5.88,"Variacao":0.0},"Pontuacao":{"Media":0.7,"Ultima":0.0}}
+{"Nome":"Vítor","Clube":{"Nome":"Avaí"},"Posicao":0,"Preco":{"Atual":1.0,"Variacao":0.0},"Pontuacao":{"Media":0.0,"Ultima":0.0}}
+{"Nome":"Vitor","Clube":{"Nome":"Joinville"},"Posicao":0,"Preco":{"Atual":1.0,"Variacao":0.0},"Pontuacao":{"Media":0.0,"Ultima":0.0}}
+{"Nome":"Vitor","Clube":{"Nome":"Grêmio"},"Posicao":0,"Preco":{"Atual":1.0,"Variacao":0.0},"Pontuacao":{"Media":0.0,"Ultima":0.0}}
+{"Nome":"Vitor Hugo","Clube":{"Nome":"Palmeiras"},"Posicao":2,"Preco":{"Atual":19.36,"Variacao":0.0},"Pontuacao":{"Media":7.0,"Ultima":6.3}}
+{"Nome":"Vitor Xavier","Clube":{"Nome":"Ponte Preta"},"Posicao":4,"Preco":{"Atual":1.0,"Variacao":0.0},"Pontuacao":{"Media":0.0,"Ultima":0.0}}
+{"Nome":"Vladimir","Clube":{"Nome":"Santos"},"Posicao":0,"Preco":{"Atual":7.26,"Variacao":0.0},"Pontuacao":{"Media":1.88,"Ultima":0.0}}
+{"Nome":"Wagner","Clube":{"Nome":"Fluminense"},"Posicao":3,"Preco":{"Atual":4.23,"Variacao":0.0},"Pontuacao":{"Media":-0.63,"Ultima":0.0}}
+{"Nome":"Wagner","Clube":{"Nome":"Chapecoense"},"Posicao":3,"Preco":{"Atual":4.64,"Variacao":0.0},"Pontuacao":{"Media":3.16,"Ultima":5.3}}
+{"Nome":"Walace","Clube":{"Nome":"Grêmio"},"Posicao":3,"Preco":{"Atual":10.39,"Variacao":0.0},"Pontuacao":{"Media":3.28,"Ultima":6.7}}
+{"Nome":"Walisson","Clube":{"Nome":"Coritiba"},"Posicao":2,"Preco":{"Atual":2.0,"Variacao":0.0},"Pontuacao":{"Media":0.0,"Ultima":0.0}}
+{"Nome":"Wallace","Clube":{"Nome":"Goiás"},"Posicao":0,"Preco":{"Atual":1.0,"Variacao":0.0},"Pontuacao":{"Media":0.0,"Ultima":0.0}}
+{"Nome":"Wallace","Clube":{"Nome":"Flamengo"},"Posicao":2,"Preco":{"Atual":15.14,"Variacao":0.0},"Pontuacao":{"Media":3.79,"Ultima":10.9}}
+{"Nome":"Wallace","Clube":{"Nome":"Sport"},"Posicao":4,"Preco":{"Atual":2.0,"Variacao":0.0},"Pontuacao":{"Media":0.0,"Ultima":0.0}}
+{"Nome":"Wallyson","Clube":{"Nome":"Coritiba"},"Posicao":4,"Preco":{"Atual":6.64,"Variacao":0.0},"Pontuacao":{"Media":0.95,"Ultima":0.0}}
+{"Nome":"Walter","Clube":{"Nome":"Atlético-PR"},"Posicao":4,"Preco":{"Atual":17.43,"Variacao":0.0},"Pontuacao":{"Media":2.53,"Ultima":-0.6}}
+{"Nome":"Walter","Clube":{"Nome":"Corinthians"},"Posicao":0,"Preco":{"Atual":6.0,"Variacao":0.0},"Pontuacao":{"Media":0.0,"Ultima":0.0}}
+{"Nome":"Wanderson","Clube":{"Nome":"Chapecoense"},"Posicao":3,"Preco":{"Atual":4.66,"Variacao":0.0},"Pontuacao":{"Media":-0.6,"Ultima":0.0}}
+{"Nome":"Wanderson","Clube":{"Nome":"Ponte Preta"},"Posicao":4,"Preco":{"Atual":3.0,"Variacao":0.0},"Pontuacao":{"Media":0.0,"Ultima":0.0}}
+{"Nome":"Welinton","Clube":{"Nome":"Coritiba"},"Posicao":2,"Preco":{"Atual":10.68,"Variacao":0.0},"Pontuacao":{"Media":5.25,"Ultima":0.0}}
+{"Nome":"Welinton Junior","Clube":{"Nome":"Joinville"},"Posicao":4,"Preco":{"Atual":3.62,"Variacao":0.0},"Pontuacao":{"Media":1.3,"Ultima":0.0}}
+{"Nome":"Wellington","Clube":{"Nome":"Palmeiras"},"Posicao":2,"Preco":{"Atual":1.0,"Variacao":0.0},"Pontuacao":{"Media":0.0,"Ultima":0.0}}
+{"Nome":"Wellington","Clube":{"Nome":"Internacional"},"Posicao":3,"Preco":{"Atual":7.0,"Variacao":0.0},"Pontuacao":{"Media":0.0,"Ultima":0.0}}
+{"Nome":"Wellington Paulista","Clube":{"Nome":"Coritiba"},"Posicao":4,"Preco":{"Atual":8.29,"Variacao":0.0},"Pontuacao":{"Media":0.08,"Ultima":0.3}}
+{"Nome":"Wellington Saci","Clube":{"Nome":"Joinville"},"Posicao":1,"Preco":{"Atual":8.43,"Variacao":0.0},"Pontuacao":{"Media":3.05,"Ultima":0.0}}
+{"Nome":"Wellington Silva","Clube":{"Nome":"Fluminense"},"Posicao":1,"Preco":{"Atual":14.3,"Variacao":0.0},"Pontuacao":{"Media":3.76,"Ultima":0.0}}
+{"Nome":"Wendel","Clube":{"Nome":"Sport"},"Posicao":3,"Preco":{"Atual":9.04,"Variacao":0.0},"Pontuacao":{"Media":2.3,"Ultima":0.0}}
+{"Nome":"Werley","Clube":{"Nome":"Santos"},"Posicao":2,"Preco":{"Atual":9.74,"Variacao":0.0},"Pontuacao":{"Media":3.53,"Ultima":0.0}}
+{"Nome":"Wesley","Clube":{"Nome":"São Paulo"},"Posicao":3,"Preco":{"Atual":9.63,"Variacao":0.0},"Pontuacao":{"Media":2.04,"Ultima":-0.9}}
+{"Nome":"Wesley","Clube":{"Nome":"Goiás"},"Posicao":4,"Preco":{"Atual":1.12,"Variacao":0.0},"Pontuacao":{"Media":-0.28,"Ultima":3.6}}
+{"Nome":"Wesley","Clube":{"Nome":"Chapecoense"},"Posicao":1,"Preco":{"Atual":1.0,"Variacao":0.0},"Pontuacao":{"Media":0.0,"Ultima":0.0}}
+{"Nome":"Weverton","Clube":{"Nome":"Atlético-PR"},"Posicao":0,"Preco":{"Atual":23.9,"Variacao":0.0},"Pontuacao":{"Media":6.21,"Ultima":5.0}}
+{"Nome":"Wiliam Barbio","Clube":{"Nome":"Chapecoense"},"Posicao":4,"Preco":{"Atual":6.82,"Variacao":0.0},"Pontuacao":{"Media":1.0,"Ultima":0.0}}
+{"Nome":"William","Clube":{"Nome":"Avaí"},"Posicao":4,"Preco":{"Atual":7.08,"Variacao":0.0},"Pontuacao":{"Media":1.0,"Ultima":1.0}}
+{"Nome":"William","Clube":{"Nome":"Internacional"},"Posicao":1,"Preco":{"Atual":4.59,"Variacao":0.0},"Pontuacao":{"Media":6.73,"Ultima":2.0}}
+{"Nome":"William Cordeiro","Clube":{"Nome":"Figueirense"},"Posicao":1,"Preco":{"Atual":1.9,"Variacao":0.0},"Pontuacao":{"Media":1.4,"Ultima":0.0}}
+{"Nome":"William Henrique","Clube":{"Nome":"Joinville"},"Posicao":4,"Preco":{"Atual":5.62,"Variacao":0.0},"Pontuacao":{"Media":0.75,"Ultima":0.0}}
+{"Nome":"William Kozlowski","Clube":{"Nome":"Goiás"},"Posicao":3,"Preco":{"Atual":1.17,"Variacao":0.0},"Pontuacao":{"Media":-0.7,"Ultima":1.7}}
+{"Nome":"William Menezes","Clube":{"Nome":"Coritiba"},"Posicao":0,"Preco":{"Atual":1.0,"Variacao":0.0},"Pontuacao":{"Media":0.0,"Ultima":0.0}}
+{"Nome":"William Popp","Clube":{"Nome":"Joinville"},"Posicao":4,"Preco":{"Atual":4.2,"Variacao":0.0},"Pontuacao":{"Media":0.64,"Ultima":1.4}}
+{"Nome":"William Pottker","Clube":{"Nome":"Figueirense"},"Posicao":4,"Preco":{"Atual":2.0,"Variacao":0.0},"Pontuacao":{"Media":0.0,"Ultima":0.0}}
+{"Nome":"Willian","Clube":{"Nome":"Sport"},"Posicao":3,"Preco":{"Atual":6.0,"Variacao":0.0},"Pontuacao":{"Media":0.0,"Ultima":0.0}}
+{"Nome":"Willian","Clube":{"Nome":"Cruzeiro"},"Posicao":4,"Preco":{"Atual":17.28,"Variacao":0.0},"Pontuacao":{"Media":3.7,"Ultima":8.0}}
+{"Nome":"Willian","Clube":{"Nome":"Chapecoense"},"Posicao":0,"Preco":{"Atual":1.0,"Variacao":0.0},"Pontuacao":{"Media":0.0,"Ultima":0.0}}
+{"Nome":"Willian Farias","Clube":{"Nome":"Cruzeiro"},"Posicao":3,"Preco":{"Atual":3.57,"Variacao":0.0},"Pontuacao":{"Media":-0.05,"Ultima":0.0}}
+{"Nome":"Willian Rocha","Clube":{"Nome":"Avaí"},"Posicao":1,"Preco":{"Atual":4.0,"Variacao":0.0},"Pontuacao":{"Media":0.0,"Ultima":0.0}}
+{"Nome":"Willians","Clube":{"Nome":"Cruzeiro"},"Posicao":3,"Preco":{"Atual":13.72,"Variacao":0.0},"Pontuacao":{"Media":2.08,"Ultima":-3.4}}
+{"Nome":"Yago","Clube":{"Nome":"Corinthians"},"Posicao":2,"Preco":{"Atual":6.33,"Variacao":0.0},"Pontuacao":{"Media":4.0,"Ultima":0.0}}
+{"Nome":"Yago","Clube":{"Nome":"Vasco"},"Posicao":4,"Preco":{"Atual":4.45,"Variacao":0.0},"Pontuacao":{"Media":0.24,"Ultima":-0.1}}
+{"Nome":"Yago","Clube":{"Nome":"Figueirense"},"Posicao":3,"Preco":{"Atual":2.57,"Variacao":0.0},"Pontuacao":{"Media":0.87,"Ultima":-0.3}}
+{"Nome":"Ygor","Clube":{"Nome":"Goiás"},"Posicao":3,"Preco":{"Atual":1.11,"Variacao":0.0},"Pontuacao":{"Media":-4.6,"Ultima":0.0}}
+{"Nome":"Ygor Nogueira","Clube":{"Nome":"Fluminense"},"Posicao":2,"Preco":{"Atual":1.0,"Variacao":0.0},"Pontuacao":{"Media":0.0,"Ultima":0.0}}
+{"Nome":"Ytalo","Clube":{"Nome":"Atlético-PR"},"Posicao":4,"Preco":{"Atual":2.73,"Variacao":0.0},"Pontuacao":{"Media":1.5,"Ultima":-0.4}}
+{"Nome":"Yuri","Clube":{"Nome":"Chapecoense"},"Posicao":4,"Preco":{"Atual":1.0,"Variacao":0.0},"Pontuacao":{"Media":0.0,"Ultima":0.0}}
+{"Nome":"Yuri Mamute","Clube":{"Nome":"Grêmio"},"Posicao":4,"Preco":{"Atual":16.82,"Variacao":0.0},"Pontuacao":{"Media":2.64,"Ultima":-0.3}}
+{"Nome":"Zé Rafael","Clube":{"Nome":"Coritiba"},"Posicao":3,"Preco":{"Atual":3.0,"Variacao":0.0},"Pontuacao":{"Media":0.0,"Ultima":0.0}}
+{"Nome":"Zé Roberto","Clube":{"Nome":"Palmeiras"},"Posicao":1,"Preco":{"Atual":27.04,"Variacao":0.0},"Pontuacao":{"Media":7.0,"Ultima":0.2}}
+{"Nome":"Zeca","Clube":{"Nome":"Santos"},"Posicao":1,"Preco":{"Atual":3.0,"Variacao":0.0},"Pontuacao":{"Media":0.0,"Ultima":0.0}}
