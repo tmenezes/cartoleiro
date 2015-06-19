@@ -61,12 +61,17 @@
     <Compile Include="Core\Analisador\MediaPontuacaoTestes\Ao_analisar_media_de_pontuacao.cs" />
     <Compile Include="Core\Analisador\UltimaPontuacaoTestes\Ao_analisar_ultima_pontuacao.cs" />
     <Compile Include="Core\Escalador\EscaladorDeTimeTestes\Ao_escalar_time.cs" />
+    <Compile Include="Crawler\ScoutsCartola\Ao_obter_jogadores.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\Cartoleiro.Core\Cartoleiro.Core.csproj">
       <Project>{afeade17-c858-4aa3-a8d0-9e43b9b0785a}</Project>
       <Name>Cartoleiro.Core</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Cartoleiro.Crawler\Cartoleiro.Crawler.csproj">
+      <Project>{C36B08B4-3B85-483E-8DEF-01AB3055EB2E}</Project>
+      <Name>Cartoleiro.Crawler</Name>
     </ProjectReference>
     <ProjectReference Include="..\Cartoleiro.DAO\Cartoleiro.DAO.csproj">
       <Project>{AEBA7A3B-3F6C-4BDD-BBAC-7BB737F5FAB4}</Project>
