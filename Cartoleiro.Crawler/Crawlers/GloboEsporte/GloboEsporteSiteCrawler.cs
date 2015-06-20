@@ -53,6 +53,8 @@ namespace Cartoleiro.Crawler.Crawlers.GloboEsporte
                 }
             }
 
+            driver.Quit();
+
             return clubes;
         }
 
