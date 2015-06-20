@@ -17,7 +17,7 @@
 
         public override string ToString()
         {
-            return string.Format("Nome: {0}, Pontuacao: {1}, Preco: {2}", Nome, Pontuacao, Preco);
+            return string.Format("{0} - Pontuacao: {1}, Preco: {2}", Nome, Pontuacao, Preco);
         }
     }
 }

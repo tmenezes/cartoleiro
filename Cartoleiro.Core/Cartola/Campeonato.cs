@@ -1,9 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
+﻿
 namespace Cartoleiro.Core.Cartola
 {
     public class Campeonato
@@ -19,5 +14,10 @@ namespace Cartoleiro.Core.Cartola
         public int SaldoDeGol { get; set; }
         public double Aproveitamento { get { return Vitorias / Jogos * 100; } }
         public UltimosJogos UltimosJogos { get; set; }
+
+        public override string ToString()
+        {
+            return string.Format("Posicao: {0}, Pontos: {1}, Vitorias: {2}", Posicao, Pontos, Vitorias);
+        }
     }
 }
