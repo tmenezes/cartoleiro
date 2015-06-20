@@ -61,6 +61,7 @@
     <Compile Include="Core\Analisador\MediaPontuacaoTestes\Ao_analisar_media_de_pontuacao.cs" />
     <Compile Include="Core\Analisador\UltimaPontuacaoTestes\Ao_analisar_ultima_pontuacao.cs" />
     <Compile Include="Core\Escalador\EscaladorDeTimeTestes\Ao_escalar_time.cs" />
+    <Compile Include="Crawler\GloboEsporte\Ao_obter_Clubes.cs" />
     <Compile Include="Crawler\ScoutsCartola\Ao_obter_jogadores.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

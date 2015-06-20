@@ -17,6 +17,7 @@ namespace Cartoleiro.Core.Cartola
         public int GolsPro { get; set; }
         public int GolsContra { get; set; }
         public int SaldoDeGol { get; set; }
+        public double Aproveitamento { get { return Vitorias / Jogos * 100; } }
         public UltimosJogos UltimosJogos { get; set; }
     }
 }

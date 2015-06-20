@@ -44,9 +44,12 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="ClubeCrawler.cs" />
     <Compile Include="Crawler.cs" />
     <Compile Include="CrawlerDataSource.cs" />
     <Compile Include="CrawlerRuntimeHelper.cs" />
+    <Compile Include="Crawlers\GloboEsporte\GloboEsporteClubeCrawler.cs" />
+    <Compile Include="Crawlers\GloboEsporte\GloboEsporteSiteCrawler.cs" />
     <Compile Include="CrawlingInfo.cs" />
     <Compile Include="ISiteCrawler.cs" />
     <Compile Include="JogadorCrawler.cs" />

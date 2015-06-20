@@ -9,9 +9,6 @@ namespace Cartoleiro.Crawler.Crawlers.ScoutsCartola
 {
     public class ScoutsCartolaSiteCrawler : ISiteCrawler
     {
-        private const string URL_JOGADORES = "/jogador";
-        private const string ID_DIV_JOGADORES = "boxAlfabetica";
-
         private readonly Uri _uriBase;
 
         public event EventHandler<CrawlingInfo> ObjetoCarregado;
@@ -41,7 +38,7 @@ namespace Cartoleiro.Crawler.Crawlers.ScoutsCartola
             IList<Jogador> jogadores = new List<Jogador>();
 
             var driver = new PhantomJSDriver();
-            driver.Navigate().GoToUrl(new Uri(_uriBase, URL_JOGADORES));
+            driver.Navigate().GoToUrl(new Uri(_uriBase, "/jogador"));
 
             var divJogadores = driver.FindElementById("boxAlfabetica");
             var linksDeJogadores = divJogadores.FindElements(By.TagName("a")).ToList();
