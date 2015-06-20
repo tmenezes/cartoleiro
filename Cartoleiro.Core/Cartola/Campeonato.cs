@@ -17,7 +17,7 @@ namespace Cartoleiro.Core.Cartola
 
         public override string ToString()
         {
-            return string.Format("Posicao: {0}, Pontos: {1}, Vitorias: {2}", Posicao, Pontos, Vitorias);
+            return string.Format("{0}º lugar, Pontos: {1}, Vitorias: {2}", Posicao, Pontos, Vitorias);
         }
     }
 }

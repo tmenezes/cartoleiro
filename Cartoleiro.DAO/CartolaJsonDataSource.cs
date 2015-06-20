@@ -1,6 +1,7 @@
 using System;
 using System.Collections.Generic;
 using System.IO;
+using System.Linq;
 using System.Text;
 using Cartoleiro.Core.Cartola;
 using Cartoleiro.Core.Data;
@@ -11,7 +12,8 @@ namespace Cartoleiro.DAO
     public class CartolaJsonDataSource : ICartolaDataSource
     {
         private readonly string _pastaAppData;
-        private string CaminhoDataSource { get { return Path.Combine(_pastaAppData, "jogadores.json"); } }
+        private string ArquivoClubes { get { return Path.Combine(_pastaAppData, "clubes.json"); } }
+        private string ArquivoJogadores { get { return Path.Combine(_pastaAppData, "jogadores.json"); } }
 
         public IEnumerable<Clube> Clubes { get; private set; }
         public IEnumerable<Jogador> Jogadores { get; private set; }
@@ -20,6 +22,7 @@ namespace Cartoleiro.DAO
         public CartolaJsonDataSource(string pastaAppData)
         {
             _pastaAppData = pastaAppData;
+
             PopularClubes();
             PopularJogadores();
         }
@@ -27,24 +30,37 @@ namespace Cartoleiro.DAO
 
         private void PopularClubes()
         {
-            Clubes = new List<Clube>();
+            Clubes = GetObjetos<Clube>(ArquivoClubes);
         }
 
         private void PopularJogadores()
         {
-            var jogadores = new List<Jogador>();
+            Jogadores = GetObjetos<Jogador>(ArquivoJogadores);
 
-            using (var reader = new StreamReader(CaminhoDataSource, Encoding.Default))
+            // atribui objeto Clube correto
+            foreach (var jogador in Jogadores)
+            {
+                var clube = Clubes.FirstOrDefault(c => c.Nome == jogador.Clube.Nome);
+
+                if (clube != null)
+                    jogador.Clube = clube;
+            }
+        }
+
+        private IEnumerable<T> GetObjetos<T>(string arquivo)
+        {
+            var objectos = new List<T>();
+
+            using (var reader = new StreamReader(arquivo, Encoding.Default))
             {
                 while (!reader.EndOfStream)
                 {
-                    var jogador = JsonConvert.DeserializeObject<Jogador>(reader.ReadLine());
-                    jogadores.Add(jogador);
+                    var item = JsonConvert.DeserializeObject<T>(reader.ReadLine());
+                    objectos.Add(item);
                 }
-
             }
 
-            Jogadores = jogadores;
+            return objectos;
         }
     }
 }
