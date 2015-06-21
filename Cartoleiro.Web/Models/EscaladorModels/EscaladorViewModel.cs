@@ -14,6 +14,7 @@ namespace Cartoleiro.Web.Models.EscaladorModels
         public Posicao? PosicaoEmFoco { get; set; }
 
         public bool ProporcionalNaPosicao { get; set; }
+        public bool SomenteProvaveis { get; set; }
 
         // analisazdores
         public bool AnalisadorPontuacaoMedia { get; set; }
@@ -30,6 +31,7 @@ namespace Cartoleiro.Web.Models.EscaladorModels
             EsquemaTatico = EsquemaTatico._442;
             Patrimonio = 100;
             ProporcionalNaPosicao = true;
+            SomenteProvaveis = true;
 
             AnalisadorPontuacaoMedia = true;
         }

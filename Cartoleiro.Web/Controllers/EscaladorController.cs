@@ -30,7 +30,8 @@ namespace Cartoleiro.Web.Controllers
             var escalador = new EscaladorDeTime(CartoleiroApp.CartolaDataSource)
                 .ComEsquema(escaladorViewModel.EsquemaTatico)
                 .ComPatrimonio(escaladorViewModel.Patrimonio)
-                .DistribuirProporcionalNaPosicao(escaladorViewModel.ProporcionalNaPosicao);
+                .DistribuirProporcionalNaPosicao(escaladorViewModel.ProporcionalNaPosicao)
+                .SomenteProvaveis(escaladorViewModel.SomenteProvaveis);
 
             if (escaladorViewModel.PosicaoEmFoco.HasValue)
             {
