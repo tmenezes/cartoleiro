@@ -41,15 +41,18 @@ namespace Cartoleiro.Crawler.Crawlers.ScoutsCartola
             var spansInfo = divAtletaInfo.FindElements(By.XPath(@"div[@id=""bloco2""]//span"));
 
             var posicao = GetPosicao(spansInfo.First().Text);
+            var status = GetStatus(spansInfo[1].Text);
 
             var jogador = new Jogador(Nome, Clube, posicao)
                           {
                               Preco = GetPreco(divValores),
-                              Pontuacao = GetPontuacao(divValores)
+                              Pontuacao = GetPontuacao(divValores),
+                              Status = status
                           };
 
             return jogador;
         }
+
 
         private Preco GetPreco(IWebElement divValores)
         {
@@ -107,6 +110,41 @@ namespace Cartoleiro.Crawler.Crawlers.ScoutsCartola
             }
 
             return Posicao.MeioCampo;
+        }
+
+        private Status GetStatus(string status)
+        {
+            if (status.ToLower() == "barrado")
+            {
+                return Status.Barrado;
+            }
+
+            if (status.ToLower() == "contundido")
+            {
+                return Status.Contundido;
+            }
+
+            if (status.ToLower() == "dúvida" || status.ToLower() == "nulo")
+            {
+                return Status.Duvida;
+            }
+
+            if (status.ToLower() == "provável")
+            {
+                return Status.Provavel;
+            }
+
+            if (status.ToLower() == "suspenso")
+            {
+                return Status.Suspenso;
+            }
+
+            if (status.ToLower() == "vendido")
+            {
+                return Status.Vendido;
+            }
+            
+            return Status.Provavel;
         }
     }
 }

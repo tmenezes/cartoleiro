@@ -7,12 +7,15 @@
         public Posicao Posicao { get; set; }
         public Preco Preco { get; set; }
         public Pontuacao Pontuacao { get; set; }
+        public Status Status { get; set; }
 
         public Jogador(string nome, Clube clube, Posicao posicao)
         {
             Nome = nome;
             Clube = clube;
             Posicao = posicao;
+
+            Status = Status.Provavel;
         }
 
         public override string ToString()
