@@ -39,9 +39,16 @@
   <ItemGroup>
     <Compile Include="Cartola\Campeonato.cs" />
     <Compile Include="Cartola\UltimosJogos.cs" />
+    <Compile Include="Escalador\Analizador\AnalisadorGenerico.cs" />
+    <Compile Include="Escalador\Analizador\AnalisadorGolsPro.cs" />
     <Compile Include="Escalador\Analizador\AnalisadorMediaPontuacao.cs" />
+    <Compile Include="Escalador\Analizador\AnalisadorPontuacaoNoCampeonato.cs" />
+    <Compile Include="Escalador\Analizador\AnalisadorSaldoDeGols.cs" />
     <Compile Include="Escalador\Analizador\AnalisadorUltimaPontuacao.cs" />
     <Compile Include="Escalador\Analizador\AnalisadorBuilder.cs" />
+    <Compile Include="Escalador\Analizador\AnalisadorUltimos5Jogos.cs" />
+    <Compile Include="Escalador\Analizador\AnalisadorVitorias.cs" />
+    <Compile Include="Escalador\Analizador\Analizadores.cs" />
     <Compile Include="Escalador\EsquemaTaticoHelper.cs" />
     <Compile Include="Escalador\EscaladorDeTime.cs" />
     <Compile Include="Cartola\EsquemaTatico.cs" />

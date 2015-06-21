@@ -1,18 +1,17 @@
-﻿using System.Collections.Generic;
-
+﻿
 namespace Cartoleiro.Core.Escalador.Analizador
 {
     public class AnalisadorBuilder
     {
-        private readonly IList<IAnalisador> _analisadores;
-        public IList<IAnalisador> Analisadores
+        private readonly Analizadores _analisadores;
+        public Analizadores Analisadores
         {
             get { return _analisadores; }
         }
 
         public AnalisadorBuilder()
         {
-            _analisadores = new List<IAnalisador>();
+            _analisadores = new Analizadores();
         }
 
 

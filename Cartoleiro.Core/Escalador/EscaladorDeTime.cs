@@ -16,7 +16,7 @@ namespace Cartoleiro.Core.Escalador
         private double _patrimonio;
         private Posicao? _posicaoEmFoco;
         private bool _distribuirProporcionalNaPosicao;
-        private IEnumerable<IAnalisador> _analisadores;
+        private Analizadores _analisadores;
 
         // propriedades
         public ICartolaDataSource CartolaDS { get; set; }
@@ -97,7 +97,7 @@ namespace Cartoleiro.Core.Escalador
             return this;
         }
 
-        public EscaladorDeTime ComAnalisadores(IEnumerable<IAnalisador> analisadores)
+        public EscaladorDeTime ComAnalisadores(Analizadores analisadores)
         {
             _analisadores = analisadores;
             return this;
@@ -105,10 +105,7 @@ namespace Cartoleiro.Core.Escalador
 
         public Time MontarTime()
         {
-            foreach (var analisador in _analisadores)
-            {
-                analisador.Analisar(_ranqueamento);
-            }
+            _analisadores.ExecutarAnalises(_ranqueamento);
 
             var partilhaDoDinheiro = new PartilhaDeDinheito(_esquemaTatico, _patrimonio, _posicaoEmFoco);
             var jogadores = EscalarJogadores(partilhaDoDinheiro);

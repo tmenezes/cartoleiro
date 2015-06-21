@@ -58,7 +58,9 @@
   <ItemGroup>
     <Compile Include="AbstractTeste.cs" />
     <Compile Include="AssertBase.cs" />
+    <Compile Include="Core\Analisador\Ultimos5JogosTestes\Ao_analisar_ultimos_5_jogos.cs" />
     <Compile Include="Core\Analisador\MediaPontuacaoTestes\Ao_analisar_media_de_pontuacao.cs" />
+    <Compile Include="Core\Analisador\PontosNoCampeonatoTestes\Ao_analisar_pontos_no_campeonato.cs" />
     <Compile Include="Core\Analisador\UltimaPontuacaoTestes\Ao_analisar_ultima_pontuacao.cs" />
     <Compile Include="Core\Escalador\EscaladorDeTimeTestes\Ao_escalar_time.cs" />
     <Compile Include="Crawler\GloboEsporte\Ao_obter_Clubes.cs" />

@@ -2,11 +2,11 @@ using System.Collections.Generic;
 
 namespace Cartoleiro.Core.Escalador.Analizador
 {
-    public class AnalisadorMediaPontuacao : AnalisadorGenerico, IAnalisador
+    public class AnalisadorVitorias : AnalisadorGenerico, IAnalisador
     {
         public void Analisar(IEnumerable<PontuacaoDeEscalacao> ranqueamento)
         {
-            Analisar(ranqueamento, item => item.Jogador.Pontuacao.Media);
+            Analisar(ranqueamento, item => item.Jogador.Clube.Campeonato.Vitorias);
         }
     }
 }
