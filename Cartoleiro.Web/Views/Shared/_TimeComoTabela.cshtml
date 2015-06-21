@@ -16,7 +16,7 @@
         @foreach (var jogador in Model.TodosJogadores)
         {
             <tr>
-                <td>@jogador.Clube.Nome</td>
+                <td><span class="text-muted">@string.Format("{0}º lugar", jogador.Clube.Campeonato.Posicao)</span><br />@jogador.Clube.Nome</td>
                 <td><span class="text-muted">@jogador.Posicao</span><br /><strong>@jogador.Nome</strong></td>
                 <td>@jogador.Preco.Atual.ToString("F")</td>
                 <td>@jogador.Pontuacao.Media.ToString("F")</td>

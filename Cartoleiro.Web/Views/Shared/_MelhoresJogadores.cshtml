@@ -2,7 +2,7 @@
 @using Cartoleiro.Web.Models
 
 @{
-    var jogadores = CartoleiroApp.CartolaDataSource.Jogadores.Where(j=> j.Posicao!= Posicao.Tecnico)
+    var jogadores = CartoleiroApp.CartolaDataSource.Jogadores.Where(j => j.Posicao != Posicao.Tecnico)
                                                              .OrderByDescending(j => j.Pontuacao.Media)
                                                              .Take(50)
                                                              .ToList();
@@ -21,7 +21,7 @@
         @foreach (var jogador in jogadores)
         {
             <tr>
-                <td>@jogador.Clube.Nome</td>
+                <td><span class="text-muted">@string.Format("{0}º lugar", jogador.Clube.Campeonato.Posicao)</span><br />@jogador.Clube.Nome</td>
                 <td><span class="text-muted">@jogador.Posicao</span><br /><strong>@jogador.Nome</strong></td>
                 <td>@jogador.Preco.Atual.ToString("F")</td>
                 <td>@jogador.Pontuacao.Media.ToString("F")</td>
