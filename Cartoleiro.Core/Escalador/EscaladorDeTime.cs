@@ -10,13 +10,14 @@ namespace Cartoleiro.Core.Escalador
     public class EscaladorDeTime
     {
         // atributos
-        private readonly IEnumerable<PontuacaoDeEscalacao> _ranqueamento;
+        private IEnumerable<PontuacaoDeEscalacao> _ranqueamento;
 
         private EsquemaTatico _esquemaTatico;
         private double _patrimonio;
         private Posicao? _posicaoEmFoco;
         private bool _distribuirProporcionalNaPosicao;
         private Analisadores _analisadores;
+        private bool _somenteProvaveis;
 
         // propriedades
         public ICartolaDataSource CartolaDS { get; set; }
@@ -26,12 +27,12 @@ namespace Cartoleiro.Core.Escalador
         {
             CartolaDS = cartolaDS;
 
-            _ranqueamento = cartolaDS.Jogadores.Select(j => new PontuacaoDeEscalacao(j)).ToList();
-
             _esquemaTatico = EsquemaTatico._442;
             _patrimonio = 100;
             _posicaoEmFoco = null;
+            _somenteProvaveis = true;
             _distribuirProporcionalNaPosicao = true;
+
             _analisadores = new AnalisadorBuilder().PontuacaoMedia()
                                                    .UltimaPontuacao()
                                                    .Analisadores;
@@ -92,8 +93,14 @@ namespace Cartoleiro.Core.Escalador
             return this;
         }
 
+        public EscaladorDeTime SomenteProvaveis(bool valor)
+        {
+            _somenteProvaveis = true;
+            return this;
+        }
         public EscaladorDeTime DistribuirProporcionalNaPosicao(bool valor)
         {
+            _distribuirProporcionalNaPosicao = valor;
             return this;
         }
 
@@ -105,6 +112,8 @@ namespace Cartoleiro.Core.Escalador
 
         public Time MontarTime()
         {
+            CriarRanqueamento();
+
             _analisadores.ExecutarAnalises(_ranqueamento);
 
             var partilhaDoDinheiro = new PartilhaDeDinheito(_esquemaTatico, _patrimonio, _posicaoEmFoco);
@@ -122,6 +131,13 @@ namespace Cartoleiro.Core.Escalador
             return time;
         }
 
+
+        private void CriarRanqueamento()
+        {
+            _ranqueamento = (_somenteProvaveis)
+                ? CartolaDS.Jogadores.Where(j => j.Status == Status.Provavel).Select(j => new PontuacaoDeEscalacao(j)).ToList()
+                : CartolaDS.Jogadores.Select(j => new PontuacaoDeEscalacao(j)).ToList();
+        }
 
         private List<Jogador> EscalarJogadores(PartilhaDeDinheito partilhaDoDinheiro)
         {
