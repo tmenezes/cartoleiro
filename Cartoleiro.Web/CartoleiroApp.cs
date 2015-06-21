@@ -4,7 +4,7 @@ using Cartoleiro.Core.Escalador;
 using Cartoleiro.Core.Escalador.Analizador;
 using Cartoleiro.DAO;
 
-namespace Cartoleiro.Web.Models
+namespace Cartoleiro.Web
 {
     public static class CartoleiroApp
     {
@@ -13,7 +13,6 @@ namespace Cartoleiro.Web.Models
 
         public static void Iniciar()
         {
-            //CartolaDataSource = new CartolaDataSource();
             CartolaDataSource = new CartolaJsonDataSource(HttpContext.Current.Server.MapPath("~/App_Data"));
 
             EscalarMelhorTime();

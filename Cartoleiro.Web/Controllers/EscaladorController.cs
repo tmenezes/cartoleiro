@@ -1,9 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Web;
-using System.Web.Mvc;
-using System.Web.UI;
+﻿using System.Web.Mvc;
 using Cartoleiro.Core.Escalador;
 using Cartoleiro.Core.Escalador.Analizador;
 using Cartoleiro.Web.Models;
@@ -16,14 +11,16 @@ namespace Cartoleiro.Web.Controllers
         // GET: Escalador
         public ActionResult Index()
         {
-            return View();
+            return View(new EscaladorViewModel());
         }
 
+        // GET: Escalador/Escalar
         public ActionResult Escalar()
         {
             return RedirectToAction("Index");
         }
 
+        // POST: Escalador/Escalar
         [HttpPost]
         public ActionResult Escalar(EscaladorViewModel escaladorViewModel)
         {
@@ -40,7 +37,19 @@ namespace Cartoleiro.Web.Controllers
                 escalador.ComFocoNaPosicao(escaladorViewModel.PosicaoEmFoco.Value);
             }
 
+            var analisadores = GetAnalisadores(escaladorViewModel);
+            escalador.ComAnalisadores(analisadores);
+
+            var time = escalador.MontarTime();
+            ViewData.SetTimeEscalado(time);
+
+            return View("Index", escaladorViewModel);
+        }
+
+        private static Analisadores GetAnalisadores(EscaladorViewModel escaladorViewModel)
+        {
             var analisadorBuilder = new AnalisadorBuilder();
+
             if (escaladorViewModel.AnalisadorPontuacaoMedia)
             {
                 analisadorBuilder.PontuacaoMedia();
@@ -49,12 +58,28 @@ namespace Cartoleiro.Web.Controllers
             {
                 analisadorBuilder.UltimaPontuacao();
             }
-            escalador.ComAnalisadores(analisadorBuilder.Analisadores);
+            if (escaladorViewModel.AnalisadorPontosNoCampeonato)
+            {
+                analisadorBuilder.PontosNoCampeonato();
+            }
+            if (escaladorViewModel.AnalisadorVitorias)
+            {
+                analisadorBuilder.Vitorias();
+            }
+            if (escaladorViewModel.AnalisadorGolsPro)
+            {
+                analisadorBuilder.GolsPro();
+            }
+            if (escaladorViewModel.AnalisadorSaldoDeGols)
+            {
+                analisadorBuilder.SaldoDeGols();
+            }
+            if (escaladorViewModel.AnalisadorUltimos5Jogos)
+            {
+                analisadorBuilder.Ultimos5Jogos();
+            }
 
-            var time = escalador.MontarTime();
-            ViewData.SetTimeEscalado(time);
-
-            return View("Index", escaladorViewModel);
+            return analisadorBuilder.Analisadores;
         }
     }
 }

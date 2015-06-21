@@ -3,15 +3,15 @@ namespace Cartoleiro.Core.Escalador.Analizador
 {
     public class AnalisadorBuilder
     {
-        private readonly Analizadores _analisadores;
-        public Analizadores Analisadores
+        private readonly Analisadores _analisadores;
+        public Analisadores Analisadores
         {
             get { return _analisadores; }
         }
 
         public AnalisadorBuilder()
         {
-            _analisadores = new Analizadores();
+            _analisadores = new Analisadores();
         }
 
 
@@ -24,6 +24,41 @@ namespace Cartoleiro.Core.Escalador.Analizador
         public AnalisadorBuilder UltimaPontuacao()
         {
             Analisadores.Add(new AnalisadorUltimaPontuacao());
+            return this;
+        }
+
+        public AnalisadorBuilder PontosNoCampeonato()
+        {
+            Analisadores.Add(new AnalisadorPontuacaoNoCampeonato());
+            return this;
+        }
+
+        public AnalisadorBuilder Vitorias()
+        {
+            Analisadores.Add(new AnalisadorVitorias());
+            return this;
+        }
+
+        public AnalisadorBuilder GolsPro()
+        {
+            Analisadores.Add(new AnalisadorGolsPro());
+            return this;
+        }
+        //public AnalisadorBuilder GolsContra()
+        //{
+        //    Analisadores.Add(new AnalisadorGolsPro());
+        //    return this;
+        //}
+
+        public AnalisadorBuilder SaldoDeGols()
+        {
+            Analisadores.Add(new AnalisadorSaldoDeGols());
+            return this;
+        }
+
+        public AnalisadorBuilder Ultimos5Jogos()
+        {
+            Analisadores.Add(new AnalisadorUltimos5Jogos());
             return this;
         }
     }

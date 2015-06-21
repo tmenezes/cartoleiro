@@ -12,8 +12,8 @@
     <table class="table table-striped table-bordered">
         <thead>
             <tr>
-                <th>Posição</th>
-                <th>Nome</th>
+                <th>Clube</th>
+                <th>Jogador</th>
                 <th>C$</th>
                 <th>Média</th>
             </tr>
@@ -21,8 +21,8 @@
         @foreach (var jogador in jogadores)
         {
             <tr>
-                <td>@jogador.Posicao</td>
-                <td>@jogador.Nome</td>
+                <td>@jogador.Clube.Nome</td>
+                <td><span class="text-muted">@jogador.Posicao</span><br /><strong>@jogador.Nome</strong></td>
                 <td>@jogador.Preco.Atual.ToString("F")</td>
                 <td>@jogador.Pontuacao.Media.ToString("F")</td>
             </tr>

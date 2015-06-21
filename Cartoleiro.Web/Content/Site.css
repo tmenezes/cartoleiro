@@ -23,6 +23,11 @@ textarea {
     max-width: 280px;
 }
 
+.nopadding {
+   padding: 0 !important;
+   /*margin: 0 !important;*/
+}
+
 
 body {
     padding-top: 50px;

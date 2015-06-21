@@ -16,7 +16,7 @@ namespace Cartoleiro.Core.Escalador
         private double _patrimonio;
         private Posicao? _posicaoEmFoco;
         private bool _distribuirProporcionalNaPosicao;
-        private Analizadores _analisadores;
+        private Analisadores _analisadores;
 
         // propriedades
         public ICartolaDataSource CartolaDS { get; set; }
@@ -97,7 +97,7 @@ namespace Cartoleiro.Core.Escalador
             return this;
         }
 
-        public EscaladorDeTime ComAnalisadores(Analizadores analisadores)
+        public EscaladorDeTime ComAnalisadores(Analisadores analisadores)
         {
             _analisadores = analisadores;
             return this;

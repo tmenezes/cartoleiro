@@ -12,7 +12,7 @@ namespace Cartoleiro.Core.Escalador.Analizador
 
             foreach (var item in ranqueamento)
             {
-                var pontos = indicadorEmAnalise(item) * Analizadores.MAX_PONTOS_ANALISADOR / maiorIndicador;
+                var pontos = indicadorEmAnalise(item) * Analisadores.MAX_PONTOS_ANALISADOR / maiorIndicador;
 
                 item.AddPontos(pontos);
             }
@@ -24,7 +24,7 @@ namespace Cartoleiro.Core.Escalador.Analizador
 
             foreach (var item in ranqueamento)
             {
-                var pontos = indicadorEmAnalise(item) * Analizadores.MAX_PONTOS_ANALISADOR / maiorIndicador;
+                var pontos = indicadorEmAnalise(item) * Analisadores.MAX_PONTOS_ANALISADOR / maiorIndicador;
 
                 item.AddPontos(pontos);
             }

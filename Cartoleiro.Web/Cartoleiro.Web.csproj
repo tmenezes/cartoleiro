@@ -176,7 +176,7 @@
     <Compile Include="Models\AccountModels\AccountViewModels.cs" />
     <Compile Include="Models\AccountModels\IdentityModels.cs" />
     <Compile Include="Models\AccountModels\ManageViewModels.cs" />
-    <Compile Include="Models\CartoleiroApp.cs" />
+    <Compile Include="CartoleiroApp.cs" />
     <Compile Include="Models\EscaladorModels\EscaladorViewModel.cs" />
     <Compile Include="Models\ViewDataHelper.cs" />
     <Compile Include="Models\ViewModelHelper.cs" />

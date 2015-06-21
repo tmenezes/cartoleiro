@@ -2,7 +2,7 @@
 
 namespace Cartoleiro.Core.Escalador.Analizador
 {
-    public class Analizadores : List<IAnalisador>
+    public class Analisadores : List<IAnalisador>
     {
         internal const double MAX_PONTOS_ANALISADOR = 10;
 
