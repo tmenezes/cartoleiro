@@ -71,6 +71,10 @@ namespace Cartoleiro.Web.Controllers
             {
                 analisadorBuilder.GolsPro();
             }
+            if (escaladorViewModel.AnalisadorGolsContra)
+            {
+                analisadorBuilder.GolsContra();
+            }
             if (escaladorViewModel.AnalisadorSaldoDeGols)
             {
                 analisadorBuilder.SaldoDeGols();

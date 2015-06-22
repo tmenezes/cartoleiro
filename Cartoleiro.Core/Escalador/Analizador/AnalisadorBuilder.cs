@@ -44,11 +44,12 @@ namespace Cartoleiro.Core.Escalador.Analizador
             Analisadores.Add(new AnalisadorGolsPro());
             return this;
         }
-        //public AnalisadorBuilder GolsContra()
-        //{
-        //    Analisadores.Add(new AnalisadorGolsPro());
-        //    return this;
-        //}
+
+        public AnalisadorBuilder GolsContra()
+        {
+            Analisadores.Add(new AnalisadorGolsContra());
+            return this;
+        }
 
         public AnalisadorBuilder SaldoDeGols()
         {

@@ -41,6 +41,7 @@
     <Compile Include="Cartola\Status.cs" />
     <Compile Include="Cartola\UltimosJogos.cs" />
     <Compile Include="Escalador\Analizador\AnalisadorGenerico.cs" />
+    <Compile Include="Escalador\Analizador\AnalisadorGolsContra.cs" />
     <Compile Include="Escalador\Analizador\AnalisadorGolsPro.cs" />
     <Compile Include="Escalador\Analizador\AnalisadorMediaPontuacao.cs" />
     <Compile Include="Escalador\Analizador\AnalisadorPontuacaoNoCampeonato.cs" />

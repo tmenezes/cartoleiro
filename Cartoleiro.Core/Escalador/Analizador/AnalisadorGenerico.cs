@@ -29,5 +29,21 @@ namespace Cartoleiro.Core.Escalador.Analizador
                 item.AddPontos(pontos);
             }
         }
+
+
+        protected void AnalisarInvertido(IEnumerable<PontuacaoDeEscalacao> ranqueamento, Func<PontuacaoDeEscalacao, int> indicadorEmAnalise)
+        {
+            var maiorIndicador = ranqueamento.Max(item => indicadorEmAnalise(item));
+            var menorIndicador = ranqueamento.Min(item => indicadorEmAnalise(item));
+
+            foreach (var item in ranqueamento)
+            {
+                var indicadorAjustado = maiorIndicador - indicadorEmAnalise(item) + menorIndicador;
+
+                var pontos = indicadorAjustado * Analisadores.MAX_PONTOS_ANALISADOR / maiorIndicador;
+
+                item.AddPontos(pontos);
+            }
+        }
     }
 }
