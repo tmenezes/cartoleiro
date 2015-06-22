@@ -1,6 +1,6 @@
 using System.Collections.Generic;
 
-namespace Cartoleiro.Core.Escalador.Analizador
+namespace Cartoleiro.Core.Escalador.Analizador.Jogador
 {
     public class AnalisadorUltimaPontuacao : AnalisadorGenerico, IAnalisador
     {

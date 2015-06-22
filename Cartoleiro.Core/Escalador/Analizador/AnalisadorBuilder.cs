@@ -1,4 +1,7 @@
 ﻿
+using Cartoleiro.Core.Escalador.Analizador.Campeonato;
+using Cartoleiro.Core.Escalador.Analizador.Jogador;
+
 namespace Cartoleiro.Core.Escalador.Analizador
 {
     public class AnalisadorBuilder

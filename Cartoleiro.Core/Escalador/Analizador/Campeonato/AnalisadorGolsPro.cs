@@ -1,6 +1,6 @@
 using System.Collections.Generic;
 
-namespace Cartoleiro.Core.Escalador.Analizador
+namespace Cartoleiro.Core.Escalador.Analizador.Campeonato
 {
     public class AnalisadorGolsPro : AnalisadorGenerico, IAnalisador
     {
