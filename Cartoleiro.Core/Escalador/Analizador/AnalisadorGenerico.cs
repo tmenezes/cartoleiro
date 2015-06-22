@@ -38,9 +38,9 @@ namespace Cartoleiro.Core.Escalador.Analizador
 
             foreach (var item in ranqueamento)
             {
-                var indicadorAjustado = maiorIndicador - indicadorEmAnalise(item) + menorIndicador;
+                var indicadorAjustado = maiorIndicador - indicadorEmAnalise(item);
 
-                var pontos = indicadorAjustado * Analisadores.MAX_PONTOS_ANALISADOR / maiorIndicador;
+                var pontos = indicadorAjustado * Analisadores.MAX_PONTOS_ANALISADOR / (maiorIndicador - menorIndicador);
 
                 item.AddPontos(pontos);
             }

@@ -47,6 +47,8 @@
     <Compile Include="Escalador\Analizador\Jogador\AnalisadorMediaPontuacao.cs" />
     <Compile Include="Escalador\Analizador\Campeonato\AnalisadorPontuacaoNoCampeonato.cs" />
     <Compile Include="Escalador\Analizador\Campeonato\AnalisadorSaldoDeGols.cs" />
+    <Compile Include="Escalador\Analizador\Jogador\AnalisadorScoutsNegativos.cs" />
+    <Compile Include="Escalador\Analizador\Jogador\AnalisadorScoutsPositivos.cs" />
     <Compile Include="Escalador\Analizador\Jogador\AnalisadorUltimaPontuacao.cs" />
     <Compile Include="Escalador\Analizador\AnalisadorBuilder.cs" />
     <Compile Include="Escalador\Analizador\Campeonato\AnalisadorUltimos5Jogos.cs" />
