@@ -8,6 +8,7 @@
         public Preco Preco { get; set; }
         public Pontuacao Pontuacao { get; set; }
         public Status Status { get; set; }
+        public Scouts Scouts { get; set; }
 
         public Jogador(string nome, Clube clube, Posicao posicao)
         {

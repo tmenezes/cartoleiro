@@ -38,6 +38,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Cartola\Campeonato.cs" />
+    <Compile Include="Cartola\Scouts.cs" />
     <Compile Include="Cartola\Status.cs" />
     <Compile Include="Cartola\UltimosJogos.cs" />
     <Compile Include="Escalador\Analizador\AnalisadorGenerico.cs" />
