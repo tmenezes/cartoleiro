@@ -33,10 +33,24 @@ namespace Cartoleiro.Core.Escalador
         {
             get
             {
-                var jogadores = new List<Jogador>() { Tecnico, Goleiro };
-                jogadores.AddRange(Zaga);
+                // retorno time em ordem de exibicao
+
+                var jogadores = new List<Jogador> { Goleiro };
+
+                if (Zaga.Any(j => j.Posicao == Posicao.Lateral))
+                {
+                    jogadores.AddRange(Zaga.Where(j => j.Posicao == Posicao.Lateral));
+                    jogadores.AddRange(Zaga.Where(j => j.Posicao == Posicao.Zagueiro));
+                }
+                else
+                {
+                    jogadores.AddRange(Zaga);
+                }
+
                 jogadores.AddRange(MeioCampo);
                 jogadores.AddRange(Ataque);
+                jogadores.Add(Tecnico);
+
                 return jogadores;
             }
         }
