@@ -7,12 +7,12 @@ using Ploeh.AutoFixture.Kernel;
 
 namespace Cartoleiro.DAO
 {
-    public class CartolaDataSource : ICartolaDataSource
+    public class CartolaStubDataSource : ICartolaDataSource
     {
         public IEnumerable<Clube> Clubes { get; private set; }
         public IEnumerable<Jogador> Jogadores { get; private set; }
 
-        public CartolaDataSource()
+        public CartolaStubDataSource()
         {
             PopularClubes();
             PopularJogadores();
@@ -66,6 +66,7 @@ namespace Cartoleiro.DAO
 
             Jogadores = jogadores;
         }
+
     }
 
     internal class RandomDoubleSequenceGenerator : ISpecimenBuilder

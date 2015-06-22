@@ -37,13 +37,16 @@ namespace Cartoleiro.DAO
         {
             Jogadores = GetObjetos<Jogador>(ArquivoJogadores);
 
-            // atribui objeto Clube correto
+            // executa ajustes no datasource json
             foreach (var jogador in Jogadores)
             {
                 var clube = Clubes.FirstOrDefault(c => c.Nome == jogador.Clube.Nome);
 
                 if (clube != null)
                     jogador.Clube = clube;
+
+                if (jogador.Scouts == null)
+                    jogador.Scouts = new Scouts();
             }
         }
 

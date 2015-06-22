@@ -11,14 +11,14 @@ namespace Cartoleiro.Testes.Core.Escalador.EscaladorDeTimeTestes
     public class Ao_escalar_time : AbstractTesteAutoAct
     {
         Time time;
-        CartolaDataSource cartolaDS;
+        CartolaStubDataSource cartolaDS;
         EscaladorDeTime escaladorDeTime;
 
         public override void Arrange()
         {
             var analizadores = new AnalisadorBuilder().PontuacaoMedia().Analisadores;
 
-            cartolaDS = new CartolaDataSource();
+            cartolaDS = new CartolaStubDataSource();
             escaladorDeTime = new EscaladorDeTime(cartolaDS).ComAnalisadores(analizadores);
         }
 

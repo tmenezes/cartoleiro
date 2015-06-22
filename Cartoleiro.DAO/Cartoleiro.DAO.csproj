@@ -47,7 +47,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="CartolaDataSource.cs" />
+    <Compile Include="CartolaStubDataSource.cs" />
     <Compile Include="CartolaJsonDataSource.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

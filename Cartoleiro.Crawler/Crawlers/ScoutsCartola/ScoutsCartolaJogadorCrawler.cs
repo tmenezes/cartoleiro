@@ -34,20 +34,22 @@ namespace Cartoleiro.Crawler.Crawlers.ScoutsCartola
         {
             WebDriver.Navigate().GoToUrl(Pagina);
 
-            var divAtletaInfo = WebDriver.FindElement(By.Id("athletebox"))
-                                         .FindElement(By.XPath(@"//div[@id=""info""]"));
+            var divAtleta = WebDriver.FindElement(By.Id("athletebox"));
+            var divAtletaInfo = divAtleta.FindElement(By.Id("info"));
 
-            var divValores = divAtletaInfo.FindElement(By.XPath(@"div[@id=""bloco1""]"));
-            var spansInfo = divAtletaInfo.FindElements(By.XPath(@"div[@id=""bloco2""]//span"));
+            var divValores = divAtletaInfo.FindElement(By.Id("bloco1"));
+            var spansInfo = divAtletaInfo.FindElement(By.Id("bloco2")).FindElements(By.TagName("span"));
 
             var posicao = GetPosicao(spansInfo.First().Text);
             var status = GetStatus(spansInfo[1].Text);
+            var scouts = GetScouts(divAtleta);
 
             var jogador = new Jogador(Nome, Clube, posicao)
                           {
                               Preco = GetPreco(divValores),
                               Pontuacao = GetPontuacao(divValores),
-                              Status = status
+                              Status = status,
+                              Scouts = scouts,
                           };
 
             return jogador;
@@ -143,8 +145,50 @@ namespace Cartoleiro.Crawler.Crawlers.ScoutsCartola
             {
                 return Status.Vendido;
             }
-            
+
             return Status.Provavel;
+        }
+
+        private Scouts GetScouts(IWebElement divAtleta)
+        {
+            try
+            {
+                var divScoutsPositivos = divAtleta.FindElement(By.Id("scoutsPositivos"));
+                var divScoutsNegativos = divAtleta.FindElement(By.Id("scoutsNegativos"));
+
+                var itensScoutsPositivos = divScoutsPositivos.FindElements(By.TagName("p"))
+                                                             .Select(p => Convert.ToInt32(p.FindElement(By.TagName("span")).Text))
+                                                             .ToList();
+                var itensScoutsNegativos = divScoutsNegativos.FindElements(By.TagName("p"))
+                                                             .Select(p => p.FindElement(By.TagName("span")).Text)
+                                                             .Select(i => string.IsNullOrWhiteSpace(i) ? 0 : Convert.ToInt32(i))
+                                                             .ToList();
+
+                var scouts = new Scouts
+                             {
+                                 FaltasSofridas = itensScoutsPositivos[0],
+                                 Assistencias = itensScoutsPositivos[1],
+                                 FinalizacoesNaTrave = itensScoutsPositivos[2],
+                                 FinalizacoesDefendidas = itensScoutsPositivos[3],
+                                 FinalizacoesFora = itensScoutsPositivos[4],
+                                 Gols = itensScoutsPositivos[5],
+                                 RoubadasDeBola = itensScoutsPositivos[6],
+
+                                 PassesErrados = itensScoutsNegativos[0],
+                                 Impedimentos = itensScoutsNegativos[1],
+                                 PenaltisPerdidos = itensScoutsNegativos[2],
+                                 FaltasCometidas = itensScoutsNegativos[3],
+                                 GolsContra = itensScoutsNegativos[4],
+                                 CartoesAmarelo = itensScoutsNegativos[5],
+                                 CartoesVermelho = itensScoutsNegativos[6]
+                             };
+
+                return scouts;
+            }
+            catch (Exception)
+            {
+                return null;
+            }
         }
     }
 }
