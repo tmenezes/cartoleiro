@@ -18,6 +18,7 @@ namespace Cartoleiro.Core.Escalador.Analizador
         }
 
 
+        // jogador
         public AnalisadorBuilder PontuacaoMedia()
         {
             Analisadores.Add(new AnalisadorMediaPontuacao());
@@ -30,6 +31,20 @@ namespace Cartoleiro.Core.Escalador.Analizador
             return this;
         }
 
+        public AnalisadorBuilder ScoutsPositivos()
+        {
+            Analisadores.Add(new AnalisadorScoutsPositivos());
+            return this;
+        }
+
+        public AnalisadorBuilder ScoutsNegativos()
+        {
+            Analisadores.Add(new AnalisadorScoutsNegativos());
+            return this;
+        }
+
+
+        // campeonato
         public AnalisadorBuilder PontosNoCampeonato()
         {
             Analisadores.Add(new AnalisadorPontuacaoNoCampeonato());

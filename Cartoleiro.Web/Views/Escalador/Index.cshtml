@@ -36,12 +36,12 @@
         <div class="col-sm-offset-2 col-sm-10">
             <div class="checkbox">
                 <label>
-                    @Html.CheckBoxFor(m => m.ProporcionalNaPosicao) Dividir proporcional na posição?
+                    @Html.CheckBoxFor(m => m.ProporcionalNaPosicao) Dividir proporcional na posição
                 </label>
             </div>
             <div class="checkbox">
                 <label>
-                    @Html.CheckBoxFor(m => m.SomenteProvaveis) Somente jogadores provaveis?
+                    @Html.CheckBoxFor(m => m.SomenteProvaveis) Somente jogadores provaveis
                 </label>
             </div>
         </div>
@@ -52,73 +52,83 @@
             <legend>Analisadores</legend>
         </fieldset>
     </div>
-    
-        <div class="row">
-            <div class="col-sm-offset-2 col-sm-10 nopadding">
-                <div class="col-sm-4">
-                    <div class="panel panel-default">
-                        <div class="panel-heading">
-                            <h3 class="panel-title">Jogador</h3>
+
+    <div class="row">
+        <div class="col-sm-offset-2 col-sm-10 nopadding">
+            <div class="col-sm-4">
+                <div class="panel panel-default">
+                    <div class="panel-heading">
+                        <h3 class="panel-title">Jogador</h3>
+                    </div>
+                    <div class="panel-body">
+                        <div class="checkbox">
+                            <label>
+                                @Html.CheckBoxFor(m => m.AnalisadorPontuacaoMedia) Pontuação média
+                            </label>
                         </div>
-                        <div class="panel-body">
-                            <div class="checkbox">
-                                <label>
-                                    @Html.CheckBoxFor(m => m.AnalisadorPontuacaoMedia) Pontuação média
-                                </label>
-                            </div>
-                            <div class="checkbox">
-                                <label>
-                                    @Html.CheckBoxFor(m => m.AnalisadorUltimaPontuacao) Última pontuação
-                                </label>
-                            </div>
+                        <div class="checkbox">
+                            <label>
+                                @Html.CheckBoxFor(m => m.AnalisadorUltimaPontuacao) Última pontuação
+                            </label>
+                        </div>
+                        <div class="checkbox">
+                            <label>
+                                @Html.CheckBoxFor(m => m.AnalisadorScoutsPositivos) Scouts positivos
+                            </label>
+                        </div>
+                        <div class="checkbox">
+                            <label>
+                                @Html.CheckBoxFor(m => m.AnalisadorScoutsNegativos) Scouts negativos
+                            </label>
                         </div>
                     </div>
                 </div>
-
-                <div class="col-sm-4">
-                    <div class="panel panel-default">
-                        <div class="panel-heading">
-                            <h3 class="panel-title">Clube no Campeonato</h3>
-                        </div>
-                        <div class="panel-body">
-                            <div class="checkbox">
-                                <label>
-                                    @Html.CheckBoxFor(m => m.AnalisadorPontosNoCampeonato) Pontos
-                                </label>
-                            </div>
-                            <div class="checkbox">
-                                <label>
-                                    @Html.CheckBoxFor(m => m.AnalisadorVitorias) Vitórias
-                                </label>
-                            </div>
-                            <div class="checkbox">
-                                <label>
-                                    @Html.CheckBoxFor(m => m.AnalisadorGolsPro) Gols pró
-                                </label>
-                            </div>
-                            <div class="checkbox">
-                                <label>
-                                    @Html.CheckBoxFor(m => m.AnalisadorGolsContra) Gols contra
-                                </label>
-                            </div>
-                            <div class="checkbox">
-                                <label>
-                                    @Html.CheckBoxFor(m => m.AnalisadorSaldoDeGols) Saldo de gols
-                                </label>
-                            </div>
-                            <div class="checkbox">
-                                <label>
-                                    @Html.CheckBoxFor(m => m.AnalisadorUltimos5Jogos) Últimos 5 jogos
-                                </label>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-
             </div>
+
+            <div class="col-sm-4">
+                <div class="panel panel-default">
+                    <div class="panel-heading">
+                        <h3 class="panel-title">Clube no Campeonato</h3>
+                    </div>
+                    <div class="panel-body">
+                        <div class="checkbox">
+                            <label>
+                                @Html.CheckBoxFor(m => m.AnalisadorPontosNoCampeonato) Pontos
+                            </label>
+                        </div>
+                        <div class="checkbox">
+                            <label>
+                                @Html.CheckBoxFor(m => m.AnalisadorVitorias) Vitórias
+                            </label>
+                        </div>
+                        <div class="checkbox">
+                            <label>
+                                @Html.CheckBoxFor(m => m.AnalisadorGolsPro) Gols pró
+                            </label>
+                        </div>
+                        <div class="checkbox">
+                            <label>
+                                @Html.CheckBoxFor(m => m.AnalisadorGolsContra) Gols contra
+                            </label>
+                        </div>
+                        <div class="checkbox">
+                            <label>
+                                @Html.CheckBoxFor(m => m.AnalisadorSaldoDeGols) Saldo de gols
+                            </label>
+                        </div>
+                        <div class="checkbox">
+                            <label>
+                                @Html.CheckBoxFor(m => m.AnalisadorUltimos5Jogos) Últimos 5 jogos
+                            </label>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
         </div>
-    
+    </div>
+
     <hr />
 
     <div class="form-group">

@@ -59,6 +59,15 @@ namespace Cartoleiro.Web.Controllers
             {
                 analisadorBuilder.UltimaPontuacao();
             }
+            if (escaladorViewModel.AnalisadorScoutsPositivos)
+            {
+                analisadorBuilder.ScoutsPositivos();
+            }
+            if (escaladorViewModel.AnalisadorScoutsNegativos)
+            {
+                analisadorBuilder.ScoutsNegativos();
+            }
+
             if (escaladorViewModel.AnalisadorPontosNoCampeonato)
             {
                 analisadorBuilder.PontosNoCampeonato();

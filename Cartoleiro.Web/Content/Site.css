@@ -27,6 +27,10 @@ textarea {
    padding: 0 !important;
    /*margin: 0 !important;*/
 }
+.table-cartoleiro > tbody > tr > td {
+    padding: 6px 8px;
+    vertical-align: middle;
+}
 
 
 body {
