@@ -25,7 +25,7 @@ namespace Cartoleiro.Crawler.Crawlers.ScoutsCartola
 
             Pagina = elementoHtml.GetAttribute("href");
             Nome = nomeJogador;
-            Clube = CrawlerRuntimeHelper.GetClube(nomeClube);
+            Clube = CrawlerHelper.GetClube(nomeClube);
 
             return this;
         }

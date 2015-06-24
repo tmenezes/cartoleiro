@@ -16,6 +16,7 @@ namespace Cartoleiro.Crawler.Crawlers.GloboEsporte
         public event EventHandler<CrawlingInfo> ObjetoCarregado;
         public bool SuportaClubes { get; private set; }
         public bool SuportaJogadores { get; private set; }
+        public bool SuportaRodadas { get; private set; }
 
 
         public GloboEsporteSiteCrawler(Uri uriBase)
@@ -26,9 +27,9 @@ namespace Cartoleiro.Crawler.Crawlers.GloboEsporte
 
         public IEnumerable<Clube> CarregarClubes()
         {
-            IList<Clube> clubes = new List<Clube>();
+            var clubes = new List<Clube>();
 
-            var driver = new PhantomJSDriver();
+            var driver = CrawlerHelper.GetWebDriver();
             driver.Navigate().GoToUrl(_uriBase);
 
             var divClubes = driver.FindElementByXPath(@"//div[@class='tabela tabela-sem-jogos-por-grupo']");
@@ -61,6 +62,43 @@ namespace Cartoleiro.Crawler.Crawlers.GloboEsporte
         public IEnumerable<Jogador> CarregarJogadores()
         {
             yield break;
+        }
+
+        public IEnumerable<Rodada> CarregarRodadas()
+        {
+            return CarregarRodadas(int.MaxValue);
+        }
+
+        public IEnumerable<Rodada> CarregarRodadas(int quantidade)
+        {
+            var rodadas = new List<Rodada>();
+
+            var driver = CrawlerHelper.GetWebDriver();
+            driver.Navigate().GoToUrl(_uriBase);
+
+            var asideJogos = driver.FindElement(By.TagName("aside"));
+
+            var templateUrlRodadas = string.Concat("http://globoesporte.globo.com", asideJogos.GetAttribute("data-url-pattern-navegador-jogos"), "{0}/jogos.html");
+            var totalRodadas = Convert.ToInt32(asideJogos.FindElement(By.TagName("nav"))
+                                                         .FindElements(By.TagName("span"))[1]
+                                                         .GetAttribute("data-rodadas-length"));
+
+            for (int i = 1; i <= totalRodadas; i++)
+            {
+                var urlRodada = string.Format(templateUrlRodadas, i);
+                driver.Navigate().GoToUrl(urlRodada);
+
+                var rodada = new GloboEsporteRodadaCrawler(driver).ObterRodada(i);
+                rodadas.Add(rodada);
+
+
+                OnObjetoCarregado(new CrawlingInfo(totalRodadas, rodadas.Count, rodada.ToString()));
+
+                if (rodadas.Count >= quantidade)
+                    return rodadas;
+            }
+
+            return rodadas;
         }
 
 

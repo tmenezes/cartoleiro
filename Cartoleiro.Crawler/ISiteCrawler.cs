@@ -10,8 +10,10 @@ namespace Cartoleiro.Crawler
 
         bool SuportaClubes { get; }
         bool SuportaJogadores { get; }
+        bool SuportaRodadas { get; }
 
         IEnumerable<Clube> CarregarClubes();
         IEnumerable<Jogador> CarregarJogadores();
+        IEnumerable<Rodada> CarregarRodadas();
     }
 }

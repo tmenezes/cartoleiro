@@ -15,6 +15,7 @@ namespace Cartoleiro.Crawler.Crawlers.ScoutsCartola
 
         public bool SuportaClubes { get { return true; } }
         public bool SuportaJogadores { get { return true; } }
+        public bool SuportaRodadas { get; private set; }
 
 
         public ScoutsCartolaSiteCrawler(Uri uriBase)
@@ -37,7 +38,7 @@ namespace Cartoleiro.Crawler.Crawlers.ScoutsCartola
         {
             IList<Jogador> jogadores = new List<Jogador>();
 
-            var driver = new PhantomJSDriver();
+            var driver = CrawlerHelper.GetWebDriver();
             driver.Navigate().GoToUrl(new Uri(_uriBase, "/jogador"));
 
             var divJogadores = driver.FindElementById("boxAlfabetica");
@@ -64,6 +65,11 @@ namespace Cartoleiro.Crawler.Crawlers.ScoutsCartola
             driver.Quit();
 
             return jogadores;
+        }
+
+        public IEnumerable<Rodada> CarregarRodadas()
+        {
+            yield break;
         }
 
 
