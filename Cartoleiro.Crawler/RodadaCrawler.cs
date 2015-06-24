@@ -37,7 +37,7 @@ namespace Cartoleiro.Crawler
 
             foreach (var liJogo in liJogos)
             {
-                var jogo = GetJogo(liJogo);
+                var jogo = GetJogo(rodada.Numero, liJogo);
 
                 rodada.Jogos.Add(jogo);
             }
@@ -45,7 +45,7 @@ namespace Cartoleiro.Crawler
             return rodada;
         }
 
-        private static Jogo GetJogo(IWebElement liJogo)
+        private static Jogo GetJogo(int numeroDaRodada, IWebElement liJogo)
         {
             //var divInfo = liJogo.FindElement(By.CssSelector(".placar-jogo-informacoes"));
             var divJogo = liJogo.FindElement(By.CssSelector(".placar-jogo-equipes"));
@@ -60,7 +60,7 @@ namespace Cartoleiro.Crawler
             var imgVisitante = spansJogo[2].FindElement(By.TagName("img")).GetAttribute("src");
             var placarVisitante = spansJogo[1].FindElement(By.CssSelector(".placar-jogo-equipes-placar-visitante")).Text;
 
-            var jogo = new Jogo(CrawlerHelper.GetClube(mandante), CrawlerHelper.GetClube(visitante));
+            var jogo = new Jogo(numeroDaRodada, CrawlerHelper.GetClube(mandante), CrawlerHelper.GetClube(visitante));
             jogo.PlacarMandante = string.IsNullOrWhiteSpace(placarMandante) ? 0 : Convert.ToInt32(placarMandante);
             jogo.PlacarVisitante = string.IsNullOrWhiteSpace(placarVisitante) ? 0 : Convert.ToInt32(placarVisitante);
 
