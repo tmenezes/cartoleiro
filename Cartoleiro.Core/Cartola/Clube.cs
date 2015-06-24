@@ -12,6 +12,9 @@
 
         public override string ToString()
         {
+            if (Campeonato == null)
+                return Nome;
+
             return string.Format("{0} - {1}", Nome, Campeonato);
         }
     }
