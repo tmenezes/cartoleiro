@@ -198,6 +198,7 @@
     <Content Include="Scripts\bootstrap.min.js" />
     <Content Include="App_Data\jogadores.json" />
     <Content Include="App_Data\clubes.json" />
+    <Content Include="App_Data\rodadas.json" />
     <None Include="Scripts\jquery-1.10.2.intellisense.js" />
     <Content Include="Scripts\cartoleiro.js" />
     <Content Include="Scripts\jquery-1.10.2.js" />

@@ -125,7 +125,30 @@
                 </div>
             </div>
 
-
+            <div class="col-sm-4">
+                <div class="panel panel-default">
+                    <div class="panel-heading">
+                        <h3 class="panel-title">Confronto</h3>
+                    </div>
+                    <div class="panel-body">
+                        <div class="checkbox">
+                            <label>
+                                @Html.CheckBoxFor(m => m.AnalisadorMandoDeCampo) Mando de campo
+                            </label>
+                        </div>
+                        <div class="checkbox">
+                            <label>
+                                @Html.CheckBoxFor(m => m.AnalisadorVitoriasEmCasa) Vitórias em casa
+                            </label>
+                        </div>
+                        <div class="checkbox">
+                            <label>
+                                @Html.CheckBoxFor(m => m.AnalisadorVitoriasForaCasa) Vitórias fora de casa
+                            </label>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
 

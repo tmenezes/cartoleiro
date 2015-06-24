@@ -28,7 +28,7 @@ namespace Cartoleiro.Core.Cartola
             {
                 if (_vitoriasEmCasa == null)
                 {
-                    _vitoriasEmCasa = Rodadas.Count(r => r.Jogos.First(j => j.Mandante == _clube).Vencedor == _clube);
+                    _vitoriasEmCasa = Rodadas.JogosComoMandante(_clube).Count(j => j.Vencedor == _clube);
                 }
 
                 return _vitoriasEmCasa.Value;
@@ -40,20 +40,21 @@ namespace Cartoleiro.Core.Cartola
             {
                 if (_vitoriasForaDeCasa == null)
                 {
-                    _vitoriasForaDeCasa = Rodadas.Count(r => r.Jogos.First(j => j.Visitante == _clube).Vencedor == _clube);
+                    _vitoriasForaDeCasa = Rodadas.JogosComoVisitante(_clube).Count(j => j.Vencedor == _clube);
                 }
 
                 return _vitoriasForaDeCasa.Value;
             }
         }
 
-        public static IEnumerable<Rodada> Rodadas { get; set; }
+        public static Rodadas Rodadas { get; set; }
 
 
         public void SetClube(Clube clube)
         {
             _clube = clube;
         }
+
         public override string ToString()
         {
             return string.Format("{0}º lugar, Pontos: {1}, Vitorias: {2}", Posicao, Pontos, Vitorias);

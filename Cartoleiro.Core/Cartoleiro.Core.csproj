@@ -40,6 +40,7 @@
     <Compile Include="Cartola\Campeonato.cs" />
     <Compile Include="Cartola\Jogo.cs" />
     <Compile Include="Cartola\Rodada.cs" />
+    <Compile Include="Cartola\Rodadas.cs" />
     <Compile Include="Cartola\Scouts.cs" />
     <Compile Include="Cartola\Status.cs" />
     <Compile Include="Cartola\UltimosJogos.cs" />

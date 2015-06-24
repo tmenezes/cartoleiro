@@ -1,5 +1,6 @@
 ﻿
 using Cartoleiro.Core.Escalador.Analizador.Campeonato;
+using Cartoleiro.Core.Escalador.Analizador.Confronto;
 using Cartoleiro.Core.Escalador.Analizador.Jogador;
 
 namespace Cartoleiro.Core.Escalador.Analizador
@@ -78,6 +79,26 @@ namespace Cartoleiro.Core.Escalador.Analizador
         public AnalisadorBuilder Ultimos5Jogos()
         {
             Analisadores.Add(new AnalisadorUltimos5Jogos());
+            return this;
+        }
+
+
+        // confronto
+        public AnalisadorBuilder MandoDeCampo()
+        {
+            Analisadores.Add(new AnalisadorMandoDeCampo());
+            return this;
+        }
+
+        public AnalisadorBuilder VitoriasEmCasa()
+        {
+            Analisadores.Add(new AnalisadorVitoriasEmCasa());
+            return this;
+        }
+
+        public AnalisadorBuilder VitoriasForaDeCasa()
+        {
+            Analisadores.Add(new AnalisadorVitoriasForaDeCasa());
             return this;
         }
     }

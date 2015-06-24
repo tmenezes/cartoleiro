@@ -61,6 +61,7 @@ namespace Cartoleiro.DAO
         private void PopularRodadas()
         {
             Rodadas = GetObjetos<Rodada>(ArquivoRodadas);
+            Campeonato.Rodadas = new Rodadas(Rodadas);
 
             foreach (var rodada in Rodadas)
             {

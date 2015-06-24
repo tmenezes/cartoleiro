@@ -1,4 +1,5 @@
 ﻿using System.Collections.Generic;
+using System.Linq;
 
 namespace Cartoleiro.Core.Cartola
 {
@@ -7,12 +8,23 @@ namespace Cartoleiro.Core.Cartola
         public int Numero { get; set; }
         public IList<Jogo> Jogos { get; set; }
 
+        public int TotalDeGols
+        {
+            get { return Jogos.Sum(j => j.TotalDeGols); }
+        }
+
+
         public Rodada(int numero)
         {
             Numero = numero;
             Jogos = new List<Jogo>();
         }
 
+
+        public bool EsMandante(Clube clube)
+        {
+            return Jogos.Any(j => j.Mandante == clube);
+        }
 
         public override string ToString()
         {
