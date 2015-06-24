@@ -50,7 +50,7 @@ namespace Cartoleiro.Crawler.Crawlers.GloboEsporte
                                                                     .ObterClube(trCampeonato);
                     clubes.Add(clube);
 
-                    OnObjetoCarregado(new CrawlingInfo(trsClubes.Count(), clubes.Count, clube.ToString()));
+                    OnObjetoCarregado(new CrawlingInfo(trsClubes.Count(), clubes.Count, clube));
                 }
             }
 
@@ -92,11 +92,13 @@ namespace Cartoleiro.Crawler.Crawlers.GloboEsporte
                 rodadas.Add(rodada);
 
 
-                OnObjetoCarregado(new CrawlingInfo(totalRodadas, rodadas.Count, rodada.ToString()));
+                OnObjetoCarregado(new CrawlingInfo(totalRodadas, rodadas.Count, rodada));
 
                 if (rodadas.Count >= quantidade)
-                    return rodadas;
+                    break;
             }
+
+            driver.Quit();
 
             return rodadas;
         }

@@ -6,13 +6,15 @@ namespace Cartoleiro.Crawler
 {
     public class CrawlerDataSource : ICartolaDataSource
     {
-        public IEnumerable<Clube> Clubes { get; private set; }
-        public IEnumerable<Jogador> Jogadores { get; private set; }
+        public IEnumerable<Clube> Clubes { get; internal set; }
+        public IEnumerable<Jogador> Jogadores { get; internal set; }
+        public IEnumerable<Rodada> Rodadas { get; internal set; }
 
-        public CrawlerDataSource(IEnumerable<Clube> clubes, IEnumerable<Jogador> jogadores)
+        public CrawlerDataSource()
         {
-            Clubes = clubes;
-            Jogadores = jogadores;
+            Clubes = new List<Clube>();
+            Jogadores = new List<Jogador>();
+            Rodadas = new List<Rodada>();
         }
     }
 }

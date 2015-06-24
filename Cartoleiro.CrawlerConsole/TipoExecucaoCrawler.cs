@@ -4,6 +4,7 @@ namespace Cartoleiro.CrawlerConsole
     {
         Clubes = 1,
         Jogadores = 2,
-        Completa = 3
+        Rodadas = 3,
+        Completa = 4
     }
 }

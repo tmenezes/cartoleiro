@@ -1,6 +1,7 @@
 ﻿using System.Collections.Generic;
 using Cartoleiro.Core.Cartola;
 using OpenQA.Selenium.PhantomJS;
+using OpenQA.Selenium.Remote;
 
 namespace Cartoleiro.Crawler
 {
@@ -15,14 +16,9 @@ namespace Cartoleiro.Crawler
             return _clubes[nome];
         }
 
-        internal static PhantomJSDriver GetWebDriver()
+        internal static RemoteWebDriver GetWebDriver()
         {
-            var service = PhantomJSDriverService.CreateDefaultService();
-            service.IgnoreSslErrors = true;
-            service.LoadImages = false;
-            service.Start();
-
-            var driver = new PhantomJSDriver(service);
+            var driver = new PhantomJSDriver();
             return driver;
         }
     }

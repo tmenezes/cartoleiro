@@ -35,24 +35,44 @@ namespace Cartoleiro.Crawler
         {
             var clubes = _clubesCrawler.CarregarClubes();
             var jogadores = _jogadoresCrawler.CarregarJogadores();
+            var rodadas = _clubesCrawler.CarregarRodadas();
 
-            return new CrawlerDataSource(clubes, jogadores);
+            return new CrawlerDataSource()
+                   {
+                       Clubes = clubes,
+                       Jogadores = jogadores,
+                       Rodadas = rodadas
+                   };
         }
 
         public ICartolaDataSource ExecutarCrawlerDeClubes()
         {
             var clubes = _clubesCrawler.CarregarClubes();
-            var jogadores = new List<Jogador>();
 
-            return new CrawlerDataSource(clubes, jogadores);
+            return new CrawlerDataSource()
+                   {
+                       Clubes = clubes
+                   };
         }
 
         public ICartolaDataSource ExecutarCrawlerDeJogadores()
         {
-            var clubes = new List<Clube>();
             var jogadores = _jogadoresCrawler.CarregarJogadores();
 
-            return new CrawlerDataSource(clubes, jogadores);
+            return new CrawlerDataSource()
+                   {
+                       Jogadores = jogadores
+                   };
+        }
+
+        public ICartolaDataSource ExecutarCrawlerDeRodadas()
+        {
+            var rodadas = _clubesCrawler.CarregarRodadas();
+
+            return new CrawlerDataSource()
+                   {
+                       Rodadas = rodadas
+                   };
         }
 
 

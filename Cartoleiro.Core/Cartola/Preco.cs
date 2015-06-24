@@ -13,7 +13,7 @@ namespace Cartoleiro.Core.Cartola
 
         public override string ToString()
         {
-            return string.Format("Atual: {0}, Var.: {1}", Atual, Variacao);
+            return string.Format("Atual: {0}, Var: {1}", Atual, Variacao);
         }
     }
 }

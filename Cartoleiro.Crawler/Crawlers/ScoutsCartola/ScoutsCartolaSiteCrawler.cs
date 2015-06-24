@@ -58,7 +58,7 @@ namespace Cartoleiro.Crawler.Crawlers.ScoutsCartola
 
                     jogadores.Add(jogador);
 
-                    OnObjetoCarregado(new CrawlingInfo(jogadoresEncontrados.Count(), jogadores.Count, jogador.ToString()));
+                    OnObjetoCarregado(new CrawlingInfo(jogadoresEncontrados.Count(), jogadores.Count, jogador));
                 }
             }
 
@@ -83,7 +83,7 @@ namespace Cartoleiro.Crawler.Crawlers.ScoutsCartola
 
                 jogadoresEncontrados.Add(jogador);
 
-                OnObjetoCarregado(new CrawlingInfo(linksDeJogadores.Count, jogadoresEncontrados.Count, jogador.ToString()));
+                OnObjetoCarregado(new CrawlingInfo(linksDeJogadores.Count, jogadoresEncontrados.Count, jogador));
             }
 
             return jogadoresEncontrados;

@@ -17,6 +17,7 @@ namespace Cartoleiro.DAO
 
         public IEnumerable<Clube> Clubes { get; private set; }
         public IEnumerable<Jogador> Jogadores { get; private set; }
+        public IEnumerable<Rodada> Rodadas { get; private set; }
 
 
         public CartolaJsonDataSource(string pastaAppData)

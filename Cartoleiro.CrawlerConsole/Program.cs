@@ -15,6 +15,7 @@ namespace Cartoleiro.CrawlerConsole
     {
         private static string ArquivoClubesJson { get { return Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "clubes.json"); } }
         private static string ArquivoJogadoresJson { get { return Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "jogadores.json"); } }
+        private static string ArquivoRodadasJson { get { return Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "rodadas.json"); } }
 
         static void Main(string[] args)
         {
@@ -42,7 +43,7 @@ namespace Cartoleiro.CrawlerConsole
 
             // executando...
             Task.Factory.StartNew(() => executarCrawler())
-                         .ContinueWith(t => SalvarDataSource(t.Result));
+                        .ContinueWith(t => SalvarDataSource(t.Result));
         }
 
         private static void SalvarDataSource(ICartolaDataSource dataSource)
@@ -52,6 +53,7 @@ namespace Cartoleiro.CrawlerConsole
 
             SavlarDados(dataSource.Clubes, ArquivoClubesJson);
             SavlarDados(dataSource.Jogadores, ArquivoJogadoresJson);
+            SavlarDados(dataSource.Rodadas, ArquivoRodadasJson);
 
             Console.WriteLine("");
             Console.WriteLine("Crawler concluido!!! Pressione qualquer tecla para sair.");
@@ -91,7 +93,8 @@ namespace Cartoleiro.CrawlerConsole
                 Console.WriteLine("Informe o tipo de execucao:");
                 Console.WriteLine("1 - Clubes");
                 Console.WriteLine("2 - Jogadores ");
-                Console.WriteLine("3 - Completa");
+                Console.WriteLine("3 - Rodadas ");
+                Console.WriteLine("4 - Completa");
                 var tipoSelecionado = Console.ReadLine();
 
                 try
@@ -121,6 +124,9 @@ namespace Cartoleiro.CrawlerConsole
                 case TipoExecucaoCrawler.Jogadores:
                     return crawler.ExecutarCrawlerDeJogadores;
 
+                case TipoExecucaoCrawler.Rodadas:
+                    return crawler.ExecutarCrawlerDeRodadas;
+
                 case TipoExecucaoCrawler.Completa:
                 default:
                     return crawler.Executar;
@@ -130,8 +136,8 @@ namespace Cartoleiro.CrawlerConsole
         private static void Crawler_ObjetoCarregado(object sender, CrawlingInfo e)
         {
             Console.WriteLine("");
-            Console.WriteLine("Objeto carregado: {0:000} de {1}", e.ObjetosCarregados, e.TotalDeObjetos);
-            Console.WriteLine("Objeto          : {0}", e.DadosDoObjeto);
+            Console.WriteLine("Progresso: {0:000} de {1}", e.ObjetosCarregados, e.TotalDeObjetos);
+            Console.WriteLine("Objeto   : {0} -> {1}", e.TipoDoObjeto, e.DadosDoObjeto);
         }
     }
 }
