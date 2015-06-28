@@ -31,9 +31,9 @@ namespace Cartoleiro.Web.Models.EscaladorModels
         public bool AnalisadorUltimos5Jogos { get; set; }
 
         // analisadores de confronto
-        public bool AnalisadorMandoDeCampo { get; set; }
-        public bool AnalisadorVitoriasEmCasa { get; set; }
-        public bool AnalisadorVitoriasForaCasa { get; set; }
+        public bool AnalisadorPesoDoClube { get; set; }
+        public bool AnalisadorAproveitamentoPorMando { get; set; }
+        public bool AnalisadorVitoriasGolsProPorMando { get; set; }
 
 
         public EscaladorViewModel()

@@ -47,9 +47,9 @@
     <Compile Include="Escalador\Analizador\AnalisadorGenerico.cs" />
     <Compile Include="Escalador\Analizador\Campeonato\AnalisadorGolsContra.cs" />
     <Compile Include="Escalador\Analizador\Campeonato\AnalisadorGolsPro.cs" />
-    <Compile Include="Escalador\Analizador\Confronto\AnalisadorMandoDeCampo.cs" />
-    <Compile Include="Escalador\Analizador\Confronto\AnalisadorVitoriasEmCasa.cs" />
-    <Compile Include="Escalador\Analizador\Confronto\AnalisadorVitoriasForaDeCasa.cs" />
+    <Compile Include="Escalador\Analizador\Confronto\AnalisadorAproveitamentoPorMando.cs" />
+    <Compile Include="Escalador\Analizador\Confronto\AnalisadorGolsProMando.cs" />
+    <Compile Include="Escalador\Analizador\Confronto\AnalisadorPesoDoClube.cs" />
     <Compile Include="Escalador\Analizador\Jogador\AnalisadorMediaPontuacao.cs" />
     <Compile Include="Escalador\Analizador\Campeonato\AnalisadorPontuacaoNoCampeonato.cs" />
     <Compile Include="Escalador\Analizador\Campeonato\AnalisadorSaldoDeGols.cs" />

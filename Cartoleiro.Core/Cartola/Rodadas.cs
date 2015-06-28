@@ -31,6 +31,11 @@ namespace Cartoleiro.Core.Cartola
         }
 
 
+        public IEnumerable<Jogo> JogosPassados(Clube clube)
+        {
+            return RodadasAtivas().Select(r => r.Jogos.First(j => j.ParticipaDesseJogo(clube)));
+        }
+
         public IEnumerable<Jogo> JogosComoMandante(Clube clube)
         {
             return RodadasAtivas().Select(r => r.Jogos.FirstOrDefault(j => j.Mandante == clube)).Where(j => j != null);

@@ -1,4 +1,7 @@
-﻿namespace Cartoleiro.Core.Cartola
+﻿using System;
+using System.Text.RegularExpressions;
+
+namespace Cartoleiro.Core.Cartola
 {
     public class Jogo
     {
@@ -27,6 +30,32 @@
             NumeroDaRodada = numeroDaRodada;
             Mandante = mandante;
             Visitante = visitante;
+        }
+
+
+        public bool ParticipaDesseJogo(Clube clube)
+        {
+            return clube == Mandante || clube == Visitante;
+        }
+
+        public Clube GetAdversario(Clube clube)
+        {
+            if (!ParticipaDesseJogo(clube))
+                throw new InvalidOperationException("Clube não participa desse jogo");
+
+            return (clube == Mandante)
+                ? Visitante
+                : Mandante;
+        }
+
+        public int GolsDoClube(Clube clube)
+        {
+            if (!ParticipaDesseJogo(clube))
+                throw new InvalidOperationException("Clube não participa desse jogo");
+
+            return (clube == Mandante)
+                ? PlacarMandante
+                : PlacarVisitante;
         }
 
         public override string ToString()

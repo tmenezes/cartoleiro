@@ -93,17 +93,17 @@ namespace Cartoleiro.Web.Controllers
                 analisadorBuilder.Ultimos5Jogos();
             }
 
-            if (escaladorViewModel.AnalisadorMandoDeCampo)
+            if (escaladorViewModel.AnalisadorPesoDoClube)
             {
-                analisadorBuilder.MandoDeCampo();
+                analisadorBuilder.PesoDoClube();
             }
-            if (escaladorViewModel.AnalisadorVitoriasEmCasa)
+            if (escaladorViewModel.AnalisadorAproveitamentoPorMando)
             {
-                analisadorBuilder.VitoriasEmCasa();
+                analisadorBuilder.AproveitamentoNoMando();
             }
-            if (escaladorViewModel.AnalisadorVitoriasForaCasa)
+            if (escaladorViewModel.AnalisadorVitoriasGolsProPorMando)
             {
-                analisadorBuilder.VitoriasForaDeCasa();
+                analisadorBuilder.GolsProPorMando();
             }
 
             return analisadorBuilder.Analisadores;

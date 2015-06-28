@@ -84,21 +84,21 @@ namespace Cartoleiro.Core.Escalador.Analizador
 
 
         // confronto
-        public AnalisadorBuilder MandoDeCampo()
+        public AnalisadorBuilder PesoDoClube()
         {
-            Analisadores.Add(new AnalisadorMandoDeCampo());
+            Analisadores.Add(new AnalisadorPesoDoClube());
             return this;
         }
 
-        public AnalisadorBuilder VitoriasEmCasa()
+        public AnalisadorBuilder AproveitamentoNoMando()
         {
-            Analisadores.Add(new AnalisadorVitoriasEmCasa());
+            Analisadores.Add(new AnalisadorAproveitamentoPorMando());
             return this;
         }
 
-        public AnalisadorBuilder VitoriasForaDeCasa()
+        public AnalisadorBuilder GolsProPorMando()
         {
-            Analisadores.Add(new AnalisadorVitoriasForaDeCasa());
+            Analisadores.Add(new AnalisadorGolsProMando());
             return this;
         }
     }

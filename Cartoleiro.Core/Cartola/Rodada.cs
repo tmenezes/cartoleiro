@@ -26,6 +26,11 @@ namespace Cartoleiro.Core.Cartola
             return Jogos.Any(j => j.Mandante == clube);
         }
 
+        public Jogo GetJogoDoClube(Clube clube)
+        {
+            return Jogos.First(j => j.ParticipaDesseJogo(clube));
+        }
+
         public override string ToString()
         {
             return string.Format("Numero: {0}, Jogos: {1}", Numero, Jogos.Count);

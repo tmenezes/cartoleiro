@@ -3,7 +3,7 @@ using System.Linq;
 
 namespace Cartoleiro.Core.Escalador.Analizador.Confronto
 {
-    public class AnalisadorMandoDeCampo : AnalisadorGenerico, IAnalisador
+    public class AnalisadorAproveitamentoPorMando : AnalisadorGenerico, IAnalisador
     {
         public void Analisar(IEnumerable<PontuacaoDeEscalacao> ranqueamento)
         {
@@ -15,14 +15,14 @@ namespace Cartoleiro.Core.Escalador.Analizador.Confronto
                 var esMandante = Cartola.Campeonato.Rodadas.ProximaRodada.EsMandante(item.Jogador.Clube);
                 if (esMandante)
                 {
-                    var totalJogosEmCasa = Cartola.Campeonato.Rodadas.JogosComoMandante(item.Jogador.Clube).Count();
+                    var totalJogosEmCasa = (double)Cartola.Campeonato.Rodadas.JogosComoMandante(item.Jogador.Clube).Count();
                     var vitoriasEmCasa = item.Jogador.Clube.Campeonato.VitoriasEmCasa;
 
                     return vitoriasEmCasa / totalJogosEmCasa * 100;
                 }
                 else
                 {
-                    var totalJogosForaDeCasa = Cartola.Campeonato.Rodadas.JogosComoVisitante(item.Jogador.Clube).Count();
+                    var totalJogosForaDeCasa = (double)Cartola.Campeonato.Rodadas.JogosComoVisitante(item.Jogador.Clube).Count();
                     var vitoriasForaDeCasa = item.Jogador.Clube.Campeonato.VitoriasForaDeCasa;
 
                     return vitoriasForaDeCasa / totalJogosForaDeCasa * 100;
