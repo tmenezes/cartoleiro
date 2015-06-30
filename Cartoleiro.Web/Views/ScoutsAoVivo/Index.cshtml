@@ -1,0 +1,39 @@
+﻿@model dynamic
+@{
+    ViewBag.Title = "Scouts ao vivo";
+}
+
+<h2 class="page-header">@ViewBag.Title <small>acompanhe seu time em tempo real</small></h2>
+
+<ul id="myTabs" class="nav nav-tabs" role="tablist">
+    <li role="presentation"><a href="#tabPersonalizado" aria-controls="tabPersonalizado" role="tab" data-toggle="tab">Personalizado</a></li>
+    <li role="presentation"><a href="#tabRodada" aria-controls="tabRodada" role="tab" data-toggle="tab">Rodada</a></li>
+</ul>
+<div class="tab-content">
+    <div role="tabpanel" class="tab-pane fade" id="tabPersonalizado">
+        <div class="col-md-4">
+            <iframe src="http://parciais.competicaocartolafc.com/parciais_cartolafc/Parciais_Box_1.htm" width="100%" height="800" frameborder="0"></iframe>
+        </div>
+        <div class="col-md-4">
+            <iframe src="http://parciais.competicaocartolafc.com/parciais_cartolafc/Parciais_Box_2.htm" width="312px" height="800px" frameborder="0"></iframe>
+        </div>
+        <div class="col-lg-4">
+            <iframe src="http://parciais.competicaocartolafc.com/parciais_cartolafc/Parciais_Box_3.htm" width="312px" height="800px" frameborder="0"></iframe>
+        </div>
+    </div>
+    <div role="tabpanel" class="tab-pane fade" id="tabRodada">
+        <div>em construção...</div>
+    </div>
+</div>
+
+@section scripts{
+    <script>
+        $(document).ready(function () {
+            //$('#myTabs a').click(function (e) {
+            //    e.preventDefault();
+            //    $(this).tab('show');
+            //});
+            $('#myTabs a:first').tab('show');
+        })
+    </script>
+}
