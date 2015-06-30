@@ -50,6 +50,12 @@ namespace Cartoleiro.Core.Cartola
         public static Rodadas Rodadas { get; set; }
 
 
+        static Campeonato()
+        {
+            Rodadas = new Rodadas(new List<Rodada>());
+        }
+
+
         public void SetClube(Clube clube)
         {
             _clube = clube;
