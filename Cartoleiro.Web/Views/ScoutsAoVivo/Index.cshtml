@@ -1,4 +1,5 @@
-﻿@model dynamic
+﻿@using Cartoleiro.Core.Cartola
+@model dynamic
 @{
     ViewBag.Title = "Scouts ao vivo";
 }
@@ -22,17 +23,27 @@
         </div>
     </div>
     <div role="tabpanel" class="tab-pane fade" id="tabRodada">
-        <div>em construção...</div>
+        <div class="row">
+            <div>em construção...</div>
+            @foreach (var jogo in Campeonato.Rodadas.RodadaAtual.Jogos)
+            {
+                <div class="col-md-2 panel panel-default">
+                    <div class="panel-body">
+                        <div class="media">
+                            <div class="media-left"><img src="#" width="32" height="32" alt="@jogo.Mandante.Nome" title="@jogo.Mandante.Nome" /></div>
+                            <div class="media-body media-middle text-center">0 x 0</div>
+                            <div class="media-right"><img src="#" width="32" height="32" alt="@jogo.Visitante.Nome" title="@jogo.Visitante.Nome" /></div>
+                        </div>
+                    </div>
+                </div>
+            }
+        </div>
     </div>
 </div>
 
 @section scripts{
     <script>
         $(document).ready(function () {
-            //$('#myTabs a').click(function (e) {
-            //    e.preventDefault();
-            //    $(this).tab('show');
-            //});
             $('#myTabs a:first').tab('show');
         })
     </script>
