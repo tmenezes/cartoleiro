@@ -54,6 +54,7 @@
     <Compile Include="Escalador\Analizador\Campeonato\AnalisadorPontuacaoNoCampeonato.cs" />
     <Compile Include="Escalador\Analizador\Campeonato\AnalisadorSaldoDeGols.cs" />
     <Compile Include="Escalador\Analizador\Jogador\AnalisadorScoutsNegativos.cs" />
+    <Compile Include="Escalador\Analizador\Jogador\AnalisadorScoutsPorPosicao.cs" />
     <Compile Include="Escalador\Analizador\Jogador\AnalisadorScoutsPositivos.cs" />
     <Compile Include="Escalador\Analizador\Jogador\AnalisadorUltimaPontuacao.cs" />
     <Compile Include="Escalador\Analizador\AnalisadorBuilder.cs" />

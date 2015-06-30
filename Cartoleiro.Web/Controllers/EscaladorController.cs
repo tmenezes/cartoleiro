@@ -1,4 +1,5 @@
-﻿using System.Web.Mvc;
+﻿using System;
+using System.Web.Mvc;
 using Cartoleiro.Core.Escalador;
 using Cartoleiro.Core.Escalador.Analizador;
 using Cartoleiro.Web.Models;
@@ -41,8 +42,15 @@ namespace Cartoleiro.Web.Controllers
             var analisadores = GetAnalisadores(escaladorViewModel);
             escalador.ComAnalisadores(analisadores);
 
-            var time = escalador.MontarTime();
-            ViewData.SetTimeEscalado(time);
+            try
+            {
+                var time = escalador.MontarTime();
+                ViewData.SetTimeEscalado(time);
+            }
+            catch (Exception ex)
+            {
+                ViewData.SetErro(ex.Message);
+            }
 
             return View("Index", escaladorViewModel);
         }
@@ -58,6 +66,10 @@ namespace Cartoleiro.Web.Controllers
             if (escaladorViewModel.AnalisadorUltimaPontuacao)
             {
                 analisadorBuilder.UltimaPontuacao();
+            }
+            if (escaladorViewModel.AnalisadorScoutsPorPosicao)
+            {
+                analisadorBuilder.ScoutsPorPosicao();
             }
             if (escaladorViewModel.AnalisadorScoutsPositivos)
             {

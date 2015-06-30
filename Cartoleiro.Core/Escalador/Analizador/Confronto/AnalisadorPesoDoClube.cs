@@ -17,17 +17,12 @@ namespace Cartoleiro.Core.Escalador.Analizador.Confronto
                 var clubeAdversario = proximaRodada.GetJogoDoClube(clubeDoJogador).GetAdversario(clubeDoJogador);
 
                 var esMandante = proximaRodada.EsMandante(clubeDoJogador);
-                var estaMelhorNoCampeonato = clubeDoJogador.Campeonato.Pontos >= clubeAdversario.Campeonato.Pontos;
-                var ataqueMelhorQueDefesa = clubeDoJogador.Campeonato.GolsPro >= clubeAdversario.Campeonato.GolsContra;
+                var melhorSaldo = clubeDoJogador.Campeonato.SaldoDeGol >= clubeAdversario.Campeonato.SaldoDeGol;
 
-                if (esMandante)
-                    pontos += 10;
 
-                if (estaMelhorNoCampeonato)
-                    pontos += 10;
-
-                if (ataqueMelhorQueDefesa)
-                    pontos += 10;
+                pontos += clubeDoJogador.Campeonato.Pontos;
+                pontos += (esMandante) ? 5 : 0;
+                pontos += (melhorSaldo) ? 5 : 0;
 
                 return pontos;
             });

@@ -24,5 +24,20 @@ namespace Cartoleiro.Web.Models
             else
                 viewData["TIME_ESCALADO"] = time;
         }
+
+        public static string GetErro(this ViewDataDictionary viewData)
+        {
+            if (viewData.ContainsKey("CONTROLLER_ERROR"))
+                return viewData["CONTROLLER_ERROR"] as string;
+
+            return null;
+        }
+        public static void SetErro(this ViewDataDictionary viewData, string erro)
+        {
+            if (!viewData.ContainsKey("CONTROLLER_ERROR"))
+                viewData.Add("CONTROLLER_ERROR", erro);
+            else
+                viewData["CONTROLLER_ERROR"] = erro;
+        }
     }
 }

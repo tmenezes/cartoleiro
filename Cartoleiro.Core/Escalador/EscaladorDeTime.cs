@@ -123,7 +123,7 @@ namespace Cartoleiro.Core.Escalador
             foreach (var jogador in jogadores)
             {
                 if (jogador == null)
-                    throw new InvalidOperationException("Não foi possível escalar todos os jogadores do time com o patrimônio (cartoletas) informado");
+                    throw new InvalidOperationException("Não foi possível escalar todos os jogadores do time com o patrimônio (cartoletas) informado.");
 
                 time.AddJogador(jogador);
             }

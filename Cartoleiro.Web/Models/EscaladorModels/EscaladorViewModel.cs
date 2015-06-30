@@ -19,6 +19,7 @@ namespace Cartoleiro.Web.Models.EscaladorModels
         // analisadores de jogador
         public bool AnalisadorPontuacaoMedia { get; set; }
         public bool AnalisadorUltimaPontuacao { get; set; }
+        public bool AnalisadorScoutsPorPosicao { get; set; }
         public bool AnalisadorScoutsPositivos { get; set; }
         public bool AnalisadorScoutsNegativos { get; set; }
 

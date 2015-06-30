@@ -5,7 +5,13 @@
 }
 
 <h2 class="page-header">@ViewBag.Title de times <small>Simule escalação do seu time</small></h2>
-
+@if (ViewData.GetErro() != null)
+{
+    <div class="alert alert-warning alert-dismissible fade in" role="alert">
+        <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">×</span></button>
+        <strong>Atenção!</strong> @ViewData.GetErro()
+    </div>
+}
 @using (Html.BeginForm("Escalar", "Escalador", FormMethod.Post, new { @class = "form-horizontal", role = "form" }))
 {
     @Html.AntiForgeryToken()
@@ -69,6 +75,11 @@
                         <div class="checkbox">
                             <label>
                                 @Html.CheckBoxFor(m => m.AnalisadorUltimaPontuacao) Última pontuação
+                            </label>
+                        </div>
+                        <div class="checkbox">
+                            <label>
+                                @Html.CheckBoxFor(m => m.AnalisadorScoutsPorPosicao) Melhor scout na posição
                             </label>
                         </div>
                         <div class="checkbox">

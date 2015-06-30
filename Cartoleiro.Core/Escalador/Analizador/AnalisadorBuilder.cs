@@ -32,6 +32,12 @@ namespace Cartoleiro.Core.Escalador.Analizador
             return this;
         }
 
+        public AnalisadorBuilder ScoutsPorPosicao()
+        {
+            Analisadores.Add(new AnalisadorScoutsPorPosicao());
+            return this;
+        }
+
         public AnalisadorBuilder ScoutsPositivos()
         {
             Analisadores.Add(new AnalisadorScoutsPositivos());
