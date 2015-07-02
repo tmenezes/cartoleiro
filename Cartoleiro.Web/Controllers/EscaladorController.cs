@@ -2,6 +2,7 @@
 using System.Web.Mvc;
 using Cartoleiro.Core.Escalador;
 using Cartoleiro.Core.Escalador.Analizador;
+using Cartoleiro.Web.Helpers;
 using Cartoleiro.Web.Models;
 using Cartoleiro.Web.Models.EscaladorModels;
 

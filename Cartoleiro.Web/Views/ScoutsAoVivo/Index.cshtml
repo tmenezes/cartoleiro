@@ -1,4 +1,5 @@
 ﻿@using Cartoleiro.Core.Cartola
+@using Cartoleiro.Web.Helpers
 @model dynamic
 @{
     ViewBag.Title = "Scouts ao vivo";
@@ -30,7 +31,7 @@
                     <div class="panel-body">
                         <div class="media">
                             <div class="media-left">
-                                <img src="@string.Format("Images/clubes/{0}.png", @jogo.Mandante.Nome.ToLower())" width="32" height="32" alt="@jogo.Mandante.Nome" title="@jogo.Mandante.Nome" />
+                                <img src="@jogo.Mandante.GetUrlImagem()" width="32" height="32" alt="@jogo.Mandante.Nome" title="@jogo.Mandante.Nome" />
                             </div>
                             <div class="media-body media-middle text-center panel-partida-placar">
                                 <span><strong>@jogo.PlacarMandante</strong></span>
@@ -38,7 +39,7 @@
                                 <span><strong>@jogo.PlacarVisitante</strong></span>
                             </div>
                             <div class="media-right">
-                                <img src="@string.Format("Images/clubes/{0}.png", @jogo.Visitante.Nome.ToLower())" width="32" height="32" alt="@jogo.Visitante.Nome" title="@jogo.Visitante.Nome" />
+                                <img src="@jogo.Visitante.GetUrlImagem()" width="32" height="32" alt="@jogo.Visitante.Nome" title="@jogo.Visitante.Nome" />
                             </div>
                         </div>
                     </div>
