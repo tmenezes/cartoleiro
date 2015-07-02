@@ -8,7 +8,7 @@ namespace Cartoleiro.Web.Helpers
         public static string GetUrlImagem(this Clube clube)
         {
             var clubeSemAcento = RemoverAcentos(clube.Nome.ToLower().Replace(" ", ""));
-            return string.Format("Images/clubes/{0}.png", clubeSemAcento);
+            return string.Format("~/Images/clubes/{0}.png", clubeSemAcento);
         }
 
         private static string RemoverAcentos(string texto)

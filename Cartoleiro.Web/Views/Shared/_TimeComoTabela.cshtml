@@ -1,5 +1,6 @@
 ﻿@model Cartoleiro.Core.Escalador.Time
 
+@using Cartoleiro.Web.Helpers
 @using Cartoleiro.Web.Models
 
 @if (Model != null)
@@ -16,10 +17,12 @@
         @foreach (var jogador in Model.TodosJogadores)
         {
             <tr>
-                <td><span class="text-muted">@string.Format("{0}º lugar", jogador.Clube.Campeonato.Posicao)</span><br />@jogador.Clube.Nome</td>
+                @*<td><span class="text-muted">@string.Format("{0}º lugar", jogador.Clube.Campeonato.Posicao)</span><br />@jogador.Clube.Nome</td>*@
+                <td><img src="@Url.Content(jogador.Clube.GetUrlImagem())" width="32" height="32" alt="@jogador.Clube.Nome" title="@jogador.Clube.Nome" /></td> 
                 <td><span class="text-muted">@jogador.Posicao</span><br /><strong>@jogador.Nome</strong></td>
                 <td>@jogador.Preco.Atual.ToString("F")</td>
                 <td>@jogador.Pontuacao.Media.ToString("F")</td>
+                
             </tr>
         }
     </table>
