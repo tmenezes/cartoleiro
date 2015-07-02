@@ -204,6 +204,26 @@
     <Content Include="Content\Site.css" />
     <Content Include="Images\bg_cabecalho_novo.png" />
     <Content Include="Images\cartola.png" />
+    <Content Include="Images\clubes\atletico-pr.png" />
+    <Content Include="Images\clubes\atletico_mg.png" />
+    <Content Include="Images\clubes\avai.png" />
+    <Content Include="Images\clubes\chapecoense.png" />
+    <Content Include="Images\clubes\corinthians.png" />
+    <Content Include="Images\clubes\coritiba.png" />
+    <Content Include="Images\clubes\cruzeiro.png" />
+    <Content Include="Images\clubes\figueirense.png" />
+    <Content Include="Images\clubes\flamengo.png" />
+    <Content Include="Images\clubes\fluminense.png" />
+    <Content Include="Images\clubes\goias.png" />
+    <Content Include="Images\clubes\gremio.png" />
+    <Content Include="Images\clubes\internacional.png" />
+    <Content Include="Images\clubes\Joinville.png" />
+    <Content Include="Images\clubes\palmeiras.png" />
+    <Content Include="Images\clubes\ponte_preta.png" />
+    <Content Include="Images\clubes\santos.png" />
+    <Content Include="Images\clubes\sao_paulo.png" />
+    <Content Include="Images\clubes\sport.png" />
+    <Content Include="Images\clubes\vasco.png" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
     <Content Include="App_Data\jogadores.json" />
@@ -261,6 +281,7 @@
     <Content Include="Views\Shared\_TimeComoTabela.cshtml" />
     <Content Include="Views\Shared\_MelhoresJogadores.cshtml" />
     <Content Include="Views\ScoutsAoVivo\Index.cshtml" />
+    <Content Include="Views\Shared\_GoogleAnalitics.cshtml" />
   </ItemGroup>
   <ItemGroup />
   <ItemGroup>
