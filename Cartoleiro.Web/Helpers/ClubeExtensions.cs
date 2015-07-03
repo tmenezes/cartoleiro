@@ -1,4 +1,6 @@
 ﻿using System.Text;
+using System.Web;
+using System.Web.Mvc;
 using Cartoleiro.Core.Cartola;
 
 namespace Cartoleiro.Web.Helpers
@@ -8,7 +10,9 @@ namespace Cartoleiro.Web.Helpers
         public static string GetUrlImagem(this Clube clube)
         {
             var clubeSemAcento = RemoverAcentos(clube.Nome.ToLower().Replace(" ", ""));
-            return string.Format("~/Images/clubes/{0}.png", clubeSemAcento);
+            var imagem = string.Format("~/Images/clubes/{0}.png", clubeSemAcento);
+
+            return UrlHelper.GenerateContentUrl(imagem, HttpContext.Current.Request.RequestContext.HttpContext);
         }
 
         public static string GetTooltip(this Clube clube)
