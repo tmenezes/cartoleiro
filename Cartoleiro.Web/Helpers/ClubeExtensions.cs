@@ -11,6 +11,13 @@ namespace Cartoleiro.Web.Helpers
             return string.Format("~/Images/clubes/{0}.png", clubeSemAcento);
         }
 
+        public static string GetTooltip(this Clube clube)
+        {
+            return string.Format("{0}: {1}º lugar", clube.Nome, clube.Campeonato.Posicao);
+        }
+
+
+
         private static string RemoverAcentos(string texto)
         {
             var tempBytes = Encoding.GetEncoding("ISO-8859-8").GetBytes(texto);

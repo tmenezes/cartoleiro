@@ -23,7 +23,7 @@
                 <td>
                     <div class="media">
                         <div class="media-left media-middle">
-                            <img src="@Url.Content(jogador.Clube.GetUrlImagem())" width="32" height="32" alt="@jogador.Clube.Nome" title="@jogador.Clube.Nome" />
+                            <img src="@Url.Content(jogador.Clube.GetUrlImagem())" width="32" height="32" alt="@jogador.Clube.Nome" data-toggle="tooltip" data-placement="left" title="@jogador.Clube.GetTooltip()" />
                         </div>
                         <div class="media-body">
                             <span class="text-muted">@jogador.Posicao</span><br /><strong>@jogador.Nome</strong>
@@ -32,7 +32,6 @@
                 </td>
                 <td>@jogador.Preco.Atual.ToString("F")</td>
                 <td>@jogador.Pontuacao.Media.ToString("F")</td>
-
             </tr>
         }
     </table>
