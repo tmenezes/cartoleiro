@@ -44,6 +44,13 @@ textarea {
     font-size: 18px;
 }
 
+.media-jogador > span {
+    font-size: 90%;
+}
+.media-jogador > strong {
+    font-size: 15px;
+}
+
 
 body {
     padding-top: 50px;
