@@ -52,6 +52,12 @@ namespace Cartoleiro.Core.Escalador.Analizador
 
 
         // campeonato
+        public AnalisadorBuilder Ultimos5Jogos()
+        {
+            Analisadores.Add(new AnalisadorUltimos5Jogos());
+            return this;
+        }
+
         public AnalisadorBuilder PontosNoCampeonato()
         {
             Analisadores.Add(new AnalisadorPontuacaoNoCampeonato());
@@ -79,12 +85,6 @@ namespace Cartoleiro.Core.Escalador.Analizador
         public AnalisadorBuilder SaldoDeGols()
         {
             Analisadores.Add(new AnalisadorSaldoDeGols());
-            return this;
-        }
-
-        public AnalisadorBuilder Ultimos5Jogos()
-        {
-            Analisadores.Add(new AnalisadorUltimos5Jogos());
             return this;
         }
 

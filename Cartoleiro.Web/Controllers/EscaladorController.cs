@@ -81,6 +81,10 @@ namespace Cartoleiro.Web.Controllers
                 analisadorBuilder.ScoutsNegativos();
             }
 
+            if (escaladorViewModel.AnalisadorUltimos5Jogos)
+            {
+                analisadorBuilder.Ultimos5Jogos();
+            }
             if (escaladorViewModel.AnalisadorPontosNoCampeonato)
             {
                 analisadorBuilder.PontosNoCampeonato();
@@ -100,10 +104,6 @@ namespace Cartoleiro.Web.Controllers
             if (escaladorViewModel.AnalisadorSaldoDeGols)
             {
                 analisadorBuilder.SaldoDeGols();
-            }
-            if (escaladorViewModel.AnalisadorUltimos5Jogos)
-            {
-                analisadorBuilder.Ultimos5Jogos();
             }
 
             if (escaladorViewModel.AnalisadorPesoDoClube)

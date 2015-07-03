@@ -24,12 +24,12 @@ namespace Cartoleiro.Web.Models.EscaladorModels
         public bool AnalisadorScoutsNegativos { get; set; }
 
         // analisadores de campeonato
+        public bool AnalisadorUltimos5Jogos { get; set; }
         public bool AnalisadorPontosNoCampeonato { get; set; }
         public bool AnalisadorVitorias { get; set; }
         public bool AnalisadorGolsPro { get; set; }
         public bool AnalisadorGolsContra { get; set; }
         public bool AnalisadorSaldoDeGols { get; set; }
-        public bool AnalisadorUltimos5Jogos { get; set; }
 
         // analisadores de confronto
         public bool AnalisadorPesoDoClube { get; set; }
@@ -45,6 +45,8 @@ namespace Cartoleiro.Web.Models.EscaladorModels
             SomenteProvaveis = true;
 
             AnalisadorPontuacaoMedia = true;
+            AnalisadorUltimos5Jogos= true;
+            AnalisadorPesoDoClube = true;
         }
     }
 }

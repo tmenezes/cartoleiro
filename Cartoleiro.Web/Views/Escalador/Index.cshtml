@@ -105,6 +105,11 @@
                     <div class="panel-body">
                         <div class="checkbox">
                             <label>
+                                @Html.CheckBoxFor(m => m.AnalisadorUltimos5Jogos) Últimos 5 jogos
+                            </label>
+                        </div>
+                        <div class="checkbox">
+                            <label>
                                 @Html.CheckBoxFor(m => m.AnalisadorPontosNoCampeonato) Pontos
                             </label>
                         </div>
@@ -126,11 +131,6 @@
                         <div class="checkbox">
                             <label>
                                 @Html.CheckBoxFor(m => m.AnalisadorSaldoDeGols) Saldo de gols
-                            </label>
-                        </div>
-                        <div class="checkbox">
-                            <label>
-                                @Html.CheckBoxFor(m => m.AnalisadorUltimos5Jogos) Últimos 5 jogos
                             </label>
                         </div>
                     </div>
