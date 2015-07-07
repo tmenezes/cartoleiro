@@ -1,7 +1,7 @@
-﻿using System.Text;
-using System.Web;
+﻿using System.Web;
 using System.Web.Mvc;
 using Cartoleiro.Core.Cartola;
+using Cartoleiro.Web.Models;
 
 namespace Cartoleiro.Web.Helpers
 {
@@ -9,8 +9,7 @@ namespace Cartoleiro.Web.Helpers
     {
         public static string GetUrlImagem(this Clube clube)
         {
-            var clubeSemAcento = RemoverAcentos(clube.Nome.ToLower().Replace(" ", ""));
-            var imagem = string.Format("~/Images/clubes/{0}.png", clubeSemAcento);
+            var imagem = string.Format("~/Images/clubes/{0}.png", GetNomeNormalizado(clube));
 
             return UrlHelper.GenerateContentUrl(imagem, HttpContext.Current.Request.RequestContext.HttpContext);
         }
@@ -20,12 +19,11 @@ namespace Cartoleiro.Web.Helpers
             return string.Format("{0}: {1}º lugar", clube.Nome, clube.Campeonato.Posicao);
         }
 
-
-
-        private static string RemoverAcentos(string texto)
+        public static string GetNomeNormalizado(this Clube clube)
         {
-            var tempBytes = Encoding.GetEncoding("ISO-8859-8").GetBytes(texto);
-            return Encoding.UTF8.GetString(tempBytes);
+            var clubeSemAcento = ModelUtils.RemoverAcentos(clube.Nome.ToLower().Replace(" ", ""));
+            
+            return clubeSemAcento;
         }
     }
 }

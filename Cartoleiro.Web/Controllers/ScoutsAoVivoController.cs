@@ -1,7 +1,6 @@
 ﻿using System;
 using System.Net.Http;
 using System.Net.Http.Headers;
-using System.Threading.Tasks;
 using System.Web.Mvc;
 using Cartoleiro.Web.Models.ScoutsAoVivo;
 using Newtonsoft.Json;
@@ -16,7 +15,7 @@ namespace Cartoleiro.Web.Controllers
             return View();
         }
 
-        public async Task<ActionResult> ScoutsPartida(string idPartida)
+        public ActionResult ScoutsPartida(string idPartida)
         {
             using (var client = new HttpClient())
             {
@@ -24,16 +23,16 @@ namespace Cartoleiro.Web.Controllers
                 client.DefaultRequestHeaders.Accept.Clear();
                 client.DefaultRequestHeaders.Accept.Add(new MediaTypeWithQualityHeaderValue("application/json"));
 
-                var response = await client.GetAsync("getdata.php?match=" + idPartida); //81_avai_gremio
+                var response = client.GetAsync("getdata.php?match=" + idPartida).Result; //81_avai_gremio
                 if (response.IsSuccessStatusCode)
                 {
-                    var content = await response.Content.ReadAsStringAsync();
+                    var content = response.Content.ReadAsStringAsync().Result;
                     var scouts = JsonConvert.DeserializeObject<ScoutsData>(content);
 
-                    return View(scouts);
+                    return PartialView("_ScoutsPartida", scouts.ScoutsMatch);
                 }
-                
-                return View();
+
+                return PartialView("_ScoutsPartida", null);
             }
         }
     }

@@ -3,11 +3,13 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Web;
+using System.Web.Mvc;
 using Newtonsoft.Json;
 
 namespace Cartoleiro.Web.Models.ScoutsAoVivo
 {
-    public class Home
+    public class Team
     {
         [JsonProperty("name")]
         public string Name { get; set; }
@@ -23,24 +25,21 @@ namespace Cartoleiro.Web.Models.ScoutsAoVivo
 
         [JsonProperty("playerlist")]
         public Playerlist Playerlist { get; set; }
-    }
 
-    public class Away
-    {
-        [JsonProperty("name")]
-        public string Name { get; set; }
+        public string GetUrlImagem()
+        {
+            var nomeSemAcento = ModelUtils.RemoverAcentos(Name.ToLower().Replace(" ", ""));
+            var imagem = string.Format("~/Images/clubes/{0}.png", nomeSemAcento);
 
-        [JsonProperty("url")]
-        public string Url { get; set; }
+            return UrlHelper.GenerateContentUrl(imagem, HttpContext.Current.Request.RequestContext.HttpContext);
+        }
 
-        [JsonProperty("abv")]
-        public string Abv { get; set; }
-
-        [JsonProperty("score")]
-        public string Score { get; set; }
-
-        [JsonProperty("playerlist")]
-        public Playerlist Playerlist { get; set; }
+        public string GetPlacar()
+        {
+            return !string.IsNullOrEmpty(Score)
+                ? Score
+                : "0";
+        }
     }
 
     public class Match
@@ -52,10 +51,10 @@ namespace Cartoleiro.Web.Models.ScoutsAoVivo
         public string Datetime { get; set; }
 
         [JsonProperty("home")]
-        public Home Home { get; set; }
+        public Team Home { get; set; }
 
         [JsonProperty("away")]
-        public Away Away { get; set; }
+        public Team Away { get; set; }
     }
 
     public class FixtureMatches
@@ -89,6 +88,17 @@ namespace Cartoleiro.Web.Models.ScoutsAoVivo
 
         [JsonProperty("goals")]
         public string Goals { get; set; }
+
+        public string GetCorLabelTotal()
+        {
+            if (Total < 0)
+                return "label-danger";
+
+            if (Total >= 5)
+                return "label-success";
+
+            return "label-default";
+        }
     }
 
     public class Item
@@ -121,10 +131,10 @@ namespace Cartoleiro.Web.Models.ScoutsAoVivo
         public string Datetime { get; set; }
 
         [JsonProperty("home")]
-        public Home Home { get; set; }
+        public Team Home { get; set; }
 
         [JsonProperty("away")]
-        public Away Away { get; set; }
+        public Team Away { get; set; }
     }
 
     public class ScoutsData

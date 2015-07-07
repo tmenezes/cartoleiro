@@ -25,17 +25,16 @@ textarea {
 
 .nopadding {
    padding: 0 !important;
-   /*margin: 0 !important;*/
 }
 .table-cartoleiro > tbody > tr > td {
     padding: 6px 8px;
     vertical-align: middle;
 }
 
+/* scouts ao vivo */
 .panel-partida {
     margin: 10px;
 }
-
 .panel-partida > .panel-body {
     padding: 20px 10px
 }
@@ -49,6 +48,38 @@ textarea {
 }
 .media-jogador > strong {
     font-size: 15px;
+}
+
+.panel-scouts-confronto {
+    font-size: 28px;
+    text-align: center;
+    width: 91%;
+    margin-left: 10px;
+    margin-top: 20px;
+}
+.panel-scouts-confronto > .panel-body {
+    padding: 20px 10px
+}
+.panel-scouts-confronto-mandante {
+    width: 44%;
+    text-align: right;
+    float: left;
+    margin-right: 20px;
+}
+.panel-scouts-confronto-visitante {
+    width: 44%;
+    text-align: left;
+    float: left;
+    margin-left: 20px;
+}
+
+.scouts-lista-time {
+    margin-left: -5px;
+    width: 47%;
+}
+
+.scouts-lista-time-total {
+    font-size: 14px
 }
 
 

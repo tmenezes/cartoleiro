@@ -1,5 +1,6 @@
 ﻿@using Cartoleiro.Core.Cartola
 @using Cartoleiro.Web.Helpers
+@using Cartoleiro.Web.Helpers.HtmlHelpers
 @model dynamic
 @{
     ViewBag.Title = "Scouts ao vivo";
@@ -27,7 +28,8 @@
         <div class="row">
             @foreach (var jogo in Campeonato.Rodadas.ProximaRodada.Jogos)
             {
-                <div class="col-md-2 panel panel-default panel-partida">
+                @Ajax.ActionLink(jogo,
+                @<div class="col-md-2 panel panel-default panel-partida">
                     <div class="panel-body">
                         <div class="media">
                             <div class="media-left">
@@ -43,11 +45,14 @@
                             </div>
                         </div>
                     </div>
-                </div>
+                </div>, "ScoutsPartida", "ScoutsAoVivo", new { idPartida = jogo.GetIdPartidaScoutsOnLine() }, new AjaxOptions { UpdateTargetId = "divConfronto", LoadingElementId = "divLoading"})
             }
         </div>
         <div class="row">
-
+            <div id="divLoading" class="text-center" style="display: none"><img src="~/Images/loading.gif" alt="loading..." /></div>
+            <div id="divConfronto">
+                @{Html.RenderAction("ScoutsPartida", new {idPartida = "81_avai_gremio"});}
+            </div>
         </div>
     </div>
 </div>

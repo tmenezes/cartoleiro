@@ -183,11 +183,14 @@
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
     <Compile Include="Helpers\ClubeExtensions.cs" />
+    <Compile Include="Helpers\HtmlHelpers\ActionLinkEx.cs" />
+    <Compile Include="Helpers\JogoExtensions.cs" />
     <Compile Include="Models\AccountModels\AccountViewModels.cs" />
     <Compile Include="Models\AccountModels\IdentityModels.cs" />
     <Compile Include="Models\AccountModels\ManageViewModels.cs" />
     <Compile Include="CartoleiroApp.cs" />
     <Compile Include="Models\EscaladorModels\EscaladorViewModel.cs" />
+    <Compile Include="Models\ModelUtils.cs" />
     <Compile Include="Models\ScoutsAoVivo\ScoutsAoVivo.cs" />
     <Compile Include="Helpers\ViewDataHelper.cs" />
     <Compile Include="Helpers\ViewModelHelper.cs" />
@@ -225,6 +228,7 @@
     <Content Include="Images\clubes\saopaulo.png" />
     <Content Include="Images\clubes\sport.png" />
     <Content Include="Images\clubes\vasco.png" />
+    <Content Include="Images\loading.GIF" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
     <Content Include="App_Data\jogadores.json" />
@@ -235,6 +239,8 @@
     <Content Include="Scripts\jquery-1.10.2.js" />
     <Content Include="Scripts\jquery-1.10.2.min.js" />
     <None Include="Scripts\jquery.validate-vsdoc.js" />
+    <Content Include="Scripts\jquery.unobtrusive-ajax.js" />
+    <Content Include="Scripts\jquery.unobtrusive-ajax.min.js" />
     <Content Include="Scripts\jquery.validate.js" />
     <Content Include="Scripts\jquery.validate.min.js" />
     <Content Include="Scripts\jquery.validate.unobtrusive.js" />
@@ -283,6 +289,8 @@
     <Content Include="Views\Shared\_MelhoresJogadores.cshtml" />
     <Content Include="Views\ScoutsAoVivo\Index.cshtml" />
     <Content Include="Views\Shared\_GoogleAnalitics.cshtml" />
+    <Content Include="Views\ScoutsAoVivo\_ScoutsClube.cshtml" />
+    <Content Include="Views\ScoutsAoVivo\_ScoutsPartida.cshtml" />
   </ItemGroup>
   <ItemGroup />
   <ItemGroup>
