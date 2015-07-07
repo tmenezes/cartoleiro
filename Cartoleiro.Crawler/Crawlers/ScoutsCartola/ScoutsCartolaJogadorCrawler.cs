@@ -48,6 +48,7 @@ namespace Cartoleiro.Crawler.Crawlers.ScoutsCartola
                           {
                               Preco = GetPreco(divValores),
                               Pontuacao = GetPontuacao(divValores),
+                              Jogos = GetQuantidadeDeJogos(divValores),
                               Status = status,
                               Scouts = scouts,
                           };
@@ -77,6 +78,15 @@ namespace Cartoleiro.Crawler.Crawlers.ScoutsCartola
             var pontuacaoMedia = Convert.ToDouble(spanPontuacaoMedia.Text, _cultura);
 
             return new Pontuacao(pontuacaoMedia, pontuacaoAtual);
+        }
+
+        private int GetQuantidadeDeJogos(IWebElement divValores)
+        {
+            var paragrafos = divValores.FindElements(By.TagName("p"));
+
+            var spanJogos = paragrafos.First().FindElement(By.TagName("span"));
+
+            return Convert.ToInt32(spanJogos.Text ?? "0");
         }
 
         private Posicao GetPosicao(string posicao)

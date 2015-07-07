@@ -7,6 +7,7 @@
         public Posicao Posicao { get; set; }
         public Preco Preco { get; set; }
         public Pontuacao Pontuacao { get; set; }
+        public int Jogos { get; set; }
         public Status Status { get; set; }
         public Scouts Scouts { get; set; }
 

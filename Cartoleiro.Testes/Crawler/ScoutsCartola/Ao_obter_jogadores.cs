@@ -37,8 +37,11 @@ namespace Cartoleiro.Testes.Crawler.ScoutsCartola
             Assert.IsNotNull(jogador1.Pontuacao);
             Assert.IsTrue(Enum.IsDefined(typeof(Status), jogador1.Status));
 
-            Assert.IsNotNull(jogador1.Scouts);
-            Assert.IsTrue(jogador1.Scouts.TotalDePositivos + jogador1.Scouts.TotalDeNegativos > 0);
+            if (jogador1.Jogos > 0)
+            {
+                Assert.IsNotNull(jogador1.Scouts);
+                Assert.IsTrue(jogador1.Scouts.TotalDePositivos + jogador1.Scouts.TotalDeNegativos > 0);
+            }
         }
     }
 }

@@ -285,12 +285,13 @@
     <Content Include="Views\Shared\Lockout.cshtml" />
     <Content Include="Views\Shared\_LoginPartial.cshtml" />
     <Content Include="Views\Escalador\Index.cshtml" />
-    <Content Include="Views\Shared\_TimeComoTabela.cshtml" />
+    <Content Include="Views\Shared\_TimeTabelaSimples.cshtml" />
     <Content Include="Views\Shared\_MelhoresJogadores.cshtml" />
     <Content Include="Views\ScoutsAoVivo\Index.cshtml" />
     <Content Include="Views\Shared\_GoogleAnalitics.cshtml" />
     <Content Include="Views\ScoutsAoVivo\_ScoutsClube.cshtml" />
     <Content Include="Views\ScoutsAoVivo\_ScoutsPartida.cshtml" />
+    <Content Include="Views\Shared\_TimeTabelaDetalhe.cshtml" />
   </ItemGroup>
   <ItemGroup />
   <ItemGroup>

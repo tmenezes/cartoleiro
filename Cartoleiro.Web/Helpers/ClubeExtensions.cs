@@ -25,5 +25,11 @@ namespace Cartoleiro.Web.Helpers
             
             return clubeSemAcento;
         }
+
+        public static Clube AdversarioNaProximaRodada(this Clube clube)
+        {
+            var adversario = Campeonato.Rodadas.ProximaRodada.GetJogoDoClube(clube).GetAdversario(clube);
+            return adversario;
+        }
     }
 }
