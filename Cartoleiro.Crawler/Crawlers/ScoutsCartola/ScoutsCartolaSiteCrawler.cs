@@ -1,6 +1,7 @@
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Threading.Tasks;
 using Cartoleiro.Core.Cartola;
 using OpenQA.Selenium;
 using OpenQA.Selenium.PhantomJS;
@@ -52,6 +53,7 @@ namespace Cartoleiro.Crawler.Crawlers.ScoutsCartola
             {
                 var jogadoresEncontrados = GetJogadoresEncontrados(linksDeJogadores, driver);
 
+                //Parallel.ForEach(jogadoresEncontrados, new ParallelOptions { MaxDegreeOfParallelism = 20 }, jogadorCrawler =>
                 foreach (var jogadorCrawler in jogadoresEncontrados)
                 {
                     var jogador = jogadorCrawler.ObterJogador();

@@ -12,9 +12,11 @@
     <table class="table table-striped table-bordered table-cartoleiro">
         <thead>
             <tr>
-                <th style="width: 70%">Jogador</th>
-                <th style="width: 15%">C$</th>
-                <th style="width: 15%">Média</th>
+                <th style="width: 56%">Jogador</th>
+                <th class="text-right" style="width: 10%">Jogos</th>
+                <th class="text-right" style="width: 10%">C$</th>
+                <th class="text-right" style="width: 12%">Pt. Média</th>
+                <th class="text-right" style="width: 12%">Pt. Últ.</th>
             </tr>
         </thead>
         @foreach (var jogador in jogadores)
@@ -30,8 +32,10 @@
                         </div>
                     </div>
                 </td>
-                <td>@jogador.Preco.Atual.ToString("F")</td>
-                <td>@jogador.Pontuacao.Media.ToString("F")</td>
+                <td class="text-right">@jogador.Jogos.ToString()</td>
+                <td class="text-right">@jogador.Preco.Atual.ToString("F")</td>
+                <td class="text-right">@jogador.Pontuacao.Media.ToString("F")</td>
+                <td class="text-right">@jogador.Pontuacao.Ultima.ToString("F")</td>
             </tr>
         }
     </table>

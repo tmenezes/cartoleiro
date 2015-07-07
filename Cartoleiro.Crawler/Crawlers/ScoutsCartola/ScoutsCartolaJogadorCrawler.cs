@@ -86,7 +86,7 @@ namespace Cartoleiro.Crawler.Crawlers.ScoutsCartola
 
             var spanJogos = paragrafos.First().FindElement(By.TagName("span"));
 
-            return Convert.ToInt32(spanJogos.Text ?? "0");
+            return string.IsNullOrWhiteSpace(spanJogos.Text) ? 0 : Convert.ToInt32(spanJogos.Text);
         }
 
         private Posicao GetPosicao(string posicao)

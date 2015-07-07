@@ -23,7 +23,7 @@ namespace Cartoleiro.Testes.Crawler.ScoutsCartola
 
         public override void Act()
         {
-            jogadores = crawler.CarregarJogadores(2);
+            jogadores = crawler.CarregarJogadores(10);
         }
 
         [TestMethod]
