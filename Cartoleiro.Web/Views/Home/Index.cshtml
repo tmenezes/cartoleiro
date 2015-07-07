@@ -12,7 +12,7 @@
                     <h1>Cartoleiro</h1>
                     <p class="lead">Cartoleiro é a sua ferramenta para simular a escalação times no Cartola FC com o seu patrimônio e utilizando analisadores estatísticos de partidas anteriores.</p>
                     <p>
-                        <a href="Escalador" class="btn btn-outline-inverse btn-primary btn-lg">Escalar Time &raquo;</a>
+                        <a href="@Url.Action("Index", "Escalador")" class="btn btn-outline-inverse btn-primary btn-lg">Escalar Time &raquo;</a>
                     </p>
                 </div>
             </div>
@@ -26,7 +26,7 @@
             @Html.Partial("_MelhoresJogadores")
         </p>
         <p>
-            <a class="btn btn-default" href="#">Ver mais &raquo;</a>
+            <a class="btn btn-default" href="@Url.Action("Index", "Escalador")">Ver mais &raquo;</a>
         </p>
     </div>
     <div class="col-md-4">
@@ -35,7 +35,7 @@
             @Html.Partial("_TimeComoTabela", CartoleiroApp.TimeDeMaiorMedia)
         </p>
         <p>
-            <a class="btn btn-default" href="#">Ver mais &raquo;</a>
+            <a class="btn btn-default" href="@Url.Action("Index", "Escalador")">Ver mais &raquo;</a>
         </p>
     </div>
 </div>

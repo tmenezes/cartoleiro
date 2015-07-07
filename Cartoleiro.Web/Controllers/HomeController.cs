@@ -22,8 +22,6 @@ namespace Cartoleiro.Web.Controllers
 
         public ActionResult Contato()
         {
-            ViewBag.Message = "Your contact page.";
-
             return View();
         }
     }
