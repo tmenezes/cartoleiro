@@ -20,5 +20,10 @@ namespace Cartoleiro.Web
 
             CartoleiroApp.Iniciar();
         }
+
+        protected void Application_EndRequest(object sender, EventArgs e)
+        {
+            CartoleiroKeepAlive.Iniciar(HttpContext.Current);
+        }
     }
 }

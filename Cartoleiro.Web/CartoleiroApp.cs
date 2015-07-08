@@ -1,4 +1,5 @@
-﻿using System.Web;
+﻿using System.Net.Http.Headers;
+using System.Web;
 using Cartoleiro.Core.Data;
 using Cartoleiro.Core.Escalador;
 using Cartoleiro.Core.Escalador.Analizador;

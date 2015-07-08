@@ -1,8 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Web;
-using System.Web.Mvc;
+﻿using System.Web.Mvc;
 
 namespace Cartoleiro.Web.Controllers
 {
@@ -23,6 +19,11 @@ namespace Cartoleiro.Web.Controllers
         public ActionResult Contato()
         {
             return View();
+        }
+
+        public ActionResult KeepAlive()
+        {
+            return PartialView("Error");
         }
     }
 }

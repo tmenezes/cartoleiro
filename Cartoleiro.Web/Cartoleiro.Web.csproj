@@ -185,6 +185,7 @@
     <Compile Include="Helpers\ClubeExtensions.cs" />
     <Compile Include="Helpers\HtmlHelpers\ActionLinkEx.cs" />
     <Compile Include="Helpers\JogoExtensions.cs" />
+    <Compile Include="CartoleiroKeepAlive.cs" />
     <Compile Include="Models\AccountModels\AccountViewModels.cs" />
     <Compile Include="Models\AccountModels\IdentityModels.cs" />
     <Compile Include="Models\AccountModels\ManageViewModels.cs" />
@@ -234,6 +235,7 @@
     <Content Include="App_Data\jogadores.json" />
     <Content Include="App_Data\clubes.json" />
     <Content Include="App_Data\rodadas.json" />
+    <None Include="Properties\PublishProfiles\mestrecartoleiro.com - Web Deploy.pubxml" />
     <None Include="Scripts\jquery-1.10.2.intellisense.js" />
     <Content Include="Scripts\cartoleiro.js" />
     <Content Include="Scripts\jquery-1.10.2.js" />
