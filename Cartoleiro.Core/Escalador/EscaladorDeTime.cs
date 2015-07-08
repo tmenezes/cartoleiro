@@ -18,6 +18,7 @@ namespace Cartoleiro.Core.Escalador
         private bool _distribuirProporcionalNaPosicao;
         private Analisadores _analisadores;
         private bool _somenteProvaveis;
+        private double? _mediaLimite;
 
         // propriedades
         public ICartolaDataSource CartolaDS { get; set; }
@@ -32,6 +33,7 @@ namespace Cartoleiro.Core.Escalador
             _posicaoEmFoco = null;
             _somenteProvaveis = true;
             _distribuirProporcionalNaPosicao = true;
+            _mediaLimite = null;
 
             _analisadores = new AnalisadorBuilder().PontuacaoMedia()
                                                    .UltimaPontuacao()
@@ -103,6 +105,11 @@ namespace Cartoleiro.Core.Escalador
             _distribuirProporcionalNaPosicao = valor;
             return this;
         }
+        public EscaladorDeTime ComMediaMaiorQue(double media)
+        {
+            _mediaLimite = media;
+            return this;
+        }
 
         public EscaladorDeTime ComAnalisadores(Analisadores analisadores)
         {
@@ -116,14 +123,14 @@ namespace Cartoleiro.Core.Escalador
 
             _analisadores.ExecutarAnalises(_ranqueamento);
 
-            var partilhaDoDinheiro = new PartilhaDeDinheito(_esquemaTatico, _patrimonio, _posicaoEmFoco);
+            var partilhaDoDinheiro = new Carteira(_esquemaTatico, _patrimonio, _posicaoEmFoco);
             var jogadores = EscalarJogadores(partilhaDoDinheiro);
 
             var time = new Time(_esquemaTatico);
             foreach (var jogador in jogadores)
             {
                 if (jogador == null)
-                    throw new InvalidOperationException("Não foi possível escalar todos os jogadores do time com o patrimônio (cartoletas) informado.");
+                    throw new InvalidOperationException("Não foi possível escalar todos os jogadores do time com os filtros e patrimônio (cartoletas) informados.");
 
                 time.AddJogador(jogador);
             }
@@ -134,19 +141,25 @@ namespace Cartoleiro.Core.Escalador
 
         private void CriarRanqueamento()
         {
-            _ranqueamento = (_somenteProvaveis)
-                ? CartolaDS.Jogadores.Where(j => j.Status == Status.Provavel).Select(j => new PontuacaoDeEscalacao(j)).ToList()
-                : CartolaDS.Jogadores.Select(j => new PontuacaoDeEscalacao(j)).ToList();
+            var jogadores = CartolaDS.Jogadores;
+
+            if (_somenteProvaveis)
+                jogadores = jogadores.Where(j => j.Status == Status.Provavel);
+
+            if (_mediaLimite.HasValue)
+                jogadores = jogadores.Where(j => j.Pontuacao.Media > _mediaLimite.Value);
+
+            _ranqueamento = jogadores.Select(j => new PontuacaoDeEscalacao(j)).ToList();
         }
 
-        private List<Jogador> EscalarJogadores(PartilhaDeDinheito partilhaDoDinheiro)
+        private List<Jogador> EscalarJogadores(Carteira carteira)
         {
-            var goleiro = EscolherJogador(Posicao.Goleiro, partilhaDoDinheiro.Partilha[Posicao.Goleiro]);
-            var zagueiros = EscolherJogadores(Posicao.Zagueiro, partilhaDoDinheiro.Partilha[Posicao.Zagueiro]);
-            var laterais = EscolherJogadores(Posicao.Lateral, partilhaDoDinheiro.Partilha[Posicao.Lateral]);
-            var meioCampos = EscolherJogadores(Posicao.MeioCampo, partilhaDoDinheiro.Partilha[Posicao.MeioCampo]);
-            var atacantes = EscolherJogadores(Posicao.Atacante, partilhaDoDinheiro.Partilha[Posicao.Atacante]);
-            var tecnico = EscolherJogador(Posicao.Tecnico, partilhaDoDinheiro.Partilha[Posicao.Tecnico]);
+            var goleiro = EscolherJogador(Posicao.Goleiro, carteira);
+            var zagueiros = EscolherJogadores(Posicao.Zagueiro, carteira);
+            var laterais = EscolherJogadores(Posicao.Lateral, carteira);
+            var meioCampos = EscolherJogadores(Posicao.MeioCampo, carteira);
+            var atacantes = EscolherJogadores(Posicao.Atacante, carteira);
+            var tecnico = EscolherJogador(Posicao.Tecnico, carteira);
 
             var jogadores = new List<Jogador>() { goleiro, tecnico };
             jogadores.AddRange(zagueiros);
@@ -157,33 +170,39 @@ namespace Cartoleiro.Core.Escalador
             return jogadores;
         }
 
-        private Jogador EscolherJogador(Posicao posicao, double patrimonio)
+        private Jogador EscolherJogador(Posicao posicao, Carteira carteira)
         {
             var jogadoresMelhoresPontuados = GetJogadoresMelhoresPontuados(posicao);
 
-            return jogadoresMelhoresPontuados.FirstOrDefault(j => j.Preco.Atual <= patrimonio);
+            var jogador = jogadoresMelhoresPontuados.FirstOrDefault(j => carteira.PossuiCartoletasParaComprar(j));
+            if (jogador != null)
+            {
+                carteira.ComprarJogador(jogador);
+            }
+
+            return jogador;
         }
 
-        private IEnumerable<Jogador> EscolherJogadores(Posicao posicao, double patrimonio)
+        private IEnumerable<Jogador> EscolherJogadores(Posicao posicao, Carteira carteira)
         {
             var jogadoresMelhoresPontuados = GetJogadoresMelhoresPontuados(posicao);
 
             var numeroDeJogadores = EsquemaTaticoHelper.GetNumeroDeJogadores(posicao, _esquemaTatico);
             var jogadores = new List<Jogador>();
 
+            var patrimonioTotalDaPosicao = carteira.Partilha[posicao];
             int i = 0;
-            var patrimonioCorrente = patrimonio;
 
             while ((jogadores.Count < numeroDeJogadores) && (i < jogadoresMelhoresPontuados.Count))
             {
                 var jogador = jogadoresMelhoresPontuados[i];
 
-                if (jogador.Preco.Atual <= patrimonioCorrente)
+                if (carteira.PossuiCartoletasParaComprar(jogador))
                 {
-                    if (PodeEscolherJogador(jogador, patrimonio))
+                    if (PodeEscolherJogador(jogador, patrimonioTotalDaPosicao))
                     {
+                        carteira.ComprarJogador(jogador);
                         jogadores.Add(jogador);
-                        patrimonioCorrente -= jogador.Preco.Atual;
                     }
                 }
 
@@ -201,15 +220,15 @@ namespace Cartoleiro.Core.Escalador
                                 .ToList();
         }
 
-        private bool PodeEscolherJogador(Jogador jogador, double patrimonio)
+        private bool PodeEscolherJogador(Jogador jogador, double patrimonioTotalDaPosicao)
         {
             if (!_distribuirProporcionalNaPosicao)
                 return true;
 
             var numeroDeJogadores = EsquemaTaticoHelper.GetNumeroDeJogadores(jogador.Posicao, _esquemaTatico);
-            var percentualMaximoDeValorAceito = (100 / numeroDeJogadores) * 1.2;
+            var percentualMaximoDeValorAceito = (100 / numeroDeJogadores) * 1.2;  // (100 / 2) -> (50 * 1.2) -> 60 %  |  (100 / 3) -> (33.3 * 1.2) -> 40 %
 
-            var percentualDoJogador = jogador.Preco.Atual * 100 / patrimonio;
+            var percentualDoJogador = jogador.Preco.Atual * 100 / patrimonioTotalDaPosicao;
 
             return percentualDoJogador <= percentualMaximoDeValorAceito;
         }

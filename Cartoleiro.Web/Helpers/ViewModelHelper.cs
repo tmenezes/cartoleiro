@@ -39,5 +39,19 @@ namespace Cartoleiro.Web.Helpers
                 return posicoes;
             }
         }
+
+        public static IEnumerable<SelectListItem> LimitesDeMedia
+        {
+            get
+            {
+                var medias = Enumerable.Range(0, 10)
+                                       .Select(i => new SelectListItem()
+                                       {
+                                           Value = i.ToString(),
+                                           Text = i.ToString()
+                                       });
+                return medias;
+            }
+        }
     }
 }

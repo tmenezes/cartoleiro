@@ -1,5 +1,6 @@
 ﻿@model Cartoleiro.Core.Escalador.Time
 
+@using Cartoleiro.Core.Cartola
 @using Cartoleiro.Web.Helpers
 @using Cartoleiro.Web.Models
 
@@ -25,7 +26,7 @@
                             <img src="@jogador.Clube.GetUrlImagem()" width="32" height="32" alt="@jogador.Clube.Nome" data-toggle="tooltip" data-placement="left" title="@jogador.Clube.GetTooltip()" />
                         </div>
                         <div class="media-body media-jogador">
-                            <span class="text-muted">@jogador.Posicao</span><br/><strong>@jogador.Nome</strong>
+                            <span class="text-muted">@jogador.Posicao</span><br /><strong>@jogador.Nome</strong>
                             <span class="badge pull-right">@jogador.Status</span>
                         </div>
                     </div>
@@ -34,10 +35,11 @@
                 <td class="text-right">@jogador.Preco.Atual.ToString("F")</td>
                 <td class="text-right">@jogador.Pontuacao.Media.ToString("F")</td>
                 <td class="text-right">@jogador.Pontuacao.Ultima.ToString("F")</td>
-                <td class="text-center">                    
-                    <img src="@jogador.Clube.GetUrlImagem()" width="24" height="24" alt="@jogador.Clube.Nome" data-toggle="tooltip" data-placement="left" title="@jogador.Clube.GetTooltip()"/>
+                <td class="text-center">
+                    @{ var jogo = Campeonato.Rodadas.ProximaRodada.GetJogoDoClube(jogador.Clube); }
+                    <img src="@jogo.Mandante.GetUrlImagem()" width="24" height="24" alt="@jogo.Mandante.Nome" data-toggle="tooltip" data-placement="left" title="@jogo.Mandante.GetTooltip()"/>
                     <span style="margin: 5px">X</span>
-                    <img src="@jogador.Clube.AdversarioNaProximaRodada().GetUrlImagem()" width="24" height="24" alt="@jogador.Clube.AdversarioNaProximaRodada().Nome" data-toggle="tooltip" data-placement="right" title="@jogador.Clube.AdversarioNaProximaRodada().GetTooltip()"/>
+                    <img src="@jogo.Visitante.GetUrlImagem()" width="24" height="24" alt="@jogo.Visitante.Nome" data-toggle="tooltip" data-placement="right" title="@jogo.Visitante.GetTooltip()"/>
                 </td>
             </tr>
         }

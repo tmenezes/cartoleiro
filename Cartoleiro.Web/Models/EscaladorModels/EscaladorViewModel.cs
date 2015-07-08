@@ -1,4 +1,5 @@
-﻿using System.ComponentModel.DataAnnotations;
+﻿using System.ComponentModel;
+using System.ComponentModel.DataAnnotations;
 using Cartoleiro.Core.Cartola;
 
 namespace Cartoleiro.Web.Models.EscaladorModels
@@ -6,12 +7,18 @@ namespace Cartoleiro.Web.Models.EscaladorModels
     public class EscaladorViewModel
     {
         [Required]
+        [DisplayName("Esquema tático")]
         public EsquemaTatico EsquemaTatico { get; set; }
 
         [Required]
+        [DisplayName("Patrimônio")]
         public double Patrimonio { get; set; }
 
+        [DisplayName("Posição em foco")]
         public Posicao? PosicaoEmFoco { get; set; }
+
+        [DisplayName("Média maior que")]
+        public double? MediaMaiorQue { get; set; }
 
         public bool ProporcionalNaPosicao { get; set; }
         public bool SomenteProvaveis { get; set; }

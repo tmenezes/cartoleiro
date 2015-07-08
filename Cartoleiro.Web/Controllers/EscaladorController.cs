@@ -39,6 +39,10 @@ namespace Cartoleiro.Web.Controllers
             {
                 escalador.ComFocoNaPosicao(escaladorViewModel.PosicaoEmFoco.Value);
             }
+            if (escaladorViewModel.MediaMaiorQue.HasValue)
+            {
+                escalador.ComMediaMaiorQue(escaladorViewModel.MediaMaiorQue.Value);
+            }
 
             var analisadores = GetAnalisadores(escaladorViewModel);
             escalador.ComAnalisadores(analisadores);
