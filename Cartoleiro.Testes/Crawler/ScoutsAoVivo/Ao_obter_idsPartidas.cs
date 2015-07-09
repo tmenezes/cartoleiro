@@ -1,6 +1,6 @@
 ﻿using System.Collections.Generic;
 using System.Linq;
-using Cartoleiro.Crawler.Crawlers.ScoutsAoVivo;
+using Cartoleiro.Web.AppCode.ScoutsAoVivo;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 
 namespace Cartoleiro.Testes.Crawler.ScoutsAoVivo

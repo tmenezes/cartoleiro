@@ -1,5 +1,6 @@
 ﻿using System.Web.Mvc;
 using Cartoleiro.Web.AppCode;
+using Cartoleiro.Web.AppCode.ScoutsAoVivo;
 
 namespace Cartoleiro.Web.Controllers
 {

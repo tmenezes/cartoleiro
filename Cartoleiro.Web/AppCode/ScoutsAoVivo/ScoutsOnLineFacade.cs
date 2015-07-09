@@ -6,14 +6,15 @@ using System.Net.Http;
 using System.Net.Http.Headers;
 using System.Threading;
 using System.Threading.Tasks;
+using System.Web;
 using Cartoleiro.Core.Cartola;
-using Cartoleiro.Crawler.Crawlers.ScoutsAoVivo;
 using Cartoleiro.Web.AppCode.Extensions;
+using Cartoleiro.Web.AppCode.Utils;
 using Cartoleiro.Web.Models.ScoutsAoVivoModels;
-using Microsoft.Ajax.Utilities;
+using Elmah;
 using Newtonsoft.Json;
 
-namespace Cartoleiro.Web.AppCode
+namespace Cartoleiro.Web.AppCode.ScoutsAoVivo
 {
     public static class ScoutsOnLineFacade
     {
@@ -23,17 +24,22 @@ namespace Cartoleiro.Web.AppCode
         private static IDictionary<string, Jogo> _jogosPorIdPartida;
         private static IDictionary<Jogo, ScoutsData> _scoutsDasPartidas;
         private static IDictionary<Jogo, ValidadeScouts> _validadeDosScouts;
-        private static ConcurrentQueue<Jogo> _atualizacoesDeScoutsPendentes;
 
         private static Task _atualizadorDeScouts;
+        private static HttpContext _httpContext;
 
 
         // publicos
         public static void Iniciar()
         {
-            _atualizacoesDeScoutsPendentes = new ConcurrentQueue<Jogo>();
-
             _atualizadorDeScouts = Task.Factory.StartNew(AtualizarScouts, TaskCreationOptions.LongRunning);
+
+        }
+
+
+        public static void SetHttpContext(HttpContext httpContext)
+        {
+            _httpContext = httpContext;
         }
 
         public static ScoutsData ObterScoutsOnLine(string idPartida)
@@ -88,8 +94,9 @@ namespace Cartoleiro.Web.AppCode
                         }
                     }
                 }
-                catch (Exception)
+                catch (Exception ex)
                 {
+                    LogError(ex);
                 }
                 finally
                 {
@@ -124,22 +131,13 @@ namespace Cartoleiro.Web.AppCode
         {
             try
             {
-                using (var client = new HttpClient())
-                {
-                    client.BaseAddress = new Uri("http://scoutsaovivo.appspot.com");
-                    client.DefaultRequestHeaders.Accept.Clear();
-                    client.DefaultRequestHeaders.Accept.Add(new MediaTypeWithQualityHeaderValue("application/json"));
+                var url = "http://scoutsaovivo.appspot.com";
+                var urlRecurso = "getdata.php?match=" + _chavesScouts[idPartida];
 
-                    var response = client.GetAsync("getdata.php?match=" + _chavesScouts[idPartida]).Result; // 81_avai_gremio
+                var json = HttpClientHelper.Get(url, urlRecurso);
+                var scouts = JsonConvert.DeserializeObject<ScoutsData>(json);
 
-                    if (!response.IsSuccessStatusCode)
-                        return null;
-
-                    var content = response.Content.ReadAsStringAsync().Result;
-                    var scouts = JsonConvert.DeserializeObject<ScoutsData>(content);
-
-                    return scouts;
-                }
+                return scouts;
             }
             catch (Exception)
             {
@@ -190,6 +188,20 @@ namespace Cartoleiro.Web.AppCode
             var clubeSemAcento = ModelUtils.RemoverAcentos(clube.Nome.ToLower().Replace(" ", "-"));
 
             return clubeSemAcento;
+        }
+
+        private static void LogError(Exception ex)
+        {
+            try
+            {
+                if (_httpContext != null)
+                {
+                    ErrorSignal.FromContext(_httpContext).Raise(ex);
+                }
+            }
+            catch (Exception)
+            {
+            }
         }
     }
 

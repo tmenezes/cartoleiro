@@ -31,7 +31,6 @@ namespace Cartoleiro.Core.Escalador.Analizador.Jogador
                     default:
                         return item.Jogador.Pontuacao.Media;
                 }
-                return item.Jogador.Scouts.TotalDePositivos;
             });
         }
     }

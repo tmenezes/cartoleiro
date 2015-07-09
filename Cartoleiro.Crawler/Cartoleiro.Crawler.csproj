@@ -50,7 +50,6 @@
     <Compile Include="CrawlerDataSource.cs" />
     <Compile Include="Crawlers\GloboEsporte\GloboEsporteClubeCrawler.cs" />
     <Compile Include="Crawlers\GloboEsporte\GloboEsporteSiteCrawler.cs" />
-    <Compile Include="Crawlers\ScoutsAoVivo\ScoutsAoVivoJogosCrawler.cs" />
     <Compile Include="CrawlingInfo.cs" />
     <Compile Include="ISiteCrawler.cs" />
     <Compile Include="JogadorCrawler.cs" />

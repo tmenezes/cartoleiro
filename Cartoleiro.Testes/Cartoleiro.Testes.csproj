@@ -84,8 +84,14 @@
       <Project>{AEBA7A3B-3F6C-4BDD-BBAC-7BB737F5FAB4}</Project>
       <Name>Cartoleiro.DAO</Name>
     </ProjectReference>
+    <ProjectReference Include="..\Cartoleiro.Web\Cartoleiro.Web.csproj">
+      <Project>{5F5C1DF3-5BE4-4529-A9F0-6F87B5CA9D10}</Project>
+      <Name>Cartoleiro.Web</Name>
+    </ProjectReference>
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <None Include="app.config" />
+  </ItemGroup>
   <Choose>
     <When Condition="'$(VisualStudioVersion)' == '10.0' And '$(IsCodedUITest)' == 'True'">
       <ItemGroup>

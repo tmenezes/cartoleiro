@@ -4,6 +4,7 @@ using System.Web.Mvc;
 using System.Web.Optimization;
 using System.Web.Routing;
 using Cartoleiro.Web.AppCode;
+using Cartoleiro.Web.AppCode.ScoutsAoVivo;
 
 namespace Cartoleiro.Web
 {
@@ -18,6 +19,11 @@ namespace Cartoleiro.Web
 
             CartoleiroApp.Iniciar();
             ScoutsOnLineFacade.Iniciar();
+        }
+
+        protected void Application_BeginRequest(object sender, EventArgs e)
+        {
+            ScoutsOnLineFacade.SetHttpContext(HttpContext.Current);
         }
 
         protected void Application_EndRequest(object sender, EventArgs e)

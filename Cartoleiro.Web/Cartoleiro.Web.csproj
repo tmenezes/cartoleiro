@@ -172,12 +172,14 @@
     <Compile Include="AppCode\CartoleiroKeepAlive.cs" />
     <Compile Include="AppCode\CartoleiroApp.cs" />
     <Compile Include="AppCode\Extensions\ClubeExtensions.cs" />
-    <Compile Include="AppCode\ScoutsOnLineFacade.cs" />
+    <Compile Include="AppCode\ScoutsAoVivo\ScoutsAoVivoJogosCrawler.cs" />
+    <Compile Include="AppCode\ScoutsAoVivo\ScoutsOnLineFacade.cs" />
     <Compile Include="AppCode\ModelUtils.cs" />
     <Compile Include="AppCode\Extensions\JogoExtensions.cs" />
     <Compile Include="AppCode\MvcHelpers\ViewDataHelper.cs" />
     <Compile Include="AppCode\MvcHelpers\ViewModelHelper.cs" />
     <Compile Include="AppCode\HtmlHelpers\ActionLinkEx.cs" />
+    <Compile Include="AppCode\Utils\HttpClientHelper.cs" />
     <Compile Include="App_Start\BundleConfig.cs" />
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\IdentityConfig.cs" />
@@ -308,10 +310,6 @@
     <ProjectReference Include="..\Cartoleiro.Core\Cartoleiro.Core.csproj">
       <Project>{AFEADE17-C858-4AA3-A8D0-9E43B9B0785A}</Project>
       <Name>Cartoleiro.Core</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\Cartoleiro.Crawler\Cartoleiro.Crawler.csproj">
-      <Project>{C36B08B4-3B85-483E-8DEF-01AB3055EB2E}</Project>
-      <Name>Cartoleiro.Crawler</Name>
     </ProjectReference>
     <ProjectReference Include="..\Cartoleiro.DAO\Cartoleiro.DAO.csproj">
       <Project>{AEBA7A3B-3F6C-4BDD-BBAC-7BB737F5FAB4}</Project>
