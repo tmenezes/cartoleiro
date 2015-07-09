@@ -17,6 +17,7 @@ namespace Cartoleiro.Web
             BundleConfig.RegisterBundles(BundleTable.Bundles);
 
             CartoleiroApp.Iniciar();
+            ScoutsOnLineFacade.Iniciar();
         }
 
         protected void Application_EndRequest(object sender, EventArgs e)

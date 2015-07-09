@@ -67,6 +67,7 @@
     <Compile Include="Core\Escalador\EscaladorDeTimeTestes\Ao_escalar_time.cs" />
     <Compile Include="Crawler\GloboEsporte\Ao_obter_Clubes.cs" />
     <Compile Include="Crawler\GloboEsporte\Ao_obter_Rodadas.cs" />
+    <Compile Include="Crawler\ScoutsAoVivo\Ao_obter_idsPartidas.cs" />
     <Compile Include="Crawler\ScoutsCartola\Ao_obter_jogadores.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

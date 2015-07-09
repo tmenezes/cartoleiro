@@ -1,5 +1,4 @@
-﻿using System;
-using Cartoleiro.Core.Cartola;
+﻿using Cartoleiro.Core.Cartola;
 using Cartoleiro.Core.Escalador;
 using Cartoleiro.Core.Escalador.Analizador;
 using Cartoleiro.DAO;

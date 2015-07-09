@@ -50,6 +50,7 @@
     <Compile Include="CrawlerDataSource.cs" />
     <Compile Include="Crawlers\GloboEsporte\GloboEsporteClubeCrawler.cs" />
     <Compile Include="Crawlers\GloboEsporte\GloboEsporteSiteCrawler.cs" />
+    <Compile Include="Crawlers\ScoutsAoVivo\ScoutsAoVivoJogosCrawler.cs" />
     <Compile Include="CrawlingInfo.cs" />
     <Compile Include="ISiteCrawler.cs" />
     <Compile Include="JogadorCrawler.cs" />
@@ -76,6 +77,7 @@
   <ItemGroup>
     <None Include="packages.config" />
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

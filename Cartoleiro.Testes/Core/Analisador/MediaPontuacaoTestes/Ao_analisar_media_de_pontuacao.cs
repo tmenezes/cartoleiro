@@ -1,9 +1,7 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using System.Linq;
 using Cartoleiro.Core.Cartola;
 using Cartoleiro.Core.Escalador;
-using Cartoleiro.Core.Escalador.Analizador;
 using Cartoleiro.Core.Escalador.Analizador.Jogador;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 
