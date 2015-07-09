@@ -169,9 +169,10 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Content Include="AppCode\Extensions\ClubeExtensions.cs" />
     <Compile Include="AppCode\CartoleiroKeepAlive.cs" />
     <Compile Include="AppCode\CartoleiroApp.cs" />
+    <Compile Include="AppCode\Extensions\ClubeExtensions.cs" />
+    <Compile Include="AppCode\ScoutsOnLineFacade.cs" />
     <Compile Include="AppCode\ModelUtils.cs" />
     <Compile Include="AppCode\Extensions\JogoExtensions.cs" />
     <Compile Include="AppCode\MvcHelpers\ViewDataHelper.cs" />
@@ -183,10 +184,10 @@
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="App_Start\Startup.Auth.cs" />
     <Compile Include="Controllers\AccountController.cs" />
+    <Compile Include="Controllers\ScoutsAoVivoController.cs" />
     <Compile Include="Controllers\EscaladorController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\ManageController.cs" />
-    <Compile Include="Controllers\ScoutsAoVivoController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>

@@ -1,4 +1,6 @@
 ﻿@using Cartoleiro.Core.Cartola
+@using Cartoleiro.Web.AppCode
+@using Cartoleiro.Web.AppCode.Extensions
 
 @{
     var jogadores = CartoleiroApp.CartolaDataSource.Jogadores.Where(j => j.Posicao != Posicao.Tecnico)

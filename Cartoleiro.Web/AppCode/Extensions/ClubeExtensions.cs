@@ -1,9 +1,8 @@
 ﻿using System.Web;
 using System.Web.Mvc;
 using Cartoleiro.Core.Cartola;
-using Cartoleiro.Web.Models;
 
-namespace Cartoleiro.Web.Extensions
+namespace Cartoleiro.Web.AppCode.Extensions
 {
     public static class ClubeExtensions
     {
@@ -22,7 +21,7 @@ namespace Cartoleiro.Web.Extensions
         public static string GetNomeNormalizado(this Clube clube)
         {
             var clubeSemAcento = ModelUtils.RemoverAcentos(clube.Nome.ToLower().Replace(" ", ""));
-            
+
             return clubeSemAcento;
         }
 

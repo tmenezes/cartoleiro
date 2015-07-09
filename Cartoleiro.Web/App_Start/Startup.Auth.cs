@@ -1,12 +1,10 @@
 ﻿using System;
+using Cartoleiro.Web.Models.AccountModels;
 using Microsoft.AspNet.Identity;
 using Microsoft.AspNet.Identity.Owin;
 using Microsoft.Owin;
 using Microsoft.Owin.Security.Cookies;
-using Microsoft.Owin.Security.Google;
 using Owin;
-using Cartoleiro.Web.Models;
-using Cartoleiro.Web.Models.AccountModels;
 
 namespace Cartoleiro.Web
 {

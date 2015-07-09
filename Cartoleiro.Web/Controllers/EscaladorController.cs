@@ -4,7 +4,6 @@ using Cartoleiro.Core.Escalador;
 using Cartoleiro.Core.Escalador.Analizador;
 using Cartoleiro.Web.AppCode;
 using Cartoleiro.Web.AppCode.MvcHelpers;
-using Cartoleiro.Web.Models;
 using Cartoleiro.Web.Models.EscaladorModels;
 
 namespace Cartoleiro.Web.Controllers
