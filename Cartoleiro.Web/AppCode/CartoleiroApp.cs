@@ -1,11 +1,10 @@
-﻿using System.Net.Http.Headers;
-using System.Web;
+﻿using System.Web;
 using Cartoleiro.Core.Data;
 using Cartoleiro.Core.Escalador;
 using Cartoleiro.Core.Escalador.Analizador;
 using Cartoleiro.DAO;
 
-namespace Cartoleiro.Web
+namespace Cartoleiro.Web.AppCode
 {
     public static class CartoleiroApp
     {

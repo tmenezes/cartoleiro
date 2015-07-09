@@ -4,7 +4,7 @@ using System.Threading;
 using System.Threading.Tasks;
 using System.Web;
 
-namespace Cartoleiro.Web
+namespace Cartoleiro.Web.AppCode
 {
     public static class CartoleiroKeepAlive
     {

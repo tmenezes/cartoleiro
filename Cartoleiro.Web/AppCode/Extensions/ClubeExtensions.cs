@@ -3,7 +3,7 @@ using System.Web.Mvc;
 using Cartoleiro.Core.Cartola;
 using Cartoleiro.Web.Models;
 
-namespace Cartoleiro.Web.Helpers
+namespace Cartoleiro.Web.Extensions
 {
     public static class ClubeExtensions
     {

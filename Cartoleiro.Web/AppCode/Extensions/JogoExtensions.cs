@@ -1,8 +1,7 @@
 ﻿using System.Linq;
 using Cartoleiro.Core.Cartola;
-using Cartoleiro.Web.Models;
 
-namespace Cartoleiro.Web.Helpers
+namespace Cartoleiro.Web.AppCode.Extensions
 {
     public static class JogoExtensions
     {

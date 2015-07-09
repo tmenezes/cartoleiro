@@ -1,7 +1,7 @@
 ﻿using System.Web.Mvc;
 using Cartoleiro.Core.Escalador;
 
-namespace Cartoleiro.Web.Helpers
+namespace Cartoleiro.Web.AppCode.MvcHelpers
 {
     public static class ViewDataExtensions
     {

@@ -1,13 +1,10 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using System.Collections.Generic;
 using System.Web;
 using System.Web.Mvc;
+using Cartoleiro.Web.AppCode;
 using Newtonsoft.Json;
 
-namespace Cartoleiro.Web.Models.ScoutsAoVivo
+namespace Cartoleiro.Web.Models.ScoutsAoVivoModels
 {
     public class Team
     {

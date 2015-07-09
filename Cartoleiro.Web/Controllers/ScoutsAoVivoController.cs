@@ -2,7 +2,7 @@
 using System.Net.Http;
 using System.Net.Http.Headers;
 using System.Web.Mvc;
-using Cartoleiro.Web.Models.ScoutsAoVivo;
+using Cartoleiro.Web.Models.ScoutsAoVivoModels;
 using Newtonsoft.Json;
 
 namespace Cartoleiro.Web.Controllers

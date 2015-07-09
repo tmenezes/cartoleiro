@@ -169,6 +169,14 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="AppCode\Extensions\ClubeExtensions.cs" />
+    <Compile Include="AppCode\CartoleiroKeepAlive.cs" />
+    <Compile Include="AppCode\CartoleiroApp.cs" />
+    <Compile Include="AppCode\ModelUtils.cs" />
+    <Compile Include="AppCode\Extensions\JogoExtensions.cs" />
+    <Compile Include="AppCode\MvcHelpers\ViewDataHelper.cs" />
+    <Compile Include="AppCode\MvcHelpers\ViewModelHelper.cs" />
+    <Compile Include="AppCode\HtmlHelpers\ActionLinkEx.cs" />
     <Compile Include="App_Start\BundleConfig.cs" />
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\IdentityConfig.cs" />
@@ -182,19 +190,11 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
-    <Compile Include="Helpers\ClubeExtensions.cs" />
-    <Compile Include="Helpers\HtmlHelpers\ActionLinkEx.cs" />
-    <Compile Include="Helpers\JogoExtensions.cs" />
-    <Compile Include="CartoleiroKeepAlive.cs" />
     <Compile Include="Models\AccountModels\AccountViewModels.cs" />
     <Compile Include="Models\AccountModels\IdentityModels.cs" />
     <Compile Include="Models\AccountModels\ManageViewModels.cs" />
-    <Compile Include="CartoleiroApp.cs" />
     <Compile Include="Models\EscaladorModels\EscaladorViewModel.cs" />
-    <Compile Include="Models\ModelUtils.cs" />
-    <Compile Include="Models\ScoutsAoVivo\ScoutsAoVivo.cs" />
-    <Compile Include="Helpers\ViewDataHelper.cs" />
-    <Compile Include="Helpers\ViewModelHelper.cs" />
+    <Compile Include="Models\ScoutsAoVivoModels\ScoutsAoVivo.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Startup.cs" />
   </ItemGroup>

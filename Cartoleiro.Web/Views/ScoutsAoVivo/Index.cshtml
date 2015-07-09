@@ -1,6 +1,4 @@
 ﻿@using Cartoleiro.Core.Cartola
-@using Cartoleiro.Web.Helpers
-@using Cartoleiro.Web.Helpers.HtmlHelpers
 @model dynamic
 @{
     ViewBag.Title = "Scouts ao vivo";
@@ -49,9 +47,9 @@
             }
         </div>
         <div class="row">
-            <div id="divLoading" class="text-center" style="display: none"><img src="~/Images/loading.gif" alt="loading..." /></div>
+            <div id="divLoading" class="text-center col-md-10 col-md-offset-1" style="display: none"><img src="~/Images/loading.gif" alt="loading..." /></div>
             <div id="divConfronto">
-                @{Html.RenderAction("ScoutsPartida", new {idPartida = "81_avai_gremio"});}
+                @*@{Html.RenderAction("ScoutsPartida", new {idPartida = "81_avai_gremio"});}*@
             </div>
         </div>
     </div>

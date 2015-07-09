@@ -4,7 +4,7 @@ using System.Web.Mvc;
 using System.Web.Mvc.Ajax;
 using System.Web.WebPages;
 
-namespace Cartoleiro.Web.Helpers.HtmlHelpers
+namespace Cartoleiro.Web.AppCode.HtmlHelpers
 {
     public static class ActionLinkEx
     {

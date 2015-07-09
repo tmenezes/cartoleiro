@@ -4,7 +4,7 @@ using System.Linq;
 using System.Web.Mvc;
 using Cartoleiro.Core.Cartola;
 
-namespace Cartoleiro.Web.Helpers
+namespace Cartoleiro.Web.AppCode.MvcHelpers
 {
     public static class ViewModelHelper
     {

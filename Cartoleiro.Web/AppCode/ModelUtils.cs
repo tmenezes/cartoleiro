@@ -1,6 +1,6 @@
 ﻿using System.Text;
 
-namespace Cartoleiro.Web.Models
+namespace Cartoleiro.Web.AppCode
 {
     public static class ModelUtils
     {
