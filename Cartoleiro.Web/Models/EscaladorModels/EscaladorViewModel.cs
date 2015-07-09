@@ -20,6 +20,9 @@ namespace Cartoleiro.Web.Models.EscaladorModels
         [DisplayName("Média maior que")]
         public double? MediaMaiorQue { get; set; }
 
+        [DisplayName("Qtde Jogos maior que")]
+        public int? JogosMaiorQue { get; set; }
+
         public bool ProporcionalNaPosicao { get; set; }
         public bool SomenteProvaveis { get; set; }
 

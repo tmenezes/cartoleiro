@@ -53,5 +53,19 @@ namespace Cartoleiro.Web.Helpers
                 return medias;
             }
         }
+
+        public static IEnumerable<SelectListItem> LimitesDeJogos
+        {
+            get
+            {
+                var medias = Enumerable.Range(1, Campeonato.Rodadas.RodadaAtual.Numero - 1)
+                                       .Select(i => new SelectListItem()
+                                       {
+                                           Value = i.ToString(),
+                                           Text = i.ToString()
+                                       });
+                return medias;
+            }
+        }
     }
 }

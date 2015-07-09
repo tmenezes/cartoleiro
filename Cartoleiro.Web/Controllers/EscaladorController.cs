@@ -43,6 +43,10 @@ namespace Cartoleiro.Web.Controllers
             {
                 escalador.ComMediaMaiorQue(escaladorViewModel.MediaMaiorQue.Value);
             }
+            if (escaladorViewModel.JogosMaiorQue.HasValue)
+            {
+                escalador.ComQtdeJogosMaiorQue(escaladorViewModel.JogosMaiorQue.Value);
+            }
 
             var analisadores = GetAnalisadores(escaladorViewModel);
             escalador.ComAnalisadores(analisadores);

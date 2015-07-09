@@ -34,15 +34,21 @@
         </div>
     </div>
     <div class="form-group">
-        @Html.LabelFor(m => m.PosicaoEmFoco, new {@class = "col-md-2 control-label"})
+        @Html.LabelFor(m => m.PosicaoEmFoco, new { @class = "col-md-2 control-label" })
         <div class="col-md-10">
-            @Html.DropDownListFor(m => m.PosicaoEmFoco, ViewModelHelper.Posicoes, "Todas", new {@class = "form-control"})
+            @Html.DropDownListFor(m => m.PosicaoEmFoco, ViewModelHelper.Posicoes, "Todas", new { @class = "form-control" })
         </div>
     </div>
     <div class="form-group">
         @Html.LabelFor(m => m.MediaMaiorQue, new { @class = "col-md-2 control-label" })
         <div class="col-md-10">
             @Html.DropDownListFor(m => m.MediaMaiorQue, ViewModelHelper.LimitesDeMedia, "Qualquer média", new { @class = "form-control" })
+        </div>
+    </div>
+    <div class="form-group">
+        @Html.LabelFor(m => m.JogosMaiorQue, new { @class = "col-md-2 control-label" })
+        <div class="col-md-10">
+            @Html.DropDownListFor(m => m.JogosMaiorQue, ViewModelHelper.LimitesDeJogos, "Nenhum jogo", new { @class = "form-control" })
         </div>
     </div>
     <div class="form-group">

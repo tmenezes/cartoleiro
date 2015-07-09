@@ -19,6 +19,7 @@ namespace Cartoleiro.Core.Escalador
         private Analisadores _analisadores;
         private bool _somenteProvaveis;
         private double? _mediaLimite;
+        private int? _qtdeJogosLimite;
 
         // propriedades
         public ICartolaDataSource CartolaDS { get; set; }
@@ -110,6 +111,11 @@ namespace Cartoleiro.Core.Escalador
             _mediaLimite = media;
             return this;
         }
+        public EscaladorDeTime ComQtdeJogosMaiorQue(int jogos)
+        {
+            _qtdeJogosLimite = jogos;
+            return this;
+        }
 
         public EscaladorDeTime ComAnalisadores(Analisadores analisadores)
         {
@@ -148,6 +154,9 @@ namespace Cartoleiro.Core.Escalador
 
             if (_mediaLimite.HasValue)
                 jogadores = jogadores.Where(j => j.Pontuacao.Media > _mediaLimite.Value);
+
+            if (_qtdeJogosLimite.HasValue)
+                jogadores = jogadores.Where(j => j.Jogos > _qtdeJogosLimite.Value);
 
             _ranqueamento = jogadores.Select(j => new PontuacaoDeEscalacao(j)).ToList();
         }
