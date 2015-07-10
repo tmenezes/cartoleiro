@@ -26,32 +26,11 @@
     </div>
     <div role="tabpanel" class="tab-pane fade col-lg-offset-1" id="tabRodada">
         <div class="row">
-            @foreach (var jogo in Campeonato.Rodadas.ProximaRodada.Jogos)
-            {
-                @Ajax.ActionLink(jogo,
-                @<div class="col-md-2 panel panel-default panel-partida">
-                    <div class="panel-body">
-                        <div class="media">
-                            <div class="media-left">
-                                <img src="@jogo.Mandante.GetUrlImagem()" width="32" height="32" alt="@jogo.Mandante.Nome" title="@jogo.Mandante.Nome" />
-                            </div>
-                            <div class="media-body media-middle text-center panel-partida-placar">
-                                <span><strong>@jogo.PlacarMandante</strong></span>
-                                <span>x</span>
-                                <span><strong>@jogo.PlacarVisitante</strong></span>
-                            </div>
-                            <div class="media-right">
-                                <img src="@jogo.Visitante.GetUrlImagem()" width="32" height="32" alt="@jogo.Visitante.Nome" title="@jogo.Visitante.Nome" />
-                            </div>
-                        </div>
-                    </div>
-                </div>, "ScoutsPartida", "ScoutsAoVivo", new { idPartida = jogo.GetIdJogo() }, new AjaxOptions { UpdateTargetId = "divConfronto", LoadingElementId = "divLoading"})
-            }
+            @Html.Partial("_ListaJogos")
         </div>
         <div class="row">
-            <div id="divLoading" class="text-center col-md-10 col-md-offset-1" style="display: none"><img src="~/Images/loading.gif" alt="loading..." /></div>
+            <div id="divLoading" class="text-center col-md-10" style="display: none"><img src="~/Images/loading.gif" alt="loading..." /></div>
             <div id="divConfronto">
-                @*@{Html.RenderAction("ScoutsPartida", new {idPartida = "81_avai_gremio"});}*@
             </div>
         </div>
     </div>

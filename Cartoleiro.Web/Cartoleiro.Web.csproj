@@ -297,6 +297,7 @@
     <Content Include="Views\ScoutsAoVivo\_ScoutsClube.cshtml" />
     <Content Include="Views\ScoutsAoVivo\_ScoutsPartida.cshtml" />
     <Content Include="Views\Shared\_TimeTabelaDetalhe.cshtml" />
+    <Content Include="Views\ScoutsAoVivo\_ListaJogos.cshtml" />
   </ItemGroup>
   <ItemGroup />
   <ItemGroup>
