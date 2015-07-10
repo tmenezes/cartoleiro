@@ -15,7 +15,7 @@ namespace Cartoleiro.Crawler
         }
 
         public abstract JogadorCrawler MapearElementoHtml(IWebElement elementoHtml);
-        public abstract Jogador ObterJogador();
+        public abstract Jogador ObterJogador(IWebDriver webDriver);
 
         public override string ToString()
         {

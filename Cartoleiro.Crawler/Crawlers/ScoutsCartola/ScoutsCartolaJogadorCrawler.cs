@@ -30,30 +30,46 @@ namespace Cartoleiro.Crawler.Crawlers.ScoutsCartola
             return this;
         }
 
-        public override Jogador ObterJogador()
+        public override Jogador ObterJogador(IWebDriver webDriver)
         {
-            WebDriver.Navigate().GoToUrl(Pagina);
+            int tentativas = 1;
+            while (tentativas < 3)
+            {
+                try
+                {
+                    //WebDriver.Navigate().GoToUrl(Pagina);
+                    webDriver.Navigate().GoToUrl(Pagina);
 
-            var divAtleta = WebDriver.FindElement(By.Id("athletebox"));
-            var divAtletaInfo = divAtleta.FindElement(By.Id("info"));
+                    var divAtleta = webDriver.FindElement(By.Id("athletebox"));
+                    var divAtletaInfo = divAtleta.FindElement(By.Id("info"));
 
-            var divValores = divAtletaInfo.FindElement(By.Id("bloco1"));
-            var spansInfo = divAtletaInfo.FindElement(By.Id("bloco2")).FindElements(By.TagName("span"));
+                    var divValores = divAtletaInfo.FindElement(By.Id("bloco1"));
+                    var spansInfo = divAtletaInfo.FindElement(By.Id("bloco2")).FindElements(By.TagName("span"));
 
-            var posicao = GetPosicao(spansInfo.First().Text);
-            var status = GetStatus(spansInfo[1].Text);
-            var scouts = GetScouts(divAtleta);
+                    var posicao = GetPosicao(spansInfo.First().Text);
+                    var status = GetStatus(spansInfo[1].Text);
+                    var scouts = GetScouts(divAtleta);
 
-            var jogador = new Jogador(Nome, Clube, posicao)
-                          {
-                              Preco = GetPreco(divValores),
-                              Pontuacao = GetPontuacao(divValores),
-                              Jogos = GetQuantidadeDeJogos(divValores),
-                              Status = status,
-                              Scouts = scouts,
-                          };
+                    var jogador = new Jogador(Nome, Clube, posicao)
+                                  {
+                                      Preco = GetPreco(divValores),
+                                      Pontuacao = GetPontuacao(divValores),
+                                      Jogos = GetQuantidadeDeJogos(divValores),
+                                      Status = status,
+                                      Scouts = scouts,
+                                  };
 
-            return jogador;
+                    return jogador;
+                }
+                catch (Exception)
+                {
+                }
+                finally
+                {
+                    tentativas++;
+                }
+            }
+            throw new Exception("Não conseguiu obter o jogador");
         }
 
 

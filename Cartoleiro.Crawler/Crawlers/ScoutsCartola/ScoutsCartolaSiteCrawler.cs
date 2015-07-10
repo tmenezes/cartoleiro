@@ -1,4 +1,5 @@
 using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
@@ -53,18 +54,24 @@ namespace Cartoleiro.Crawler.Crawlers.ScoutsCartola
             {
                 var jogadoresEncontrados = GetJogadoresEncontrados(linksDeJogadores, driver);
 
+                var driversDeJogadores = Enumerable.Range(0, 6).Select(i => CrawlerHelper.GetWebDriver()).ToList();
+
+                //foreach (var jogadorCrawler in jogadoresEncontrados)
                 //Parallel.ForEach(jogadoresEncontrados, new ParallelOptions { MaxDegreeOfParallelism = 20 }, jogadorCrawler =>
-                foreach (var jogadorCrawler in jogadoresEncontrados)
+                Parallel.For(0, jogadoresEncontrados.Count, new ParallelOptions { MaxDegreeOfParallelism = 5 }, i =>
                 {
-                    var jogador = jogadorCrawler.ObterJogador();
+                    var jogador = jogadoresEncontrados[i].ObterJogador(driversDeJogadores[i % 5]);
 
                     jogadores.Add(jogador);
 
-                    OnObjetoCarregado(new CrawlingInfo(jogadoresEncontrados.Count(), jogadores.Count, jogador));
-                }
+                    OnObjetoCarregado(new CrawlingInfo(jogadoresEncontrados.Count, jogadores.Count, jogador));
+                });
+
+                driversDeJogadores.ForEach(driverJogador => driver.Quit());
             }
 
             driver.Quit();
+
 
             return jogadores;
         }
@@ -75,7 +82,7 @@ namespace Cartoleiro.Crawler.Crawlers.ScoutsCartola
         }
 
 
-        private IEnumerable<JogadorCrawler> GetJogadoresEncontrados(List<IWebElement> linksDeJogadores, IWebDriver driver)
+        private IList<JogadorCrawler> GetJogadoresEncontrados(List<IWebElement> linksDeJogadores, IWebDriver driver)
         {
             var jogadoresEncontrados = new List<JogadorCrawler>(linksDeJogadores.Count);
 
