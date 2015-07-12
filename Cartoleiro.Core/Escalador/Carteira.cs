@@ -1,5 +1,6 @@
 using System;
 using System.Collections.Generic;
+using System.Linq;
 using Cartoleiro.Core.Cartola;
 
 namespace Cartoleiro.Core.Escalador
@@ -11,27 +12,24 @@ namespace Cartoleiro.Core.Escalador
 
         private readonly EsquemaTatico _esquema;
         private readonly double _patrimonio;
+        private readonly Dictionary<Posicao, double> _valoresMinimos;
         private readonly Posicao? _posicaoEmFoco;
-        public Dictionary<Posicao, int> _jogadoresComprados = new Dictionary<Posicao, int>();
-
+        private Dictionary<Posicao, int> _jogadoresComprados = new Dictionary<Posicao, int>();
 
         public Dictionary<Posicao, double> Partilha { get; set; }
 
 
-        public Carteira(EsquemaTatico esquema, double patrimonio)
+        // construtores
+        public Carteira(EsquemaTatico esquema, double patrimonio, Dictionary<Posicao, double> valoresMinimos)
+            : this(esquema, patrimonio, valoresMinimos, null)
         {
-            _esquema = esquema;
-            _patrimonio = patrimonio;
-            _posicaoEmFoco = null;
-
-            PartilharDinheiro();
-            ConfigurarJogadoresComprados();
         }
 
-        public Carteira(EsquemaTatico esquema, double patrimonio, Posicao? posicaoEmFoco)
+        public Carteira(EsquemaTatico esquema, double patrimonio, Dictionary<Posicao, double> valoresMinimos, Posicao? posicaoEmFoco)
         {
             _esquema = esquema;
             _patrimonio = patrimonio;
+            _valoresMinimos = valoresMinimos;
             _posicaoEmFoco = posicaoEmFoco;
 
             PartilharDinheiro();
@@ -39,6 +37,7 @@ namespace Cartoleiro.Core.Escalador
         }
 
 
+        // publicos
         public void ComprarJogador(Jogador jogador)
         {
             var patrimonioDaPosicao = Partilha[jogador.Posicao];
@@ -63,6 +62,7 @@ namespace Cartoleiro.Core.Escalador
         }
 
 
+        // privados
         private void PartilharDinheiro()
         {
             if (_posicaoEmFoco.HasValue)
@@ -91,13 +91,15 @@ namespace Cartoleiro.Core.Escalador
 
             Partilha = new Dictionary<Posicao, double>()
                        {
-                           {Posicao.Goleiro, valorIndividual},
-                           {Posicao.Lateral,  valorTotalParaLateral },
-                           {Posicao.Zagueiro,  valorTotalParaZaga },
-                           {Posicao.MeioCampo, valorTotalParaMeioCampo},
-                           {Posicao.Atacante, valorTotalParaAtaque},
-                           {Posicao.Tecnico, valorIndividual},
+                           { Posicao.Goleiro, valorIndividual },
+                           { Posicao.Lateral, valorTotalParaLateral },
+                           { Posicao.Zagueiro, valorTotalParaZaga },
+                           { Posicao.MeioCampo, valorTotalParaMeioCampo },
+                           { Posicao.Atacante, valorTotalParaAtaque },
+                           { Posicao.Tecnico, valorIndividual },
                        };
+
+            AjustarValoresMinimos();
         }
 
         private void PartilharComFocoEmPosicao(Posicao posicaoEmFoco)
@@ -140,6 +142,9 @@ namespace Cartoleiro.Core.Escalador
 
         private void PartilharSobra(double sobraDoPatrimonio)
         {
+            if (sobraDoPatrimonio <= 0)
+                return;
+
             var posicoesNaoFinalizadas = new List<Posicao>();
 
             foreach (var item in _jogadoresComprados)
@@ -158,6 +163,24 @@ namespace Cartoleiro.Core.Escalador
             foreach (var posicao in posicoesNaoFinalizadas)
             {
                 Partilha[posicao] += sobraPorPosicao;
+            }
+        }
+
+        private void AjustarValoresMinimos()
+        {
+            var posicoes = Enum.GetValues(typeof(Posicao)).OfType<Posicao>();
+
+            foreach (var posicao in posicoes)
+            {
+                var numeroDeJogadores = EsquemaTaticoHelper.GetNumeroDeJogadores(posicao, _esquema);
+                var valorIndividual = Partilha[posicao] / numeroDeJogadores;
+                var valorMinimo = _valoresMinimos[posicao];
+
+                if (valorIndividual < valorMinimo)
+                {
+                    var valorAjustado = valorMinimo * numeroDeJogadores;
+                    Partilha[posicao] = valorAjustado;
+                }
             }
         }
     }

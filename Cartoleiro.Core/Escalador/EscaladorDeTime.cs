@@ -129,8 +129,8 @@ namespace Cartoleiro.Core.Escalador
 
             _analisadores.ExecutarAnalises(_ranqueamento);
 
-            var partilhaDoDinheiro = new Carteira(_esquemaTatico, _patrimonio, _posicaoEmFoco);
-            var jogadores = EscalarJogadores(partilhaDoDinheiro);
+            var carteira = new Carteira(_esquemaTatico, _patrimonio, CalcularValoresMinimos(), _posicaoEmFoco);
+            var jogadores = EscalarJogadores(carteira);
 
             var time = new Time(_esquemaTatico);
             foreach (var jogador in jogadores)
@@ -240,6 +240,29 @@ namespace Cartoleiro.Core.Escalador
             var percentualDoJogador = jogador.Preco.Atual * 100 / patrimonioTotalDaPosicao;
 
             return percentualDoJogador <= percentualMaximoDeValorAceito;
+        }
+
+        private Dictionary<Posicao, double> CalcularValoresMinimos()
+        {
+            var valoresMinimos = new Dictionary<Posicao, double>();
+            var posicoes = Enum.GetValues(typeof(Posicao)).OfType<Posicao>();
+            var jogadores = _ranqueamento.Select(i => i.Jogador).ToList();
+
+            foreach (var posicao in posicoes)
+            {
+                var posicaoCopia = posicao;
+                var jogadoresMaisBaratos = jogadores.Where(j => j.Posicao == posicaoCopia)
+                                                    .OrderBy(j => j.Preco.Atual)
+                                                    .Take(5);
+
+                var precoMinimo = jogadoresMaisBaratos.Any()
+                    ? jogadoresMaisBaratos.Average(j => j.Preco.Atual)
+                    : 0;
+
+                valoresMinimos.Add(posicaoCopia, precoMinimo);
+            }
+
+            return valoresMinimos;
         }
     }
 }
