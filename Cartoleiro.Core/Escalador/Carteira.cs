@@ -84,7 +84,7 @@ namespace Cartoleiro.Core.Escalador
         {
             var valorIndividual = patrimonio / TOTAL_JOGADORES;
 
-            var valorTotalParaLateral = EsquemaTaticoHelper.NumeroDeLaterais() * valorIndividual;
+            var valorTotalParaLateral = EsquemaTaticoHelper.NumeroDeLaterais(_esquema) * valorIndividual;
             var valorTotalParaZaga = EsquemaTaticoHelper.NumeroDeZagueiros(_esquema) * valorIndividual;
             var valorTotalParaMeioCampo = EsquemaTaticoHelper.NumeroDeMeioCampos(_esquema) * valorIndividual;
             var valorTotalParaAtaque = EsquemaTaticoHelper.NumeroDeAtacantes(_esquema) * valorIndividual;

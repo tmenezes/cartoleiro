@@ -33,10 +33,7 @@ namespace Cartoleiro.Core.Escalador
             switch (posicao)
             {
                 case Posicao.Lateral:
-                    if (esquema == EsquemaTatico._343 || esquema == EsquemaTatico._352 || esquema == EsquemaTatico._451)
-                        return NumeroTotalDoMeioCampo(esquema);
-                    else
-                        return NumeroTotalDaZaga(esquema);
+                    return NumeroDeLaterais(esquema);
 
                 case Posicao.Zagueiro:
                     return NumeroTotalDaZaga(esquema);
@@ -57,7 +54,7 @@ namespace Cartoleiro.Core.Escalador
             switch (posicao)
             {
                 case Posicao.Lateral:
-                    return TOTAL_LATERAIS;
+                    return NumeroDeLaterais(esquema);
 
                 case Posicao.Zagueiro:
                     return NumeroDeZagueiros(esquema);
@@ -77,36 +74,19 @@ namespace Cartoleiro.Core.Escalador
         public static int NumeroDeZagueiros(EsquemaTatico esquema)
         {
             int totalDaZaga = GetTotalDeJogadores(esquema, ZAGA);
-            int totalDoMeioCampo = GetTotalDeJogadores(esquema, MEIO_CAMPO);
+            int totalDeLaterais = NumeroDeLaterais(esquema);
 
-            if (totalDoMeioCampo > totalDaZaga)
-                return totalDaZaga;
-
-            int zagueiros = (totalDaZaga > 3)
-                ? totalDaZaga - TOTAL_LATERAIS
-                : totalDaZaga;
-
-            return zagueiros;
+            return totalDaZaga - totalDeLaterais;
         }
 
-        public static int NumeroDeLaterais()
+        public static int NumeroDeLaterais(EsquemaTatico esquema)
         {
-            return TOTAL_LATERAIS;
+            return NumeroTotalDaZaga(esquema) > 3 ? TOTAL_LATERAIS : 0;
         }
 
         public static int NumeroDeMeioCampos(EsquemaTatico esquema)
         {
-            int totalDaZaga = GetTotalDeJogadores(esquema, ZAGA);
-            int totalDoMeioCampo = GetTotalDeJogadores(esquema, MEIO_CAMPO);
-
-            if (totalDoMeioCampo <= totalDaZaga)
-                return totalDoMeioCampo;
-
-            int meioCampos = (totalDoMeioCampo > 3)
-                ? totalDoMeioCampo - TOTAL_LATERAIS
-                : totalDoMeioCampo;
-
-            return meioCampos;
+            return GetTotalDeJogadores(esquema, MEIO_CAMPO);
         }
 
         public static int NumeroDeAtacantes(EsquemaTatico esquema)
