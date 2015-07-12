@@ -12,6 +12,8 @@
 })();
 
 function setupCountDownScoutsAoVivo(urlResults, urlJogo) {
+    $(".list-group-item").addClass("flash");
+
     $('#spanCountDown').countdown(getNovaData(), function (event) {
         $(this).html(event.strftime('%S')); //event.strftime('%D days %H:%M:%S')
     })
@@ -23,6 +25,7 @@ function setupCountDownScoutsAoVivo(urlResults, urlJogo) {
 
         $("#divLoading").css("display", "none");
     });
+
     function getNovaData() {
         var data = new Date(); data.setSeconds(data.getSeconds() + 30);
         return data;
