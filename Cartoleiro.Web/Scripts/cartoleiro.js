@@ -24,7 +24,7 @@ function setupCountDownScoutsAoVivo(urlResults, urlJogo) {
         $("#divLoading").css("display", "none");
     });
     function getNovaData() {
-        var data = new Date(); data.setSeconds(data.getSeconds() + 30*6);
+        var data = new Date(); data.setSeconds(data.getSeconds() + 30);
         return data;
     }
 }
