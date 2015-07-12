@@ -19,7 +19,7 @@ namespace Cartoleiro.Testes.Crawler.ScoutsAoVivo
 
         public override void Act()
         {
-            idsPartidas = crawler.CarregarIdsPartidas();
+            idsPartidas = crawler.CarregarDosJogos();
         }
 
         [TestMethod]

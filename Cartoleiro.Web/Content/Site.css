@@ -52,6 +52,12 @@ textarea {
 .media-jogador > .badge {
     margin-top: -8px;
 }
+.countdown {  
+    float: left;
+    margin-left: 44.4%;
+    margin-top: -33px;
+    font-size: 16px;
+}
 
 .panel-scouts-confronto {
     font-size: 28px;

@@ -1,8 +1,13 @@
-﻿@using Cartoleiro.Core.Cartola
+﻿@model Cartoleiro.Web.Models.ScoutsAoVivoModels.FixtureMatches
+@using Cartoleiro.Core.Cartola
 @using Cartoleiro.Web.AppCode.Extensions
 @using Cartoleiro.Web.AppCode.HtmlHelpers
+
 @foreach (var jogo in Campeonato.Rodadas.ProximaRodada.Jogos)
 {
+    var match = (Model != null) ? Model.Matches.FirstOrDefault(m => m.Home.Name == jogo.Mandante.Nome) : null;
+    var placarMandante = (match != null) ? match.Home.GetPlacar("-") : "-";
+    var placarVisitante = (match != null) ? match.Away.GetPlacar("-") : "-";
     @Ajax.ActionLink(jogo,
     @<div class="col-md-2 panel panel-default panel-partida">
         <div class="panel-body">
@@ -11,14 +16,14 @@
                     <img src="@jogo.Mandante.GetUrlImagem()" width="32" height="32" alt="@jogo.Mandante.Nome" title="@jogo.Mandante.Nome" />
                 </div>
                 <div class="media-body media-middle text-center panel-partida-placar">
-                    <span><strong>@jogo.PlacarMandante</strong></span>
+                    <span><strong>@placarMandante</strong></span>
                     <span>x</span>
-                    <span><strong>@jogo.PlacarVisitante</strong></span>
+                    <span><strong>@placarVisitante</strong></span>
                 </div>
                 <div class="media-right">
                     <img src="@jogo.Visitante.GetUrlImagem()" width="32" height="32" alt="@jogo.Visitante.Nome" title="@jogo.Visitante.Nome" />
                 </div>
             </div>
         </div>
-    </div>, "ScoutsPartida", "ScoutsAoVivo", new { idPartida = jogo.GetIdJogo() }, new AjaxOptions { UpdateTargetId = "divConfronto", LoadingElementId = "divLoading" })
+    </div>, "ScoutsJogo", "ScoutsAoVivo", new { idJogo = jogo.GetIdJogo() }, new AjaxOptions { UpdateTargetId = "divConfronto", LoadingElementId = "divLoading" })
 }

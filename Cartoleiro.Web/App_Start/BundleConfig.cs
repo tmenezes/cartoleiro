@@ -30,6 +30,9 @@ namespace Cartoleiro.Web
 
             bundles.Add(new ScriptBundle("~/bundles/cartoleiro").Include(
                       "~/Scripts/cartoleiro.js"));
+
+            bundles.Add(new ScriptBundle("~/bundles/cartoleiro.countdown").Include(
+                      "~/Scripts/jquery.countdown.js"));
         }
     }
 }

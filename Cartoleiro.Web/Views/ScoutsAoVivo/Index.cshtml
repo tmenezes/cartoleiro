@@ -14,19 +14,19 @@
 </ul>
 <div class="tab-content">
     <div role="tabpanel" class="tab-pane fade" id="tabPersonalizado">
-        <div class="col-md-4">
-            <iframe src="http://parciais.competicaocartolafc.com/parciais_cartolafc/Parciais_Box_1.htm" width="312px" height="800px" frameborder="0"></iframe>
-        </div>
-        <div class="col-md-4">
-            <iframe src="http://parciais.competicaocartolafc.com/parciais_cartolafc/Parciais_Box_2.htm" width="312px" height="800px" frameborder="0"></iframe>
-        </div>
-        <div class="col-lg-4">
-            <iframe src="http://parciais.competicaocartolafc.com/parciais_cartolafc/Parciais_Box_3.htm" width="312px" height="800px" frameborder="0"></iframe>
-        </div>
+        @*<div class="col-md-4">
+                <iframe src="http://parciais.competicaocartolafc.com/parciais_cartolafc/Parciais_Box_1.htm" width="312px" height="800px" frameborder="0"></iframe>
+            </div>
+            <div class="col-md-4">
+                <iframe src="http://parciais.competicaocartolafc.com/parciais_cartolafc/Parciais_Box_2.htm" width="312px" height="800px" frameborder="0"></iframe>
+            </div>
+            <div class="col-lg-4">
+                <iframe src="http://parciais.competicaocartolafc.com/parciais_cartolafc/Parciais_Box_3.htm" width="312px" height="800px" frameborder="0"></iframe>
+            </div>*@
     </div>
     <div role="tabpanel" class="tab-pane fade col-lg-offset-1" id="tabRodada">
-        <div class="row">
-            @Html.Partial("_ListaJogos")
+        <div id="listaJogos" class="row">
+            @{ Html.RenderAction("ScoutsResultados"); }
         </div>
         <div class="row">
             <div id="divLoading" class="text-center col-md-10" style="display: none"><img src="~/Images/loading.gif" alt="loading..." /></div>
@@ -37,9 +37,17 @@
 </div>
 
 @section scripts{
+    @Scripts.Render("~/bundles/cartoleiro.countdown")
     <script>
+        var jogoCorrente = "";
+
         $(document).ready(function () {
             $('#myTabs a:first').tab('show');
-        })
+
+            $("#listaJogos a").on("click", function (event) {
+                var href = $(event.currentTarget).prop("href") + "";
+                jogoCorrente = href.substring(href.indexOf("idJogo=") + 7);
+            });
+        });
     </script>
 }

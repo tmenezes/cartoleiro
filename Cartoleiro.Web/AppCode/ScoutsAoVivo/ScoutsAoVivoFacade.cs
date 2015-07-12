@@ -1,9 +1,7 @@
-﻿using System;
+using System;
 using System.Collections.Concurrent;
 using System.Collections.Generic;
 using System.Linq;
-using System.Net.Http;
-using System.Net.Http.Headers;
 using System.Threading;
 using System.Threading.Tasks;
 using System.Web;
@@ -16,7 +14,7 @@ using Newtonsoft.Json;
 
 namespace Cartoleiro.Web.AppCode.ScoutsAoVivo
 {
-    public static class ScoutsOnLineFacade
+    public static class ScoutsAoVivoFacade
     {
         private static DateTime _dataAtualizacaoDosDados = DateTime.MinValue;
 
@@ -27,6 +25,8 @@ namespace Cartoleiro.Web.AppCode.ScoutsAoVivo
 
         private static Task _atualizadorDeScouts;
         private static HttpContext _httpContext;
+
+        public static ScoutsData Scouts { get; private set; }
 
 
         // publicos
@@ -42,7 +42,7 @@ namespace Cartoleiro.Web.AppCode.ScoutsAoVivo
             _httpContext = httpContext;
         }
 
-        public static ScoutsData ObterScoutsOnLine(string idPartida)
+        public static ScoutsData ObterScoutsAoVivo(string idPartida)
         {
             var jogo = _jogosPorIdPartida.ContainsKey(idPartida) ? _jogosPorIdPartida[idPartida] : null;
             if (jogo == null)
@@ -78,7 +78,7 @@ namespace Cartoleiro.Web.AppCode.ScoutsAoVivo
                     if (deveAtualizarEstruturas)
                     {
                         InicializarEstruturasDeDados();
-                        AtualizarChavesDasPartidas();
+                        AtualizarChavesDosJogos();
 
                         _dataAtualizacaoDosDados = DateTime.Now;
                     }
@@ -136,6 +136,7 @@ namespace Cartoleiro.Web.AppCode.ScoutsAoVivo
 
                 var json = HttpClientHelper.Get(url, urlRecurso);
                 var scouts = JsonConvert.DeserializeObject<ScoutsData>(json);
+                Scouts = scouts;
 
                 return scouts;
             }
@@ -169,10 +170,10 @@ namespace Cartoleiro.Web.AppCode.ScoutsAoVivo
             }
         }
 
-        private static void AtualizarChavesDasPartidas()
+        private static void AtualizarChavesDosJogos()
         {
             var crawler = new ScoutsAoVivoJogosCrawler();
-            var idsPartidas = crawler.CarregarIdsPartidas();
+            var idsPartidas = crawler.CarregarDosJogos();
 
             _chavesScouts = new ConcurrentDictionary<string, string>();
 
@@ -202,27 +203,6 @@ namespace Cartoleiro.Web.AppCode.ScoutsAoVivo
             catch (Exception)
             {
             }
-        }
-    }
-
-    internal class ValidadeScouts
-    {
-        public DateTime DataAtualizacao { get; set; }
-        public DateTime DataProximaAtualizacao { get; set; }
-
-        public bool DentroDaValidade { get { return DateTime.Now < DataAtualizacao.AddSeconds(60); } }
-        public bool DeveAtualizar { get { return DateTime.Now > DataProximaAtualizacao; } }
-
-        public ValidadeScouts()
-        {
-            DataAtualizacao = DateTime.MinValue;
-            DataProximaAtualizacao = DateTime.MaxValue;
-        }
-
-        public void Atualizar(DateTime proximaAtualizacao)
-        {
-            DataAtualizacao = DateTime.Now;
-            DataProximaAtualizacao = proximaAtualizacao;
         }
     }
 }

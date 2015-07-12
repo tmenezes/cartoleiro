@@ -172,8 +172,9 @@
     <Compile Include="AppCode\CartoleiroKeepAlive.cs" />
     <Compile Include="AppCode\CartoleiroApp.cs" />
     <Compile Include="AppCode\Extensions\ClubeExtensions.cs" />
+    <Compile Include="AppCode\ScoutsAoVivo\ScoutsAoVivoFacade.cs" />
     <Compile Include="AppCode\ScoutsAoVivo\ScoutsAoVivoJogosCrawler.cs" />
-    <Compile Include="AppCode\ScoutsAoVivo\ScoutsOnLineFacade.cs" />
+    <Compile Include="AppCode\ScoutsAoVivo\ValidadeScouts.cs" />
     <Compile Include="AppCode\ModelUtils.cs" />
     <Compile Include="AppCode\Extensions\JogoExtensions.cs" />
     <Compile Include="AppCode\MvcHelpers\ViewDataHelper.cs" />
@@ -244,6 +245,7 @@
     <Content Include="Scripts\jquery-1.10.2.js" />
     <Content Include="Scripts\jquery-1.10.2.min.js" />
     <None Include="Scripts\jquery.validate-vsdoc.js" />
+    <Content Include="Scripts\jquery.countdown.js" />
     <Content Include="Scripts\jquery.unobtrusive-ajax.js" />
     <Content Include="Scripts\jquery.unobtrusive-ajax.min.js" />
     <Content Include="Scripts\jquery.validate.js" />

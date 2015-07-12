@@ -1,7 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Net;
-using System.Net.Http;
 using Cartoleiro.Web.AppCode.Utils;
 using Cartoleiro.Web.Models.ScoutsAoVivoModels;
 using Newtonsoft.Json;
@@ -10,9 +8,9 @@ namespace Cartoleiro.Web.AppCode.ScoutsAoVivo
 {
     public class ScoutsAoVivoJogosCrawler
     {
-        public IEnumerable<string> CarregarIdsPartidas()
+        public IEnumerable<string> CarregarDosJogos()
         {
-            var idsPartidas = new List<string>();
+            var idsJogos = new List<string>();
 
             var url = "http://scoutsaovivo.appspot.com/index.php";
             var html = HttpClientHelper.Get(url);
@@ -27,12 +25,12 @@ namespace Cartoleiro.Web.AppCode.ScoutsAoVivo
 
             foreach (var match in scouts.FixtureMatches.Matches)
             {
-                var idPartida = string.Format("{0}_{1}_{2}", match.Id, match.Home.Url, match.Away.Url);
+                var idJogo = string.Format("{0}_{1}_{2}", match.Id, match.Home.Url, match.Away.Url);
 
-                idsPartidas.Add(idPartida);
+                idsJogos.Add(idJogo);
             }
 
-            return idsPartidas;
+            return idsJogos;
         }
     }
 }

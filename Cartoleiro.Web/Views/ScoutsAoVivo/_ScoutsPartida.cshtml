@@ -1,7 +1,7 @@
 ﻿@model Cartoleiro.Web.Models.ScoutsAoVivoModels.ScoutsMatch
 
 @if (Model != null)
-{   
+{
     <div class="row panel panel-default panel-scouts-confronto">
         <div class="panel-body">
             <div class="panel-scouts-confronto-mandante">
@@ -19,10 +19,16 @@
             </div>
         </div>
     </div>
+    <span id="spanCountDown" class="countdown label label-primary"></span>
     <div class="col-md-5 scouts-lista-time">
         @Html.Partial("_ScoutsClube", Model.Home)
     </div>
     <div class="col-md-5 scouts-lista-time">
         @Html.Partial("_ScoutsClube", Model.Away)
     </div>
+    <script>
+        $(document).ready(function () {
+            setupCountDownScoutsAoVivo('@Url.Action("ScoutsResultados")', '@Url.Action("ScoutsJogo")');
+        });
+    </script>
 }

@@ -10,3 +10,21 @@
             $('#home > .navbar').addClass('navbar-transparent');
     });
 })();
+
+function setupCountDownScoutsAoVivo(urlResults, urlJogo) {
+    $('#spanCountDown').countdown(getNovaData(), function (event) {
+        $(this).html(event.strftime('%S')); //event.strftime('%D days %H:%M:%S')
+    })
+    .on('finish.countdown', function (event) {
+        $("#divLoading").css("display", "block");
+
+        $("#listaJogos").load(urlResults);
+        $("#divConfronto").load(urlJogo + '?idJogo=' + jogoCorrente);
+
+        $("#divLoading").css("display", "none");
+    });
+    function getNovaData() {
+        var data = new Date(); data.setSeconds(data.getSeconds() + 30*6);
+        return data;
+    }
+}

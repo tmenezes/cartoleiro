@@ -18,12 +18,12 @@ namespace Cartoleiro.Web
             BundleConfig.RegisterBundles(BundleTable.Bundles);
 
             CartoleiroApp.Iniciar();
-            ScoutsOnLineFacade.Iniciar();
+            ScoutsAoVivoFacade.Iniciar();
         }
 
         protected void Application_BeginRequest(object sender, EventArgs e)
         {
-            ScoutsOnLineFacade.SetHttpContext(HttpContext.Current);
+            ScoutsAoVivoFacade.SetHttpContext(HttpContext.Current);
         }
 
         protected void Application_EndRequest(object sender, EventArgs e)

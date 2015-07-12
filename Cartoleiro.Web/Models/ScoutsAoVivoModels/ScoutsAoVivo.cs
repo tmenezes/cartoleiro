@@ -33,9 +33,14 @@ namespace Cartoleiro.Web.Models.ScoutsAoVivoModels
 
         public string GetPlacar()
         {
+            return GetPlacar("0");
+        }
+
+        public string GetPlacar(string valorDefault)
+        {
             return !string.IsNullOrEmpty(Score)
                 ? Score
-                : "0";
+                : valorDefault;
         }
     }
 
