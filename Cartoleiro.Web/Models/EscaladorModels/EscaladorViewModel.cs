@@ -1,6 +1,7 @@
 ﻿using System.ComponentModel;
 using System.ComponentModel.DataAnnotations;
 using Cartoleiro.Core.Cartola;
+using Cartoleiro.Web.AppCode.MvcHelpers;
 
 namespace Cartoleiro.Web.Models.EscaladorModels
 {
@@ -50,12 +51,14 @@ namespace Cartoleiro.Web.Models.EscaladorModels
         public EscaladorViewModel()
         {
             EsquemaTatico = EsquemaTatico._442;
-            Patrimonio = 100;
+            Patrimonio = 999;
+            MediaMaiorQue = ViewModelHelper.MaiorMedia / 2;
+            JogosMaiorQue = ViewModelHelper.MaiorQtdeJogos / 2;
             ProporcionalNaPosicao = true;
             SomenteProvaveis = true;
 
             AnalisadorPontuacaoMedia = true;
-            AnalisadorUltimos5Jogos= true;
+            AnalisadorUltimos5Jogos = true;
             AnalisadorPesoDoClube = true;
         }
     }

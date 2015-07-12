@@ -8,6 +8,16 @@ namespace Cartoleiro.Web.AppCode.MvcHelpers
 {
     public static class ViewModelHelper
     {
+        public static int MaiorMedia { get; private set; }
+        public static int MaiorQtdeJogos { get; private set; }
+
+        static ViewModelHelper()
+        {
+            MaiorMedia = CalcularMaiorMedia();
+            MaiorQtdeJogos = CalcularMaiorQuantidadeDeJogos();
+        }
+
+
         public static IEnumerable<SelectListItem> EsquemasTaticos
         {
             get
@@ -44,7 +54,7 @@ namespace Cartoleiro.Web.AppCode.MvcHelpers
         {
             get
             {
-                var medias = Enumerable.Range(0, 10)
+                var medias = Enumerable.Range(1, MaiorMedia)
                                        .Select(i => new SelectListItem()
                                        {
                                            Value = i.ToString(),
@@ -58,7 +68,7 @@ namespace Cartoleiro.Web.AppCode.MvcHelpers
         {
             get
             {
-                var medias = Enumerable.Range(1, Campeonato.Rodadas.RodadaAtual.Numero - 1)
+                var medias = Enumerable.Range(1, MaiorQtdeJogos)
                                        .Select(i => new SelectListItem()
                                        {
                                            Value = i.ToString(),
@@ -66,6 +76,30 @@ namespace Cartoleiro.Web.AppCode.MvcHelpers
                                        });
                 return medias;
             }
+        }
+
+
+        private static int CalcularMaiorQuantidadeDeJogos()
+        {
+            return CalcularMaiorIndicador(j => j.Jogos);
+        }
+
+        private static int CalcularMaiorMedia()
+        {
+            return CalcularMaiorIndicador(j => j.Pontuacao.Media);
+        }
+
+        private static int CalcularMaiorIndicador(Func<Jogador, double> funcaoDeAnalise)
+        {
+            var posicoes = Enum.GetValues(typeof(Posicao)).OfType<Posicao>();
+            var mediasPorPosicoes = posicoes.Select(p => new
+            {
+                Posicao = p,
+                Indicador = CartoleiroApp.CartolaDataSource.Jogadores.Where(j => j.Posicao == p)
+                                                                     .Max(funcaoDeAnalise)
+            });
+
+            return (int)Math.Floor(mediasPorPosicoes.Min(i => i.Indicador));
         }
     }
 }
