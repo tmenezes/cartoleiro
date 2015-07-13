@@ -19,7 +19,7 @@ namespace Cartoleiro.Core.Confronto
         private const string MEDIDOR_MEDIA_ATAQUE = "Pontuação média do ataque";
         private const string MEDIDOR_MEDIA_CLUBE = "Pontuação média dos jogadores";
 
-        private IEnumerable<Jogador> _jogadores;
+        private readonly IEnumerable<Jogador> _jogadores;
 
         public Clube Mandande { get; set; }
         public Clube Visitante { get; set; }
@@ -127,21 +127,14 @@ namespace Cartoleiro.Core.Confronto
 
         private ItemDeMedicaoDeConfronto MedirMediaDoAtaque()
         {
-            try
-            {
-                var pontosMandante = _jogadores.Where(j => j.Clube == Mandande && j.Posicao == Posicao.Atacante).Average(j => j.Pontuacao.Media);
-                var pontosVisitante = _jogadores.Where(j => j.Clube == Visitante && j.Posicao == Posicao.Atacante).Average(j => j.Pontuacao.Media);
+            var pontosMandante = _jogadores.Where(j => j.Clube == Mandande && j.Posicao == Posicao.Atacante).Average(j => j.Pontuacao.Media);
+            var pontosVisitante = _jogadores.Where(j => j.Clube == Visitante && j.Posicao == Posicao.Atacante).Average(j => j.Pontuacao.Media);
 
-                var vencedor = (pontosMandante > pontosVisitante)
-                    ? Mandande
-                    : (pontosVisitante > pontosMandante) ? Visitante : null;
+            var vencedor = (pontosMandante > pontosVisitante)
+                ? Mandande
+                : (pontosVisitante > pontosMandante) ? Visitante : null;
 
-                return new ItemDeMedicaoDeConfronto(MEDIDOR_MEDIA_ATAQUE, vencedor, pontosMandante, pontosVisitante);
-            }
-            catch (Exception ex)
-            {
-                return null;
-            }
+            return new ItemDeMedicaoDeConfronto(MEDIDOR_MEDIA_ATAQUE, vencedor, pontosMandante, pontosVisitante);
         }
 
         private ItemDeMedicaoDeConfronto MedirMediaDoClube()
