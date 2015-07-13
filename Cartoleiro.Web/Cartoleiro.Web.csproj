@@ -187,6 +187,8 @@
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="App_Start\Startup.Auth.cs" />
     <Compile Include="Controllers\AccountController.cs" />
+    <Compile Include="Controllers\ConfrontosController.cs" />
+    <Compile Include="Controllers\JogadorController.cs" />
     <Compile Include="Controllers\ScoutsAoVivoController.cs" />
     <Compile Include="Controllers\EscaladorController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
@@ -197,7 +199,9 @@
     <Compile Include="Models\AccountModels\AccountViewModels.cs" />
     <Compile Include="Models\AccountModels\IdentityModels.cs" />
     <Compile Include="Models\AccountModels\ManageViewModels.cs" />
+    <Compile Include="Models\ConfrontosModels\ResultadoViewModel.cs" />
     <Compile Include="Models\EscaladorModels\EscaladorViewModel.cs" />
+    <Compile Include="Models\JogadorModels\FiltroJogadorViewModel.cs" />
     <Compile Include="Models\ScoutsAoVivoModels\ScoutsAoVivo.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Startup.cs" />
@@ -300,6 +304,12 @@
     <Content Include="Views\ScoutsAoVivo\_ScoutsPartida.cshtml" />
     <Content Include="Views\Shared\_TimeTabelaDetalhe.cshtml" />
     <Content Include="Views\ScoutsAoVivo\_ListaJogos.cshtml" />
+    <Content Include="Views\Confrontos\Index.cshtml" />
+    <Content Include="Views\Confrontos\_ListaConfrontos.cshtml" />
+    <Content Include="Views\Confrontos\_ConfrontoResult.cshtml" />
+    <Content Include="Views\Confrontos\_ItensConfronto.cshtml" />
+    <Content Include="Views\Jogador\Index.cshtml" />
+    <Content Include="Views\Jogador\_TabelaJogadores.cshtml" />
   </ItemGroup>
   <ItemGroup />
   <ItemGroup>

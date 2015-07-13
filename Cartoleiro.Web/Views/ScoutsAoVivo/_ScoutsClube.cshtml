@@ -6,7 +6,7 @@
         foreach (var item in Model.Playerlist.Items)
         {
             <li class="list-group-item">
-                <span class="pull-right scouts-lista-time-total label @item.Player.GetCorLabelTotal()">@item.Player.Total.ToString("F")</span>
+                <span class="pull-right scouts-lista-time-total label @item.Player.GetCssLabelTotal()">@item.Player.Total.ToString("F")</span>
                 <span class="text-muted">@item.Player.Position</span>&nbsp;&nbsp;&nbsp;<strong>@item.Player.Name</strong>&nbsp;&nbsp;&nbsp;<small>(<em>@item.Player.Scouts </em>)</small>
             </li>
         }
