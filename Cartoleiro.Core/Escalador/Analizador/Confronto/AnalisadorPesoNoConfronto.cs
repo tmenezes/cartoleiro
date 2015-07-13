@@ -2,7 +2,7 @@ using System.Collections.Generic;
 
 namespace Cartoleiro.Core.Escalador.Analizador.Confronto
 {
-    public class AnalisadorPesoDoClube : AnalisadorGenerico, IAnalisador
+    public class AnalisadorPesoNoConfronto : AnalisadorGenerico, IAnalisador
     {
         public void Analisar(IEnumerable<PontuacaoDeEscalacao> ranqueamento)
         {

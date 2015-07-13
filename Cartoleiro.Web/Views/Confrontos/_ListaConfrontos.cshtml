@@ -1,0 +1,28 @@
+﻿@model Cartoleiro.Web.Models.ScoutsAoVivoModels.FixtureMatches
+@using Cartoleiro.Core.Cartola
+@using Cartoleiro.Web.AppCode.Extensions
+@using Cartoleiro.Web.AppCode.HtmlHelpers
+
+@foreach (var jogo in Campeonato.Rodadas.ProximaRodada.Jogos)
+{
+    @Ajax.ActionLink(jogo,
+    @<div class="col-md-2 panel panel-default panel-partida">
+        <div class="panel-body">
+            <div class="media">
+                <div class="media-left">
+                    <img src="@jogo.Mandante.GetUrlImagem()" width="32" height="32" alt="@jogo.Mandante.Nome" title="@jogo.Mandante.Nome" />
+                </div>
+                <div class="media-body media-middle text-center panel-partida-placar">
+                    <span><strong>&nbsp;</strong></span>
+                    <span>x</span>
+                    <span><strong>&nbsp;</strong></span>
+                </div>
+                <div class="media-right">
+                    <img src="@jogo.Visitante.GetUrlImagem()" width="32" height="32" alt="@jogo.Visitante.Nome" title="@jogo.Visitante.Nome" />
+                </div>
+            </div>
+        </div>
+    </div>, "AnalisarConfronto", "Confrontos", new { idJogo = jogo.GetIdJogo() }, new AjaxOptions { UpdateTargetId = "divConfronto", LoadingElementId = "divLoading" })
+}
+
+

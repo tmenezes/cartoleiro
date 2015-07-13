@@ -1,0 +1,30 @@
+﻿@using Cartoleiro.Web.AppCode.Extensions
+@using Cartoleiro.Web.Models.ConfrontosModels
+@model Cartoleiro.Core.Confronto.ResultadoDoConfronto
+
+@if (Model != null)
+{
+    <div class="row panel panel-default panel-scouts-confronto">
+        <div class="panel-body">
+            <div class="panel-scouts-confronto-mandante">
+                <span>@Model.Mandande.Nome</span>
+                <img src="@Model.Mandande.GetUrlImagem()" width="32" height="32" alt="@Model.Mandande.Nome" title="@Model.Mandande.Nome" />
+            </div>
+            <div class="pull-left">
+                <span><strong>@Model.TotalMandante</strong></span>
+                <span>x</span>
+                <span><strong>@Model.TotalVisitante</strong></span>
+            </div>
+            <div class="panel-scouts-confronto-visitante">
+                <img src="@Model.Visitante.GetUrlImagem()" width="32" height="32" alt="@Model.Visitante.Nome" title="@Model.Visitante.Nome" />
+                <span>@Model.Visitante.Nome</span>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-5 col-sm-5 scouts-lista-time">
+        @Html.Partial("_ItensConfronto", new ResultadoViewModel(Model, Model.Mandande))
+    </div>
+    <div class="col-md-5 col-sm-5 scouts-lista-time">
+        @Html.Partial("_ItensConfronto", new ResultadoViewModel(Model, Model.Visitante))
+    </div>
+}

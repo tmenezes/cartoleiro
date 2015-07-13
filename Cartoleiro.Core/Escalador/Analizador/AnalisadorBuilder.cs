@@ -92,7 +92,7 @@ namespace Cartoleiro.Core.Escalador.Analizador
         // confronto
         public AnalisadorBuilder PesoDoClube()
         {
-            Analisadores.Add(new AnalisadorPesoDoClube());
+            Analisadores.Add(new AnalisadorPesoNoConfronto());
             return this;
         }
 

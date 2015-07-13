@@ -91,7 +91,7 @@ namespace Cartoleiro.Web.Models.ScoutsAoVivoModels
         [JsonProperty("goals")]
         public string Goals { get; set; }
 
-        public string GetCorLabelTotal()
+        public string GetCssLabelTotal()
         {
             if (Total < 0)
                 return "label-danger";

@@ -78,6 +78,20 @@ namespace Cartoleiro.Web.AppCode.MvcHelpers
             }
         }
 
+        public static IEnumerable<SelectListItem> Clubes
+        {
+            get
+            {
+                var clubes = CartoleiroApp.CartolaDataSource.Clubes.OrderBy(c => c.Nome)
+                                                            .Select(c => new SelectListItem()
+                                                            {
+                                                                Value = c.Nome,
+                                                                Text = c.Nome,
+                                                            });
+                return clubes;
+            }
+        }
+
 
         private static int CalcularMaiorQuantidadeDeJogos()
         {

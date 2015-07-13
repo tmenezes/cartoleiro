@@ -1,0 +1,13 @@
+﻿@{
+    ViewBag.Title = "Confrontos";
+}
+
+<h2 class="page-header">@ViewBag.Title <small>Analise quem será o vencedor do confronto</small></h2>
+<div id="listaJogos" class="row">
+    @Html.Partial("_ListaConfrontos")
+</div>
+<div class="row">
+    <div id="divLoading" class="text-center col-md-10" style="display: none"><img src="~/Images/loading.gif" alt="loading..." /></div>
+    <div id="divConfronto">
+    </div>
+</div>

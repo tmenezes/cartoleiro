@@ -19,7 +19,7 @@ namespace Cartoleiro.Core.Cartola
         public int GolsPro { get; set; }
         public int GolsContra { get; set; }
         public int SaldoDeGol { get; set; }
-        public double Aproveitamento { get { return Vitorias / Jogos * 100; } }
+        public double Aproveitamento { get { return Vitorias / (double)Jogos * 100; } }
         public UltimosJogos UltimosJogos { get; set; }
 
         public int VitoriasEmCasa
@@ -45,6 +45,24 @@ namespace Cartoleiro.Core.Cartola
 
                 return _vitoriasForaDeCasa.Value;
             }
+        }
+
+        public int JogosEmCasa
+        {
+            get { return Rodadas.JogosComoMandante(_clube).Count(); }
+        }
+        public int JogosForaDeCasa
+        {
+            get { return Rodadas.JogosComoVisitante(_clube).Count(); }
+        }
+
+        public double AproveitamentoEmCasa
+        {
+            get { return VitoriasEmCasa / (double)JogosEmCasa * 100; }
+        }
+        public double AproveitamentoForaDeCasa
+        {
+            get { return VitoriasForaDeCasa / (double)JogosForaDeCasa * 100; }
         }
 
         public static Rodadas Rodadas { get; set; }
