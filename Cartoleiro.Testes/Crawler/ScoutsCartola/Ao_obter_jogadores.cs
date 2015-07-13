@@ -8,6 +8,7 @@ using Microsoft.VisualStudio.TestTools.UnitTesting;
 namespace Cartoleiro.Testes.Crawler.ScoutsCartola
 {
     [TestClass]
+    [Ignore]
     public class Ao_obter_jogadores : AbstractTesteAutoAct
     {
         ScoutsCartolaSiteCrawler crawler;
@@ -23,7 +24,7 @@ namespace Cartoleiro.Testes.Crawler.ScoutsCartola
 
         public override void Act()
         {
-            jogadores = crawler.CarregarJogadores(10);
+            jogadores = crawler.CarregarJogadores(2);
         }
 
         [TestMethod]
