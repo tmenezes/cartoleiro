@@ -1,0 +1,42 @@
+﻿@using Cartoleiro.Web.AppCode.MvcHelpers
+@model Cartoleiro.Web.Models.JogadorModels.FiltroJogadorViewModel
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Jogadores</h2>
+@using (Html.BeginForm("Filtrar", "Jogador", FormMethod.Post, new { @class = "form-horizontal", role = "form" }))
+{
+    <div class="form-group">
+        @Html.LabelFor(m => m.NomeClube, new { @class = "col-md-2 control-label" })
+        <div class="col-md-10">
+            @Html.DropDownListFor(m => m.NomeClube, ViewModelHelper.Clubes, "Selecione", new { @class = "form-control" })
+        </div>
+    </div>
+    <div class="form-group">
+        <div class="col-sm-offset-2 col-sm-10">
+            <div class="checkbox">
+                <label>
+                    @Html.CheckBoxFor(m => m.SomenteProvaveis) Somente jogadores provaveis
+                </label>
+            </div>
+        </div>
+    </div>
+    <div class="form-group">
+        <div class="col-md-offset-2 col-md-10">
+            <input type="submit" class="btn btn-primary" value="Escalar time" />
+        </div>
+    </div>
+}
+@if (ViewData["JOGADORES"] != null)
+{
+    <div class="row">
+        <fieldset class="">
+            <legend>Jogadores</legend>
+        </fieldset>
+        @Html.Partial("_TabelaJogadores", ViewData["JOGADORES"])
+    </div>
+}
+
