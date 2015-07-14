@@ -13,7 +13,9 @@ namespace Cartoleiro.Crawler.Crawlers.ApiCartola
 {
     public class ApiCartolaSiteCrawler : ISiteCrawler
     {
+        private const string URL_CARTOLA = "http://api.cartola.globo.com";
         private const int MERCADO_ABERTO = 1;
+
         private readonly Uri _uriBase;
 
         public event EventHandler<CrawlingInfo> ObjetoCarregado;
@@ -32,6 +34,11 @@ namespace Cartoleiro.Crawler.Crawlers.ApiCartola
         }
         public bool SuportaRodadas { get { return false; } }
 
+
+        public ApiCartolaSiteCrawler()
+            : this(new Uri(URL_CARTOLA))
+        {
+        }
 
         public ApiCartolaSiteCrawler(Uri uriBase)
         {

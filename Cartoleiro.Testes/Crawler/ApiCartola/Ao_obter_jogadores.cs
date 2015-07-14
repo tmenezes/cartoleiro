@@ -16,9 +16,7 @@ namespace Cartoleiro.Testes.Crawler.ApiCartola
 
         public override void Arrange()
         {
-            var uri = new Uri("http://api.cartola.globo.com");
-
-            crawler = new ApiCartolaSiteCrawler(uri);
+            crawler = new ApiCartolaSiteCrawler();
         }
 
         public override void Act()

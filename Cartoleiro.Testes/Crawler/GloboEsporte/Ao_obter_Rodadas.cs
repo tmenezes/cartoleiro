@@ -1,4 +1,3 @@
-using System;
 using System.Collections.Generic;
 using System.Linq;
 using Cartoleiro.Core.Cartola;
@@ -16,9 +15,7 @@ namespace Cartoleiro.Testes.Crawler.GloboEsporte
 
         public override void Arrange()
         {
-            var uri = new Uri("http://globoesporte.globo.com/futebol/brasileirao-serie-a/");
-
-            crawler = new GloboEsporteSiteCrawler(uri);
+            crawler = new GloboEsporteSiteCrawler();
         }
 
         public override void Act()

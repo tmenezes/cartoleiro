@@ -11,6 +11,7 @@ namespace Cartoleiro.Crawler.Crawlers.GloboEsporte
 {
     public class GloboEsporteSiteCrawler : ISiteCrawler
     {
+        private const string URL_CARTOLA = "http://globoesporte.globo.com/futebol/brasileirao-serie-a";
         private readonly Uri _uriBase;
 
         public event EventHandler<CrawlingInfo> ObjetoCarregado;
@@ -18,6 +19,11 @@ namespace Cartoleiro.Crawler.Crawlers.GloboEsporte
         public bool SuportaJogadores { get; private set; }
         public bool SuportaRodadas { get; private set; }
 
+
+        public GloboEsporteSiteCrawler()
+            : this(new Uri(URL_CARTOLA))
+        {
+        }
 
         public GloboEsporteSiteCrawler(Uri uriBase)
         {
