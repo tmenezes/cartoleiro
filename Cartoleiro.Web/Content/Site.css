@@ -30,6 +30,13 @@ textarea {
     padding: 5px 8px;
     vertical-align: middle;
 }
+.table-cartoleiro a {
+  color: #97310e;
+}
+.table-cartoleiro a:hover,
+.table-cartoleiro a:focus {
+  color: #dd4814;
+}
 
 /* scouts ao vivo */
 .panel-partida {

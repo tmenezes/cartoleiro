@@ -9,21 +9,46 @@
 <h2 class="page-header">@ViewBag.Title <small>dados atualizados do Cartola FC</small></h2>
 <div class="row">
     <div class="col-sm-6 col-md-4">
-        <div class="thumbnail">
-            <img src="@Model.Clube.GetUrlImagem()" class="thumbnail" width="200" height="242" alt="@Model.Clube.Nome" data-toggle="tooltip" data-placement="left" title="@Model.Clube.GetTooltip()" />
-            <div class="caption">
+        <div class="panel panel-default">
+            <div class="panel-body">
+                <img src="~/Images/jogador.jpg" class="thumbnail" width="330" height="240" alt="@Model.Clube.Nome" data-toggle="tooltip" data-placement="left" title="@Model.Clube.GetTooltip()" />
                 <h3 class="text-center">@Model.Nome</h3>
-                <p>Clube: @Model.Clube.Nome</p>
-                <p>Posição: @Model.Posicao</p>
-                <p>Status: @Model.Status</p>
-                <p>Jogos: @Model.Jogos</p>
-                <p>Pontuação: @Model.Pontuacao.Media</p>
-                <p>Preço: @Model.Preco.Atual</p>
-                <p><a href="#" class="btn btn-primary" role="button">Clube</a> @Html.ActionLink("Escalador", "Index", "Escalador", null, new { @class = "btn btn-default" })</p>
+                <br />
+                <table class="table">
+                    <tbody>
+                        <tr>
+                            <td>Clube</td>
+                            <td>
+                                <img src="@Model.Clube.GetUrlImagem()" width="20" height="20" alt="@Model.Clube.Nome" title="@Model.Clube.Nome" style="margin-left: -30px; float: left" />
+                                @Model.Clube.Nome
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>Posição</td>
+                            <td>@Model.Posicao</td>
+                        </tr>
+                        <tr>
+                            <td>Status</td>
+                            <td>@Model.Status</td>
+                        </tr>
+                        <tr>
+                            <td>Jogos</td>
+                            <td>@Model.Jogos</td>
+                        </tr>
+                        <tr>
+                            <td>Pontuação</td>
+                            <td>@Model.Pontuacao.Media.ToString("F")</td>
+                        </tr>
+                        <tr>
+                            <td>Preço</td>
+                            <td>C$ @Model.Preco.Atual.ToString("F")</td>
+                        </tr>
+                    </tbody>
+                </table>
             </div>
         </div>
     </div>
-    <div class="col-md-4">
+    <div class="col-sm-6 col-md-4">
         <div class="panel panel-primary">
             <div class="panel-heading">
                 <h3 class="panel-title">Scouts atacando</h3>
@@ -34,14 +59,14 @@
                     {
                         <tr>
                             <td>@item.Item1</td>
-                            <td><span class="pull-right scouts-lista-time-total label label-default">@item.Item2</span></td>
+                            <td><span class="pull-right scouts-lista-time-total label label-primary">@item.Item2</span></td>
                         </tr>
                     }
                 </tbody>
             </table>
         </div>
     </div>
-    <div class="col-md-4">
+    <div class="col-sm-6 col-md-4">
         <div class="panel panel-info2">
             <div class="panel-heading">
                 <h3 class="panel-title">Scouts defendendo</h3>
@@ -52,11 +77,19 @@
                     {
                         <tr>
                             <td>@item.Item1</td>
-                            <td><span class="pull-right scouts-lista-time-total label label-default">@item.Item2</span></td>
+                            <td><span class="pull-right scouts-lista-time-total label label-info">@item.Item2</span></td>
                         </tr>
                     }
                 </tbody>
             </table>
         </div>
+    </div>
+</div>
+<div class="row">
+    <div class="col-sm-12 col-md-10">
+        <h3>Sobre o jogador</h3>
+        <p>@Model.Nome é @Model.Posicao no clube @Model.Clube.Nome no Campeonato Brasileiro 2015.</p>
+        <p>@Model.Nome jogou @Model.Jogos partidas e mantêm uma média de @Model.Pontuacao.Media.ToString("F") por jogo. Sua variação no último jogo foi de @Model.Pontuacao.Ultima.ToString("F") pontos.</p>
+        <p>Seu preço atual é de @Model.Preco.Atual.ToString("F") cartoletas. Sua variação no último jogo foi de C$ @Model.Preco.Variacao.ToString("F").</p>
     </div>
 </div>

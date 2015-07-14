@@ -237,6 +237,7 @@
     <Content Include="Images\clubes\saopaulo.png" />
     <Content Include="Images\clubes\sport.png" />
     <Content Include="Images\clubes\vasco.png" />
+    <Content Include="Images\jogador.jpg" />
     <Content Include="Images\loading.GIF" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
