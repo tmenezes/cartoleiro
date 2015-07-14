@@ -14,12 +14,13 @@ namespace Cartoleiro.Web.Controllers
             return View();
         }
 
-        public ActionResult Filtrar(FiltroJogadorViewModel filtro)
+        [HttpPost]
+        public ActionResult Index(FiltroJogadorViewModel filtro)
         {
             var clube = CartoleiroApp.CartolaDataSource.Clubes.FirstOrDefault(c => c.Nome == filtro.NomeClube);
             if (clube == null)
             {
-                return View("Index", filtro);
+                return View(filtro);
             }
 
             var jogadores = CartoleiroApp.CartolaDataSource.Jogadores.Where(j => j.Clube == clube)
@@ -31,7 +32,14 @@ namespace Cartoleiro.Web.Controllers
 
             ViewData["JOGADORES"] = jogadores;
 
-            return View("Index", filtro);
+            return View(filtro);
+        }
+
+        public ActionResult Detalhe(int id, string detalhe)
+        {
+            var jogador = CartoleiroApp.CartolaDataSource.Jogadores.FirstOrDefault(j => j.Id == id);
+
+            return View(jogador);
         }
     }
 }

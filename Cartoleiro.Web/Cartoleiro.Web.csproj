@@ -310,6 +310,7 @@
     <Content Include="Views\Confrontos\_ItensConfronto.cshtml" />
     <Content Include="Views\Jogador\Index.cshtml" />
     <Content Include="Views\Jogador\_TabelaJogadores.cshtml" />
+    <Content Include="Views\Jogador\Detalhe.cshtml" />
   </ItemGroup>
   <ItemGroup />
   <ItemGroup>

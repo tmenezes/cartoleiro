@@ -1,0 +1,62 @@
+﻿@using Cartoleiro.Web.AppCode.Extensions
+@model Cartoleiro.Core.Cartola.Jogador
+
+@{
+    ViewBag.Title = Model.Nome;
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2 class="page-header">@ViewBag.Title <small>dados atualizados do Cartola FC</small></h2>
+<div class="row">
+    <div class="col-sm-6 col-md-4">
+        <div class="thumbnail">
+            <img src="@Model.Clube.GetUrlImagem()" class="thumbnail" width="200" height="242" alt="@Model.Clube.Nome" data-toggle="tooltip" data-placement="left" title="@Model.Clube.GetTooltip()" />
+            <div class="caption">
+                <h3 class="text-center">@Model.Nome</h3>
+                <p>Clube: @Model.Clube.Nome</p>
+                <p>Posição: @Model.Posicao</p>
+                <p>Status: @Model.Status</p>
+                <p>Jogos: @Model.Jogos</p>
+                <p>Pontuação: @Model.Pontuacao.Media</p>
+                <p>Preço: @Model.Preco.Atual</p>
+                <p><a href="#" class="btn btn-primary" role="button">Clube</a> @Html.ActionLink("Escalador", "Index", "Escalador", null, new { @class = "btn btn-default" })</p>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-4">
+        <div class="panel panel-primary">
+            <div class="panel-heading">
+                <h3 class="panel-title">Scouts atacando</h3>
+            </div>
+            <table class="table">
+                <tbody>
+                    @foreach (var item in Model.Scouts.Atacando)
+                    {
+                        <tr>
+                            <td>@item.Item1</td>
+                            <td><span class="pull-right scouts-lista-time-total label label-default">@item.Item2</span></td>
+                        </tr>
+                    }
+                </tbody>
+            </table>
+        </div>
+    </div>
+    <div class="col-md-4">
+        <div class="panel panel-info2">
+            <div class="panel-heading">
+                <h3 class="panel-title">Scouts defendendo</h3>
+            </div>
+            <table class="table">
+                <tbody>
+                    @foreach (var item in Model.Scouts.Defendendo)
+                    {
+                        <tr>
+                            <td>@item.Item1</td>
+                            <td><span class="pull-right scouts-lista-time-total label label-default">@item.Item2</span></td>
+                        </tr>
+                    }
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>

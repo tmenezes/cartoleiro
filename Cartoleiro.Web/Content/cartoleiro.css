@@ -71,3 +71,22 @@
     .bs-callout-info h4 {
         color: #1b809e;
     }
+
+.panel-info2 {
+  border-color: #772953;
+}
+.panel-info2 > .panel-heading {
+  color: #ffffff;
+  background-color: #772953;
+  border-color: #772953;
+}
+.panel-info2 > .panel-heading + .panel-collapse > .panel-body {
+  border-top-color: #772953;
+}
+.panel-info2 > .panel-heading .badge {
+  color: #ffffff;
+  background-color: #772953;
+}
+.panel-info2 > .panel-footer + .panel-collapse > .panel-body {
+  border-bottom-color: #772953;
+}
