@@ -55,7 +55,7 @@
             </div>
             <table class="table">
                 <tbody>
-                    @foreach (var item in Model.Scouts.Atacando)
+                    @foreach (var item in Model.Scouts.Atacando())
                     {
                         <tr>
                             <td>@item.Item1</td>
@@ -73,7 +73,7 @@
             </div>
             <table class="table">
                 <tbody>
-                    @foreach (var item in Model.Scouts.Defendendo)
+                    @foreach (var item in Model.Scouts.Defendendo())
                     {
                         <tr>
                             <td>@item.Item1</td>

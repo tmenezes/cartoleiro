@@ -45,41 +45,35 @@ namespace Cartoleiro.Core.Cartola
             }
         }
 
-        public IEnumerable<Tuple<string, int>> Atacando
+        public IEnumerable<Tuple<string, int>> Atacando()
         {
-            get
-            {
-                return new List<Tuple<string, int>>()
-                       {
-                           new Tuple<string,int>("Faltas sofridas", FaltasSofridas),
-                           new Tuple<string,int>("Passes errados", PassesErrados),
-                           new Tuple<string,int>("Assistências", Assistencias),
-                           new Tuple<string,int>("Finalizações na trave", FinalizacoesNaTrave),
-                           new Tuple<string,int>("Finalizações defendidas", FinalizacoesDefendidas),
-                           new Tuple<string,int>("Finalizações fora", FinalizacoesFora),
-                           new Tuple<string,int>("Gols", Gols),
-                           new Tuple<string,int>("Impedimentos", Impedimentos),
-                           new Tuple<string,int>("Pênaltis perdidos", PenaltisPerdidos),
-                       };
-            }
+            return new List<Tuple<string, int>>()
+                   {
+                       new Tuple<string,int>("Faltas sofridas", FaltasSofridas),
+                       new Tuple<string,int>("Passes errados", PassesErrados),
+                       new Tuple<string,int>("Assistências", Assistencias),
+                       new Tuple<string,int>("Finalizações na trave", FinalizacoesNaTrave),
+                       new Tuple<string,int>("Finalizações defendidas", FinalizacoesDefendidas),
+                       new Tuple<string,int>("Finalizações fora", FinalizacoesFora),
+                       new Tuple<string,int>("Gols", Gols),
+                       new Tuple<string,int>("Impedimentos", Impedimentos),
+                       new Tuple<string,int>("Pênaltis perdidos", PenaltisPerdidos),
+                   };
         }
-        public IEnumerable<Tuple<string, int>> Defendendo
+        public IEnumerable<Tuple<string, int>> Defendendo()
         {
-            get
-            {
-                return new List<Tuple<string, int>>()
-                       {
-                           new Tuple<string,int>("Roubadas de bola", RoubadasDeBola),
-                           new Tuple<string,int>("Faltas cometidas", FaltasCometidas),
-                           new Tuple<string,int>("Gols contra", GolsContra),
-                           new Tuple<string,int>("Cartões amarelos", CartoesAmarelo),
-                           new Tuple<string,int>("Cartões vermelhos", CartoesVermelho),
-                           new Tuple<string,int>("Sem sofrer gols", SemGolSofrido),
-                           new Tuple<string,int>("Defesas difíceis", DefesasDificeis),
-                           new Tuple<string,int>("Defesas de pênaltis", DefesasDePenaltis),
-                           new Tuple<string,int>("Gols sofridos", GolsSofridos),
-                       };
-            }
+            return new List<Tuple<string, int>>()
+                   {
+                       new Tuple<string,int>("Roubadas de bola", RoubadasDeBola),
+                       new Tuple<string,int>("Faltas cometidas", FaltasCometidas),
+                       new Tuple<string,int>("Gols contra", GolsContra),
+                       new Tuple<string,int>("Cartões amarelos", CartoesAmarelo),
+                       new Tuple<string,int>("Cartões vermelhos", CartoesVermelho),
+                       new Tuple<string,int>("Sem sofrer gols", SemGolSofrido),
+                       new Tuple<string,int>("Defesas difíceis", DefesasDificeis),
+                       new Tuple<string,int>("Defesas de pênaltis", DefesasDePenaltis),
+                       new Tuple<string,int>("Gols sofridos", GolsSofridos),
+                   };
         }
 
 
