@@ -23,7 +23,7 @@
 
         public override string ToString()
         {
-            return string.Format("{0} - Pontuacao: {1}, Preco: {2}", Nome, Pontuacao, Preco);
+            return string.Format("{0} [{1}/{4}] - Pts: {2}, C$: {3}", Nome, Clube.Nome, Pontuacao, Preco.Atual, Status);
         }
     }
 }

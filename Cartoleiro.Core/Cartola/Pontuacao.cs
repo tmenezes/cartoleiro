@@ -13,7 +13,7 @@ namespace Cartoleiro.Core.Cartola
 
         public override string ToString()
         {
-            return string.Format("Med: {0}, Ult: {1}", Media, Ultima);
+            return string.Format("{0}/{1}", Media, Ultima);
         }
     }
 }
