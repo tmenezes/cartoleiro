@@ -15,9 +15,9 @@ namespace Cartoleiro.Web.Controllers
             return View();
         }
 
-        public ActionResult ScoutsJogo(string idJogo)
+        public ActionResult ScoutsJogo(string id)
         {
-            var scouts = ScoutsAoVivoFacade.ObterScoutsAoVivo(idJogo);
+            var scouts = ScoutsAoVivoFacade.ObterScoutsAoVivo(id);
             var scoutsMatch = (scouts != null)
                 ? scouts.ScoutsMatch
                 : null;

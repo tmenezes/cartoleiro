@@ -28,7 +28,7 @@
     </div>
     <script>
         $(document).ready(function () {
-            setupCountDownScoutsAoVivo('@Url.Action("ScoutsResultados")', '@Url.Action("ScoutsJogo")');
+            setupCountDownScoutsAoVivo('@Url.Action("ScoutsResultados")', '@Url.Action("ScoutsJogo", new { id = ""})');
         });
     </script>
 }

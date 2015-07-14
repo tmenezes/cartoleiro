@@ -43,7 +43,7 @@
 
             $("#listaJogos a").on("click", function (event) {
                 var href = $(event.currentTarget).prop("href") + "";
-                jogoCorrente = href.substring(href.indexOf("idJogo=") + 7);
+                jogoCorrente = href.substring(href.indexOf("/ScoutsJogo/") + 12);
             });
         });
     </script>

@@ -12,10 +12,10 @@ namespace Cartoleiro.Web.Controllers
             return View();
         }
 
-        public ActionResult AnalisarConfronto(string idJogo)
+        public ActionResult AnalisarConfronto(string id)
         {
-            var mandante = ModelUtils.GetMandande(idJogo);
-            var visitante = ModelUtils.GetVisitante(idJogo);
+            var mandante = ModelUtils.GetMandande(id);
+            var visitante = ModelUtils.GetVisitante(id);
 
             if (mandante == null || visitante == null)
             {
