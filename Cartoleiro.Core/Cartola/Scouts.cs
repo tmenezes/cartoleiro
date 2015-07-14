@@ -20,6 +20,10 @@
         public int CartoesAmarelo { get; set; }
         public int CartoesVermelho { get; set; }
 
+        public int DefesasDificeis { get; set; }
+        public int DefesasDePenaltis { get; set; }
+        public int GolsSofridos { get; set; }
+
         public int TotalDePositivos
         {
             get
@@ -34,6 +38,32 @@
             {
                 return PassesErrados + Impedimentos + PenaltisPerdidos +
                        FaltasCometidas + GolsContra + CartoesAmarelo + CartoesVermelho;
+            }
+        }
+
+        public void SetScout(string nome, int quantidade)
+        {
+            switch (nome)
+            {
+                case "FS": FaltasSofridas = quantidade; break;
+                case "A": Assistencias = quantidade; break;
+                case "FT": FinalizacoesNaTrave = quantidade; break;
+                case "FD": FinalizacoesDefendidas = quantidade; break;
+                case "FF": FinalizacoesFora = quantidade; break;
+                case "G": Gols = quantidade; break;
+                case "RB": RoubadasDeBola = quantidade; break;
+
+                case "PE": PassesErrados = quantidade; break;
+                case "I": Impedimentos = quantidade; break;
+                case "PP": PenaltisPerdidos = quantidade; break;
+                case "FC": FaltasCometidas = quantidade; break;
+                case "GC": GolsContra = quantidade; break;
+                case "CA": CartoesAmarelo = quantidade; break;
+                case "CV": CartoesVermelho = quantidade; break;
+
+                case "DD": DefesasDificeis = quantidade; break;
+                case "DP": DefesasDePenaltis = quantidade; break;
+                case "GS": GolsSofridos = quantidade; break;
             }
         }
     }

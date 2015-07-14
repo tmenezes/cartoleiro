@@ -30,9 +30,15 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="Newtonsoft.Json, Version=7.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\packages\Newtonsoft.Json.7.0.1\lib\net45\Newtonsoft.Json.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Net.Http.WebRequest" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -48,6 +54,10 @@
     <Compile Include="ClubeCrawler.cs" />
     <Compile Include="Crawler.cs" />
     <Compile Include="CrawlerDataSource.cs" />
+    <Compile Include="Crawlers\ApiCartola\Json\MercadoAtletas.cs" />
+    <Compile Include="Crawlers\ApiCartola\ApiCartolaJogadorCrawler.cs" />
+    <Compile Include="Crawlers\ApiCartola\ApiCartolaSiteCrawler.cs" />
+    <Compile Include="Crawlers\ApiCartola\Json\MercadoStatus.cs" />
     <Compile Include="Crawlers\GloboEsporte\GloboEsporteClubeCrawler.cs" />
     <Compile Include="Crawlers\GloboEsporte\GloboEsporteSiteCrawler.cs" />
     <Compile Include="CrawlingInfo.cs" />
@@ -57,6 +67,7 @@
     <Compile Include="Crawlers\ScoutsCartola\ScoutsCartolaJogadorCrawler.cs" />
     <Compile Include="Crawlers\ScoutsCartola\ScoutsCartolaSiteCrawler.cs" />
     <Compile Include="RodadaCrawler.cs" />
+    <Compile Include="Utils\HttpClientHelper.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\Cartoleiro.Core\Cartoleiro.Core.csproj">
