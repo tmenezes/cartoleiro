@@ -13,10 +13,10 @@ namespace Cartoleiro.Core.Escalador.Analizador.Jogador
                 switch (item.Jogador.Posicao)
                 {
                     case Posicao.Goleiro:
-                        return item.Jogador.Scouts.FinalizacoesDefendidas;
+                        return item.Jogador.Scouts.DefesasDificeis;
 
                     case Posicao.Lateral:
-                        return item.Jogador.Scouts.TotalDePositivos;
+                        return item.Jogador.Scouts.SemGolSofrido;
 
                     case Posicao.Zagueiro:
                         return item.Jogador.Scouts.RoubadasDeBola;

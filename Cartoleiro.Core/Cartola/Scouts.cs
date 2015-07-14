@@ -20,6 +20,7 @@
         public int CartoesAmarelo { get; set; }
         public int CartoesVermelho { get; set; }
 
+        public int SemGolSofrido { get; set; }
         public int DefesasDificeis { get; set; }
         public int DefesasDePenaltis { get; set; }
         public int GolsSofridos { get; set; }
@@ -61,6 +62,7 @@
                 case "CA": CartoesAmarelo = quantidade; break;
                 case "CV": CartoesVermelho = quantidade; break;
 
+                case "SG": SemGolSofrido = quantidade; break;
                 case "DD": DefesasDificeis = quantidade; break;
                 case "DP": DefesasDePenaltis = quantidade; break;
                 case "GS": GolsSofridos = quantidade; break;
