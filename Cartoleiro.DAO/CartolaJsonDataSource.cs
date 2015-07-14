@@ -48,7 +48,7 @@ namespace Cartoleiro.DAO
             // executa ajustes no datasource json
             foreach (var jogador in Jogadores)
             {
-                var clube = Clubes.FirstOrDefault(c => c.Nome == jogador.Clube.Nome);
+                var clube = Clubes.FirstOrDefault(c => string.Equals(c.Nome, jogador.Clube.Nome, StringComparison.CurrentCultureIgnoreCase));
 
                 if (clube != null)
                     jogador.Clube = clube;
