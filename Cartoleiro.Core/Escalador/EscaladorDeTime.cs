@@ -98,7 +98,7 @@ namespace Cartoleiro.Core.Escalador
 
         public EscaladorDeTime SomenteProvaveis(bool valor)
         {
-            _somenteProvaveis = true;
+            _somenteProvaveis = valor;
             return this;
         }
         public EscaladorDeTime DistribuirProporcionalNaPosicao(bool valor)
@@ -149,8 +149,9 @@ namespace Cartoleiro.Core.Escalador
         {
             var jogadores = CartolaDS.Jogadores;
 
-            if (_somenteProvaveis)
-                jogadores = jogadores.Where(j => j.Status == Status.Provavel);
+            jogadores = (_somenteProvaveis)
+                ? jogadores.Where(j => j.Status == Status.Provavel)
+                : jogadores.Where(j => j.Status == Status.Provavel || j.Status == Status.Duvida);
 
             if (_mediaLimite.HasValue)
                 jogadores = jogadores.Where(j => j.Pontuacao.Media > _mediaLimite.Value);

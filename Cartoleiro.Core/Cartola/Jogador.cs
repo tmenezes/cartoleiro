@@ -2,6 +2,7 @@
 {
     public class Jogador
     {
+        public int Id { get; set; }
         public string Nome { get; set; }
         public Clube Clube { get; set; }
         public Posicao Posicao { get; set; }

@@ -8,5 +8,6 @@ namespace Cartoleiro.Core.Cartola
         Provavel,
         Suspenso,
         Vendido,
+        Desconhecido,
     }
 }

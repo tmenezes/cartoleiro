@@ -13,6 +13,7 @@ namespace Cartoleiro.Crawler.Crawlers.ApiCartola
 
         public static Jogador ObterJogador(Atleta atleta)
         {
+            var id = atleta.Id;
             var nome = atleta.Apelido;
             var clube = CrawlerHelper.GetClube(atleta.Clube.Nome);
 
@@ -22,6 +23,7 @@ namespace Cartoleiro.Crawler.Crawlers.ApiCartola
 
             var jogador = new Jogador(nome, clube, posicao)
                           {
+                              Id = id,
                               Preco = GetPreco(atleta),
                               Pontuacao = GetPontuacao(atleta),
                               Jogos = GetQuantidadeDeJogos(atleta),
@@ -101,7 +103,7 @@ namespace Cartoleiro.Crawler.Crawlers.ApiCartola
                 return Status.Contundido;
             }
 
-            if (status.ToLower() == "dúvida" || status.ToLower() == "nulo")
+            if (status.ToLower() == "dúvida")
             {
                 return Status.Duvida;
             }
@@ -119,6 +121,11 @@ namespace Cartoleiro.Crawler.Crawlers.ApiCartola
             if (status.ToLower() == "vendido")
             {
                 return Status.Vendido;
+            }
+
+            if (status.ToLower() == "nulo")
+            {
+                return Status.Desconhecido;
             }
 
             return Status.Provavel;
