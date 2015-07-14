@@ -1,10 +1,7 @@
 using System;
 using System.Globalization;
-using System.Linq;
 using Cartoleiro.Core.Cartola;
 using Cartoleiro.Crawler.Crawlers.ApiCartola.Json;
-using OpenQA.Selenium;
-using Clube = Cartoleiro.Core.Cartola.Clube;
 using Posicao = Cartoleiro.Core.Cartola.Posicao;
 
 namespace Cartoleiro.Crawler.Crawlers.ApiCartola

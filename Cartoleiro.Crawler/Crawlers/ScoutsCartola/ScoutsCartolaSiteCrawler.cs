@@ -5,7 +5,6 @@ using System.Linq;
 using System.Threading.Tasks;
 using Cartoleiro.Core.Cartola;
 using OpenQA.Selenium;
-using OpenQA.Selenium.PhantomJS;
 
 namespace Cartoleiro.Crawler.Crawlers.ScoutsCartola
 {

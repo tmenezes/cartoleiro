@@ -1,4 +1,3 @@
-using System;
 using Cartoleiro.Core.Cartola;
 
 namespace Cartoleiro.Core.Confronto

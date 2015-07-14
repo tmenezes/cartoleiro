@@ -1,13 +1,9 @@
 using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
 using Cartoleiro.Core.Cartola;
 using Cartoleiro.Crawler.Crawlers.ApiCartola.Json;
 using Cartoleiro.Crawler.Utils;
 using Newtonsoft.Json;
-using OpenQA.Selenium;
-using Clube = Cartoleiro.Crawler.Crawlers.ApiCartola.Json.Clube;
 
 namespace Cartoleiro.Crawler.Crawlers.ApiCartola
 {
