@@ -1,10 +1,10 @@
-using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
 using System.Text;
 using Cartoleiro.Core.Cartola;
 using Cartoleiro.Core.Data;
+using Cartoleiro.Core.Extensions;
 using Newtonsoft.Json;
 
 namespace Cartoleiro.DAO
@@ -46,16 +46,7 @@ namespace Cartoleiro.DAO
             Jogadores = GetObjetos<Jogador>(ArquivoJogadores);
 
             // executa ajustes no datasource json
-            foreach (var jogador in Jogadores)
-            {
-                var clube = Clubes.FirstOrDefault(c => string.Equals(c.Nome, jogador.Clube.Nome, StringComparison.CurrentCultureIgnoreCase));
-
-                if (clube != null)
-                    jogador.Clube = clube;
-
-                if (jogador.Scouts == null)
-                    jogador.Scouts = new Scouts();
-            }
+            Jogadores.SetClubes(Clubes);
         }
 
         private void PopularRodadas()

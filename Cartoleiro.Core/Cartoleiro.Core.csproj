@@ -75,6 +75,7 @@
     <Compile Include="Cartola\Preco.cs" />
     <Compile Include="Escalador\Carteira.cs" />
     <Compile Include="Escalador\PontuacaoDeEscalacao.cs" />
+    <Compile Include="Extensions\IEnumerableJogadorExtensions.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Cartola\Clube.cs" />
     <Compile Include="Escalador\Time.cs" />

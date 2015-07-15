@@ -19,6 +19,7 @@ namespace Cartoleiro.Web
 
             CartoleiroApp.Iniciar();
             ScoutsAoVivoFacade.Iniciar();
+            AtualizadorCartola.Iniciar();
         }
 
         protected void Application_BeginRequest(object sender, EventArgs e)

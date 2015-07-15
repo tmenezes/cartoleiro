@@ -169,6 +169,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AppCode\AtualizadorCartola.cs" />
     <Compile Include="AppCode\CartoleiroKeepAlive.cs" />
     <Compile Include="AppCode\CartoleiroApp.cs" />
     <Compile Include="AppCode\Extensions\ClubeExtensions.cs" />
@@ -325,6 +326,10 @@
     <ProjectReference Include="..\Cartoleiro.Core\Cartoleiro.Core.csproj">
       <Project>{AFEADE17-C858-4AA3-A8D0-9E43B9B0785A}</Project>
       <Name>Cartoleiro.Core</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Cartoleiro.Crawler\Cartoleiro.Crawler.csproj">
+      <Project>{C36B08B4-3B85-483E-8DEF-01AB3055EB2E}</Project>
+      <Name>Cartoleiro.Crawler</Name>
     </ProjectReference>
     <ProjectReference Include="..\Cartoleiro.DAO\Cartoleiro.DAO.csproj">
       <Project>{AEBA7A3B-3F6C-4BDD-BBAC-7BB737F5FAB4}</Project>

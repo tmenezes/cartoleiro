@@ -7,7 +7,7 @@
 }
 
 <h2>Jogadores</h2>
-@using (Html.BeginForm("Filtrar", "Jogador", FormMethod.Post, new { @class = "form-horizontal", role = "form" }))
+@using (Html.BeginForm("Index", "Jogador", FormMethod.Post, new { @class = "form-horizontal", role = "form" }))
 {
     <div class="form-group">
         @Html.LabelFor(m => m.NomeClube, new { @class = "col-md-2 control-label" })

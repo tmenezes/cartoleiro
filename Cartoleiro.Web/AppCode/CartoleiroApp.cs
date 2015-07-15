@@ -18,6 +18,15 @@ namespace Cartoleiro.Web.AppCode
             EscalarMelhorTime();
         }
 
+        public static void AtualizarDataSource(ICartolaDataSource cartolaDataSource)
+        {
+            lock (CartolaDataSource)
+            {
+                CartolaDataSource = cartolaDataSource;
+            }
+        }
+
+
         private static void EscalarMelhorTime()
         {
             var escalador = new EscaladorDeTime(CartolaDataSource)
