@@ -18,7 +18,7 @@ namespace Cartoleiro.Crawler.Utils
                 client.BaseAddress = new Uri(urlBase);
 
                 var response = client.GetAsync(urlRecurso).Result;
-
+                
                 if (!response.IsSuccessStatusCode)
                     return null;
 

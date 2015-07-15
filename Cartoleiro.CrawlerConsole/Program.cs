@@ -6,6 +6,7 @@ using System.Text;
 using System.Threading.Tasks;
 using Cartoleiro.Core.Data;
 using Cartoleiro.Crawler;
+using Cartoleiro.Crawler.Crawlers.ApiCartola;
 using Newtonsoft.Json;
 
 namespace Cartoleiro.CrawlerConsole
@@ -50,9 +51,12 @@ namespace Cartoleiro.CrawlerConsole
             Console.WriteLine("");
             Console.WriteLine("Salvando informacao capturada...");
 
-            SavlarDados(dataSource.Clubes, ArquivoClubesJson);
-            SavlarDados(dataSource.Jogadores, ArquivoJogadoresJson);
-            SavlarDados(dataSource.Rodadas, ArquivoRodadasJson);
+            if (dataSource != null)
+            {
+                SavlarDados(dataSource.Clubes, ArquivoClubesJson);
+                SavlarDados(dataSource.Jogadores, ArquivoJogadoresJson);
+                SavlarDados(dataSource.Rodadas, ArquivoRodadasJson);
+            }
 
             Console.WriteLine("");
             Console.WriteLine("Crawler concluido!!! Pressione qualquer tecla para sair.");
@@ -94,6 +98,7 @@ namespace Cartoleiro.CrawlerConsole
                 Console.WriteLine("2 - Jogadores ");
                 Console.WriteLine("3 - Rodadas ");
                 Console.WriteLine("4 - Completa");
+                Console.WriteLine("5 - Imagem Jogadores");
                 var tipoSelecionado = Console.ReadLine();
 
                 try
@@ -126,10 +131,20 @@ namespace Cartoleiro.CrawlerConsole
                 case TipoExecucaoCrawler.Rodadas:
                     return crawler.ExecutarCrawlerDeRodadas;
 
+                case TipoExecucaoCrawler.ImagemJogadores:
+                    return BaixarImagemJogadores;
+
                 case TipoExecucaoCrawler.Completa:
                 default:
                     return crawler.Executar;
             }
+        }
+
+        private static ICartolaDataSource BaixarImagemJogadores()
+        {
+            new ApiCartolaImagemJogadoresCrawler().BaixarImagens();
+            
+            return null;
         }
 
         private static void Crawler_ObjetoCarregado(object sender, CrawlingInfo e)

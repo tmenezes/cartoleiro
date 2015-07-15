@@ -54,6 +54,7 @@
     <Compile Include="ClubeCrawler.cs" />
     <Compile Include="Crawler.cs" />
     <Compile Include="CrawlerDataSource.cs" />
+    <Compile Include="Crawlers\ApiCartola\ApiCartolaImagemJogadoresCrawler.cs" />
     <Compile Include="Crawlers\ApiCartola\Json\MercadoAtletas.cs" />
     <Compile Include="Crawlers\ApiCartola\ApiCartolaJogadorCrawler.cs" />
     <Compile Include="Crawlers\ApiCartola\ApiCartolaSiteCrawler.cs" />
