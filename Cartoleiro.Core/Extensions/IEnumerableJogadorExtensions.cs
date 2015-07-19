@@ -23,11 +23,17 @@ namespace Cartoleiro.Core.Extensions
 
         public static IEnumerable<Jogador> ElencoDoClube(this IEnumerable<Jogador> jogadores, Clube clube)
         {
-            return jogadores.Where(j => j.Clube == clube);
+            return jogadores.Where(j => j.Clube == clube).OrdenarComoTime();
         }
+
         public static IEnumerable<Jogador> JogadoresTitularesDoClube(this IEnumerable<Jogador> jogadores, Clube clube)
         {
-            return ElencoDoClube(jogadores, clube).Where(j => j.Status == Status.Provavel);
+            return ElencoDoClube(jogadores, clube).Where(j => j.Status == Status.Provavel).OrdenarComoTime();
+        }
+
+        public static IEnumerable<Jogador> OrdenarComoTime(this IEnumerable<Jogador> jogadores)
+        {
+            return jogadores.OrderBy(j => (int)j.Posicao);
         }
     }
 }
