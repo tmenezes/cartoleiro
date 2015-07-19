@@ -17,7 +17,9 @@
                 <td>
                     <div class="media">
                         <div class="media-left media-middle">
-                            <img src="@jogador.Clube.GetUrlImagem()" width="32" height="32" alt="@jogador.Clube.Nome" data-toggle="tooltip" data-placement="left" title="@jogador.Clube.GetTooltip()" />
+                            <a href="@Url.Action("Detalhe", "Clube", new { id = jogador.Clube.GetNomeNormalizado() })">
+                                <img src="@jogador.Clube.GetUrlImagem()" width="32" height="32" alt="@jogador.Clube.Nome" data-toggle="tooltip" data-placement="left" title="@jogador.Clube.GetTooltip()" />
+                            </a>
                         </div>
                         <div class="media-body media-jogador">
                             <span class="text-muted">@jogador.Posicao</span><br />

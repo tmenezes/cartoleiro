@@ -91,3 +91,10 @@
         @Html.Partial("_TabelaJogadores", ViewData.GetElencoDoClube())
     </div>
 </div>
+@section scripts{
+    <script>
+        $(document).ready(function () {
+            $('[data-toggle="tooltip"]').tooltip();
+        })
+    </script>
+}

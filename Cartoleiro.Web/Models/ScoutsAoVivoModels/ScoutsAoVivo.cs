@@ -23,6 +23,12 @@ namespace Cartoleiro.Web.Models.ScoutsAoVivoModels
         [JsonProperty("playerlist")]
         public Playerlist Playerlist { get; set; }
 
+        public string GetNomeNormalizado()
+        {
+            var clubeSemAcento = ModelUtils.RemoverAcentos(Name.ToLower().Replace(" ", ""));
+            return clubeSemAcento;
+        }
+
         public string GetUrlImagem()
         {
             var nomeSemAcento = ModelUtils.RemoverAcentos(Name.ToLower().Replace(" ", ""));
