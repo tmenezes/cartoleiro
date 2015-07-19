@@ -1,4 +1,7 @@
-﻿using System.Web;
+﻿using System.Collections.Generic;
+using System.Linq;
+using System.Web;
+using Cartoleiro.Core.Cartola;
 using Cartoleiro.Core.Data;
 using Cartoleiro.Core.Escalador;
 using Cartoleiro.Core.Escalador.Analizador;
@@ -25,7 +28,7 @@ namespace Cartoleiro.Web.AppCode
                 CartolaDataSource = cartolaDataSource;
             }
         }
-
+        
 
         private static void EscalarMelhorTime()
         {

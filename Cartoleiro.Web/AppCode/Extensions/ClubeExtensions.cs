@@ -13,6 +13,13 @@ namespace Cartoleiro.Web.AppCode.Extensions
             return UrlHelper.GenerateContentUrl(imagem, HttpContext.Current.Request.RequestContext.HttpContext);
         }
 
+        public static string GetUrlImagemGrande(this Clube clube)
+        {
+            var imagem = string.Format("~/Images/clubes/{0}_120px.png", GetNomeNormalizado(clube));
+
+            return UrlHelper.GenerateContentUrl(imagem, HttpContext.Current.Request.RequestContext.HttpContext);
+        }
+
         public static string GetTooltip(this Clube clube)
         {
             return string.Format("{0}: {1}º lugar", clube.Nome, clube.Campeonato.Posicao);

@@ -3,7 +3,8 @@
 @using Cartoleiro.Web.AppCode.Extensions
 
 @{
-    var jogadores = CartoleiroApp.CartolaDataSource.Jogadores.Where(j => j.Posicao != Posicao.Tecnico)
+    var minimoDeJogos = (int)(Campeonato.Rodadas.RodadaAtual.Numero * 0.25);
+    var jogadores = CartoleiroApp.CartolaDataSource.Jogadores.Where(j => j.Posicao != Posicao.Tecnico && j.Jogos >= minimoDeJogos)
                                                              .OrderByDescending(j => j.Pontuacao.Media)
                                                              .Take(50)
                                                              .ToList();
@@ -26,10 +27,12 @@
                 <td>
                     <div class="media">
                         <div class="media-left media-middle">
+                            <a href="@Url.Action("Detalhe", "Clube", new { id = jogador.Clube.GetNomeNormalizado() })">
                             <img src="@Url.Content(jogador.Clube.GetUrlImagem())" width="32" height="32" alt="@jogador.Clube.Nome" data-toggle="tooltip" data-placement="left" title="@jogador.Clube.GetTooltip()" />
+                            </a>
                         </div>
                         <div class="media-body media-jogador">
-                            <span class="text-muted">@jogador.Posicao</span><br/>
+                            <span class="text-muted">@jogador.Posicao</span><br />
                             <a href="@Url.Action("Detalhe", "Jogador", new { id = jogador.Id, detalhe = jogador.Nome })"><strong>@jogador.Nome</strong></a>
                         </div>
                     </div>

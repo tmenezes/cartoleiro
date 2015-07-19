@@ -11,7 +11,7 @@
     <div class="col-sm-6 col-md-4">
         <div class="panel panel-default">
             <div class="panel-body">
-                <img src="~/Images/jogador.jpg" class="thumbnail" width="330" height="240" alt="@Model.Clube.Nome" data-toggle="tooltip" data-placement="left" title="@Model.Clube.GetTooltip()" />
+                <div class="text-center"><img src="@Model.GetUrlImagem()" class="img-circle" width="120" height="120" alt="@Model.Clube.Nome" title="@Model.Clube.GetTooltip()" /></div>
                 <h3 class="text-center">@Model.Nome</h3>
                 <br />
                 <table class="table">
@@ -86,7 +86,7 @@
     </div>
 </div>
 <div class="row">
-    <div class="col-sm-12 col-md-10">
+    <div class="col-md-12">
         <h3>Sobre o jogador</h3>
         <p>@Model.Nome é @Model.Posicao no clube @Model.Clube.Nome no Campeonato Brasileiro 2015.</p>
         <p>@Model.Nome jogou @Model.Jogos partidas e mantêm uma média de @Model.Pontuacao.Media.ToString("F") por jogo. Sua variação no último jogo foi de @Model.Pontuacao.Ultima.ToString("F") pontos.</p>

@@ -1,0 +1,93 @@
+﻿@using Cartoleiro.Core.Cartola
+@using Cartoleiro.Web.AppCode.Extensions
+@using Cartoleiro.Web.AppCode.MvcHelpers
+@model Cartoleiro.Core.Cartola.Clube
+
+@{
+    ViewBag.Title = Model.Nome;
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2 class="page-header">@ViewBag.Title <small>dados atualizados do Cartola FC</small></h2>
+<div class="row">
+    <div class="col-sm-6 col-md-4">
+        <div class="panel panel-default">
+            <div class="panel-body">
+                <div class="text-center">
+                    <img src="@Model.GetUrlImagemGrande()" class="img-rounded" width="120" height="120" alt="@Model.Nome" title="@Model.GetTooltip()" />
+                </div>
+                <h3 class="text-center">@Model.Nome</h3>
+                <br />
+                <table class="table">
+                    <tbody>
+                        <tr>
+                            <td style="width: 50%">Posição</td>
+                            <td style="width: 50%">@string.Format("{0}º lugar", Model.Campeonato.Posicao)</td>
+                        </tr>
+                        <tr>
+                            <td>Pontos</td>
+                            <td>@Model.Campeonato.Pontos</td>
+                        </tr>
+                        <tr>
+                            <td>Jogos</td>
+                            <td>
+                                <div class="pull-left" style="width: 30px">@Model.Campeonato.Jogos</div>
+                                <span class="text-muted">( casa: @Model.Campeonato.JogosEmCasa - fora: @Model.Campeonato.JogosForaDeCasa )</span>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>Vitórias</td>
+                            <td>
+                                <div class="pull-left" style="width: 30px">@Model.Campeonato.Vitorias</div>
+                                <span class="text-muted">( casa: @Model.Campeonato.VitoriasEmCasa - fora: @Model.Campeonato.VitoriasForaDeCasa )</span>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>Gols pró</td>
+                            <td>
+                                <div class="pull-left" style="width: 30px">@Model.Campeonato.GolsPro</div>
+                                <span class="text-muted">( casa: @Model.Campeonato.GolsProEmCasa - fora: @Model.Campeonato.GolsProForaDeCasa)</span>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>Saldo de gols</td>
+                            <td>@Model.Campeonato.SaldoDeGol</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+    <div class="col-sm-12 col-md-8">
+        <div class="panel panel-primary">
+            <div class="panel-heading">
+                <h3 class="panel-title">Análise do próximo confronto</h3>
+            </div>
+            <div class="panel-body" style="margin-left: -10px">
+                @{
+                    var idJogo = Campeonato.Rodadas.ProximaRodada.GetJogoDoClube(Model).GetIdJogo();
+                    Html.RenderAction("AnalisarConfronto", "Confrontos", new { id = idJogo });
+                }
+            </div>
+        </div>
+    </div>
+</div>
+<div class="row">
+    <div class="col-md-12">
+        <h3>Sobre o clube</h3>
+        @ViewData.GetDescricaoDoClube()
+        <br />&nbsp;
+    </div>
+</div>
+<div class="row">
+    <div class="col-md-12">
+        <h3>Titulares <small>jogadores com status 'Provável' no Cartola FC para o próximo jogo</small></h3>
+        @Html.Partial("_TabelaJogadores", ViewData.GetTitularesDoClube())
+    </div>
+</div>
+<div class="row">
+    <div class="col-md-12">
+        <h3>Elenco <small>todos os jogadores do @Model.Nome</small></h3>
+        @Html.Partial("_TabelaJogadores", ViewData.GetElencoDoClube())
+    </div>
+</div>

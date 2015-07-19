@@ -22,6 +22,15 @@ namespace Cartoleiro.Core.Cartola
         public double Aproveitamento { get { return Vitorias / (double)Jogos * 100; } }
         public UltimosJogos UltimosJogos { get; set; }
 
+        public int GolsProEmCasa
+        {
+            get { return Rodadas.JogosComoMandante(_clube).Sum(j => j.PlacarMandante); }
+        }
+        public int GolsProForaDeCasa
+        {
+            get { return Rodadas.JogosComoVisitante(_clube).Sum(j => j.PlacarVisitante); }
+        }
+
         public int VitoriasEmCasa
         {
             get

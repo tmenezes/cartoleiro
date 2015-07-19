@@ -20,5 +20,14 @@ namespace Cartoleiro.Core.Extensions
                     jogador.Scouts = new Scouts();
             }
         }
+
+        public static IEnumerable<Jogador> ElencoDoClube(this IEnumerable<Jogador> jogadores, Clube clube)
+        {
+            return jogadores.Where(j => j.Clube == clube);
+        }
+        public static IEnumerable<Jogador> JogadoresTitularesDoClube(this IEnumerable<Jogador> jogadores, Clube clube)
+        {
+            return ElencoDoClube(jogadores, clube).Where(j => j.Status == Status.Provavel);
+        }
     }
 }
