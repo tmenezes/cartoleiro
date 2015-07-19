@@ -19,8 +19,10 @@
                         <tr>
                             <td>Clube</td>
                             <td>
-                                <img src="@Model.Clube.GetUrlImagem()" width="20" height="20" alt="@Model.Clube.Nome" title="@Model.Clube.Nome" style="margin-left: -30px; float: left" />
-                                @Model.Clube.Nome
+                                <a href="@Url.Action("Detalhe", "Clube", new { id = Model.Clube.GetNomeNormalizado() })">
+                                    <img src="@Model.Clube.GetUrlImagem()" width="20" height="20" alt="@Model.Clube.Nome" title="@Model.Clube.Nome" style="margin-left: -30px; float: left" />
+                                    @Model.Clube.Nome
+                                </a>
                             </td>
                         </tr>
                         <tr>
