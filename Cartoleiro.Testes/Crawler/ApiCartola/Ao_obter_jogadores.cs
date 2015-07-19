@@ -8,6 +8,7 @@ using Microsoft.VisualStudio.TestTools.UnitTesting;
 namespace Cartoleiro.Testes.Crawler.ApiCartola
 {
     [TestClass]
+    [Ignore]
     public class Ao_obter_jogadores : AbstractTesteAutoAct
     {
         ApiCartolaSiteCrawler crawler;
