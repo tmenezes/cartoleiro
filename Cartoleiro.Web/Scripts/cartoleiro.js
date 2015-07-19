@@ -21,7 +21,7 @@ function setupCountDownScoutsAoVivo(urlResults, urlJogo) {
         $("#divLoading").css("display", "block");
 
         $("#listaJogos").load(urlResults);
-        $("#divConfronto").load(urlJogo + "/" + jogoCorrente);
+        $("#divConfronto").load(urlJogo + "/" + window.jogoCorrente);
 
         $("#divLoading").css("display", "none");
     });

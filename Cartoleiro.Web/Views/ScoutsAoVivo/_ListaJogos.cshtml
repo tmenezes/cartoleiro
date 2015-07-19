@@ -27,3 +27,12 @@
         </div>
     </div>, "ScoutsJogo", "ScoutsAoVivo", new { id = jogo.GetIdJogo() }, new AjaxOptions { UpdateTargetId = "divConfronto", LoadingElementId = "divLoading" })
 }
+<script>
+    $(document).ready(function () {
+        $("#listaJogos a").on("click", function (event) {
+            var href = $(event.currentTarget).prop("href") + "";
+            window.jogoCorrente = href.substring(href.indexOf("/ScoutsJogo/") + 12);
+        });
+    });
+</script>
+
