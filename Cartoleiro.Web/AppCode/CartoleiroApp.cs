@@ -1,16 +1,15 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using System.IO;
 using System.Linq;
 using System.Text;
 using System.Web;
+using System.Web.Mvc;
 using Cartoleiro.Core.Cartola;
 using Cartoleiro.Core.Data;
 using Cartoleiro.Core.Escalador;
 using Cartoleiro.Core.Escalador.Analizador;
 using Cartoleiro.DAO;
 using Cartoleiro.Web.AppCode.Extensions;
-using WebGrease.Activities;
 
 namespace Cartoleiro.Web.AppCode
 {
@@ -23,8 +22,6 @@ namespace Cartoleiro.Web.AppCode
         public static void Iniciar()
         {
             CartolaDataSource = new CartolaJsonDataSource(HttpContext.Current.Server.MapPath("~/App_Data"));
-
-            CarregarDescricaoDosClubes();
 
             EscalarMelhorTime();
         }
@@ -44,9 +41,11 @@ namespace Cartoleiro.Web.AppCode
                 : string.Empty;
         }
 
-
-        private static void CarregarDescricaoDosClubes()
+        public static void CarregarDescricaoDosClubes(HttpContext httpContext)
         {
+            if (_descricaoDosClubes != null) // ja carregado
+                return;
+
             var appData = HttpContext.Current.Server.MapPath("~/App_Data/Clubes");
             var descricoes = new Dictionary<Clube, string>();
 
@@ -55,11 +54,29 @@ namespace Cartoleiro.Web.AppCode
                 var arquivo = Path.Combine(appData, string.Concat(clube.GetNomeNormalizado(), ".txt"));
                 using (var reader = new StreamReader(arquivo, Encoding.Default))
                 {
-                    descricoes.Add(clube, reader.ReadToEnd());
+                    var descricao = AplicarLinks(reader.ReadToEnd());
+
+                    descricoes.Add(clube, descricao);
                 }
             }
 
             _descricaoDosClubes = descricoes;
+        }
+
+
+        private static string AplicarLinks(string descricao)
+        {
+            var urlHelper = new UrlHelper(HttpContext.Current.Request.RequestContext);
+            var linkTemplate = @"<a href='{1}'>{0}</a>";
+            foreach (var clube in CartolaDataSource.Clubes)
+            {
+                var url = urlHelper.Action("Detalhe", "Clube", new { id = clube.GetNomeNormalizado() });
+                var link = string.Format(linkTemplate, clube.Nome, url);
+
+                descricao = descricao.Replace(clube.Nome, link);
+            }
+
+            return descricao;
         }
 
         private static void EscalarMelhorTime()

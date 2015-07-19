@@ -24,6 +24,7 @@ namespace Cartoleiro.Web
 
         protected void Application_BeginRequest(object sender, EventArgs e)
         {
+            CartoleiroApp.CarregarDescricaoDosClubes(HttpContext.Current);
             ScoutsAoVivoFacade.SetHttpContext(HttpContext.Current);
         }
 
