@@ -4,7 +4,7 @@
 
 @if (Model != null)
 {
-    <div class="row panel panel-default panel-scouts-confronto">
+    <div class="panel panel-default panel-scouts-confronto">
         <div class="panel-body">
             <div class="panel-scouts-confronto-mandante">
                 <span>@Model.Mandande.Nome</span>
@@ -21,10 +21,10 @@
             </div>
         </div>
     </div>
-    <div class="col-md-5 col-sm-5 scouts-lista-time">
+    <div class="col-md-6 col-sm-12 scouts-lista-time scouts-lista-time-casa">
         @Html.Partial("_ItensConfronto", new ResultadoViewModel(Model, Model.Mandande))
     </div>
-    <div class="col-md-5 col-sm-5 scouts-lista-time">
+    <div class="col-md-6 col-sm-12 scouts-lista-time">
         @Html.Partial("_ItensConfronto", new ResultadoViewModel(Model, Model.Visitante))
     </div>
 }

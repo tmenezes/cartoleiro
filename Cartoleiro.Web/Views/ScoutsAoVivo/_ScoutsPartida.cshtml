@@ -2,29 +2,31 @@
 
 @if (Model != null)
 {
-    <div class="row panel panel-default panel-scouts-confronto">
-        <div class="panel-body">
-            <div class="panel-scouts-confronto-mandante">
-                <span>@Model.Home.Name</span>
-                <img src="@Model.Home.GetUrlImagem()" width="32" height="32" alt="@Model.Home.Name" title="@Model.Home.Name" />
-            </div>
-            <div class="pull-left">
-                <span><strong>@Model.Home.GetPlacar()</strong></span>
-                <span>x</span>
-                <span><strong>@Model.Away.GetPlacar()</strong></span>
-            </div>
-            <div class="panel-scouts-confronto-visitante">
-                <img src="@Model.Away.GetUrlImagem()" width="32" height="32" alt="@Model.Away.Name" title="@Model.Away.Name" />
-                <span>@Model.Away.Name</span>
+    <div class="scouts-aovivo">
+        <div class="panel panel-default panel-scouts-confronto">
+            <div class="panel-body">
+                <div class="panel-scouts-confronto-mandante">
+                    <span>@Model.Home.Name</span>
+                    <img src="@Model.Home.GetUrlImagem()" width="32" height="32" alt="@Model.Home.Name" title="@Model.Home.Name" />
+                </div>
+                <div class="pull-left">
+                    <span><strong>@Model.Home.GetPlacar()</strong></span>
+                    <span>x</span>
+                    <span><strong>@Model.Away.GetPlacar()</strong></span>
+                </div>
+                <div class="panel-scouts-confronto-visitante">
+                    <img src="@Model.Away.GetUrlImagem()" width="32" height="32" alt="@Model.Away.Name" title="@Model.Away.Name" />
+                    <span>@Model.Away.Name</span>
+                </div>
             </div>
         </div>
-    </div>
-    <span id="spanCountDown" class="countdown label label-primary"></span>
-    <div class="col-md-5 col-sm-5 scouts-lista-time">
-        @Html.Partial("_ScoutsClube", Model.Home)
-    </div>
-    <div class="col-md-5 col-sm-5 scouts-lista-time">
-        @Html.Partial("_ScoutsClube", Model.Away)
+        <span id="spanCountDown" class="countdown label label-primary"></span>
+        <div class="col-md-6 col-sm-12 scouts-lista-time scouts-lista-time-casa">
+            @Html.Partial("_ScoutsClube", Model.Home)
+        </div>
+        <div class="col-md-6 col-sm-12 scouts-lista-time">
+            @Html.Partial("_ScoutsClube", Model.Away)
+        </div>
     </div>
     <script>
         $(document).ready(function () {

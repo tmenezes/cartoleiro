@@ -6,7 +6,7 @@
         foreach (var item in Model.ResultadoDoConfronto.ItensDeMedicao)
         {
             <li class="list-group-item">
-                <div class="@Model.GetCssPosicaoResultado(item)" style="width: 120px"><span class="scouts-lista-time-total label @Model.GetCssLabelResultado(item)">@Model.GetResultado(item)</span></div> 
+                <div class="@Model.GetCssPosicaoResultado(item)" style="width: 98px"><span class="scouts-lista-time-total label @Model.GetCssLabelResultado(item)">@Model.GetResultado(item)</span></div> 
                 <span class="@Model.GetCssPosicaoDescricao(item)">@item.Descricao</span>&nbsp;
             </li>
         }
