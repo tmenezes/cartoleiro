@@ -210,6 +210,26 @@
     <Compile Include="Startup.cs" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="App_Data\Clubes\atletico-mg.txt" />
+    <Content Include="App_Data\Clubes\atletico-pr.txt" />
+    <Content Include="App_Data\Clubes\avai.txt" />
+    <Content Include="App_Data\Clubes\chapecoense.txt" />
+    <Content Include="App_Data\Clubes\corinthians.txt" />
+    <Content Include="App_Data\Clubes\coritiba.txt" />
+    <Content Include="App_Data\Clubes\cruzeiro.txt" />
+    <Content Include="App_Data\Clubes\figueirense.txt" />
+    <Content Include="App_Data\Clubes\flamengo.txt" />
+    <Content Include="App_Data\Clubes\fluminense.txt" />
+    <Content Include="App_Data\Clubes\goias.txt" />
+    <Content Include="App_Data\Clubes\gremio.txt" />
+    <Content Include="App_Data\Clubes\internacional.txt" />
+    <Content Include="App_Data\Clubes\joinville.txt" />
+    <Content Include="App_Data\Clubes\palmeiras.txt" />
+    <Content Include="App_Data\Clubes\pontepreta.txt" />
+    <Content Include="App_Data\Clubes\santos.txt" />
+    <Content Include="App_Data\Clubes\saopaulo.txt" />
+    <Content Include="App_Data\Clubes\sport.txt" />
+    <Content Include="App_Data\Clubes\vasco.txt" />
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
     <Content Include="Content\cartoleiro.css" />

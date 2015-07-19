@@ -14,7 +14,7 @@ namespace Cartoleiro.Web.Controllers
         // GET: Clube
         public ActionResult Index()
         {
-            return View();
+            return RedirectToAction("Index", "Home");
         }
 
         public ActionResult Detalhe(string id)
@@ -25,10 +25,11 @@ namespace Cartoleiro.Web.Controllers
                 return RedirectToAction("Index", "Home");
             }
 
+            var descricao = CartoleiroApp.GetDescricaoDoClube(clube);
             var titulares = clube.JogadoresTitulares(CartoleiroApp.CartolaDataSource);
             var elenco = clube.Elenco(CartoleiroApp.CartolaDataSource);
 
-            ViewData.SetDescricaoDoClube("uma descricao qualquer...");
+            ViewData.SetDescricaoDoClube(descricao);
             ViewData.SetTitularesDoClube(titulares);
             ViewData.SetElencoDoClube(elenco);
 
