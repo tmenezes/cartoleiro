@@ -47,6 +47,7 @@
     <Compile Include="Confronto\ItemDeMedicaoDeConfronto.cs" />
     <Compile Include="Confronto\MedidorDeConfronto.cs" />
     <Compile Include="Confronto\ResultadoDoConfronto.cs" />
+    <Compile Include="Data\CartolaData.cs" />
     <Compile Include="Escalador\Analizador\AnalisadorGenerico.cs" />
     <Compile Include="Escalador\Analizador\Campeonato\AnalisadorGolsContra.cs" />
     <Compile Include="Escalador\Analizador\Campeonato\AnalisadorGolsPro.cs" />

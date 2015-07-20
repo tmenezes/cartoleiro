@@ -23,6 +23,12 @@ namespace Cartoleiro.Core.Confronto
         public ICartolaDataSource CartolaDataSource { get; set; }
 
 
+        // construtores
+        public MedidorDeConfronto(Clube mandande, Clube visitante)
+            : this(mandande, visitante, CartolaData.CartolaDataSource)
+        {
+        }
+
         public MedidorDeConfronto(Clube mandande, Clube visitante, ICartolaDataSource cartolaDataSource)
         {
             Mandande = mandande;
@@ -32,6 +38,7 @@ namespace Cartoleiro.Core.Confronto
             _jogadores = CartolaDataSource.Jogadores.Where(j => j.Status == Status.Provavel || j.Status == Status.Duvida).ToList();
         }
 
+        // publicos
         public ResultadoDoConfronto MedirConfronto()
         {
             var result = new ResultadoDoConfronto(Mandande, Visitante);

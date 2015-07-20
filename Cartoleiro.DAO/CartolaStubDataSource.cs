@@ -17,6 +17,8 @@ namespace Cartoleiro.DAO
         {
             PopularClubes();
             PopularJogadores();
+
+            CartolaData.Iniciar(this);
         }
 
 
