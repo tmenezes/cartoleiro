@@ -36,7 +36,7 @@ namespace Cartoleiro.Crawler.Crawlers.ApiCartola
                         var extensao = ".jpeg"; //atleta.Foto.Substring(atleta.Foto.LastIndexOf('.'));
                         var diretorio = @"c:\temp\";
 
-                        atleta.Foto = atleta.Foto ?? "http://mestrecartoleiro.com/Image/jogador.jpg";
+                        atleta.Foto = atleta.Foto ?? "http://mestrecartoleiro.com/Images/jogador.jpg";
 
                         var formato50px = atleta.Foto.Replace("FORMATO", "50x50");
                         var formato80px = atleta.Foto.Replace("FORMATO", "80x80");

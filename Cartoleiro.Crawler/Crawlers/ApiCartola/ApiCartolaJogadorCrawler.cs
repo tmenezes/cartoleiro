@@ -14,7 +14,7 @@ namespace Cartoleiro.Crawler.Crawlers.ApiCartola
         public static Jogador ObterJogador(Atleta atleta)
         {
             var id = atleta.Id;
-            var nome = atleta.Apelido;
+            var nome = atleta.Apelido.Trim();
             var clube = CrawlerHelper.GetClube(atleta.Clube.Nome);
 
             var posicao = GetPosicao(atleta.Posicao.Nome);
