@@ -1,4 +1,5 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 using System.Linq;
 using Cartoleiro.Core.Cartola;
 using Cartoleiro.Core.Data;
@@ -36,6 +37,13 @@ namespace Cartoleiro.Core.Confronto
             CartolaDataSource = cartolaDataSource;
 
             _jogadores = CartolaDataSource.Jogadores.Where(j => j.Status == Status.Provavel || j.Status == Status.Duvida).ToList();
+
+            var medidores = new Dictionary<TipoMedicao, Func<ItemDeMedicaoDeConfronto>>()
+                            {
+                                { TipoMedicao.PontosNoCampeonato, MedirPosicaoNoCampeonato },
+                                { TipoMedicao.AproveitamentoEmCasa, MedirAproveitamentoEmCasa },
+                                { TipoMedicao.AproveitamentoForaDeCasa, MedirAproveitamentoForaDeCasa },
+                            };
         }
 
         // publicos
