@@ -1,4 +1,6 @@
+using System;
 using System.Collections.Generic;
+using System.Linq;
 using Cartoleiro.Core.Cartola;
 using Cartoleiro.Core.Confronto;
 using Cartoleiro.Core.Data;
@@ -8,6 +10,7 @@ namespace Cartoleiro.Core.Escalador.Analizador.Confronto
     public class AnalisadorPesoNoConfronto : AnalisadorGenerico, IAnalisador
     {
         private static Dictionary<Clube, ResultadoDoConfronto> _medicoesDeConfrontos;
+        private static double _adicionalPorSerMandante = 1;
 
         static AnalisadorPesoNoConfronto()
         {
@@ -28,7 +31,7 @@ namespace Cartoleiro.Core.Escalador.Analizador.Confronto
                 var resultadoDoConfronto = _medicoesDeConfrontos[clubeDoJogador];
 
                 return (esMandante)
-                    ? resultadoDoConfronto.TotalMandante + 1
+                    ? resultadoDoConfronto.TotalMandante + _adicionalPorSerMandante
                     : resultadoDoConfronto.TotalVisitante;
             });
         }
@@ -37,13 +40,21 @@ namespace Cartoleiro.Core.Escalador.Analizador.Confronto
         {
             _medicoesDeConfrontos = new Dictionary<Clube, ResultadoDoConfronto>();
 
+            var tiposDeMedicao = new List<TipoMedicao>()
+                                 {
+                                     TipoMedicao.PontosNoCampeonato, TipoMedicao.AproveitamentoNoCampeonato, TipoMedicao.SaldoDeGols,
+                                     TipoMedicao.MediaDaDefesa, TipoMedicao.MediaDaMeioCampo, TipoMedicao.MediaDaAtaque, TipoMedicao.MediaDoClube,
+                                 };
+
             foreach (var jogo in Cartola.Campeonato.Rodadas.ProximaRodada.Jogos)
             {
-                var resultaDoConfronto = new MedidorDeConfronto(jogo.Mandante, jogo.Visitante).MedirConfronto();
+                var resultaDoConfronto = new MedidorDeConfronto(jogo.Mandante, jogo.Visitante).MedirConfronto(tiposDeMedicao);
 
                 _medicoesDeConfrontos.Add(jogo.Mandante, resultaDoConfronto);
                 _medicoesDeConfrontos.Add(jogo.Visitante, resultaDoConfronto);
             }
+
+            _adicionalPorSerMandante = _medicoesDeConfrontos.First().Value.ItensDeMedicao.Count() * 0.25;
         }
     }
 }
