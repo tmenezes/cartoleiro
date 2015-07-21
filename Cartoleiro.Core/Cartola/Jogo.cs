@@ -19,10 +19,15 @@ namespace Cartoleiro.Core.Cartola
                     : (PlacarMandante < PlacarVisitante) ? Visitante : null;
             }
         }
+        public bool Empate
+        {
+            get { return Vencedor == null; }
+        }
         public int TotalDeGols
         {
             get { return PlacarMandante + PlacarVisitante; }
         }
+
 
         public Jogo(int numeroDaRodada, Clube mandante, Clube visitante)
         {
@@ -55,6 +60,16 @@ namespace Cartoleiro.Core.Cartola
             return (clube == Mandante)
                 ? PlacarMandante
                 : PlacarVisitante;
+        }
+
+        public int PontosConquistados(Clube clube)
+        {
+            if (!ParticipaDesseJogo(clube))
+                throw new InvalidOperationException("Clube não participa desse jogo");
+
+            return (clube == Vencedor)
+                ? 3
+                : (Empate) ? 1 : 0;
         }
 
         public override string ToString()
