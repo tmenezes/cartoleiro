@@ -1,28 +1,94 @@
+using System;
 using Cartoleiro.Core.Cartola;
 
 namespace Cartoleiro.Core.Confronto
 {
     public class ItemDeMedicaoDeConfronto
     {
-        public string Descricao { get; set; }
-        public Clube Vencedor { get; set; }
-        public double ResultadoMandante { get; set; }
-        public double ResultadoVisitante { get; set; }
-        public string Formatacao { get; set; }
+        private const string MEDIDOR_PONTOS_CAMPEONATO = "Pontos no campeonato";
+        private const string MEDIDOR_VITORIAS = "Vitórias";
+        private const string MEDIDOR_DERROTAS = "Derrotas";
+        private const string MEDIDOR_APROVEITAMENTO_CASA = "Aproveitamento em casa";
+        private const string MEDIDOR_APROVEITAMENTO_FORA = "Aproveitamento fora de casa";
+        private const string MEDIDOR_APROVEITAMENTO = "Aproveitamento no campeonato";
+        private const string MEDIDOR_GOLS_PRO = "Gols pró";
+        private const string MEDIDOR_GOLS_CONTRA = "Gols contra";
+        private const string MEDIDOR_SALDO_GOL = "Saldo de gols";
+        private const string MEDIDOR_MEDIA_DEFESA = "Pontuação média da defesa";
+        private const string MEDIDOR_MEDIA_MEIOCAMPO = "Pontuação média do meio campo";
+        private const string MEDIDOR_MEDIA_ATAQUE = "Pontuação média do ataque";
+        private const string MEDIDOR_MEDIA_CLUBE = "Pontuação média dos jogadores";
+
+        public TipoMedicao TipoMedicao { get; private set; }
+        public string Descricao { get; private set; }
+        public Clube Vencedor { get; private set; }
+        public double ResultadoMandante { get; private set; }
+        public double ResultadoVisitante { get; private set; }
+        public string Formatacao { get; private set; }
 
 
-        public ItemDeMedicaoDeConfronto(string descricao, Clube vencedor, double resultadoMandante, double resultadoVisitante)
-            : this(descricao, vencedor, resultadoMandante, resultadoVisitante, "N")
+        public ItemDeMedicaoDeConfronto(TipoMedicao tipoMedicao, Clube vencedor, double resultadoMandante, double resultadoVisitante)
+            : this(tipoMedicao, vencedor, resultadoMandante, resultadoVisitante, "N")
         {
         }
 
-        public ItemDeMedicaoDeConfronto(string descricao, Clube vencedor, double resultadoMandante, double resultadoVisitante, string formatacao)
+        public ItemDeMedicaoDeConfronto(TipoMedicao tipoMedicao, Clube vencedor, double resultadoMandante, double resultadoVisitante, string formatacao)
         {
-            Descricao = descricao;
+            TipoMedicao = tipoMedicao;
+            Descricao = ObterDescricao();
             Vencedor = vencedor;
             ResultadoMandante = resultadoMandante;
             ResultadoVisitante = resultadoVisitante;
             Formatacao = formatacao;
+        }
+
+
+        private string ObterDescricao()
+        {
+            switch (TipoMedicao)
+            {
+                case TipoMedicao.PontosNoCampeonato:
+                    return MEDIDOR_PONTOS_CAMPEONATO;
+
+                case TipoMedicao.Vitorias:
+                    return MEDIDOR_VITORIAS;
+
+                case TipoMedicao.Derrotas:
+                    return MEDIDOR_DERROTAS;
+
+                case TipoMedicao.AproveitamentoEmCasa:
+                    return MEDIDOR_APROVEITAMENTO_CASA;
+
+                case TipoMedicao.AproveitamentoForaDeCasa:
+                    return MEDIDOR_APROVEITAMENTO_FORA;
+
+                case TipoMedicao.AproveitamentoNoCampeonato:
+                    return MEDIDOR_APROVEITAMENTO;
+
+                case TipoMedicao.GolsPro:
+                    return MEDIDOR_GOLS_PRO;
+
+                case TipoMedicao.GolsContra:
+                    return MEDIDOR_GOLS_CONTRA;
+
+                case TipoMedicao.SaldoDeGols:
+                    return MEDIDOR_SALDO_GOL;
+
+                case TipoMedicao.MediaDaDefesa:
+                    return MEDIDOR_MEDIA_DEFESA;
+
+                case TipoMedicao.MediaDaMeioCampo:
+                    return MEDIDOR_MEDIA_MEIOCAMPO;
+
+                case TipoMedicao.MediaDaAtaque:
+                    return MEDIDOR_MEDIA_ATAQUE;
+
+                case TipoMedicao.MediaDoClube:
+                    return MEDIDOR_MEDIA_CLUBE;
+
+                default:
+                    return MEDIDOR_PONTOS_CAMPEONATO;
+            }
         }
 
 

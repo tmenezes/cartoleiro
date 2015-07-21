@@ -3,21 +3,14 @@ using System.Collections.Generic;
 using System.Linq;
 using Cartoleiro.Core.Cartola;
 using Cartoleiro.Core.Data;
+using Cartoleiro.Core.Util;
 
 namespace Cartoleiro.Core.Confronto
 {
     public class MedidorDeConfronto
     {
-        private const string MEDIDOR_PONTOS_CAMPEONATO = "Pontos no campeonato";
-        private const string MEDIDOR_APROVEITAMENTO_CASA = "Aproveitamento em casa";
-        private const string MEDIDOR_APROVEITAMENTO_FORA = "Aproveitamento fora de casa";
-        private const string MEDIDOR_SALDO_GOL = "Saldo de gols";
-        private const string MEDIDOR_MEDIA_DEFESA = "Pontuação média da defesa";
-        private const string MEDIDOR_MEDIA_MEIOCAMPO = "Pontuação média do meio campo";
-        private const string MEDIDOR_MEDIA_ATAQUE = "Pontuação média do ataque";
-        private const string MEDIDOR_MEDIA_CLUBE = "Pontuação média dos jogadores";
-
         private readonly IEnumerable<Jogador> _jogadores;
+        private readonly Dictionary<TipoMedicao, Func<ItemDeMedicaoDeConfronto>> _medidores;
 
         public Clube Mandande { get; set; }
         public Clube Visitante { get; set; }
@@ -38,27 +31,38 @@ namespace Cartoleiro.Core.Confronto
 
             _jogadores = CartolaDataSource.Jogadores.Where(j => j.Status == Status.Provavel || j.Status == Status.Duvida).ToList();
 
-            var medidores = new Dictionary<TipoMedicao, Func<ItemDeMedicaoDeConfronto>>()
-                            {
-                                { TipoMedicao.PontosNoCampeonato, MedirPosicaoNoCampeonato },
-                                { TipoMedicao.AproveitamentoEmCasa, MedirAproveitamentoEmCasa },
-                                { TipoMedicao.AproveitamentoForaDeCasa, MedirAproveitamentoForaDeCasa },
-                            };
+            _medidores = new Dictionary<TipoMedicao, Func<ItemDeMedicaoDeConfronto>>()
+                         {
+                             { TipoMedicao.PontosNoCampeonato, MedirPosicaoNoCampeonato },
+                             { TipoMedicao.Vitorias, MedirVitorias},
+                             { TipoMedicao.Derrotas, MedirDerrotas},
+                             { TipoMedicao.AproveitamentoEmCasa, MedirAproveitamentoEmCasa },
+                             { TipoMedicao.AproveitamentoForaDeCasa, MedirAproveitamentoForaDeCasa },
+                             { TipoMedicao.AproveitamentoNoCampeonato, MedirAproveitamentoNoCampeonato},
+                             { TipoMedicao.GolsPro, MedirGolsPro},
+                             { TipoMedicao.GolsContra, MedirGolsContra},
+                             { TipoMedicao.SaldoDeGols, MedirSaldoDeGols},
+                             { TipoMedicao.MediaDaDefesa, MedirMediaDaDefesa },
+                             { TipoMedicao.MediaDaMeioCampo, MedirMediaDoMeioCampo },
+                             { TipoMedicao.MediaDaAtaque, MedirMediaDoAtaque },
+                             { TipoMedicao.MediaDoClube, MedirMediaDoClube },
+                         };
         }
 
         // publicos
         public ResultadoDoConfronto MedirConfronto()
         {
+            return MedirConfronto(EnumUtils.TodosOsItens<TipoMedicao>());
+        }
+
+        public ResultadoDoConfronto MedirConfronto(IEnumerable<TipoMedicao> tiposDeMedicao)
+        {
             var result = new ResultadoDoConfronto(Mandande, Visitante);
 
-            result.AdicionarItemDeMedicao(MedirPosicaoNoCampeonato())
-                  .AdicionarItemDeMedicao(MedirAproveitamentoEmCasa())
-                  .AdicionarItemDeMedicao(MedirAproveitamentoForaDeCasa())
-                  .AdicionarItemDeMedicao(MedirSaldoDeGols())
-                  .AdicionarItemDeMedicao(MedirMediaDaDefesa())
-                  .AdicionarItemDeMedicao(MedirMediaDoMeioCampo())
-                  .AdicionarItemDeMedicao(MedirMediaDoAtaque())
-                  .AdicionarItemDeMedicao(MedirMediaDoClube());
+            foreach (var tipoMedicao in tiposDeMedicao)
+            {
+                result.AdicionarItemDeMedicao(_medidores[tipoMedicao].Invoke());
+            }
 
             return result;
         }
@@ -74,7 +78,31 @@ namespace Cartoleiro.Core.Confronto
                 ? Mandande
                 : (pontosVisitante > pontosMandante) ? Visitante : null;
 
-            return new ItemDeMedicaoDeConfronto(MEDIDOR_PONTOS_CAMPEONATO, vencedor, pontosMandante, pontosVisitante, "G");
+            return new ItemDeMedicaoDeConfronto(TipoMedicao.PontosNoCampeonato, vencedor, pontosMandante, pontosVisitante, "G");
+        }
+
+        private ItemDeMedicaoDeConfronto MedirVitorias()
+        {
+            var pontosMandante = Mandande.Campeonato.Vitorias;
+            var pontosVisitante = Visitante.Campeonato.Vitorias;
+
+            var vencedor = (pontosMandante > pontosVisitante)
+                ? Mandande
+                : (pontosVisitante > pontosMandante) ? Visitante : null;
+
+            return new ItemDeMedicaoDeConfronto(TipoMedicao.Vitorias, vencedor, pontosMandante, pontosVisitante, "G");
+        }
+
+        private ItemDeMedicaoDeConfronto MedirDerrotas()
+        {
+            var pontosMandante = Mandande.Campeonato.Derrotas;
+            var pontosVisitante = Visitante.Campeonato.Derrotas;
+
+            var vencedor = (pontosMandante < pontosVisitante)
+                ? Mandande
+                : (pontosVisitante < pontosMandante) ? Visitante : null;
+
+            return new ItemDeMedicaoDeConfronto(TipoMedicao.Derrotas, vencedor, pontosMandante, pontosVisitante, "G");
         }
 
         private ItemDeMedicaoDeConfronto MedirAproveitamentoEmCasa()
@@ -86,7 +114,7 @@ namespace Cartoleiro.Core.Confronto
                 ? Mandande
                 : (pontosVisitante > pontosMandante) ? Visitante : null;
 
-            return new ItemDeMedicaoDeConfronto(MEDIDOR_APROVEITAMENTO_CASA, vencedor, pontosMandante, pontosVisitante, "P");
+            return new ItemDeMedicaoDeConfronto(TipoMedicao.AproveitamentoEmCasa, vencedor, pontosMandante, pontosVisitante, "P");
         }
 
         private ItemDeMedicaoDeConfronto MedirAproveitamentoForaDeCasa()
@@ -98,7 +126,43 @@ namespace Cartoleiro.Core.Confronto
                 ? Mandande
                 : (pontosVisitante > pontosMandante) ? Visitante : null;
 
-            return new ItemDeMedicaoDeConfronto(MEDIDOR_APROVEITAMENTO_FORA, vencedor, pontosMandante, pontosVisitante, "P");
+            return new ItemDeMedicaoDeConfronto(TipoMedicao.AproveitamentoForaDeCasa, vencedor, pontosMandante, pontosVisitante, "P");
+        }
+
+        private ItemDeMedicaoDeConfronto MedirAproveitamentoNoCampeonato()
+        {
+            var pontosMandante = Mandande.Campeonato.Aproveitamento / 100;
+            var pontosVisitante = Visitante.Campeonato.Aproveitamento / 100;
+
+            var vencedor = (pontosMandante > pontosVisitante)
+                ? Mandande
+                : (pontosVisitante > pontosMandante) ? Visitante : null;
+
+            return new ItemDeMedicaoDeConfronto(TipoMedicao.AproveitamentoNoCampeonato, vencedor, pontosMandante, pontosVisitante, "P");
+        }
+
+        private ItemDeMedicaoDeConfronto MedirGolsPro()
+        {
+            var pontosMandante = Mandande.Campeonato.GolsPro;
+            var pontosVisitante = Visitante.Campeonato.GolsPro;
+
+            var vencedor = (pontosMandante > pontosVisitante)
+                ? Mandande
+                : (pontosVisitante > pontosMandante) ? Visitante : null;
+
+            return new ItemDeMedicaoDeConfronto(TipoMedicao.GolsPro, vencedor, pontosMandante, pontosVisitante, "G");
+        }
+
+        private ItemDeMedicaoDeConfronto MedirGolsContra()
+        {
+            var pontosMandante = Mandande.Campeonato.GolsContra;
+            var pontosVisitante = Visitante.Campeonato.GolsContra;
+
+            var vencedor = (pontosMandante < pontosVisitante)
+                ? Mandande
+                : (pontosVisitante < pontosMandante) ? Visitante : null;
+
+            return new ItemDeMedicaoDeConfronto(TipoMedicao.GolsContra, vencedor, pontosMandante, pontosVisitante, "G");
         }
 
         private ItemDeMedicaoDeConfronto MedirSaldoDeGols()
@@ -110,7 +174,7 @@ namespace Cartoleiro.Core.Confronto
                 ? Mandande
                 : (pontosVisitante > pontosMandante) ? Visitante : null;
 
-            return new ItemDeMedicaoDeConfronto(MEDIDOR_SALDO_GOL, vencedor, pontosMandante, pontosVisitante, "G");
+            return new ItemDeMedicaoDeConfronto(TipoMedicao.SaldoDeGols, vencedor, pontosMandante, pontosVisitante, "G");
         }
 
         private ItemDeMedicaoDeConfronto MedirMediaDaDefesa()
@@ -122,7 +186,7 @@ namespace Cartoleiro.Core.Confronto
                 ? Mandande
                 : (pontosVisitante > pontosMandante) ? Visitante : null;
 
-            return new ItemDeMedicaoDeConfronto(MEDIDOR_MEDIA_DEFESA, vencedor, pontosMandante, pontosVisitante);
+            return new ItemDeMedicaoDeConfronto(TipoMedicao.MediaDaDefesa, vencedor, pontosMandante, pontosVisitante);
         }
 
         private ItemDeMedicaoDeConfronto MedirMediaDoMeioCampo()
@@ -134,7 +198,7 @@ namespace Cartoleiro.Core.Confronto
                 ? Mandande
                 : (pontosVisitante > pontosMandante) ? Visitante : null;
 
-            return new ItemDeMedicaoDeConfronto(MEDIDOR_MEDIA_MEIOCAMPO, vencedor, pontosMandante, pontosVisitante);
+            return new ItemDeMedicaoDeConfronto(TipoMedicao.MediaDaMeioCampo, vencedor, pontosMandante, pontosVisitante);
         }
 
         private ItemDeMedicaoDeConfronto MedirMediaDoAtaque()
@@ -146,7 +210,7 @@ namespace Cartoleiro.Core.Confronto
                 ? Mandande
                 : (pontosVisitante > pontosMandante) ? Visitante : null;
 
-            return new ItemDeMedicaoDeConfronto(MEDIDOR_MEDIA_ATAQUE, vencedor, pontosMandante, pontosVisitante);
+            return new ItemDeMedicaoDeConfronto(TipoMedicao.MediaDaAtaque, vencedor, pontosMandante, pontosVisitante);
         }
 
         private ItemDeMedicaoDeConfronto MedirMediaDoClube()
@@ -158,7 +222,7 @@ namespace Cartoleiro.Core.Confronto
                 ? Mandande
                 : (pontosVisitante > pontosMandante) ? Visitante : null;
 
-            return new ItemDeMedicaoDeConfronto(MEDIDOR_MEDIA_CLUBE, vencedor, pontosMandante, pontosVisitante);
+            return new ItemDeMedicaoDeConfronto(TipoMedicao.MediaDoClube, vencedor, pontosMandante, pontosVisitante);
         }
     }
 }

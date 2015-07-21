@@ -30,9 +30,9 @@ namespace Cartoleiro.Web.Models.ConfrontosModels
 
         public string GetCssLabelResultado(ItemDeMedicaoDeConfronto item)
         {
-            return (Clube == ResultadoDoConfronto.Mandande)
-                ? (item.ResultadoMandante > item.ResultadoVisitante) ? "label-success" : "label-default"
-                : (item.ResultadoVisitante > item.ResultadoMandante) ? "label-success" : "label-default";
+            return (Clube == item.Vencedor)
+                ? "label-success"
+                : (item.Vencedor != null) ? "label-default" : "label-success";
         }
 
         public string GetCssPosicaoDescricao(ItemDeMedicaoDeConfronto item)
