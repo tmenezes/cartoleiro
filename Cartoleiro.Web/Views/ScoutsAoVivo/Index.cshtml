@@ -11,13 +11,16 @@
 </ul>
 <div class="tab-content">
     <div role="tabpanel" class="tab-pane fade" id="tabPersonalizado">
-        <div class="col-md-4">
+        <div class="col-md-4 text-center">
+            @Html.Partial("_adQuadrado1")
             <iframe src="http://parciais.competicaocartolafc.com/parciais_cartolafc/Parciais_Box_1.htm" width="312px" height="800px" frameborder="0"></iframe>
         </div>
-        <div class="col-md-4">
+        <div class="col-md-4 text-center">
+            @Html.Partial("_adQuadrado2")
             <iframe src="http://parciais.competicaocartolafc.com/parciais_cartolafc/Parciais_Box_2.htm" width="312px" height="800px" frameborder="0"></iframe>
         </div>
-        <div class="col-lg-4">
+        <div class="col-md-4 text-center">
+            @Html.Partial("_adQuadrado3")
             <iframe src="http://parciais.competicaocartolafc.com/parciais_cartolafc/Parciais_Box_3.htm" width="312px" height="800px" frameborder="0"></iframe>
         </div>
     </div>
@@ -26,7 +29,12 @@
             @{ Html.RenderAction("ScoutsResultados"); }
         </div>
         <div class="row">
-            <div id="divLoading" class="text-center col-md-10" style="display: none"><img src="~/Images/loading.gif" alt="loading..." /></div>
+            @Html.Partial("_adHorizontalLinha")
+        </div>
+        <div class="row">
+            <div id="divLoading" class="text-center col-md-10" style="display: none">
+                <img src="~/Images/loading.gif" alt="loading..." />
+            </div>
             <div id="divConfronto">
             </div>
         </div>

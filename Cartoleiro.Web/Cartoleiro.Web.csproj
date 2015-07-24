@@ -2002,6 +2002,12 @@
     <Content Include="Views\Shared\_TabelaJogadores.cshtml" />
     <Content Include="Views\Jogador\Detalhe.cshtml" />
     <Content Include="Views\Clube\Detalhe.cshtml" />
+    <Content Include="Views\Shared\_adHorizontalLinha.cshtml" />
+    <Content Include="Views\Shared\_adQuadrado1.cshtml" />
+    <Content Include="Views\Shared\_adQuadrado2.cshtml" />
+    <Content Include="Views\Shared\_adQuadrado3.cshtml" />
+    <Content Include="Views\Shared\_adQuadradoMini1.cshtml" />
+    <Content Include="Views\Shared\_adQuadradoMini2.cshtml" />
   </ItemGroup>
   <ItemGroup />
   <ItemGroup>
