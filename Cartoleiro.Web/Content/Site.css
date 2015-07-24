@@ -24,123 +24,185 @@ textarea {
 }
 
 .nopadding {
-   padding: 0 !important;
+    padding: 0 !important;
 }
+
 .nomargin {
-   margin: 0 !important;
+    margin: 0 !important;
 }
+
 .table-cartoleiro > tbody > tr > td {
     padding: 5px 8px;
     vertical-align: middle;
 }
+
 .table-cartoleiro a {
-  color: #000;
+    color: #000;
 }
-.table-cartoleiro a:hover,
-.table-cartoleiro a:focus {
-  color: #dd4814;
+
+    .table-cartoleiro a:hover,
+    .table-cartoleiro a:focus {
+        color: #dd4814;
+    }
+
+/* escalador */
+.escalador-form-ad1 {
+    float: left;
+    position: absolute;
+    top: -286px;
+    left: 510px;
+    margin: 0 10px;
+}
+.escalador-form-ad2 {
+    float: left;
+    position: absolute;
+    top: -286px;
+    left: 830px;
+    margin: 0 10px;
 }
 
 /* scouts ao vivo */
 .panel-partida {
     margin: 10px;
 }
-.panel-partida > .panel-body {
-    padding: 20px 10px
-}
+
+    .panel-partida > .panel-body {
+        padding: 20px 10px;
+    }
 
 .panel-partida-placar {
     font-size: 18px;
 }
+
 .media-jogador > span {
     font-size: 90%;
 }
+
 .media-jogador > strong {
     font-size: 15px;
 }
+
 .media-jogador > .badge {
     margin-top: -8px;
 }
-.countdown {  
+
+.countdown {
     float: left;
     margin-left: 48.5%;
     margin-top: -33px;
     font-size: 16px;
 }
+
 .scouts-aovivo {
     width: 91.5%;
     margin-top: 20px;
 }
+
 .scouts-confronto {
     width: 91.1%;
     margin-top: 20px;
 }
+
 .panel-scouts-confronto {
     font-size: 28px;
     text-align: center;
     margin-left: 10px;
 }
-.panel-scouts-confronto a {
-  color: #000;
-}
-.panel-scouts-confronto a:visited {
-  color: #000;
-}
-.panel-scouts-confronto a:hover,
-.panel-scouts-confronto a:focus {
-  color: #dd4814;
-}
-.panel-scouts-confronto > .panel-body {
-    padding: 20px 10px
-}
+
+    .panel-scouts-confronto a {
+        color: #000;
+    }
+
+        .panel-scouts-confronto a:visited {
+            color: #000;
+        }
+
+        .panel-scouts-confronto a:hover,
+        .panel-scouts-confronto a:focus {
+            color: #dd4814;
+        }
+
+    .panel-scouts-confronto > .panel-body {
+        padding: 20px 10px;
+    }
+
 .panel-scouts-confronto-mandante {
     width: 45%;
     text-align: right;
     float: left;
     margin-right: 15px;
 }
+
 .panel-scouts-confronto-visitante {
     /*width: 44%;*/
     text-align: left;
     float: left;
     margin-left: 15px;
 }
+
 .scouts-lista-time {
-    padding-right: 0
+    padding-right: 0;
 }
+
 .scouts-lista-time-casa {
     margin-left: -5px;
     margin-right: 5px;
 }
- .scouts-lista-time-total {
-    font-size: 14px
+
+.scouts-lista-time-total {
+    font-size: 14px;
 }
 
- /* efeitos css 3 */
- .flash{
-  -moz-animation: flash 1s ease-out;
-  -moz-animation-iteration-count: 1;
-
-  -webkit-animation: flash 1s ease-out;
-  -webkit-animation-iteration-count: 1;
-
-  -ms-animation: flash 1s ease-out;
-  -ms-animation-iteration-count: 1;
+/* efeitos css 3 */
+.flash {
+    -moz-animation: flash 1s ease-out;
+    -moz-animation-iteration-count: 1;
+    -webkit-animation: flash 1s ease-out;
+    -webkit-animation-iteration-count: 1;
+    -ms-animation: flash 1s ease-out;
+    -ms-animation-iteration-count: 1;
 }
+
 @-webkit-keyframes flash {
-    0% { background-color:none;}
-    50% { background-color:rgb(255, 240, 220);}        
-    100% {background-color:none;}
+    0% {
+        background-color: none;
+    }
+
+    50% {
+        background-color: rgb(255, 240, 220);
+    }
+
+    100% {
+        background-color: none;
+    }
 }
+
 @-moz-keyframes flash {
-    0% { background-color:none;}
-    50% { background-color:rgb(255, 240, 220);}        
-    100% {background-color:none;}
+    0% {
+        background-color: none;
+    }
+
+    50% {
+        background-color: rgb(255, 240, 220);
+    }
+
+    100% {
+        background-color: none;
+    }
 }
+
 @-ms-keyframes flash {
-    0% { background-color:none;}
-    50% { background-color:rgb(255, 240, 220);}        
-    100% {background-color:none;}
+    0% {
+        background-color: none;
+    }
+
+    50% {
+        background-color: rgb(255, 240, 220);
+    }
+
+    100% {
+        background-color: none;
+    }
 }
 
 body {
