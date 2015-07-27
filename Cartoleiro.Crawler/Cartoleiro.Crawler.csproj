@@ -59,6 +59,9 @@
     <Compile Include="Crawlers\ApiCartola\ApiCartolaJogadorCrawler.cs" />
     <Compile Include="Crawlers\ApiCartola\ApiCartolaSiteCrawler.cs" />
     <Compile Include="Crawlers\ApiCartola\Json\MercadoStatus.cs" />
+    <Compile Include="Crawlers\Futpedia\FutpediaJogoCrawler.cs" />
+    <Compile Include="Crawlers\Futpedia\FutpediaSiteCrawler.cs" />
+    <Compile Include="Crawlers\Futpedia\Json\Numeros.cs" />
     <Compile Include="Crawlers\GloboEsporte\GloboEsporteClubeCrawler.cs" />
     <Compile Include="Crawlers\GloboEsporte\GloboEsporteSiteCrawler.cs" />
     <Compile Include="CrawlingInfo.cs" />

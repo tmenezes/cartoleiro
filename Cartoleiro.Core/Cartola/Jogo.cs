@@ -9,6 +9,8 @@ namespace Cartoleiro.Core.Cartola
         public Clube Visitante { get; set; }
         public int PlacarMandante { get; set; }
         public int PlacarVisitante { get; set; }
+        public DateTime DataDoJogo { get; set; }
+        public string NomeDoCampeonato { get; set; }
 
         public Clube Vencedor
         {
@@ -34,6 +36,9 @@ namespace Cartoleiro.Core.Cartola
             NumeroDaRodada = numeroDaRodada;
             Mandante = mandante;
             Visitante = visitante;
+
+            DataDoJogo = DateTime.MinValue;
+            NomeDoCampeonato = "Campeonato Brasileiro";
         }
 
 

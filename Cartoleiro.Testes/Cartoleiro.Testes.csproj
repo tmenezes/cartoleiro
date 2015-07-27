@@ -65,6 +65,7 @@
     <Compile Include="Core\Analisador\PontosNoCampeonatoTestes\Ao_analisar_pontos_no_campeonato.cs" />
     <Compile Include="Core\Analisador\UltimaPontuacaoTestes\Ao_analisar_ultima_pontuacao.cs" />
     <Compile Include="Core\Escalador\EscaladorDeTimeTestes\Ao_escalar_time.cs" />
+    <Compile Include="Crawler\Futpedia\Ao_obter_jogos.cs" />
     <Compile Include="Crawler\GloboEsporte\Ao_obter_Clubes.cs" />
     <Compile Include="Crawler\GloboEsporte\Ao_obter_Rodadas.cs" />
     <Compile Include="Crawler\ScoutsAoVivo\Ao_obter_idsPartidas.cs" />

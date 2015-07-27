@@ -1,4 +1,5 @@
-﻿using System.Linq;
+﻿using System;
+using System.Linq;
 using System.Text;
 using Cartoleiro.Core.Cartola;
 using Cartoleiro.Web.AppCode.Extensions;
@@ -7,6 +8,7 @@ namespace Cartoleiro.Web.AppCode
 {
     public static class ModelUtils
     {
+        [Obsolete("Usar StringUtils do Core")]
         public static string RemoverAcentos(string texto)
         {
             var tempBytes = Encoding.GetEncoding("ISO-8859-8").GetBytes(texto);
