@@ -45,18 +45,20 @@ namespace Cartoleiro.Crawler.Crawlers.Futpedia
 
                 foreach (var jogoHistorico in historicoDeJogos.Jogos)
                 {
-                    var jogo = FutpediaJogoCrawler.ObterJogo(jogoHistorico, historicoDeJogos);
+					var jogo = FutpediaJogoCrawler.ObterJogo(jogoHistorico, clube, historicoDeJogos);
 
                     jogos.Add(jogo);
-
                 }
 
                 clubesCrawleados++;
                 OnObjetoCarregado(new CrawlingInfo(clubes.Count(), clubesCrawleados, string.Format("{0} carregado. Total de jogos carregados: {1}", clube.Nome, jogos.Count)));
             }
 
+			AtualizarClubesComMudancaDeNome(jogos);
+
             return jogos;
         }
+
 
         private string GetNomeClubeNoFutpedia(Clube clube)
         {
@@ -64,6 +66,14 @@ namespace Cartoleiro.Crawler.Crawlers.Futpedia
 
             return clubeSemAcento;
         }
+
+		private static void AtualizarClubesComMudancaDeNome(IEnumerable<Jogo> jogos)
+		{
+			foreach (var jogo in jogos)
+			{		
+				jogo.Visitante.Nome = CrawlerHelper.GetNomeDoClube(jogo.Visitante);
+			}
+		}
 
 
         protected virtual void OnObjetoCarregado(CrawlingInfo e)
