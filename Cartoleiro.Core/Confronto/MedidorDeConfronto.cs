@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using Cartoleiro.Core.Cartola;
 using Cartoleiro.Core.Data;
+using Cartoleiro.Core.Extensions;
 using Cartoleiro.Core.Util;
 
 namespace Cartoleiro.Core.Confronto
@@ -183,8 +184,8 @@ namespace Cartoleiro.Core.Confronto
 
         private ItemDeMedicaoDeConfronto MedirMediaDaDefesa()
         {
-            var pontosMandante = _jogadores.Where(j => j.Clube == Mandande && (j.Posicao == Posicao.Zagueiro || j.Posicao == Posicao.Lateral)).Average(j => j.Pontuacao.Media);
-            var pontosVisitante = _jogadores.Where(j => j.Clube == Visitante && (j.Posicao == Posicao.Zagueiro || j.Posicao == Posicao.Lateral)).Average(j => j.Pontuacao.Media);
+            var pontosMandante = _jogadores.DoClube(Mandande).DaDefesa().Media(j => j.Pontuacao.Media);
+            var pontosVisitante = _jogadores.DoClube(Visitante).DaDefesa().Media(j => j.Pontuacao.Media);
 
             var vencedor = (pontosMandante > pontosVisitante)
                 ? Mandande
@@ -195,8 +196,8 @@ namespace Cartoleiro.Core.Confronto
 
         private ItemDeMedicaoDeConfronto MedirMediaDoMeioCampo()
         {
-            var pontosMandante = _jogadores.Where(j => j.Clube == Mandande && j.Posicao == Posicao.MeioCampo).Average(j => j.Pontuacao.Media);
-            var pontosVisitante = _jogadores.Where(j => j.Clube == Visitante && j.Posicao == Posicao.MeioCampo).Average(j => j.Pontuacao.Media);
+            var pontosMandante = _jogadores.DoClube(Mandande).DoMeioCampo().Media(j => j.Pontuacao.Media);
+            var pontosVisitante = _jogadores.DoClube(Visitante).DoMeioCampo().Media(j => j.Pontuacao.Media);
 
             var vencedor = (pontosMandante > pontosVisitante)
                 ? Mandande
@@ -207,8 +208,8 @@ namespace Cartoleiro.Core.Confronto
 
         private ItemDeMedicaoDeConfronto MedirMediaDoAtaque()
         {
-            var pontosMandante = _jogadores.Where(j => j.Clube == Mandande && j.Posicao == Posicao.Atacante).Average(j => j.Pontuacao.Media);
-            var pontosVisitante = _jogadores.Where(j => j.Clube == Visitante && j.Posicao == Posicao.Atacante).Average(j => j.Pontuacao.Media);
+            var pontosMandante = _jogadores.DoClube(Mandande).DoAtaque().Media(j => j.Pontuacao.Media);
+            var pontosVisitante = _jogadores.DoClube(Visitante).DoAtaque().Media(j => j.Pontuacao.Media);
 
             var vencedor = (pontosMandante > pontosVisitante)
                 ? Mandande
@@ -219,8 +220,8 @@ namespace Cartoleiro.Core.Confronto
 
         private ItemDeMedicaoDeConfronto MedirMediaDoClube()
         {
-            var pontosMandante = _jogadores.Where(j => j.Clube == Mandande).Average(j => j.Pontuacao.Media);
-            var pontosVisitante = _jogadores.Where(j => j.Clube == Visitante).Average(j => j.Pontuacao.Media);
+            var pontosMandante = _jogadores.DoClube(Mandande).Media(j => j.Pontuacao.Media);
+            var pontosVisitante = _jogadores.DoClube(Visitante).Media(j => j.Pontuacao.Media);
 
             var vencedor = (pontosMandante > pontosVisitante)
                 ? Mandande

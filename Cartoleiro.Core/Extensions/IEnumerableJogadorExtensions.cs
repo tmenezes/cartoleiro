@@ -35,5 +35,33 @@ namespace Cartoleiro.Core.Extensions
         {
             return jogadores.OrderBy(j => (int)j.Posicao);
         }
+
+
+        public static IEnumerable<Jogador> DoClube(this IEnumerable<Jogador> jogadores, Clube clube)
+        {
+            return jogadores.Where(j => j.Clube == clube);
+        }
+
+        public static IEnumerable<Jogador> DaDefesa(this IEnumerable<Jogador> jogadores)
+        {
+            return jogadores.Where(j => (j.Posicao == Posicao.Zagueiro || j.Posicao == Posicao.Lateral));
+        }
+
+        public static IEnumerable<Jogador> DoMeioCampo(this IEnumerable<Jogador> jogadores)
+        {
+            return jogadores.Where(j => j.Posicao == Posicao.MeioCampo);
+        }
+
+        public static IEnumerable<Jogador> DoAtaque(this IEnumerable<Jogador> jogadores)
+        {
+            return jogadores.Where(j => j.Posicao == Posicao.Atacante);
+        }
+
+        public static double Media(this IEnumerable<Jogador> jogadores, Func<Jogador, double> avgFunc)
+        {
+            return jogadores.Any()
+                ? jogadores.Average(avgFunc)
+                : 0;
+        }
     }
 }

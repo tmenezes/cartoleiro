@@ -20,7 +20,7 @@ namespace Cartoleiro.Core.Confronto
         private const string MEDIDOR_MEDIA_CLUBE = "Pontuação média dos jogadores";
         private const string MEDIDOR_CONFRONTO_BRASILEIRO = "Vitórias confrontos no Brasileirão";
         private const string MEDIDOR_CONFRONTO_TODOS = "Vitórias em todos os confrontos";
-        private const string MEDIDOR_VITORIAS_BRASILEIRO = "Vitórias na história do clube";
+        private const string MEDIDOR_VITORIAS_BRASILEIRO = "Vitórias no Brasileirão";
         private const string MEDIDOR_VITORIAS_HISTORIA = "Vitórias na história do clube";
 
         public TipoMedicao TipoMedicao { get; private set; }
