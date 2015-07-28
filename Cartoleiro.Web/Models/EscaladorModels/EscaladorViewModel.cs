@@ -45,7 +45,8 @@ namespace Cartoleiro.Web.Models.EscaladorModels
         // analisadores de confronto
         public bool AnalisadorPesoDoClube { get; set; }
         public bool AnalisadorAproveitamentoPorMando { get; set; }
-        public bool AnalisadorVitoriasGolsProPorMando { get; set; }
+        public bool AnalisadorGolsProPorMando { get; set; }
+        public bool AnalisadorHistoricoNoConfronto { get; set; }
 
 
         public EscaladorViewModel()

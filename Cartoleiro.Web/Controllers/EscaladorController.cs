@@ -122,9 +122,13 @@ namespace Cartoleiro.Web.Controllers
             {
                 analisadorBuilder.AproveitamentoNoMando();
             }
-            if (escaladorViewModel.AnalisadorVitoriasGolsProPorMando)
+            if (escaladorViewModel.AnalisadorGolsProPorMando)
             {
                 analisadorBuilder.GolsProPorMando();
+            }
+            if (escaladorViewModel.AnalisadorHistoricoNoConfronto)
+            {
+                analisadorBuilder.HistoricoDoConfronto();
             }
 
             return analisadorBuilder.Analisadores;

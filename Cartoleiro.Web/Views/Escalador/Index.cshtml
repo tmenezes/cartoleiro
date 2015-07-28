@@ -174,14 +174,14 @@
                         </div>
                         <div class="checkbox">
                             <label>
-                                @Html.CheckBoxFor(m => m.AnalisadorVitoriasGolsProPorMando) Gols pró (Em casa vs Fora)
+                                @Html.CheckBoxFor(m => m.AnalisadorGolsProPorMando) Gols pró (Em casa vs Fora)
                             </label>
                         </div>
-                        @*<div class="checkbox">
-                                <label>
-                                    @Html.CheckBoxFor(m => m.AnalisadorVitoriasGolsProPorMando) Histórico de vitórias <small>(<em>em construção</em>)</small>
-                                </label>
-                            </div>*@
+                        <div class="checkbox">
+                            <label>
+                                @Html.CheckBoxFor(m => m.AnalisadorHistoricoNoConfronto) Histórico de vitórias no confronto
+                            </label>
+                        </div>
                     </div>
                 </div>
             </div>

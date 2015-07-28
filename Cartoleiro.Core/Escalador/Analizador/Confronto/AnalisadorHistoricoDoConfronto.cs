@@ -1,4 +1,3 @@
-using System;
 using System.Collections.Generic;
 using System.Linq;
 using Cartoleiro.Core.Cartola;
@@ -6,12 +5,12 @@ using Cartoleiro.Core.Confronto;
 
 namespace Cartoleiro.Core.Escalador.Analizador.Confronto
 {
-    public class AnalisadorPesoNoConfronto : AnalisadorGenerico, IAnalisador
+    public class AnalisadorHistoricoDoConfronto : AnalisadorGenerico, IAnalisador
     {
         private static Dictionary<Clube, ResultadoDoConfronto> _medicoesDeConfrontos;
         private static double _adicionalPorSerMandante = 1;
 
-        static AnalisadorPesoNoConfronto()
+        static AnalisadorHistoricoDoConfronto()
         {
             MedirPesoDosConfrontos();
         }
@@ -30,8 +29,8 @@ namespace Cartoleiro.Core.Escalador.Analizador.Confronto
                 var resultadoDoConfronto = _medicoesDeConfrontos[clubeDoJogador];
 
                 return (esMandante)
-                    ? resultadoDoConfronto.TotalMandante + _adicionalPorSerMandante
-                    : resultadoDoConfronto.TotalVisitante;
+                           ? resultadoDoConfronto.TotalMandante + _adicionalPorSerMandante
+                           : resultadoDoConfronto.TotalVisitante;
             });
         }
 
@@ -41,8 +40,8 @@ namespace Cartoleiro.Core.Escalador.Analizador.Confronto
 
             var tiposDeMedicao = new List<TipoMedicao>()
                                  {
-                                     TipoMedicao.PontosNoCampeonato, TipoMedicao.AproveitamentoNoCampeonato, TipoMedicao.SaldoDeGols,
-                                     TipoMedicao.MediaDaDefesa, TipoMedicao.MediaDaMeioCampo, TipoMedicao.MediaDaAtaque, TipoMedicao.MediaDoClube,
+                                     TipoMedicao.VitoriasEmTodosOsConfronto, TipoMedicao.VitoriasEmConfrontosNoBrasileiro,
+                                     TipoMedicao.VitoriasNaHistoriaDoClube, TipoMedicao.VitoriasNoBrasileiro
                                  };
 
             foreach (var jogo in Cartola.Campeonato.Rodadas.ProximaRodada.Jogos)

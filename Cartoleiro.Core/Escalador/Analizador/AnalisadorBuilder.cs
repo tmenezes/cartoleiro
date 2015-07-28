@@ -107,5 +107,11 @@ namespace Cartoleiro.Core.Escalador.Analizador
             Analisadores.Add(new AnalisadorGolsProMando());
             return this;
         }
+
+        public AnalisadorBuilder HistoricoDoConfronto()
+        {
+            Analisadores.Add(new AnalisadorHistoricoDoConfronto());
+            return this;
+        }
     }
 }
