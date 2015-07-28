@@ -46,6 +46,7 @@ namespace Cartoleiro.Core.Confronto
                              { TipoMedicao.MediaDaMeioCampo, MedirMediaDoMeioCampo },
                              { TipoMedicao.MediaDaAtaque, MedirMediaDoAtaque },
                              { TipoMedicao.MediaDoClube, MedirMediaDoClube },
+                             { TipoMedicao.VitoriasNaHistoriaDoClube, MedirVitoriasNaHistoriaDoClube},
                              { TipoMedicao.HistoricoDeVitoriasNoBrasileiro, MedirHistoricoDeVitoriasNoBrasileiro },
                              { TipoMedicao.HistoricoDeVitoriasNoConfronto, MedirHistoricoDeVitoriasNoConfronto },
                          };
@@ -225,6 +226,18 @@ namespace Cartoleiro.Core.Confronto
                 : (pontosVisitante > pontosMandante) ? Visitante : null;
 
             return new ItemDeMedicaoDeConfronto(TipoMedicao.MediaDoClube, vencedor, pontosMandante, pontosVisitante);
+        }
+
+        private ItemDeMedicaoDeConfronto MedirVitoriasNaHistoriaDoClube()
+        {
+            var pontosMandante = HistoricoDeJogos.GetHistoricoDeJogos(Mandande).Count(j => j.Vencedor() == Mandande);
+            var pontosVisitante = HistoricoDeJogos.GetHistoricoDeJogos(Visitante).Count(j => j.Vencedor() == Visitante);
+
+            var vencedor = (pontosMandante > pontosVisitante)
+                ? Mandande
+                : (pontosVisitante > pontosMandante) ? Visitante : null;
+
+            return new ItemDeMedicaoDeConfronto(TipoMedicao.VitoriasNaHistoriaDoClube, vencedor, pontosMandante, pontosVisitante, "G");
         }
 
         private ItemDeMedicaoDeConfronto MedirHistoricoDeVitoriasNoBrasileiro()
