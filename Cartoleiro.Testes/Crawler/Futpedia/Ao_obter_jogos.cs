@@ -13,6 +13,8 @@ namespace Cartoleiro.Testes.Crawler.Futpedia
     {
         FutpediaSiteCrawler crawler;
         IEnumerable<Jogo> jogos;
+        string nomeClube1;
+        string nomeClube2;
 
 
         public override void Arrange()
@@ -22,7 +24,9 @@ namespace Cartoleiro.Testes.Crawler.Futpedia
 
         public override void Act()
         {
-            jogos = crawler.CarregarJogos(new List<Clube>() { new Clube("São Paulo") });
+            nomeClube1 = "São Paulo";
+            nomeClube2 = "Palmeiras";
+            jogos = crawler.CarregarJogos(new List<Clube>() { new Clube(nomeClube1), new Clube(nomeClube2) });
         }
 
         [TestMethod]
@@ -33,6 +37,10 @@ namespace Cartoleiro.Testes.Crawler.Futpedia
             var jogo1 = jogos.First();
             Assert.IsNotNull(jogo1.Mandante);
             Assert.IsNotNull(jogo1.Visitante);
+
+            bool todosOsJogosDosClubesEsperados = jogos.All(j => j.Mandante.Nome == nomeClube1 || j.Visitante.Nome == nomeClube1 ||
+                                                                 j.Mandante.Nome == nomeClube2 || j.Visitante.Nome == nomeClube2);
+            Assert.IsTrue(todosOsJogosDosClubesEsperados);
         }
     }
 }

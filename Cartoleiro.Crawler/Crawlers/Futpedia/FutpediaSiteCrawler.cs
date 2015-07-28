@@ -1,14 +1,11 @@
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using Cartoleiro.Core.Cartola;
 using Cartoleiro.Core.Util;
-using Cartoleiro.Crawler.Crawlers.ApiCartola;
-using Cartoleiro.Crawler.Crawlers.ApiCartola.Json;
 using Cartoleiro.Crawler.Crawlers.Futpedia.Json;
 using Cartoleiro.Crawler.Utils;
 using Newtonsoft.Json;
-using Clube = Cartoleiro.Core.Cartola.Clube;
-using Jogo = Cartoleiro.Core.Cartola.Jogo;
 
 namespace Cartoleiro.Crawler.Crawlers.Futpedia
 {
@@ -39,22 +36,21 @@ namespace Cartoleiro.Crawler.Crawlers.Futpedia
 
             foreach (var clube in clubes)
             {
-                var urlClube = string.Format("/{0}/numeros.json", GetNomeClubeNoFutpedia(clube));
+                var nomeClubeNoFutepedia = GetNomeClubeNoFutpedia(clube);
+                var urlClube = $"/{nomeClubeNoFutepedia}/numeros.json";
                 var jsonNumeros = HttpClientHelper.Get(_uriBase.ToString(), urlClube);
                 var historicoDeJogos = JsonConvert.DeserializeObject<HistoricoJogos>(jsonNumeros);
 
                 foreach (var jogoHistorico in historicoDeJogos.Jogos)
                 {
-					var jogo = FutpediaJogoCrawler.ObterJogo(jogoHistorico, clube, historicoDeJogos);
+                    var jogo = FutpediaJogoCrawler.ObterJogo(jogoHistorico, clube, historicoDeJogos);
 
                     jogos.Add(jogo);
                 }
 
                 clubesCrawleados++;
-                OnObjetoCarregado(new CrawlingInfo(clubes.Count(), clubesCrawleados, string.Format("{0} carregado. Total de jogos carregados: {1}", clube.Nome, jogos.Count)));
+                OnObjetoCarregado(new CrawlingInfo(clubes.Count(), clubesCrawleados, $"{clube.Nome} carregado. Total de jogos carregados: {jogos.Count}"));
             }
-
-			AtualizarClubesComMudancaDeNome(jogos);
 
             return jogos;
         }
@@ -67,19 +63,11 @@ namespace Cartoleiro.Crawler.Crawlers.Futpedia
             return clubeSemAcento;
         }
 
-		private static void AtualizarClubesComMudancaDeNome(IEnumerable<Jogo> jogos)
-		{
-			foreach (var jogo in jogos)
-			{		
-				jogo.Visitante.Nome = CrawlerHelper.GetNomeDoClube(jogo.Visitante);
-			}
-		}
-
 
         protected virtual void OnObjetoCarregado(CrawlingInfo e)
         {
             var handler = ObjetoCarregado;
-            if (handler != null) handler(this, e);
+            handler?.Invoke(this, e);
         }
     }
 }
