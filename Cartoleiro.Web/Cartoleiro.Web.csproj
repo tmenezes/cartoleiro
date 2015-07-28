@@ -170,6 +170,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="AppCode\AtualizadorCartola.cs" />
+    <Compile Include="AppCode\CartolaDataSourceWeb.cs" />
     <Compile Include="AppCode\CartoleiroKeepAlive.cs" />
     <Compile Include="AppCode\CartoleiroApp.cs" />
     <Compile Include="AppCode\Extensions\ClubeExtensions.cs" />
@@ -1933,6 +1934,7 @@
     <Content Include="App_Data\jogadores.json" />
     <Content Include="App_Data\clubes.json" />
     <Content Include="App_Data\rodadas.json" />
+    <Content Include="App_Data\historicoDeJogos.json" />
     <None Include="Properties\PublishProfiles\mestrecartoleiro.com - Web Deploy.pubxml" />
     <None Include="Scripts\jquery-1.10.2.intellisense.js" />
     <Content Include="Scripts\cartoleiro.js" />

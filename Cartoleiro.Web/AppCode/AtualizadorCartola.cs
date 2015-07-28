@@ -7,7 +7,6 @@ using System.Threading;
 using System.Threading.Tasks;
 using System.Web;
 using Cartoleiro.Core.Cartola;
-using Cartoleiro.Core.Data;
 using Cartoleiro.Core.Extensions;
 using Cartoleiro.Crawler.Crawlers.ApiCartola;
 using Newtonsoft.Json;
@@ -62,9 +61,9 @@ namespace Cartoleiro.Web.AppCode
         {
             jogadores.SetClubes(CartoleiroApp.CartolaDataSource.Clubes);
 
-            var novoDataSource = new CartolaDataSourceAtualizado(CartoleiroApp.CartolaDataSource, jogadores);
+            var novoCartolaDataSource = new CartolaDataSourceWeb(CartoleiroApp.CartolaDataSource, jogadores);
 
-            CartoleiroApp.AtualizarDataSource(novoDataSource);
+            CartoleiroApp.AtualizarDataSource(novoCartolaDataSource);
         }
 
         private static void SalvarJsonJogadores(IEnumerable<Jogador> jogadores)
@@ -76,22 +75,6 @@ namespace Cartoleiro.Web.AppCode
                     writer.WriteLine(JsonConvert.SerializeObject(item));
                 }
             }
-        }
-    }
-
-
-
-    internal class CartolaDataSourceAtualizado : ICartolaDataSource
-    {
-        public IEnumerable<Clube> Clubes { get; private set; }
-        public IEnumerable<Jogador> Jogadores { get; private set; }
-        public IEnumerable<Rodada> Rodadas { get; private set; }
-
-        public CartolaDataSourceAtualizado(ICartolaDataSource cartolaDataSourceAntigo, IEnumerable<Jogador> jogadores)
-        {
-            Clubes = cartolaDataSourceAntigo.Clubes;
-            Jogadores = jogadores;
-            Rodadas = cartolaDataSourceAntigo.Rodadas;
         }
     }
 }

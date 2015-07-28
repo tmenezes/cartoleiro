@@ -8,5 +8,6 @@ namespace Cartoleiro.Core.Data
         IEnumerable<Clube> Clubes { get; }
         IEnumerable<Jogador> Jogadores { get; }
         IEnumerable<Rodada> Rodadas { get; }
+        IEnumerable<Jogo> HistoricoDeJogos { get; }
     }
 }

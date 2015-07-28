@@ -10,24 +10,21 @@ namespace Cartoleiro.Core.Cartola
         public int PlacarMandante { get; set; }
         public int PlacarVisitante { get; set; }
         public DateTime DataDoJogo { get; set; }
-        public string NomeDoCampeonato { get; set; }
+        public TipoCampeonato Campeonato { get; set; }
 
-        public Clube Vencedor
+        public Clube Vencedor()
         {
-            get
-            {
-                return (PlacarMandante > PlacarVisitante)
-                    ? Mandante
-                    : (PlacarMandante < PlacarVisitante) ? Visitante : null;
-            }
+            return (PlacarMandante > PlacarVisitante)
+                ? Mandante
+                : (PlacarMandante < PlacarVisitante) ? Visitante : null;
         }
-        public bool Empate
+        public bool Empate()
         {
-            get { return Vencedor == null; }
+            return Vencedor() == null;
         }
-        public int TotalDeGols
+        public int TotalDeGols()
         {
-            get { return PlacarMandante + PlacarVisitante; }
+            return PlacarMandante + PlacarVisitante;
         }
 
 
@@ -38,7 +35,7 @@ namespace Cartoleiro.Core.Cartola
             Visitante = visitante;
 
             DataDoJogo = DateTime.MinValue;
-            NomeDoCampeonato = "Campeonato Brasileiro";
+            Campeonato = TipoCampeonato.CampeonatoBrasileiro;
         }
 
 
@@ -72,9 +69,9 @@ namespace Cartoleiro.Core.Cartola
             if (!ParticipaDesseJogo(clube))
                 throw new InvalidOperationException("Clube não participa desse jogo");
 
-            return (clube == Vencedor)
+            return (clube == Vencedor())
                 ? 3
-                : (Empate) ? 1 : 0;
+                : (Empate()) ? 1 : 0;
         }
 
         public override string ToString()

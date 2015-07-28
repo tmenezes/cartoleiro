@@ -10,7 +10,7 @@ namespace Cartoleiro.Core.Cartola
 
         public int TotalDeGols
         {
-            get { return Jogos.Sum(j => j.TotalDeGols); }
+            get { return Jogos.Sum(j => j.TotalDeGols()); }
         }
 
 

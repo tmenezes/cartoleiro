@@ -1,5 +1,6 @@
 ﻿
 using System;
+using Cartoleiro.Core.Cartola;
 
 namespace Cartoleiro.Core.Data
 {
@@ -23,6 +24,9 @@ namespace Cartoleiro.Core.Data
         public static void Iniciar(ICartolaDataSource cartolaDataSource)
         {
             CartolaDataSource = cartolaDataSource;
+
+            HistoricoDeJogos.Carregar(cartolaDataSource);
+
             _iniciado = true;
         }
     }

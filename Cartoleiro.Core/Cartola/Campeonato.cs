@@ -37,7 +37,7 @@ namespace Cartoleiro.Core.Cartola
             {
                 if (_vitoriasEmCasa == null)
                 {
-                    _vitoriasEmCasa = Rodadas.JogosComoMandante(_clube).Count(j => j.Vencedor == _clube);
+                    _vitoriasEmCasa = Rodadas.JogosComoMandante(_clube).Count(j => j.Vencedor() == _clube);
                 }
 
                 return _vitoriasEmCasa.Value;
@@ -49,7 +49,7 @@ namespace Cartoleiro.Core.Cartola
             {
                 if (_vitoriasForaDeCasa == null)
                 {
-                    _vitoriasForaDeCasa = Rodadas.JogosComoVisitante(_clube).Count(j => j.Vencedor == _clube);
+                    _vitoriasForaDeCasa = Rodadas.JogosComoVisitante(_clube).Count(j => j.Vencedor() == _clube);
                 }
 
                 return _vitoriasForaDeCasa.Value;
