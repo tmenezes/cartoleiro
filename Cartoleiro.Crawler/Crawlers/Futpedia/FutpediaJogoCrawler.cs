@@ -1,9 +1,7 @@
 using System;
 using System.Globalization;
-using System.Linq;
 using Cartoleiro.Core.Cartola;
 using Cartoleiro.Crawler.Crawlers.Futpedia.Json;
-using Jogo = Cartoleiro.Core.Cartola.Jogo;
 
 namespace Cartoleiro.Crawler.Crawlers.Futpedia
 {
@@ -26,13 +24,48 @@ namespace Cartoleiro.Crawler.Crawlers.Futpedia
                 PlacarVisitante = jogoHistorico.PlacarVisitante,
 
                 DataDoJogo = DateTime.ParseExact(jogoHistorico.Data, "yyyyMMdd", CultureInfo.InvariantCulture),
-                NomeDoCampeonato = jogoHistorico.GetCampeonato(historicoJogos).Nome
+                Campeonato = GetTipoCampeonato(jogoHistorico, historicoJogos)
             };
 
             return jogo;
         }
 
-        static void ValidarMudancaDeNomeDeClube(Clube clube, Equipe equipe)
+
+        private static TipoCampeonato GetTipoCampeonato(JogoHistorico jogo, HistoricoJogos historicoJogos)
+        {
+            var nomeCampeonato = jogo.GetCampeonato(historicoJogos).Nome;
+
+            if (nomeCampeonato == "Taça Brasil")
+                return TipoCampeonato.TacaBrasil;
+
+            if (nomeCampeonato == "Torneio Roberto Gomes Pedrosa")
+                return TipoCampeonato.TorneioRobertoGomesPedrosa;
+
+            if (nomeCampeonato == "Campeonato Brasileiro")
+                return TipoCampeonato.CampeonatoBrasileiro;
+
+            if (nomeCampeonato == "Taça Libertadores")
+                return TipoCampeonato.TacaLibertadores;
+
+            if (nomeCampeonato == "Copa do Brasil")
+                return TipoCampeonato.CopaDoBrasil;
+
+            if (nomeCampeonato == "Mundial de Clubes")
+                return TipoCampeonato.MundialDeClubes;
+
+            if (nomeCampeonato == "Campeonato Paulista")
+                return TipoCampeonato.CampeonatoPaulista;
+
+            if (nomeCampeonato == "Torneio Rio-São Paulo")
+                return TipoCampeonato.TorneioRioSaoPaulo;
+
+            if (nomeCampeonato == "Campeonato Carioca")
+                return TipoCampeonato.CampeonatoCarioca;
+
+            return TipoCampeonato.Outro;
+        }
+
+        private static void ValidarMudancaDeNomeDeClube(Clube clube, Equipe equipe)
         {
             var mudouDeNome = clube.Nome != equipe.NomePopular;
             if (mudouDeNome)

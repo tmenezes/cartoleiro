@@ -1,6 +1,8 @@
 ﻿using System;
+using System.Linq;
 using Cartoleiro.Core.Data;
 using Cartoleiro.Crawler.Crawlers.ApiCartola;
+using Cartoleiro.Crawler.Crawlers.Futpedia;
 using Cartoleiro.Crawler.Crawlers.GloboEsporte;
 
 namespace Cartoleiro.Crawler
@@ -9,6 +11,7 @@ namespace Cartoleiro.Crawler
     {
         readonly GloboEsporteSiteCrawler _clubesCrawler;
         readonly ApiCartolaSiteCrawler _jogadoresCrawler;
+        readonly FutpediaSiteCrawler _historicoDeJogosCrawler;
 
         public event EventHandler<CrawlingInfo> ObjetoCarregado;
 
@@ -19,6 +22,9 @@ namespace Cartoleiro.Crawler
 
             _jogadoresCrawler = new ApiCartolaSiteCrawler();
             _jogadoresCrawler.ObjetoCarregado += Crawler_ObjetoCarregado;
+
+            _historicoDeJogosCrawler = new FutpediaSiteCrawler();
+            _historicoDeJogosCrawler.ObjetoCarregado += Crawler_ObjetoCarregado;
         }
         ~CartoleiroCrawler()
         {
@@ -32,12 +38,14 @@ namespace Cartoleiro.Crawler
             var clubes = _clubesCrawler.CarregarClubes();
             var jogadores = _jogadoresCrawler.CarregarJogadores();
             var rodadas = _clubesCrawler.CarregarRodadas();
+            var jogos = _historicoDeJogosCrawler.CarregarJogos(clubes.OrderBy(c=>c.Nome).ToList());
 
             return new CrawlerDataSource()
                    {
                        Clubes = clubes,
                        Jogadores = jogadores,
-                       Rodadas = rodadas
+                       Rodadas = rodadas,
+                       HistoricoDeJogos = jogos,
                    };
         }
 
@@ -69,6 +77,18 @@ namespace Cartoleiro.Crawler
                    {
                        Rodadas = rodadas
                    };
+        }
+
+        public ICartolaDataSource ExecutarCrawlerDeHistoricoDeJogos()
+        {
+            var clubes = _clubesCrawler.CarregarClubes();
+            var jogos = _historicoDeJogosCrawler.CarregarJogos(clubes.OrderBy(c => c.Nome).ToList());
+
+            return new CrawlerDataSource()
+            {
+                Clubes = clubes,
+                HistoricoDeJogos = jogos,
+            };
         }
 
 

@@ -16,6 +16,7 @@ namespace Cartoleiro.CrawlerConsole
         private static string ArquivoClubesJson { get { return Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "clubes.json"); } }
         private static string ArquivoJogadoresJson { get { return Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "jogadores.json"); } }
         private static string ArquivoRodadasJson { get { return Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "rodadas.json"); } }
+        private static string ArquivoHistoricoDeJogosJson { get { return Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "historicoDeJogos.json"); } }
 
         static void Main(string[] args)
         {
@@ -56,6 +57,7 @@ namespace Cartoleiro.CrawlerConsole
                 SavlarDados(dataSource.Clubes, ArquivoClubesJson);
                 SavlarDados(dataSource.Jogadores, ArquivoJogadoresJson);
                 SavlarDados(dataSource.Rodadas, ArquivoRodadasJson);
+                SavlarDados(dataSource.HistoricoDeJogos, ArquivoHistoricoDeJogosJson);
             }
 
             Console.WriteLine("");
@@ -97,8 +99,9 @@ namespace Cartoleiro.CrawlerConsole
                 Console.WriteLine("1 - Clubes");
                 Console.WriteLine("2 - Jogadores ");
                 Console.WriteLine("3 - Rodadas ");
-                Console.WriteLine("4 - Completa");
-                Console.WriteLine("5 - Imagem Jogadores");
+                Console.WriteLine("4 - Histórico de jogos");
+                Console.WriteLine("5 - Completa");
+                Console.WriteLine("6 - Imagem Jogadores");
                 var tipoSelecionado = Console.ReadLine();
 
                 try
@@ -131,6 +134,9 @@ namespace Cartoleiro.CrawlerConsole
                 case TipoExecucaoCrawler.Rodadas:
                     return crawler.ExecutarCrawlerDeRodadas;
 
+                case TipoExecucaoCrawler.HistoricoDeJogos:
+                    return crawler.ExecutarCrawlerDeHistoricoDeJogos;
+
                 case TipoExecucaoCrawler.ImagemJogadores:
                     return BaixarImagemJogadores;
 
@@ -143,7 +149,7 @@ namespace Cartoleiro.CrawlerConsole
         private static ICartolaDataSource BaixarImagemJogadores()
         {
             new ApiCartolaImagemJogadoresCrawler().BaixarImagens();
-            
+
             return null;
         }
 

@@ -36,8 +36,7 @@ namespace Cartoleiro.Crawler.Crawlers.Futpedia
 
             foreach (var clube in clubes)
             {
-                var nomeClubeNoFutepedia = GetNomeClubeNoFutpedia(clube);
-                var urlClube = $"/{nomeClubeNoFutepedia}/numeros.json";
+                var urlClube = string.Format("/{0}/numeros.json", GetNomeClubeNoFutpedia(clube));
                 var jsonNumeros = HttpClientHelper.Get(_uriBase.ToString(), urlClube);
                 var historicoDeJogos = JsonConvert.DeserializeObject<HistoricoJogos>(jsonNumeros);
 
@@ -49,7 +48,7 @@ namespace Cartoleiro.Crawler.Crawlers.Futpedia
                 }
 
                 clubesCrawleados++;
-                OnObjetoCarregado(new CrawlingInfo(clubes.Count(), clubesCrawleados, $"{clube.Nome} carregado. Total de jogos carregados: {jogos.Count}"));
+                OnObjetoCarregado(new CrawlingInfo(clubes.Count(), clubesCrawleados, string.Format("{0} carregado. Total de jogos carregados: {1}", clube.Nome, jogos.Count)));
             }
 
             return jogos;
@@ -63,11 +62,10 @@ namespace Cartoleiro.Crawler.Crawlers.Futpedia
             return clubeSemAcento;
         }
 
-
         protected virtual void OnObjetoCarregado(CrawlingInfo e)
         {
             var handler = ObjetoCarregado;
-            handler?.Invoke(this, e);
+            if (handler != null) handler(this, e);
         }
     }
 }
