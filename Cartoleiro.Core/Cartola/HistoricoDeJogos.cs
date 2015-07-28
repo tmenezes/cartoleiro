@@ -29,5 +29,12 @@ namespace Cartoleiro.Core.Cartola
                 ? _jogosDoClube[clube]
                 : null;
         }
+
+        public static IEnumerable<Jogo> GetHistoricoDeConfrontos(Clube clubeA, Clube clubeB)
+        {
+            var jogosDoClubeA = GetHistoricoDeJogos(clubeA);
+
+            return jogosDoClubeA.Where(j => j.ParticipaDesseJogo(clubeB));
+        }
     }
 }

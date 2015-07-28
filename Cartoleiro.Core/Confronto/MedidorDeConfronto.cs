@@ -46,6 +46,8 @@ namespace Cartoleiro.Core.Confronto
                              { TipoMedicao.MediaDaMeioCampo, MedirMediaDoMeioCampo },
                              { TipoMedicao.MediaDaAtaque, MedirMediaDoAtaque },
                              { TipoMedicao.MediaDoClube, MedirMediaDoClube },
+                             { TipoMedicao.HistoricoDeVitoriasNoBrasileiro, MedirHistoricoDeVitoriasNoBrasileiro },
+                             { TipoMedicao.HistoricoDeVitoriasNoConfronto, MedirHistoricoDeVitoriasNoConfronto },
                          };
         }
 
@@ -223,6 +225,34 @@ namespace Cartoleiro.Core.Confronto
                 : (pontosVisitante > pontosMandante) ? Visitante : null;
 
             return new ItemDeMedicaoDeConfronto(TipoMedicao.MediaDoClube, vencedor, pontosMandante, pontosVisitante);
+        }
+
+        private ItemDeMedicaoDeConfronto MedirHistoricoDeVitoriasNoBrasileiro()
+        {
+            var confrontos = HistoricoDeJogos.GetHistoricoDeConfrontos(Mandande, Visitante).Where(j => j.Campeonato == TipoCampeonato.CampeonatoBrasileiro).ToList();
+
+            var pontosMandante = confrontos.Count(j => j.Vencedor() == Mandande);
+            var pontosVisitante = confrontos.Count(j => j.Vencedor() == Visitante);
+
+            var vencedor = (pontosMandante > pontosVisitante)
+                ? Mandande
+                : (pontosVisitante > pontosMandante) ? Visitante : null;
+
+            return new ItemDeMedicaoDeConfronto(TipoMedicao.HistoricoDeVitoriasNoBrasileiro, vencedor, pontosMandante, pontosVisitante, "G");
+        }
+
+        private ItemDeMedicaoDeConfronto MedirHistoricoDeVitoriasNoConfronto()
+        {
+            var confrontos = HistoricoDeJogos.GetHistoricoDeConfrontos(Mandande, Visitante).ToList();
+
+            var pontosMandante = confrontos.Count(j => j.Vencedor() == Mandande);
+            var pontosVisitante = confrontos.Count(j => j.Vencedor() == Visitante);
+
+            var vencedor = (pontosMandante > pontosVisitante)
+                ? Mandande
+                : (pontosVisitante > pontosMandante) ? Visitante : null;
+
+            return new ItemDeMedicaoDeConfronto(TipoMedicao.HistoricoDeVitoriasNoConfronto, vencedor, pontosMandante, pontosVisitante, "G");
         }
     }
 }
