@@ -15,8 +15,9 @@ namespace Cartoleiro.Core.Confronto
         MediaDaMeioCampo,
         MediaDaAtaque,
         MediaDoClube,
+        VitoriasEmConfrontosNoBrasileiro,
+        VitoriasEmTodosOsConfronto,
+        VitoriasNoBrasileiro,
         VitoriasNaHistoriaDoClube,
-        HistoricoDeVitoriasNoBrasileiro,
-        HistoricoDeVitoriasNoConfronto,
     }
 }

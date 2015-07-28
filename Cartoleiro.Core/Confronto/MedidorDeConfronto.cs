@@ -46,9 +46,10 @@ namespace Cartoleiro.Core.Confronto
                              { TipoMedicao.MediaDaMeioCampo, MedirMediaDoMeioCampo },
                              { TipoMedicao.MediaDaAtaque, MedirMediaDoAtaque },
                              { TipoMedicao.MediaDoClube, MedirMediaDoClube },
+                             { TipoMedicao.VitoriasEmConfrontosNoBrasileiro, MedirHistoricoDeVitoriasNoBrasileiro },
+                             { TipoMedicao.VitoriasEmTodosOsConfronto, MedirHistoricoDeVitoriasNoConfronto },
+                             { TipoMedicao.VitoriasNoBrasileiro, MedirVitoriasNaBrasileiro},
                              { TipoMedicao.VitoriasNaHistoriaDoClube, MedirVitoriasNaHistoriaDoClube},
-                             { TipoMedicao.HistoricoDeVitoriasNoBrasileiro, MedirHistoricoDeVitoriasNoBrasileiro },
-                             { TipoMedicao.HistoricoDeVitoriasNoConfronto, MedirHistoricoDeVitoriasNoConfronto },
                          };
         }
 
@@ -228,18 +229,6 @@ namespace Cartoleiro.Core.Confronto
             return new ItemDeMedicaoDeConfronto(TipoMedicao.MediaDoClube, vencedor, pontosMandante, pontosVisitante);
         }
 
-        private ItemDeMedicaoDeConfronto MedirVitoriasNaHistoriaDoClube()
-        {
-            var pontosMandante = HistoricoDeJogos.GetHistoricoDeJogos(Mandande).Count(j => j.Vencedor() == Mandande);
-            var pontosVisitante = HistoricoDeJogos.GetHistoricoDeJogos(Visitante).Count(j => j.Vencedor() == Visitante);
-
-            var vencedor = (pontosMandante > pontosVisitante)
-                ? Mandande
-                : (pontosVisitante > pontosMandante) ? Visitante : null;
-
-            return new ItemDeMedicaoDeConfronto(TipoMedicao.VitoriasNaHistoriaDoClube, vencedor, pontosMandante, pontosVisitante, "G");
-        }
-
         private ItemDeMedicaoDeConfronto MedirHistoricoDeVitoriasNoBrasileiro()
         {
             var confrontos = HistoricoDeJogos.GetHistoricoDeConfrontos(Mandande, Visitante).Where(j => j.Campeonato == TipoCampeonato.CampeonatoBrasileiro).ToList();
@@ -251,7 +240,7 @@ namespace Cartoleiro.Core.Confronto
                 ? Mandande
                 : (pontosVisitante > pontosMandante) ? Visitante : null;
 
-            return new ItemDeMedicaoDeConfronto(TipoMedicao.HistoricoDeVitoriasNoBrasileiro, vencedor, pontosMandante, pontosVisitante, "G");
+            return new ItemDeMedicaoDeConfronto(TipoMedicao.VitoriasEmConfrontosNoBrasileiro, vencedor, pontosMandante, pontosVisitante, "G");
         }
 
         private ItemDeMedicaoDeConfronto MedirHistoricoDeVitoriasNoConfronto()
@@ -265,7 +254,31 @@ namespace Cartoleiro.Core.Confronto
                 ? Mandande
                 : (pontosVisitante > pontosMandante) ? Visitante : null;
 
-            return new ItemDeMedicaoDeConfronto(TipoMedicao.HistoricoDeVitoriasNoConfronto, vencedor, pontosMandante, pontosVisitante, "G");
+            return new ItemDeMedicaoDeConfronto(TipoMedicao.VitoriasEmTodosOsConfronto, vencedor, pontosMandante, pontosVisitante, "G");
+        }
+
+        private ItemDeMedicaoDeConfronto MedirVitoriasNaBrasileiro()
+        {
+            var pontosMandante = HistoricoDeJogos.GetHistoricoDeJogos(Mandande).Count(j => j.Vencedor() == Mandande && j.Campeonato == TipoCampeonato.CampeonatoBrasileiro);
+            var pontosVisitante = HistoricoDeJogos.GetHistoricoDeJogos(Visitante).Count(j => j.Vencedor() == Visitante && j.Campeonato == TipoCampeonato.CampeonatoBrasileiro);
+
+            var vencedor = (pontosMandante > pontosVisitante)
+                ? Mandande
+                : (pontosVisitante > pontosMandante) ? Visitante : null;
+
+            return new ItemDeMedicaoDeConfronto(TipoMedicao.VitoriasNoBrasileiro, vencedor, pontosMandante, pontosVisitante, "G");
+        }
+
+        private ItemDeMedicaoDeConfronto MedirVitoriasNaHistoriaDoClube()
+        {
+            var pontosMandante = HistoricoDeJogos.GetHistoricoDeJogos(Mandande).Count(j => j.Vencedor() == Mandande);
+            var pontosVisitante = HistoricoDeJogos.GetHistoricoDeJogos(Visitante).Count(j => j.Vencedor() == Visitante);
+
+            var vencedor = (pontosMandante > pontosVisitante)
+                ? Mandande
+                : (pontosVisitante > pontosMandante) ? Visitante : null;
+
+            return new ItemDeMedicaoDeConfronto(TipoMedicao.VitoriasNaHistoriaDoClube, vencedor, pontosMandante, pontosVisitante, "G");
         }
     }
 }

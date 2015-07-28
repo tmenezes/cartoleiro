@@ -18,9 +18,10 @@ namespace Cartoleiro.Core.Confronto
         private const string MEDIDOR_MEDIA_MEIOCAMPO = "Pontuação média do meio campo";
         private const string MEDIDOR_MEDIA_ATAQUE = "Pontuação média do ataque";
         private const string MEDIDOR_MEDIA_CLUBE = "Pontuação média dos jogadores";
+        private const string MEDIDOR_CONFRONTO_BRASILEIRO = "Vitórias confrontos no Brasileirão";
+        private const string MEDIDOR_CONFRONTO_TODOS = "Vitórias em todos os confrontos";
+        private const string MEDIDOR_VITORIAS_BRASILEIRO = "Vitórias na história do clube";
         private const string MEDIDOR_VITORIAS_HISTORIA = "Vitórias na história do clube";
-        private const string MEDIDOR_HISTORICO_BRASILEIRO = "Vitórias no Brasileirão";
-        private const string MEDIDOR_HISTORICO_JOGOS = "Vitórias em todos os confrontos";
 
         public TipoMedicao TipoMedicao { get; private set; }
         public string Descricao { get; private set; }
@@ -89,14 +90,17 @@ namespace Cartoleiro.Core.Confronto
                 case TipoMedicao.MediaDoClube:
                     return MEDIDOR_MEDIA_CLUBE;
 
+                case TipoMedicao.VitoriasEmConfrontosNoBrasileiro:
+                    return MEDIDOR_CONFRONTO_BRASILEIRO;
+
+                case TipoMedicao.VitoriasEmTodosOsConfronto:
+                    return MEDIDOR_CONFRONTO_TODOS;
+
+                case TipoMedicao.VitoriasNoBrasileiro:
+                    return MEDIDOR_VITORIAS_BRASILEIRO;
+
                 case TipoMedicao.VitoriasNaHistoriaDoClube:
                     return MEDIDOR_VITORIAS_HISTORIA;
-
-                case TipoMedicao.HistoricoDeVitoriasNoBrasileiro:
-                    return MEDIDOR_HISTORICO_BRASILEIRO;
-
-                case TipoMedicao.HistoricoDeVitoriasNoConfronto:
-                    return MEDIDOR_HISTORICO_JOGOS;
 
                 default:
                     return MEDIDOR_PONTOS_CAMPEONATO;
