@@ -3,6 +3,7 @@ namespace Cartoleiro.Core.Confronto
     public enum TipoMedicao
     {
         PontosNoCampeonato,
+        PontosNosUltimos5Jogos,
         Vitorias,
         Derrotas,
         AproveitamentoEmCasa,

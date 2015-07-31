@@ -6,6 +6,7 @@ namespace Cartoleiro.Core.Confronto
     public class ItemDeMedicaoDeConfronto
     {
         private const string MEDIDOR_PONTOS_CAMPEONATO = "Pontos no campeonato";
+        private const string MEDIDOR_PONTOS_5_JOGOS = "Pontos nos últimos 5 jogos";
         private const string MEDIDOR_VITORIAS = "Vitórias no campeonato";
         private const string MEDIDOR_DERROTAS = "Derrotas no campeonato";
         private const string MEDIDOR_APROVEITAMENTO_CASA = "Aproveitamento em casa";
@@ -53,6 +54,9 @@ namespace Cartoleiro.Core.Confronto
             {
                 case TipoMedicao.PontosNoCampeonato:
                     return MEDIDOR_PONTOS_CAMPEONATO;
+
+                case TipoMedicao.PontosNosUltimos5Jogos:
+                    return MEDIDOR_PONTOS_5_JOGOS;
 
                 case TipoMedicao.Vitorias:
                     return MEDIDOR_VITORIAS;

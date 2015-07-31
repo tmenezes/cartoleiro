@@ -35,6 +35,7 @@ namespace Cartoleiro.Core.Confronto
             _medidores = new Dictionary<TipoMedicao, Func<ItemDeMedicaoDeConfronto>>()
                          {
                              { TipoMedicao.PontosNoCampeonato, MedirPosicaoNoCampeonato },
+                             { TipoMedicao.PontosNosUltimos5Jogos, MedirPontosNosUltimos5Jogos },
                              { TipoMedicao.Vitorias, MedirVitorias},
                              { TipoMedicao.Derrotas, MedirDerrotas},
                              { TipoMedicao.AproveitamentoEmCasa, MedirAproveitamentoEmCasa },
@@ -84,6 +85,18 @@ namespace Cartoleiro.Core.Confronto
                 : (pontosVisitante > pontosMandante) ? Visitante : null;
 
             return new ItemDeMedicaoDeConfronto(TipoMedicao.PontosNoCampeonato, vencedor, pontosMandante, pontosVisitante, "G");
+        }
+
+        private ItemDeMedicaoDeConfronto MedirPontosNosUltimos5Jogos()
+        {
+            var pontosMandante = Mandande.Campeonato.UltimosJogos.TotalDePontos;
+            var pontosVisitante = Visitante.Campeonato.UltimosJogos.TotalDePontos;
+
+            var vencedor = (pontosMandante > pontosVisitante)
+                ? Mandande
+                : (pontosVisitante > pontosMandante) ? Visitante : null;
+
+            return new ItemDeMedicaoDeConfronto(TipoMedicao.PontosNosUltimos5Jogos, vencedor, pontosMandante, pontosVisitante, "G");
         }
 
         private ItemDeMedicaoDeConfronto MedirVitorias()
