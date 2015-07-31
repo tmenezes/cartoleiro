@@ -19,22 +19,11 @@
         </div>
     </div>
 }
-<div id="adHome" class="row">
-    <div class="col-md-8" style="padding-top: 10px">
-        @Html.Partial("_adHorizontalLinha")
-    </div>
-    <div class="col-md-4" style="padding-top: 10px">
-        <div class="col-md-6">
-            @Html.Partial("_adQuadradoMini1")
-        </div>
-        <div class="col-md-6">
-            @Html.Partial("_adQuadradoMini2")
-        </div>
-    </div>
-</div>
 <div class="row">
     <div class="col-md-8">
-        <h2 class="page-header">Jogadores <small>os 50 com maiores médias</small></h2>
+        @Html.Partial("_adHorizontalLinha")
+        <h2 class="page-header">Jogadores <small>os 50 com maiores médias</small>
+        </h2>
         <p>
             @Html.Partial("_MelhoresJogadores")
         </p>
@@ -43,6 +32,7 @@
         </p>
     </div>
     <div class="col-md-4">
+        @Html.Partial("_adQuadradoMini1")
         <h2 class="page-header">Escalação <small>melhor time 4-4-2</small></h2>
         <p>
             @Html.Partial("_TimeTabelaSimples", CartoleiroApp.TimeDeMaiorMedia)

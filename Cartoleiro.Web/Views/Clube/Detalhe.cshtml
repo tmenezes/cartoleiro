@@ -1,7 +1,7 @@
 ﻿@using Cartoleiro.Core.Cartola
 @using Cartoleiro.Web.AppCode.Extensions
 @using Cartoleiro.Web.AppCode.MvcHelpers
-@model Cartoleiro.Core.Cartola.Clube
+@model Clube
 
 @{
     ViewBag.Title = Model.Nome;
@@ -26,7 +26,10 @@
                         </tr>
                         <tr>
                             <td>Pontos</td>
-                            <td>@Model.Campeonato.Pontos</td>
+                            <td>
+                                <div class="pull-left" style="width: 30px">@Model.Campeonato.Pontos</div>                                
+                                <span class="text-muted">( casa: @Model.Campeonato.PontosEmCasa - fora: @Model.Campeonato.PontosForaDeCasa )</span>
+                            </td>
                         </tr>
                         <tr>
                             <td>Jogos</td>
@@ -57,6 +60,7 @@
                 </table>
             </div>
         </div>
+        @Html.Partial("_adQuadrado2")
         @Html.Partial("_adQuadrado1")
     </div>
     <div class="col-sm-12 col-md-8">
