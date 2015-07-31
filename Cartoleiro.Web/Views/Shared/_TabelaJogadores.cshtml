@@ -9,8 +9,8 @@
             <th class="text-right" style="width: 8%">Jogos</th>
             <th class="text-right" style="width: 8%">C$</th>
             <th class="text-right" style="width: 8%">Pt. Média</th>
-            <th class="text-right" style="width: 8%">Pt. Últ.</th>
-            <th class="text-center" style="width: 10%">Confronto</th>
+            <th class="text-right hidden-xs" style="width: 8%">Pt. Últ.</th>
+            <th class="text-center" style="width: 10%"><span class="hidden-xs">Confronto</span></th>
         </tr>
     </thead>
     @foreach (var jogador in Model)
@@ -26,14 +26,14 @@
                     <div class="media-body media-jogador">
                         <span class="text-muted">@jogador.Posicao</span><br />
                         <a href="@Url.Action("Detalhe", "Jogador", new { id = jogador.Id, detalhe = jogador.Nome })"><strong>@jogador.Nome</strong></a>
-                        <span class="badge pull-right">@jogador.Status</span>
+                        <span class="badge pull-right hidden-xs">@jogador.Status</span>
                     </div>
                 </div>
             </td>
             <td class="text-right">@jogador.Jogos.ToString()</td>
             <td class="text-right">@jogador.Preco.Atual.ToString("F")</td>
             <td class="text-right">@jogador.Pontuacao.Media.ToString("F")</td>
-            <td class="text-right">@jogador.Pontuacao.Ultima.ToString("F")</td>
+            <td class="text-right hidden-xs">@jogador.Pontuacao.Ultima.ToString("F")</td>
             <td class="text-center">
                 @{ var jogo = Campeonato.Rodadas.ProximaRodada.GetJogoDoClube(jogador.Clube); }
                 <a href="@Url.Action("Detalhe", "Clube", new { id = jogo.Mandante.GetNomeNormalizado() })">
