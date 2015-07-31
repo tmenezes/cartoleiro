@@ -25,7 +25,7 @@
                 </div>
             </div>
         </div>
-    </div>, "ScoutsJogo", "ScoutsAoVivo", new { id = jogo.GetIdJogo() }, new AjaxOptions { UpdateTargetId = "divConfronto", LoadingElementId = "divLoading" })
+    </div>, "ScoutsJogo", "ScoutsAoVivo", new { id = jogo.GetIdJogo() }, new AjaxOptions { UpdateTargetId = "divConfronto", LoadingElementId = "divLoading", OnSuccess = "scrolToDivConfronto();" })
 }
 <script>
     $(document).ready(function () {

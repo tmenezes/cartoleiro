@@ -31,3 +31,7 @@ function setupCountDownScoutsAoVivo(urlResults, urlJogo) {
         return data;
     }
 }
+
+function scrolToDivConfronto() {
+    $.scrollTo("#divConfronto", 800, { offset: -100 });
+}
