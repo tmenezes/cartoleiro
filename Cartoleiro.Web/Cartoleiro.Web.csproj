@@ -211,6 +211,9 @@
     <Compile Include="Startup.cs" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="android-icon-192x192.png" />
+    <Content Include="android-icon-48x48.png" />
+    <Content Include="apple-icon-114x114.png" />
     <Content Include="App_Data\Clubes\atletico-mg.txt" />
     <Content Include="App_Data\Clubes\atletico-pr.txt" />
     <Content Include="App_Data\Clubes\avai.txt" />
@@ -235,6 +238,8 @@
     <Content Include="Content\bootstrap.min.css" />
     <Content Include="Content\cartoleiro.css" />
     <Content Include="Content\docs.css" />
+    <Content Include="favicon-32x32.png" />
+    <Content Include="favicon-96x96.png" />
     <Content Include="favicon.ico" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
@@ -1929,6 +1934,7 @@
     <Content Include="Images\jogadores\92170_50px.jpeg" />
     <Content Include="Images\jogadores\92170_80px.jpeg" />
     <Content Include="Images\loading.GIF" />
+    <Content Include="ms-icon-144x144.png" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
     <Content Include="App_Data\jogadores.json" />
@@ -2019,7 +2025,6 @@
     <Content Include="fonts\glyphicons-halflings-regular.ttf" />
     <Content Include="fonts\glyphicons-halflings-regular.eot" />
     <Content Include="packages.config" />
-    <None Include="Project_Readme.html" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\Cartoleiro.Core\Cartoleiro.Core.csproj">
