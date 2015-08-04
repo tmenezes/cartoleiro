@@ -20,25 +20,45 @@
     </div>
 }
 <div class="row">
-    <div class="col-md-8">
-        @Html.Partial("_adHorizontalLinha")
-        <h2 class="page-header">Jogadores <small>os 50 com maiores médias</small>
+    <div class="col-md-4">
+        <h2 class="page-header">Atacantes<small> os 5 melhores</small></h2>
+        <p>
+            @Html.Partial("_TabelaJogadoresMini", CartoleiroApp.MelhoresAtacantes)
+        </p>
+        @Html.Partial("_adQuadrado1")
+    </div>
+    <div class="col-md-4">
+        <h2 class="page-header">Meias<small> os 5 melhores</small></h2>
+        <p>
+            @Html.Partial("_TabelaJogadoresMini", CartoleiroApp.MelhoresMeias)
+        </p>
+        @Html.Partial("_adQuadrado2")
+    </div>
+    <div class="col-md-4">
+        <h2 class="page-header">Laterais<small> os 5 melhores</small></h2>
+        <p>
+            @Html.Partial("_TabelaJogadoresMini", CartoleiroApp.MelhoresLaterais)
+        </p>
+        @Html.Partial("_adQuadrado3")
+    </div>
+    <div class="col-md-4">
+        <h2 class="page-header">
+            Zagueiros<small> os 5 melhores</small>
         </h2>
         <p>
-            @Html.Partial("_MelhoresJogadores")
-        </p>
-        <p>
-            <a class="btn btn-default" href="@Url.Action("Index", "Escalador")">Ver mais &raquo;</a>
+            @Html.Partial("_TabelaJogadoresMini", CartoleiroApp.MelhoresZagueiros)
         </p>
     </div>
     <div class="col-md-4">
-        @Html.Partial("_adQuadradoMini1")
-        <h2 class="page-header">Escalação <small>melhor time 4-4-2</small></h2>
+        <h2 class="page-header">Goleiros<small> os 5 melhores</small></h2>
         <p>
-            @Html.Partial("_TimeTabelaSimples", CartoleiroApp.TimeDeMaiorMedia)
+            @Html.Partial("_TabelaJogadoresMini", CartoleiroApp.MelhoresGoleiros)
         </p>
+    </div>
+    <div class="col-md-4">
+        <h2 class="page-header">Técnicos<small> os 5 melhores</small></h2>
         <p>
-            <a class="btn btn-default" href="@Url.Action("Index", "Escalador")">Ver mais &raquo;</a>
+            @Html.Partial("_TabelaJogadoresMini", CartoleiroApp.MelhoresTecnicos)
         </p>
     </div>
 </div>

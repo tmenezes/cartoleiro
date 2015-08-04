@@ -80,6 +80,7 @@
     <Compile Include="Cartola\Preco.cs" />
     <Compile Include="Escalador\Carteira.cs" />
     <Compile Include="Escalador\PontuacaoDeEscalacao.cs" />
+    <Compile Include="Extensions\IEnumerableRanqueamentoExtensions.cs" />
     <Compile Include="Util\EnumUtils.cs" />
     <Compile Include="Extensions\IEnumerableJogadorExtensions.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

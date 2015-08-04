@@ -4,6 +4,7 @@ using System.Linq;
 using Cartoleiro.Core.Cartola;
 using Cartoleiro.Core.Data;
 using Cartoleiro.Core.Escalador.Analizador;
+using Cartoleiro.Core.Extensions;
 
 namespace Cartoleiro.Core.Escalador
 {
@@ -144,6 +145,15 @@ namespace Cartoleiro.Core.Escalador
             return time;
         }
 
+        public IEnumerable<PontuacaoDeEscalacao> ObterRanqueamento()
+        {
+            CriarRanqueamento();
+
+            _analisadores.ExecutarAnalises(_ranqueamento);
+
+            return _ranqueamento;
+        }
+
 
         private void CriarRanqueamento()
         {
@@ -182,7 +192,7 @@ namespace Cartoleiro.Core.Escalador
 
         private Jogador EscolherJogador(Posicao posicao, Carteira carteira)
         {
-            var jogadoresMelhoresPontuados = GetJogadoresMelhoresPontuados(posicao);
+            var jogadoresMelhoresPontuados = _ranqueamento.JogadoresMelhoresPontuados(posicao);
 
             var jogador = jogadoresMelhoresPontuados.FirstOrDefault(j => carteira.PossuiCartoletasParaComprar(j));
             if (jogador != null)
@@ -195,7 +205,7 @@ namespace Cartoleiro.Core.Escalador
 
         private IEnumerable<Jogador> EscolherJogadores(Posicao posicao, Carteira carteira)
         {
-            var jogadoresMelhoresPontuados = GetJogadoresMelhoresPontuados(posicao);
+            var jogadoresMelhoresPontuados = _ranqueamento.JogadoresMelhoresPontuados(posicao);
 
             var numeroDeJogadores = EsquemaTaticoHelper.GetNumeroDeJogadores(posicao, _esquemaTatico);
             var jogadores = new List<Jogador>();
@@ -203,9 +213,9 @@ namespace Cartoleiro.Core.Escalador
             var patrimonioTotalDaPosicao = carteira.Partilha[posicao];
             int i = 0;
 
-            while ((jogadores.Count < numeroDeJogadores) && (i < jogadoresMelhoresPontuados.Count))
+            while ((jogadores.Count < numeroDeJogadores) && (i < jogadoresMelhoresPontuados.Count()))
             {
-                var jogador = jogadoresMelhoresPontuados[i];
+                var jogador = jogadoresMelhoresPontuados.ElementAt(i);
 
                 if (carteira.PossuiCartoletasParaComprar(jogador))
                 {

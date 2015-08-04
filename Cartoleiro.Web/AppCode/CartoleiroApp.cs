@@ -1,4 +1,5 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 using System.IO;
 using System.Linq;
 using System.Text;
@@ -8,6 +9,7 @@ using Cartoleiro.Core.Cartola;
 using Cartoleiro.Core.Data;
 using Cartoleiro.Core.Escalador;
 using Cartoleiro.Core.Escalador.Analizador;
+using Cartoleiro.Core.Extensions;
 using Cartoleiro.DAO;
 using Cartoleiro.Web.AppCode.Extensions;
 
@@ -16,21 +18,29 @@ namespace Cartoleiro.Web.AppCode
     public static class CartoleiroApp
     {
         private static Dictionary<Clube, string> _descricaoDosClubes;
+
         public static ICartolaDataSource CartolaDataSource { get; private set; }
         public static Time TimeDeMaiorMedia { get; private set; }
+        public static IEnumerable<Jogador> MelhoresGoleiros { get; private set; }
+        public static IEnumerable<Jogador> MelhoresZagueiros { get; private set; }
+        public static IEnumerable<Jogador> MelhoresLaterais { get; private set; }
+        public static IEnumerable<Jogador> MelhoresMeias { get; private set; }
+        public static IEnumerable<Jogador> MelhoresAtacantes { get; private set; }
+        public static IEnumerable<Jogador> MelhoresTecnicos { get; private set; }
+
 
         public static void Iniciar()
         {
-            CartolaDataSource = new CartolaJsonDataSource(HttpContext.Current.Server.MapPath("~/App_Data"));
+            var cartolaDataSource = new CartolaJsonDataSource(HttpContext.Current.Server.MapPath("~/App_Data"));
 
-            EscalarMelhorTime();
+            Iniciar(cartolaDataSource);
         }
 
         public static void AtualizarDataSource(ICartolaDataSource cartolaDataSource)
         {
             lock (CartolaDataSource)
             {
-                CartolaDataSource = cartolaDataSource;
+                Iniciar(cartolaDataSource);
             }
         }
 
@@ -64,6 +74,41 @@ namespace Cartoleiro.Web.AppCode
         }
 
 
+        private static void Iniciar(ICartolaDataSource cartolaDataSource)
+        {
+            CartolaDataSource = cartolaDataSource;
+
+            EscalarMelhorTime();
+
+            DefinirMelhoresJogadores();
+        }
+
+        private static void EscalarMelhorTime()
+        {
+            var escalador = new EscaladorDeTime(CartolaDataSource)
+                .ComPatrimonio(double.MaxValue)
+                .ComAnalisadores(new AnalisadorBuilder().PontuacaoMedia().Analisadores);
+
+            TimeDeMaiorMedia = escalador.MontarTime();
+        }
+
+        private static void DefinirMelhoresJogadores()
+        {
+            var escalador = new EscaladorDeTime(CartolaDataSource)
+                .ComPatrimonio(double.MaxValue)
+                .ComQtdeJogosMaiorQue(Convert.ToInt32(Campeonato.Rodadas.RodadaAtual.Numero * 0.33))
+                .ComAnalisadores(new AnalisadorBuilder().PontuacaoMedia().ScoutsPorPosicao().Analisadores);
+
+            var ranqueamento = escalador.ObterRanqueamento().ToList();
+
+            MelhoresGoleiros = ranqueamento.JogadoresMelhoresPontuados(Posicao.Goleiro).Take(5);
+            MelhoresLaterais = ranqueamento.JogadoresMelhoresPontuados(Posicao.Lateral).Take(5);
+            MelhoresZagueiros = ranqueamento.JogadoresMelhoresPontuados(Posicao.Zagueiro).Take(5);
+            MelhoresMeias = ranqueamento.JogadoresMelhoresPontuados(Posicao.MeioCampo).Take(5);
+            MelhoresAtacantes = ranqueamento.JogadoresMelhoresPontuados(Posicao.Atacante).Take(5);
+            MelhoresTecnicos = ranqueamento.JogadoresMelhoresPontuados(Posicao.Tecnico).Take(5);
+        }
+
         private static string AplicarLinks(string descricao)
         {
             var urlHelper = new UrlHelper(HttpContext.Current.Request.RequestContext);
@@ -77,15 +122,6 @@ namespace Cartoleiro.Web.AppCode
             }
 
             return descricao;
-        }
-
-        private static void EscalarMelhorTime()
-        {
-            var escalador = new EscaladorDeTime(CartolaDataSource)
-                .ComPatrimonio(double.MaxValue)
-                .ComAnalisadores(new AnalisadorBuilder().PontuacaoMedia().Analisadores);
-
-            TimeDeMaiorMedia = escalador.MontarTime();
         }
     }
 }
