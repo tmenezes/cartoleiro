@@ -9,22 +9,22 @@ namespace Cartoleiro.Core.Escalador.Analizador.Jogador
         {
             Analisar(ranqueamento, item =>
             {
+                var scouts = item.Jogador.Scouts;
+
                 switch (item.Jogador.Posicao)
                 {
                     case Posicao.Goleiro:
-                        return item.Jogador.Scouts.DefesasDificeis;
+                        return scouts.DefesasDificeis + scouts.SemGolSofrido;
 
                     case Posicao.Lateral:
-                        return item.Jogador.Scouts.SemGolSofrido;
-
                     case Posicao.Zagueiro:
-                        return item.Jogador.Scouts.RoubadasDeBola;
+                        return scouts.RoubadasDeBola + scouts.SemGolSofrido;
 
                     case Posicao.MeioCampo:
-                        return item.Jogador.Scouts.Assistencias;
+                        return scouts.Assistencias + scouts.RoubadasDeBola;
 
                     case Posicao.Atacante:
-                        return item.Jogador.Scouts.Gols;
+                        return scouts.Gols + scouts.Assistencias;
 
                     case Posicao.Tecnico:
                     default:
