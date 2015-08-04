@@ -36,8 +36,10 @@ namespace Cartoleiro.Core.Confronto
                          {
                              { TipoMedicao.PontosNoCampeonato, MedirPosicaoNoCampeonato },
                              { TipoMedicao.PontosNosUltimos5Jogos, MedirPontosNosUltimos5Jogos },
-                             { TipoMedicao.Vitorias, MedirVitorias},
-                             { TipoMedicao.Derrotas, MedirDerrotas},
+                             { TipoMedicao.VitoriasEmCasa, MedirVitoriasEmCasa},
+                             { TipoMedicao.VitoriasForaDeCasa, MedirVitoriasForaDeCasa},
+                             { TipoMedicao.DerrotasEmCasa, MedirDerrotasEmCasa},
+                             { TipoMedicao.DerrotasForaCasa, MedirDerrotasForaDeCasa},
                              { TipoMedicao.AproveitamentoEmCasa, MedirAproveitamentoEmCasa },
                              { TipoMedicao.AproveitamentoForaDeCasa, MedirAproveitamentoForaDeCasa },
                              { TipoMedicao.AproveitamentoNoCampeonato, MedirAproveitamentoNoCampeonato},
@@ -47,11 +49,11 @@ namespace Cartoleiro.Core.Confronto
                              { TipoMedicao.MediaDaDefesa, MedirMediaDaDefesa },
                              { TipoMedicao.MediaDaMeioCampo, MedirMediaDoMeioCampo },
                              { TipoMedicao.MediaDaAtaque, MedirMediaDoAtaque },
-                             { TipoMedicao.MediaDoClube, MedirMediaDoClube },
+                             //{ TipoMedicao.MediaDoClube, MedirMediaDoClube },
                              { TipoMedicao.VitoriasEmConfrontosNoBrasileiro, MedirHistoricoDeVitoriasNoBrasileiro },
                              { TipoMedicao.VitoriasEmTodosOsConfronto, MedirHistoricoDeVitoriasNoConfronto },
-                             { TipoMedicao.VitoriasNoBrasileiro, MedirVitoriasNaBrasileiro},
-                             { TipoMedicao.VitoriasNaHistoriaDoClube, MedirVitoriasNaHistoriaDoClube},
+                             { TipoMedicao.VitoriasSobreJogosNoBrasileiro, MedirVitoriasNaBrasileiro},
+                             { TipoMedicao.VitoriasSobreJogosNaHistoriaDoClube, MedirVitoriasNaHistoriaDoClube},
                          };
         }
 
@@ -99,28 +101,52 @@ namespace Cartoleiro.Core.Confronto
             return new ItemDeMedicaoDeConfronto(TipoMedicao.PontosNosUltimos5Jogos, vencedor, pontosMandante, pontosVisitante, "G");
         }
 
-        private ItemDeMedicaoDeConfronto MedirVitorias()
+        private ItemDeMedicaoDeConfronto MedirVitoriasEmCasa()
         {
-            var pontosMandante = Mandande.Campeonato.Vitorias;
-            var pontosVisitante = Visitante.Campeonato.Vitorias;
+            var pontosMandante = Mandande.Campeonato.VitoriasEmCasa;
+            var pontosVisitante = Visitante.Campeonato.VitoriasEmCasa;
 
             var vencedor = (pontosMandante > pontosVisitante)
                 ? Mandande
                 : (pontosVisitante > pontosMandante) ? Visitante : null;
 
-            return new ItemDeMedicaoDeConfronto(TipoMedicao.Vitorias, vencedor, pontosMandante, pontosVisitante, "G");
+            return new ItemDeMedicaoDeConfronto(TipoMedicao.VitoriasEmCasa, vencedor, pontosMandante, pontosVisitante, "G");
         }
 
-        private ItemDeMedicaoDeConfronto MedirDerrotas()
+        private ItemDeMedicaoDeConfronto MedirVitoriasForaDeCasa()
         {
-            var pontosMandante = Mandande.Campeonato.Derrotas;
-            var pontosVisitante = Visitante.Campeonato.Derrotas;
+            var pontosMandante = Mandande.Campeonato.VitoriasForaDeCasa;
+            var pontosVisitante = Visitante.Campeonato.VitoriasForaDeCasa;
+
+            var vencedor = (pontosMandante > pontosVisitante)
+                ? Mandande
+                : (pontosVisitante > pontosMandante) ? Visitante : null;
+
+            return new ItemDeMedicaoDeConfronto(TipoMedicao.VitoriasForaDeCasa, vencedor, pontosMandante, pontosVisitante, "G");
+        }
+
+        private ItemDeMedicaoDeConfronto MedirDerrotasEmCasa()
+        {
+            var pontosMandante = Mandande.Campeonato.DerrotasEmCasa;
+            var pontosVisitante = Visitante.Campeonato.DerrotasEmCasa;
 
             var vencedor = (pontosMandante < pontosVisitante)
                 ? Mandande
                 : (pontosVisitante < pontosMandante) ? Visitante : null;
 
-            return new ItemDeMedicaoDeConfronto(TipoMedicao.Derrotas, vencedor, pontosMandante, pontosVisitante, "G");
+            return new ItemDeMedicaoDeConfronto(TipoMedicao.DerrotasEmCasa, vencedor, pontosMandante, pontosVisitante, "G");
+        }
+
+        private ItemDeMedicaoDeConfronto MedirDerrotasForaDeCasa()
+        {
+            var pontosMandante = Mandande.Campeonato.DerrotasForaDeCasa;
+            var pontosVisitante = Visitante.Campeonato.DerrotasForaDeCasa;
+
+            var vencedor = (pontosMandante < pontosVisitante)
+                ? Mandande
+                : (pontosVisitante < pontosMandante) ? Visitante : null;
+
+            return new ItemDeMedicaoDeConfronto(TipoMedicao.DerrotasForaCasa, vencedor, pontosMandante, pontosVisitante, "G");
         }
 
         private ItemDeMedicaoDeConfronto MedirAproveitamentoEmCasa()
@@ -231,17 +257,17 @@ namespace Cartoleiro.Core.Confronto
             return new ItemDeMedicaoDeConfronto(TipoMedicao.MediaDaAtaque, vencedor, pontosMandante, pontosVisitante);
         }
 
-        private ItemDeMedicaoDeConfronto MedirMediaDoClube()
-        {
-            var pontosMandante = _jogadores.DoClube(Mandande).Media(j => j.Pontuacao.Media);
-            var pontosVisitante = _jogadores.DoClube(Visitante).Media(j => j.Pontuacao.Media);
+        //private ItemDeMedicaoDeConfronto MedirMediaDoClube()
+        //{
+        //    var pontosMandante = _jogadores.DoClube(Mandande).Media(j => j.Pontuacao.Media);
+        //    var pontosVisitante = _jogadores.DoClube(Visitante).Media(j => j.Pontuacao.Media);
 
-            var vencedor = (pontosMandante > pontosVisitante)
-                ? Mandande
-                : (pontosVisitante > pontosMandante) ? Visitante : null;
+        //    var vencedor = (pontosMandante > pontosVisitante)
+        //        ? Mandande
+        //        : (pontosVisitante > pontosMandante) ? Visitante : null;
 
-            return new ItemDeMedicaoDeConfronto(TipoMedicao.MediaDoClube, vencedor, pontosMandante, pontosVisitante);
-        }
+        //    return new ItemDeMedicaoDeConfronto(TipoMedicao.MediaDoClube, vencedor, pontosMandante, pontosVisitante);
+        //}
 
         private ItemDeMedicaoDeConfronto MedirHistoricoDeVitoriasNoBrasileiro()
         {
@@ -273,26 +299,38 @@ namespace Cartoleiro.Core.Confronto
 
         private ItemDeMedicaoDeConfronto MedirVitoriasNaBrasileiro()
         {
-            var pontosMandante = HistoricoDeJogos.GetHistoricoDeJogos(Mandande).Count(j => j.Vencedor() == Mandande && j.Campeonato == TipoCampeonato.CampeonatoBrasileiro);
-            var pontosVisitante = HistoricoDeJogos.GetHistoricoDeJogos(Visitante).Count(j => j.Vencedor() == Visitante && j.Campeonato == TipoCampeonato.CampeonatoBrasileiro);
+            var totalDeJogosDoMandante = HistoricoDeJogos.GetHistoricoDeJogos(Mandande).Count(j => j.Campeonato == TipoCampeonato.CampeonatoBrasileiro);
+            var totalDeJogosDoVisitante = HistoricoDeJogos.GetHistoricoDeJogos(Visitante).Count(j => j.Campeonato == TipoCampeonato.CampeonatoBrasileiro);
+
+            var vitoriasDoMandante = HistoricoDeJogos.GetHistoricoDeJogos(Mandande).Count(j => j.Vencedor() == Mandande && j.Campeonato == TipoCampeonato.CampeonatoBrasileiro);
+            var vitoriasDoVisitante = HistoricoDeJogos.GetHistoricoDeJogos(Visitante).Count(j => j.Vencedor() == Visitante && j.Campeonato == TipoCampeonato.CampeonatoBrasileiro);
+
+            var pontosMandante = vitoriasDoMandante / (double)totalDeJogosDoMandante;
+            var pontosVisitante = vitoriasDoVisitante / (double)totalDeJogosDoVisitante;
 
             var vencedor = (pontosMandante > pontosVisitante)
                 ? Mandande
                 : (pontosVisitante > pontosMandante) ? Visitante : null;
 
-            return new ItemDeMedicaoDeConfronto(TipoMedicao.VitoriasNoBrasileiro, vencedor, pontosMandante, pontosVisitante, "G");
+            return new ItemDeMedicaoDeConfronto(TipoMedicao.VitoriasSobreJogosNoBrasileiro, vencedor, pontosMandante, pontosVisitante, "P");
         }
 
         private ItemDeMedicaoDeConfronto MedirVitoriasNaHistoriaDoClube()
         {
-            var pontosMandante = HistoricoDeJogos.GetHistoricoDeJogos(Mandande).Count(j => j.Vencedor() == Mandande);
-            var pontosVisitante = HistoricoDeJogos.GetHistoricoDeJogos(Visitante).Count(j => j.Vencedor() == Visitante);
+            var totalDeJogosDoMandante = HistoricoDeJogos.GetHistoricoDeJogos(Mandande).Count();
+            var totalDeJogosDoVisitante = HistoricoDeJogos.GetHistoricoDeJogos(Visitante).Count();
+
+            var vitoriasDoMandante = HistoricoDeJogos.GetHistoricoDeJogos(Mandande).Count(j => j.Vencedor() == Mandande);
+            var vitoriasDoVisitante = HistoricoDeJogos.GetHistoricoDeJogos(Visitante).Count(j => j.Vencedor() == Visitante);
+
+            var pontosMandante = vitoriasDoMandante / (double)totalDeJogosDoMandante;
+            var pontosVisitante = vitoriasDoVisitante / (double)totalDeJogosDoVisitante;
 
             var vencedor = (pontosMandante > pontosVisitante)
                 ? Mandande
                 : (pontosVisitante > pontosMandante) ? Visitante : null;
 
-            return new ItemDeMedicaoDeConfronto(TipoMedicao.VitoriasNaHistoriaDoClube, vencedor, pontosMandante, pontosVisitante, "G");
+            return new ItemDeMedicaoDeConfronto(TipoMedicao.VitoriasSobreJogosNaHistoriaDoClube, vencedor, pontosMandante, pontosVisitante, "P");
         }
     }
 }

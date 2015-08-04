@@ -1,4 +1,3 @@
-using System;
 using System.Collections.Generic;
 using System.Linq;
 using Cartoleiro.Core.Cartola;
@@ -42,7 +41,7 @@ namespace Cartoleiro.Core.Escalador.Analizador.Confronto
             var tiposDeMedicao = new List<TipoMedicao>()
                                  {
                                      TipoMedicao.PontosNoCampeonato, TipoMedicao.AproveitamentoNoCampeonato, TipoMedicao.SaldoDeGols,
-                                     TipoMedicao.MediaDaDefesa, TipoMedicao.MediaDaMeioCampo, TipoMedicao.MediaDaAtaque, TipoMedicao.MediaDoClube,
+                                     TipoMedicao.MediaDaDefesa, TipoMedicao.MediaDaMeioCampo, TipoMedicao.MediaDaAtaque,
                                  };
 
             foreach (var jogo in Cartola.Campeonato.Rodadas.ProximaRodada.Jogos)

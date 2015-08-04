@@ -4,8 +4,10 @@ namespace Cartoleiro.Core.Confronto
     {
         PontosNoCampeonato,
         PontosNosUltimos5Jogos,
-        Vitorias,
-        Derrotas,
+        VitoriasEmCasa,
+        VitoriasForaDeCasa,
+        DerrotasEmCasa,
+        DerrotasForaCasa,
         AproveitamentoEmCasa,
         AproveitamentoForaDeCasa,
         AproveitamentoNoCampeonato,
@@ -15,10 +17,10 @@ namespace Cartoleiro.Core.Confronto
         MediaDaDefesa,
         MediaDaMeioCampo,
         MediaDaAtaque,
-        MediaDoClube,
+        //MediaDoClube,
         VitoriasEmConfrontosNoBrasileiro,
         VitoriasEmTodosOsConfronto,
-        VitoriasNoBrasileiro,
-        VitoriasNaHistoriaDoClube,
+        VitoriasSobreJogosNoBrasileiro,
+        VitoriasSobreJogosNaHistoriaDoClube,
     }
 }

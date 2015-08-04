@@ -9,6 +9,8 @@ namespace Cartoleiro.Core.Cartola
         private Clube _clube;
         private int? _vitoriasEmCasa = null;
         private int? _vitoriasForaDeCasa = null;
+        private int? _derrotasEmCasa = null;
+        private int? derrotasForaDeCasa = null;
 
         public int Posicao { get; set; }
         public int Pontos { get; set; }
@@ -29,6 +31,15 @@ namespace Cartoleiro.Core.Cartola
         public int GolsProForaDeCasa
         {
             get { return Rodadas.JogosComoVisitante(_clube).Sum(j => j.PlacarVisitante); }
+        }
+
+        public int GolsContraEmCasa
+        {
+            get { return Rodadas.JogosComoMandante(_clube).Sum(j => j.PlacarVisitante); }
+        }
+        public int GolsContraForaDeCasa
+        {
+            get { return Rodadas.JogosComoVisitante(_clube).Sum(j => j.PlacarMandante); }
         }
 
         public int VitoriasEmCasa
@@ -53,6 +64,31 @@ namespace Cartoleiro.Core.Cartola
                 }
 
                 return _vitoriasForaDeCasa.Value;
+            }
+        }
+
+        public int DerrotasEmCasa
+        {
+            get
+            {
+                if (_derrotasEmCasa == null)
+                {
+                    _derrotasEmCasa = Rodadas.JogosComoMandante(_clube).Count(j => j.Vencedor() != _clube && !j.Empate());
+                }
+
+                return _derrotasEmCasa.Value;
+            }
+        }
+        public int DerrotasForaDeCasa
+        {
+            get
+            {
+                if (derrotasForaDeCasa == null)
+                {
+                    derrotasForaDeCasa = Rodadas.JogosComoVisitante(_clube).Count(j => j.Vencedor() != _clube && !j.Empate());
+                }
+
+                return derrotasForaDeCasa.Value;
             }
         }
 

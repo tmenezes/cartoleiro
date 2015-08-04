@@ -41,7 +41,7 @@ namespace Cartoleiro.Core.Escalador.Analizador.Confronto
             var tiposDeMedicao = new List<TipoMedicao>()
                                  {
                                      TipoMedicao.VitoriasEmTodosOsConfronto, TipoMedicao.VitoriasEmConfrontosNoBrasileiro,
-                                     TipoMedicao.VitoriasNaHistoriaDoClube, TipoMedicao.VitoriasNoBrasileiro
+                                     TipoMedicao.VitoriasSobreJogosNaHistoriaDoClube, TipoMedicao.VitoriasSobreJogosNoBrasileiro
                                  };
 
             foreach (var jogo in Cartola.Campeonato.Rodadas.ProximaRodada.Jogos)

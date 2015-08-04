@@ -1,4 +1,3 @@
-using System;
 using Cartoleiro.Core.Cartola;
 
 namespace Cartoleiro.Core.Confronto
@@ -7,8 +6,10 @@ namespace Cartoleiro.Core.Confronto
     {
         private const string MEDIDOR_PONTOS_CAMPEONATO = "Pontos no campeonato";
         private const string MEDIDOR_PONTOS_5_JOGOS = "Pontos nos últimos 5 jogos";
-        private const string MEDIDOR_VITORIAS = "Vitórias no campeonato";
-        private const string MEDIDOR_DERROTAS = "Derrotas no campeonato";
+        private const string MEDIDOR_VITORIAS_CASA = "Vitórias em casa no campeonato";
+        private const string MEDIDOR_VITORIAS_FORA = "Vitórias fora no campeonato";
+        private const string MEDIDOR_DERROTAS_CASA = "Derrotas em casa no campeonato";
+        private const string MEDIDOR_DERROTAS_FORA = "Derrotas fora no campeonato";
         private const string MEDIDOR_APROVEITAMENTO_CASA = "Aproveitamento em casa";
         private const string MEDIDOR_APROVEITAMENTO_FORA = "Aproveitamento fora de casa";
         private const string MEDIDOR_APROVEITAMENTO = "Aproveitamento no campeonato";
@@ -21,8 +22,8 @@ namespace Cartoleiro.Core.Confronto
         private const string MEDIDOR_MEDIA_CLUBE = "Pontuação média dos jogadores";
         private const string MEDIDOR_CONFRONTO_BRASILEIRO = "Vitórias confrontos no Brasileirão";
         private const string MEDIDOR_CONFRONTO_TODOS = "Vitórias em todos os confrontos";
-        private const string MEDIDOR_VITORIAS_BRASILEIRO = "Vitórias no Brasileirão";
-        private const string MEDIDOR_VITORIAS_HISTORIA = "Vitórias na história do clube";
+        private const string MEDIDOR_VITORIAS_BRASILEIRO = "% Vitórias / jogos no Brasileirão";
+        private const string MEDIDOR_VITORIAS_HISTORIA = "% Vitórias / jogos na história";
 
         public TipoMedicao TipoMedicao { get; private set; }
         public string Descricao { get; private set; }
@@ -58,11 +59,17 @@ namespace Cartoleiro.Core.Confronto
                 case TipoMedicao.PontosNosUltimos5Jogos:
                     return MEDIDOR_PONTOS_5_JOGOS;
 
-                case TipoMedicao.Vitorias:
-                    return MEDIDOR_VITORIAS;
+                case TipoMedicao.VitoriasEmCasa:
+                    return MEDIDOR_VITORIAS_CASA;
 
-                case TipoMedicao.Derrotas:
-                    return MEDIDOR_DERROTAS;
+                case TipoMedicao.VitoriasForaDeCasa:
+                    return MEDIDOR_VITORIAS_FORA;
+
+                case TipoMedicao.DerrotasEmCasa:
+                    return MEDIDOR_DERROTAS_CASA;
+
+                case TipoMedicao.DerrotasForaCasa:
+                    return MEDIDOR_DERROTAS_FORA;
 
                 case TipoMedicao.AproveitamentoEmCasa:
                     return MEDIDOR_APROVEITAMENTO_CASA;
@@ -91,8 +98,8 @@ namespace Cartoleiro.Core.Confronto
                 case TipoMedicao.MediaDaAtaque:
                     return MEDIDOR_MEDIA_ATAQUE;
 
-                case TipoMedicao.MediaDoClube:
-                    return MEDIDOR_MEDIA_CLUBE;
+                //case TipoMedicao.MediaDoClube:
+                //    return MEDIDOR_MEDIA_CLUBE;
 
                 case TipoMedicao.VitoriasEmConfrontosNoBrasileiro:
                     return MEDIDOR_CONFRONTO_BRASILEIRO;
@@ -100,10 +107,10 @@ namespace Cartoleiro.Core.Confronto
                 case TipoMedicao.VitoriasEmTodosOsConfronto:
                     return MEDIDOR_CONFRONTO_TODOS;
 
-                case TipoMedicao.VitoriasNoBrasileiro:
+                case TipoMedicao.VitoriasSobreJogosNoBrasileiro:
                     return MEDIDOR_VITORIAS_BRASILEIRO;
 
-                case TipoMedicao.VitoriasNaHistoriaDoClube:
+                case TipoMedicao.VitoriasSobreJogosNaHistoriaDoClube:
                     return MEDIDOR_VITORIAS_HISTORIA;
 
                 default:
