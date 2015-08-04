@@ -18,10 +18,10 @@ namespace Cartoleiro.Core.Escalador.Analizador.Jogador
 
                     case Posicao.Lateral:
                     case Posicao.Zagueiro:
-                        return scouts.RoubadasDeBola + scouts.SemGolSofrido;
+                        return scouts.RoubadasDeBola + scouts.SemGolSofrido + (scouts.FaltasCometidas * -1);
 
                     case Posicao.MeioCampo:
-                        return scouts.Assistencias + scouts.RoubadasDeBola;
+                        return scouts.Assistencias + scouts.RoubadasDeBola + (scouts.FaltasCometidas * -1);
 
                     case Posicao.Atacante:
                         return scouts.Gols + scouts.Assistencias;
