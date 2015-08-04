@@ -7,7 +7,6 @@
     ViewBag.Title = Model.Nome;
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
-
 <h2 class="page-header">@ViewBag.Title <small>dados atualizados do Cartola FC</small></h2>
 <div class="row">
     <div class="col-sm-6 col-md-4">
@@ -95,10 +94,3 @@
         @Html.Partial("_TabelaJogadores", ViewData.GetElencoDoClube())
     </div>
 </div>
-@section scripts{
-    <script>
-        $(document).ready(function () {
-            $('[data-toggle="tooltip"]').tooltip();
-        })
-    </script>
-}

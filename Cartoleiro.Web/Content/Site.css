@@ -32,12 +32,24 @@ textarea {
 }
 
 .home-ad-1 {
-    height: 140px; 
-    margin-top: 10px
+    height: 140px;
+    margin-top: 10px;
 }
+
 .home-ad-2 {
-    height: 100px; 
-    margin-top: 10px
+    height: 100px;
+    margin-top: 10px;
+}
+
+.panel-clubes {
+    margin-top: 10px;
+    margin-bottom: -10px;
+    text-align: center;
+}
+
+.panel-clubes-clube {
+    float: left;
+    width: 5%;
 }
 
 .table-cartoleiro > tbody > tr > td {
@@ -62,6 +74,7 @@ textarea {
     left: 510px;
     margin: 0 10px;
 }
+
 .escalador-form-ad2 {
     float: left;
     position: absolute;

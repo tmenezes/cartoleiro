@@ -2011,6 +2011,7 @@
     <Content Include="Views\Shared\_adQuadrado3.cshtml" />
     <Content Include="Views\Shared\_adQuadradoMini1.cshtml" />
     <Content Include="Views\Shared\_TabelaJogadoresMini.cshtml" />
+    <Content Include="Views\Shared\_ListaClubes.cshtml" />
   </ItemGroup>
   <ItemGroup />
   <ItemGroup>

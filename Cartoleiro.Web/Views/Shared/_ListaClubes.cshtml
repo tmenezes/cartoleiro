@@ -1,0 +1,16 @@
+﻿@using Cartoleiro.Web.AppCode
+@using Cartoleiro.Web.AppCode.Extensions
+<div class="row hidden-xs">
+    <div class="panel panel-default panel-clubes">
+        <div class="panel-body">
+            @foreach (var clube in CartoleiroApp.CartolaDataSource.Clubes.OrderBy(c => c.Nome))
+            {
+                <div class="panel-clubes-clube">
+                    <a href="@Url.Action("Detalhe", "Clube", new { id = clube.GetNomeNormalizado() })">
+                        <img src="@clube.GetUrlImagem()" width="32" height="32" alt="@clube.Nome" data-toggle="tooltip" data-placement="bottom" title="@clube.GetTooltip()" />
+                    </a>
+                </div>
+            }
+        </div>
+    </div>
+</div>

@@ -4,7 +4,7 @@
     <meta charset="iso-8859-1" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="Description" content="Cartoleiro: ferramenta para simular a escalação times no Cartola FC com o seu patrimônio (cartoletas) e utilizando analisadores estatísticos de partidas anteriores.">
-    <meta name="keywords" content="mestre cartoleiro, cartoleiro, cartola, cartola fc, futebol, campeonato, brasileiro"/>
+    <meta name="keywords" content="mestre cartoleiro, cartoleiro, cartola, cartola fc, futebol, campeonato, brasileiro" />
     <meta name="robots" content="index, follow">
     <meta name="verification" content="be1d777226d2cd5e4d29cb890be79487" />
     <title>@ViewBag.Title - Mestre Cartoleiro</title>
@@ -36,6 +36,7 @@
     </div>
     @RenderSection("header", required: false)
     <div class="container body-content">
+        @Html.Partial("_ListaClubes")
         @RenderBody()
         <hr />
         <footer>
@@ -46,6 +47,11 @@
     @Scripts.Render("~/bundles/bootstrap")
     @Scripts.Render("~/bundles/cartoleiro")
     @Html.Partial("_GoogleAnalitics")
+    <script>
+        $(function () {
+            $('[data-toggle="tooltip"]').tooltip();
+        });
+    </script>
     @RenderSection("scripts", required: false)
 </body>
 </html>
