@@ -21,12 +21,17 @@ namespace Cartoleiro.Web.AppCode
 
         public static ICartolaDataSource CartolaDataSource { get; private set; }
         public static Time TimeDeMaiorMedia { get; private set; }
+
         public static IEnumerable<Jogador> MelhoresGoleiros { get; private set; }
         public static IEnumerable<Jogador> MelhoresZagueiros { get; private set; }
         public static IEnumerable<Jogador> MelhoresLaterais { get; private set; }
         public static IEnumerable<Jogador> MelhoresMeias { get; private set; }
         public static IEnumerable<Jogador> MelhoresAtacantes { get; private set; }
         public static IEnumerable<Jogador> MelhoresTecnicos { get; private set; }
+
+        public static IEnumerable<Clube> MelhoresDefesas { get; private set; }
+        public static IEnumerable<Clube> MelhoresMeioCampos { get; private set; }
+        public static IEnumerable<Clube> MelhoresAtaques { get; private set; }
 
 
         public static void Iniciar()
@@ -81,6 +86,7 @@ namespace Cartoleiro.Web.AppCode
             EscalarMelhorTime();
 
             DefinirMelhoresJogadores();
+            DefinirMelhoresClubes();
         }
 
         private static void EscalarMelhorTime()
@@ -107,6 +113,20 @@ namespace Cartoleiro.Web.AppCode
             MelhoresMeias = ranqueamento.JogadoresMelhoresPontuados(Posicao.MeioCampo).Take(5);
             MelhoresAtacantes = ranqueamento.JogadoresMelhoresPontuados(Posicao.Atacante).Take(5);
             MelhoresTecnicos = ranqueamento.JogadoresMelhoresPontuados(Posicao.Tecnico).Take(5);
+        }
+
+        private static void DefinirMelhoresClubes()
+        {
+            var escalador = new EscaladorDeTime(CartolaDataSource)
+                .ComPatrimonio(double.MaxValue)
+                .ComQtdeJogosMaiorQue(Convert.ToInt32(Campeonato.Rodadas.RodadaAtual.Numero * 0.33))
+                .ComAnalisadores(new AnalisadorBuilder().PontuacaoMedia().ScoutsPorPosicao().Analisadores);
+
+            var ranqueamento = escalador.ObterRanqueamento().ToList();
+
+            MelhoresDefesas = ranqueamento.MelhoresPontuados(Posicao.Lateral, Posicao.Zagueiro).AgruparPorClube().Take(5);
+            MelhoresMeioCampos = ranqueamento.MelhoresPontuados(Posicao.MeioCampo).AgruparPorClube().Take(5);
+            MelhoresAtaques = ranqueamento.MelhoresPontuados(Posicao.Atacante).AgruparPorClube().Take(5);
         }
 
         private static string AplicarLinks(string descricao)
