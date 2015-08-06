@@ -1,0 +1,34 @@
+﻿@using Cartoleiro.Core.Cartola
+@using Cartoleiro.Web.AppCode
+@using Cartoleiro.Web.AppCode.Extensions
+@model  Cartoleiro.Web.Models.SharedModels.ClubesComMediaDeSetorDoCampo
+
+<table class="table table-striped table-bordered table-cartoleiro">
+    <thead>
+        <tr>
+            <th style="width: 60%">Clube</th>
+            <th style="width: 20%">Posição</th>
+            <th style="width: 20%">Média</th>
+        </tr>
+    </thead>
+    @foreach (var clube in Model.Clubes)
+    {
+        <tr>
+            <td>
+                <div class="media">
+                    <div class="media-left media-middle">
+                        <a href="@Url.Action("Detalhe", "Clube", new { id = clube.GetNomeNormalizado() })">
+                            <img src="@clube.GetUrlImagem()" width="32" height="32" alt="@clube.Nome" data-toggle="tooltip" data-placement="left" title="@clube.GetTooltip()" />
+                        </a>
+                    </div>
+                    <div class="media-body media-jogador">
+                        <a href="@Url.Action("Detalhe", "Clube", new { id = clube.GetNomeNormalizado() })"><strong>@clube.Nome</strong></a>
+                    </div>
+                </div>
+            </td>
+            <td>@clube.Campeonato.Posicao.ToString("F")</td>
+            <td>@CartoleiroApp.CalcularMediaDaDefesa(clube)</td>
+        </tr>
+    }
+</table>
+

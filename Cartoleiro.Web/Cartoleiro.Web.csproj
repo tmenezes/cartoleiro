@@ -20,6 +20,7 @@
     <IISExpressAnonymousAuthentication />
     <IISExpressWindowsAuthentication />
     <IISExpressUseClassicPipelineMode />
+    <UseGlobalApplicationHostFile />
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -183,6 +184,7 @@
     <Compile Include="AppCode\MvcHelpers\ViewDataHelper.cs" />
     <Compile Include="AppCode\MvcHelpers\ViewModelHelper.cs" />
     <Compile Include="AppCode\HtmlHelpers\ActionLinkEx.cs" />
+    <Compile Include="AppCode\SetorDoCampo.cs" />
     <Compile Include="AppCode\Utils\HttpClientHelper.cs" />
     <Compile Include="App_Start\BundleConfig.cs" />
     <Compile Include="App_Start\FilterConfig.cs" />
@@ -207,6 +209,7 @@
     <Compile Include="Models\EscaladorModels\EscaladorViewModel.cs" />
     <Compile Include="Models\JogadorModels\FiltroJogadorViewModel.cs" />
     <Compile Include="Models\ScoutsAoVivoModels\ScoutsAoVivo.cs" />
+    <Compile Include="Models\SharedModels\ClubesComMediaDeSetorDoCampo.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Startup.cs" />
   </ItemGroup>
@@ -2018,6 +2021,7 @@
     <Content Include="Views\Shared\_adQuadradoMini1.cshtml" />
     <Content Include="Views\Shared\_TabelaJogadoresMini.cshtml" />
     <Content Include="Views\Shared\_ListaClubes.cshtml" />
+    <Content Include="Views\Shared\_TabelaClubesMini.cshtml" />
   </ItemGroup>
   <ItemGroup />
   <ItemGroup>

@@ -1,4 +1,5 @@
 ﻿@using Cartoleiro.Web.AppCode
+@using Cartoleiro.Web.Models.SharedModels
 @{
     ViewBag.Title = "Home";
 }
@@ -41,24 +42,48 @@
         </p>
         @Html.Partial("_adQuadrado3")
     </div>
+</div>
+<div class="row">
     <div class="col-md-4">
-        <h2 class="page-header">
-            Zagueiros<small> os 5 melhores</small>
+        <h2 class="page-header">Zagueiros<small> os 5 melhores</small>
         </h2>
         <p>
             @Html.Partial("_TabelaJogadoresMini", CartoleiroApp.MelhoresZagueiros)
         </p>
     </div>
     <div class="col-md-4">
-        <h2 class="page-header">Goleiros<small> os 5 melhores</small></h2>
+        <h2 class="page-header">Goleiros<small> os 5 melhores</small>
+        </h2>
         <p>
             @Html.Partial("_TabelaJogadoresMini", CartoleiroApp.MelhoresGoleiros)
         </p>
     </div>
     <div class="col-md-4">
-        <h2 class="page-header">Técnicos<small> os 5 melhores</small></h2>
+        <h2 class="page-header">Técnicos<small> os 5 melhores</small>
+        </h2>
         <p>
             @Html.Partial("_TabelaJogadoresMini", CartoleiroApp.MelhoresTecnicos)
+        </p>
+    </div>
+</div>
+<div class="row">
+    <div class="col-md-4">
+        <h2 class="page-header">Defesa<small> os 5 melhores</small>
+        </h2>
+        <p>
+            @Html.Partial("_TabelaClubesMini", new ClubesComMediaDeSetorDoCampo(CartoleiroApp.MelhoresDefesas, SetorDoCampo.Defesa))
+        </p>
+    </div>
+    <div class="col-md-4">
+        <h2 class="page-header">Meio Campo<small> os 5 melhores</small></h2>
+        <p>
+            @Html.Partial("_TabelaClubesMini", new ClubesComMediaDeSetorDoCampo(CartoleiroApp.MelhoresMeioCampos, SetorDoCampo.MeioCampo))
+        </p>
+    </div>
+    <div class="col-md-4">
+        <h2 class="page-header">Ataque<small> os 5 melhores</small></h2>
+        <p>
+            @Html.Partial("_TabelaClubesMini", new ClubesComMediaDeSetorDoCampo(CartoleiroApp.MelhoresAtaques, SetorDoCampo.Ataque))
         </p>
     </div>
 </div>

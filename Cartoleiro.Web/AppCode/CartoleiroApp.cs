@@ -18,6 +18,7 @@ namespace Cartoleiro.Web.AppCode
     public static class CartoleiroApp
     {
         private static Dictionary<Clube, string> _descricaoDosClubes;
+        private static IEnumerable<Jogador> _jogadores;
 
         public static ICartolaDataSource CartolaDataSource { get; private set; }
         public static Time TimeDeMaiorMedia { get; private set; }
@@ -78,10 +79,43 @@ namespace Cartoleiro.Web.AppCode
             _descricaoDosClubes = descricoes;
         }
 
+        public static double CalcularMediaDoClube(Clube clube, SetorDoCampo setorDoCampo)
+        {
+            switch (setorDoCampo)
+            {
+                case SetorDoCampo.Defesa:
+                    return CalcularMediaDaDefesa(clube);
+
+                case SetorDoCampo.MeioCampo:
+                    return CalcularMediaDoMeioCampo(clube);
+
+                case SetorDoCampo.Ataque:
+                default:
+                    return CalcularMediaDoAtaque(clube);
+            }
+        }
+
+        public static double CalcularMediaDaDefesa(Clube clube)
+        {
+            return _jogadores.DoClube(clube).DaDefesa().Media(j => j.Pontuacao.Media);
+        }
+
+        public static double CalcularMediaDoMeioCampo(Clube clube)
+        {
+            return _jogadores.DoClube(clube).DoMeioCampo().Media(j => j.Pontuacao.Media);
+        }
+
+        public static double CalcularMediaDoAtaque(Clube clube)
+        {
+            return _jogadores.DoClube(clube).DoAtaque().Media(j => j.Pontuacao.Media);
+        }
+
 
         private static void Iniciar(ICartolaDataSource cartolaDataSource)
         {
             CartolaDataSource = cartolaDataSource;
+
+            _jogadores = CartolaDataSource.Jogadores.Where(j => j.Status == Status.Provavel || j.Status == Status.Duvida).ToList();
 
             EscalarMelhorTime();
 

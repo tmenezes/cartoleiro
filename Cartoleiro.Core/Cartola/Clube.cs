@@ -1,5 +1,4 @@
 ﻿using System.Collections.Generic;
-using System.Linq;
 using Cartoleiro.Core.Data;
 using Cartoleiro.Core.Extensions;
 
