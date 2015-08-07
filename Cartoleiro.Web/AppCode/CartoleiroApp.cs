@@ -152,15 +152,15 @@ namespace Cartoleiro.Web.AppCode
         private static void DefinirMelhoresClubes()
         {
             var escalador = new EscaladorDeTime(CartolaDataSource)
+                .SomenteProvaveis(false)
                 .ComPatrimonio(double.MaxValue)
-                .ComQtdeJogosMaiorQue(Convert.ToInt32(Campeonato.Rodadas.RodadaAtual.Numero * 0.33))
-                .ComAnalisadores(new AnalisadorBuilder().PontuacaoMedia().ScoutsPorPosicao().Analisadores);
+                .ComAnalisadores(new AnalisadorBuilder().PontuacaoMedia().Analisadores);
 
             var ranqueamento = escalador.ObterRanqueamento().ToList();
 
             MelhoresDefesas = ranqueamento.MelhoresPontuados(Posicao.Lateral, Posicao.Zagueiro).AgruparPorClube().Take(5);
             MelhoresMeioCampos = ranqueamento.MelhoresPontuados(Posicao.MeioCampo).AgruparPorClube().Take(5);
-            MelhoresAtaques = ranqueamento.MelhoresPontuados(Posicao.Atacante).AgruparPorClube().Take(5);
+            MelhoresAtaques = ranqueamento.MelhoresPontuados(Posicao.Atacante).AgruparPorClube().Take(5).ToList();
         }
 
         private static string AplicarLinks(string descricao)

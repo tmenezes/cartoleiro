@@ -6,8 +6,8 @@
     <thead>
         <tr>
             <th style="width: 70%">Jogador</th>
-            <th style="width: 15%">C$</th>
-            <th style="width: 15%">Média</th>
+            <th class="text-right" style="width: 15%">C$</th>
+            <th class="text-right" style="width: 15%">Média</th>
         </tr>
     </thead>
         @foreach (var jogador in Model)
@@ -26,8 +26,8 @@
                         </div>
                     </div>
                 </td>
-                <td>@jogador.Preco.Atual.ToString("F")</td>
-                <td>@jogador.Pontuacao.Media.ToString("F")</td>
+                <td class="text-right">@jogador.Preco.Atual.ToString("F")</td>
+                <td class="text-right">@jogador.Pontuacao.Media.ToString("F")</td>
 
             </tr>
         }

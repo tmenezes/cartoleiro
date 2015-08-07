@@ -31,9 +31,10 @@ namespace Cartoleiro.Core.Extensions
                                      .Select(group => new
                                      {
                                          Clube = group.Key,
-                                         Pontuacao = group.Sum(i => i.Pontos)
+                                         Pontuacao = group.Average(i => i.Pontos)
                                      })
                                      .OrderByDescending(i => i.Pontuacao)
+                                     .ToList()
                                      .Select(i => i.Clube)
                                      .ToList();
             return clubes;

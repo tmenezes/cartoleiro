@@ -50,6 +50,7 @@
         <p>
             @Html.Partial("_TabelaJogadoresMini", CartoleiroApp.MelhoresZagueiros)
         </p>
+        @Html.Partial("_adQuadrado4")
     </div>
     <div class="col-md-4">
         <h2 class="page-header">Goleiros<small> os 5 melhores</small>
@@ -57,6 +58,7 @@
         <p>
             @Html.Partial("_TabelaJogadoresMini", CartoleiroApp.MelhoresGoleiros)
         </p>
+        @Html.Partial("_adQuadrado5")
     </div>
     <div class="col-md-4">
         <h2 class="page-header">Técnicos<small> os 5 melhores</small>
@@ -64,24 +66,25 @@
         <p>
             @Html.Partial("_TabelaJogadoresMini", CartoleiroApp.MelhoresTecnicos)
         </p>
+        @Html.Partial("_adQuadrado6")
     </div>
 </div>
 <div class="row">
     <div class="col-md-4">
-        <h2 class="page-header">Defesa<small> os 5 melhores</small>
+        <h2 class="page-header">Defesa<small> os 5 melhores clubes</small>
         </h2>
         <p>
             @Html.Partial("_TabelaClubesMini", new ClubesComMediaDeSetorDoCampo(CartoleiroApp.MelhoresDefesas, SetorDoCampo.Defesa))
         </p>
     </div>
     <div class="col-md-4">
-        <h2 class="page-header">Meio Campo<small> os 5 melhores</small></h2>
+        <h2 class="page-header">Meio Campo<small> os 5 melhores clubes</small></h2>
         <p>
             @Html.Partial("_TabelaClubesMini", new ClubesComMediaDeSetorDoCampo(CartoleiroApp.MelhoresMeioCampos, SetorDoCampo.MeioCampo))
         </p>
     </div>
     <div class="col-md-4">
-        <h2 class="page-header">Ataque<small> os 5 melhores</small></h2>
+        <h2 class="page-header">Ataque<small> os 5 melhores clubes</small></h2>
         <p>
             @Html.Partial("_TabelaClubesMini", new ClubesComMediaDeSetorDoCampo(CartoleiroApp.MelhoresAtaques, SetorDoCampo.Ataque))
         </p>

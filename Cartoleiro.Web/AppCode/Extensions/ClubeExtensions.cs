@@ -25,6 +25,11 @@ namespace Cartoleiro.Web.AppCode.Extensions
             return string.Format("{0}: {1}º lugar", clube.Nome, clube.Campeonato.Posicao);
         }
 
+        public static string GetPosicaoFormatada(this Clube clube)
+        {
+            return string.Format("{0}º", clube.Campeonato.Posicao);
+        }
+
         public static string GetNomeNormalizado(this Clube clube)
         {
             var clubeSemAcento = ModelUtils.RemoverAcentos(clube.Nome.ToLower().Replace(" ", ""));
@@ -36,6 +41,11 @@ namespace Cartoleiro.Web.AppCode.Extensions
         {
             var adversario = Campeonato.Rodadas.ProximaRodada.GetJogoDoClube(clube).GetAdversario(clube);
             return adversario;
+        }
+
+        public static double GetMediaDaSetorDoCampo(this Clube clube, SetorDoCampo setor)
+        {
+            return CartoleiroApp.CalcularMediaDoClube(clube, setor);
         }
     }
 }
