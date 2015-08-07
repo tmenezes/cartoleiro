@@ -26,12 +26,15 @@ namespace Cartoleiro.Web
             bundles.Add(new StyleBundle("~/Content/css").Include(
                       "~/Content/bootstrap.css",
                       "~/Content/site.css",
-                      "~/Content/cartoleiro.css"));
+                      "~/Content/cartoleiro.css",
+                      "~/Content/dataTables.bootstrap.css"));
 
             bundles.Add(new ScriptBundle("~/bundles/cartoleiro").Include(
                       "~/Scripts/cartoleiro.js",
                       "~/Scripts/jquery.countdown.js",
-                      "~/Scripts/jquery.scrollTo.js"));
+                      "~/Scripts/jquery.scrollTo.js",
+                      "~/Scripts/jquery.dataTables.js",
+                      "~/Scripts/dataTables.bootstrap.js"));
         }
     }
 }

@@ -7,3 +7,15 @@
 <div class="row">
     @Html.Partial("_TabelaClubes", CartoleiroApp.CartolaDataSource.Clubes.OrderBy(c => c.Campeonato.Posicao))
 </div>
+@section scripts{
+    <script>
+        $(document).ready(function () {
+            $('#tbClubes').dataTable({
+                "paging": false,
+                "info": false,
+                "searching": false,
+                "ordering": true
+            });
+        })
+    </script>
+}

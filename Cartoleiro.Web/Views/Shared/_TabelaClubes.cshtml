@@ -3,17 +3,17 @@
 @using Cartoleiro.Web.AppCode.Extensions
 @model  IEnumerable<Clube>
 
-<table class="table table-striped table-bordered table-cartoleiro">
+<table id="tbClubes" class="table table-striped table-bordered table-cartoleiro">
     <thead>
         <tr>
             <th class="text-center" style="width: 20%">Clube</th>
-            <th class="text-right" style="width: 10%">Vitórias (casa)</th>
-            <th class="text-right" style="width: 10%">Vitórias (fora)</th>
-            <th class="text-right" style="width: 10%">% Aprov. (casa)</th>
-            <th class="text-right" style="width: 10%">% Aprov. (fora)</th>
-            <th class="text-right" style="width: 10%">Média Defesa</th>
-            <th class="text-right" style="width: 10%">Média Meio Campo</th>
-            <th class="text-right" style="width: 10%">Média Ataque</th>
+            <th class="text-center" style="width: 10%">Vitórias (casa)</th>
+            <th class="text-center" style="width: 10%">Vitórias (fora)</th>
+            <th class="text-center" style="width: 10%">% Aprov. (casa)</th>
+            <th class="text-center" style="width: 10%">% Aprov. (fora)</th>
+            <th class="text-center" style="width: 10%">Média Defesa</th>
+            <th class="text-center" style="width: 10%">Média Meio Campo</th>
+            <th class="text-center" style="width: 10%">Média Ataque</th>
         </tr>
     </thead>
     @foreach (var clube in Model)
