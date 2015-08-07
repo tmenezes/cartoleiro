@@ -1,4 +1,5 @@
 ﻿@using Cartoleiro.Core.Cartola
+@using Cartoleiro.Web.AppCode
 @using Cartoleiro.Web.AppCode.Extensions
 @using Cartoleiro.Web.AppCode.MvcHelpers
 @model Clube
@@ -59,8 +60,16 @@
                             </td>
                         </tr>
                         <tr>
-                            <td>Saldo de gols</td>
-                            <td>@Model.Campeonato.SaldoDeGol</td>
+                            <td>Média da defesa</td>
+                            <td>@Model.GetMediaDaSetorDoCampo(SetorDoCampo.Defesa).ToString("F")</td>
+                        </tr>
+                        <tr>
+                            <td>Média meio campo</td>
+                            <td>@Model.GetMediaDaSetorDoCampo(SetorDoCampo.MeioCampo).ToString("F")</td>
+                        </tr>
+                        <tr>
+                            <td>Média do ataque</td>
+                            <td>@Model.GetMediaDaSetorDoCampo(SetorDoCampo.Ataque).ToString("F")</td>
                         </tr>
                     </tbody>
                 </table>
