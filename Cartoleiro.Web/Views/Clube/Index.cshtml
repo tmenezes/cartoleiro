@@ -1,0 +1,9 @@
+﻿@using Cartoleiro.Web.AppCode
+@{
+    ViewBag.Title = "Clubes Brasileirão " + DateTime.Now.Year;
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<h2 class="page-header">@ViewBag.Title <small>dados atualizados do Cartola FC</small></h2>
+<div class="row">
+    @Html.Partial("_TabelaClubes", CartoleiroApp.CartolaDataSource.Clubes.OrderBy(c => c.Campeonato.Posicao))
+</div>

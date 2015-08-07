@@ -2025,6 +2025,8 @@
     <Content Include="Views\Shared\_adQuadrado4.cshtml" />
     <Content Include="Views\Shared\_adQuadrado5.cshtml" />
     <Content Include="Views\Shared\_adQuadrado6.cshtml" />
+    <Content Include="Views\Clube\Index.cshtml" />
+    <Content Include="Views\Shared\_TabelaClubes.cshtml" />
   </ItemGroup>
   <ItemGroup />
   <ItemGroup>
