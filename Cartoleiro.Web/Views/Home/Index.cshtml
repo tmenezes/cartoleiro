@@ -45,7 +45,8 @@
 </div>
 <div class="row">
     <div class="col-md-4">
-        <h2 class="page-header">Zagueiros<small> os 5 melhores</small>
+        <h2 class="page-header">
+            Zagueiros<small> os 5 melhores</small>
         </h2>
         <p>
             @Html.Partial("_TabelaJogadoresMini", CartoleiroApp.MelhoresZagueiros)
@@ -53,7 +54,8 @@
         @Html.Partial("_adQuadrado4")
     </div>
     <div class="col-md-4">
-        <h2 class="page-header">Goleiros<small> os 5 melhores</small>
+        <h2 class="page-header">
+            Goleiros<small> os 5 melhores</small>
         </h2>
         <p>
             @Html.Partial("_TabelaJogadoresMini", CartoleiroApp.MelhoresGoleiros)
@@ -61,7 +63,8 @@
         @Html.Partial("_adQuadrado5")
     </div>
     <div class="col-md-4">
-        <h2 class="page-header">Técnicos<small> os 5 melhores</small>
+        <h2 class="page-header">
+            Técnicos<small> os 5 melhores</small>
         </h2>
         <p>
             @Html.Partial("_TabelaJogadoresMini", CartoleiroApp.MelhoresTecnicos)
@@ -71,23 +74,27 @@
 </div>
 <div class="row">
     <div class="col-md-4">
-        <h2 class="page-header">Defesa<small> os 5 melhores clubes</small>
+        <h2 class="page-header">
+            Defesa<small> os 5 melhores clubes</small>
         </h2>
         <p>
             @Html.Partial("_TabelaClubesMini", new ClubesComMediaDeSetorDoCampo(CartoleiroApp.MelhoresDefesas, SetorDoCampo.Defesa))
         </p>
+        <a class="btn btn-default" href="@Url.Action("Index", "Clube")">Ver mais &raquo;</a>
     </div>
     <div class="col-md-4">
         <h2 class="page-header">Meio Campo<small> os 5 melhores clubes</small></h2>
         <p>
             @Html.Partial("_TabelaClubesMini", new ClubesComMediaDeSetorDoCampo(CartoleiroApp.MelhoresMeioCampos, SetorDoCampo.MeioCampo))
         </p>
+        <a class="btn btn-default" href="@Url.Action("Index", "Clube")">Ver mais &raquo;</a>
     </div>
     <div class="col-md-4">
         <h2 class="page-header">Ataque<small> os 5 melhores clubes</small></h2>
         <p>
             @Html.Partial("_TabelaClubesMini", new ClubesComMediaDeSetorDoCampo(CartoleiroApp.MelhoresAtaques, SetorDoCampo.Ataque))
         </p>
+        <a class="btn btn-default" href="@Url.Action("Index", "Clube")">Ver mais &raquo;</a>
     </div>
 </div>
 @section scripts{

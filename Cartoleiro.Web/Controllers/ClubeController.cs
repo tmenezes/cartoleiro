@@ -1,7 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Web;
+﻿using System.Linq;
 using System.Web.Mvc;
 using Cartoleiro.Web.AppCode;
 using Cartoleiro.Web.AppCode.Extensions;
@@ -14,7 +11,7 @@ namespace Cartoleiro.Web.Controllers
         // GET: Clube
         public ActionResult Index()
         {
-            return RedirectToAction("Index", "Home");
+            return View("Index");
         }
 
         public ActionResult Detalhe(string id)
