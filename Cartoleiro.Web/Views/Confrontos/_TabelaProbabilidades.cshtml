@@ -1,0 +1,31 @@
+﻿@using Cartoleiro.Web.AppCode.Extensions
+@model  IEnumerable<Cartoleiro.Core.Confronto.Probabilidade.ProbabilidadeDeResultado>
+
+<table class="table table-striped table-bordered table-cartoleiro">
+    <thead>
+        <tr>
+            <th style="width: 40%">Jogo</th>
+            <th class="text-center" style="width: 20%">% Prob. vitória mandante</th>
+            <th class="text-center" style="width: 20%">% Prob. empate</th>
+            <th class="text-center" style="width: 20%">% Prob. vitória visitante</th>
+        </tr>
+    </thead>
+    @foreach (var resultado in Model)
+    {
+        <tr>
+            <td class="text-center">
+                <a href="@Url.Action("Detalhe", "Clube", new { id = resultado.Jogo.Mandante.GetNomeNormalizado() })">
+                    <img src="@resultado.Jogo.Mandante.GetUrlImagem()" width="32" height="32" alt="@resultado.Jogo.Mandante.Nome" data-toggle="tooltip" data-placement="left" title="@resultado.Jogo.Mandante.GetTooltip()" />
+                </a>
+                <span style="margin: 5px">X</span>
+                <a href="@Url.Action("Detalhe", "Clube", new { id = resultado.Jogo.Visitante.GetNomeNormalizado() })">
+                    <img src="@resultado.Jogo.Visitante.GetUrlImagem()" width="32" height="32" alt="@resultado.Jogo.Visitante.Nome" data-toggle="tooltip" data-placement="right" title="@resultado.Jogo.Visitante.GetTooltip()" />
+                </a>
+            </td>
+            <td class="text-center">@resultado.PercentualDeVitoriaMandante.ToString("P")</td>
+            <td class="text-center">@resultado.PercentualDeEmpate.ToString("P")</td>
+            <td class="text-center">@resultado.PercentualDeVitoriaVisitante.ToString("P")</td>
+        </tr>
+    }
+</table>
+

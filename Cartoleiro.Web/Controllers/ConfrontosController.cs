@@ -1,5 +1,4 @@
 ﻿using System.Web.Mvc;
-using Cartoleiro.Core.Confronto;
 using Cartoleiro.Core.Confronto.Indicador;
 using Cartoleiro.Web.AppCode;
 
@@ -23,8 +22,8 @@ namespace Cartoleiro.Web.Controllers
                 return PartialView("_ConfrontoResult", null);
             }
 
-            var medidorDeConfronto = new MedidorDeConfronto(mandante, visitante, CartoleiroApp.CartolaDataSource);
-            var resultadoDoConfronto = medidorDeConfronto.MedirConfronto();
+            var calculadorDeIndicadores = new CalculadorDeIndicadores(mandante, visitante, CartoleiroApp.CartolaDataSource);
+            var resultadoDoConfronto = calculadorDeIndicadores.CalcularConfronto();
 
             return PartialView("_ConfrontoResult", resultadoDoConfronto);
         }

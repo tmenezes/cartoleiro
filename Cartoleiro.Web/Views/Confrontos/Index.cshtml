@@ -1,4 +1,6 @@
-﻿@{
+﻿@using Cartoleiro.Core.Cartola
+@using Cartoleiro.Core.Confronto.Probabilidade
+@{
     ViewBag.Title = "Confrontos";
 }
 
@@ -24,7 +26,10 @@
         </div>
     </div>
     <div role="tabpanel" class="tab-pane fade" id="tabProbabilidades">
-
+        @{ int numeroRodada = (!string.IsNullOrEmpty(Request.QueryString["rodada"]))
+               ? Convert.ToInt32(Request.QueryString["rodada"])
+               : Campeonato.Rodadas.ProximaRodada.Numero; }
+        @Html.Partial("_TabelaProbabilidades", CalculadorDeProbabilidades.CalcularProbabilidade(Campeonato.Rodadas.FirstOrDefault(r => r.Numero == numeroRodada)))
     </div>
 </div>
 @section scripts{

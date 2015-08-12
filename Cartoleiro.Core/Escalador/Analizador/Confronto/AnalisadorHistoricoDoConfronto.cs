@@ -1,14 +1,13 @@
 using System.Collections.Generic;
 using System.Linq;
 using Cartoleiro.Core.Cartola;
-using Cartoleiro.Core.Confronto;
 using Cartoleiro.Core.Confronto.Indicador;
 
 namespace Cartoleiro.Core.Escalador.Analizador.Confronto
 {
     public class AnalisadorHistoricoDoConfronto : AnalisadorGenerico, IAnalisador
     {
-        private static Dictionary<Clube, ResultadoDoConfronto> _medicoesDeConfrontos;
+        private static Dictionary<Clube, ResultadoDosIndicadores> _medicoesDeConfrontos;
         private static double _adicionalPorSerMandante = 1;
 
         static AnalisadorHistoricoDoConfronto()
@@ -37,23 +36,23 @@ namespace Cartoleiro.Core.Escalador.Analizador.Confronto
 
         private static void MedirPesoDosConfrontos()
         {
-            _medicoesDeConfrontos = new Dictionary<Clube, ResultadoDoConfronto>();
+            _medicoesDeConfrontos = new Dictionary<Clube, ResultadoDosIndicadores>();
 
-            var tiposDeMedicao = new List<TipoMedicao>()
+            var tiposDeMedicao = new List<TipoDeIndicador>()
                                  {
-                                     TipoMedicao.VitoriasEmTodosOsConfronto, TipoMedicao.VitoriasEmConfrontosNoBrasileiro,
-                                     TipoMedicao.VitoriasSobreJogosNaHistoriaDoClube, TipoMedicao.VitoriasSobreJogosNoBrasileiro
+                                     TipoDeIndicador.VitoriasEmTodosOsConfronto, TipoDeIndicador.VitoriasEmConfrontosNoBrasileiro,
+                                     TipoDeIndicador.VitoriasSobreJogosNaHistoriaDoClube, TipoDeIndicador.VitoriasSobreJogosNoBrasileiro
                                  };
 
             foreach (var jogo in Cartola.Campeonato.Rodadas.ProximaRodada.Jogos)
             {
-                var resultaDoConfronto = new MedidorDeConfronto(jogo.Mandante, jogo.Visitante).MedirConfronto(tiposDeMedicao);
+                var resultaDoConfronto = new CalculadorDeIndicadores(jogo.Mandante, jogo.Visitante).CalcularConfronto(tiposDeMedicao);
 
                 _medicoesDeConfrontos.Add(jogo.Mandante, resultaDoConfronto);
                 _medicoesDeConfrontos.Add(jogo.Visitante, resultaDoConfronto);
             }
 
-            _adicionalPorSerMandante = _medicoesDeConfrontos.First().Value.ItensDeMedicao.Count() * 0.25;
+            _adicionalPorSerMandante = _medicoesDeConfrontos.First().Value.Indicadores.Count() * 0.25;
         }
     }
 }

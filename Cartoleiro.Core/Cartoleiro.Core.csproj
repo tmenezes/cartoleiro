@@ -46,10 +46,12 @@
     <Compile Include="Cartola\Status.cs" />
     <Compile Include="Cartola\TipoCampeonato.cs" />
     <Compile Include="Cartola\UltimosJogos.cs" />
-    <Compile Include="Confronto\Indicador\ItemDeMedicaoDeConfronto.cs" />
-    <Compile Include="Confronto\Indicador\MedidorDeConfronto.cs" />
-    <Compile Include="Confronto\Indicador\ResultadoDoConfronto.cs" />
-    <Compile Include="Confronto\Indicador\TipoMedicao.cs" />
+    <Compile Include="Confronto\Indicador\Indicador.cs" />
+    <Compile Include="Confronto\Indicador\CalculadorDeIndicadores.cs" />
+    <Compile Include="Confronto\Indicador\ResultadoDosIndicadores.cs" />
+    <Compile Include="Confronto\Indicador\TipoDeIndicador.cs" />
+    <Compile Include="Confronto\Probabilidade\CalculadorDeProbabilidades.cs" />
+    <Compile Include="Confronto\Probabilidade\ProbabilidadeDeResultado.cs" />
     <Compile Include="Data\CartolaData.cs" />
     <Compile Include="Escalador\Analizador\AnalisadorGenerico.cs" />
     <Compile Include="Escalador\Analizador\Campeonato\AnalisadorGolsContra.cs" />
@@ -80,6 +82,7 @@
     <Compile Include="Cartola\Preco.cs" />
     <Compile Include="Escalador\Carteira.cs" />
     <Compile Include="Escalador\PontuacaoDeEscalacao.cs" />
+    <Compile Include="Extensions\IEnumerableJogoExtensions.cs" />
     <Compile Include="Extensions\IEnumerableRanqueamentoExtensions.cs" />
     <Compile Include="Util\EnumUtils.cs" />
     <Compile Include="Extensions\IEnumerableJogadorExtensions.cs" />

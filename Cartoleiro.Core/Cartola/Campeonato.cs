@@ -92,6 +92,15 @@ namespace Cartoleiro.Core.Cartola
             }
         }
 
+        public int EmpatesEmCasa
+        {
+            get { return Jogos - (VitoriasEmCasa + DerrotasEmCasa); }
+        }
+        public int EmpatesForaDeCasa
+        {
+            get { return Jogos - (VitoriasForaDeCasa + DerrotasForaDeCasa); }
+        }
+
         public int PontosEmCasa
         {
             get { return Rodadas.JogosComoMandante(_clube).Sum(j => j.PontosConquistados(_clube)); }

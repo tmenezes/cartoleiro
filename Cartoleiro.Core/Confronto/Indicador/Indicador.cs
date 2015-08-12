@@ -2,7 +2,7 @@ using Cartoleiro.Core.Cartola;
 
 namespace Cartoleiro.Core.Confronto.Indicador
 {
-    public class ItemDeMedicaoDeConfronto
+    public class Indicador
     {
         private const string MEDIDOR_PONTOS_CAMPEONATO = "Pontos no campeonato";
         private const string MEDIDOR_PONTOS_5_JOGOS = "Pontos nos últimos 5 jogos";
@@ -25,7 +25,7 @@ namespace Cartoleiro.Core.Confronto.Indicador
         private const string MEDIDOR_VITORIAS_BRASILEIRO = "% Vitórias / jogos no Brasileirão";
         private const string MEDIDOR_VITORIAS_HISTORIA = "% Vitórias / jogos na história";
 
-        public TipoMedicao TipoMedicao { get; private set; }
+        public TipoDeIndicador TipoDeIndicador { get; private set; }
         public string Descricao { get; private set; }
         public Clube Vencedor { get; private set; }
         public double ResultadoMandante { get; private set; }
@@ -33,14 +33,14 @@ namespace Cartoleiro.Core.Confronto.Indicador
         public string Formatacao { get; private set; }
 
 
-        public ItemDeMedicaoDeConfronto(TipoMedicao tipoMedicao, Clube vencedor, double resultadoMandante, double resultadoVisitante)
-            : this(tipoMedicao, vencedor, resultadoMandante, resultadoVisitante, "N")
+        public Indicador(TipoDeIndicador tipoDeIndicador, Clube vencedor, double resultadoMandante, double resultadoVisitante)
+            : this(tipoDeIndicador, vencedor, resultadoMandante, resultadoVisitante, "N")
         {
         }
 
-        public ItemDeMedicaoDeConfronto(TipoMedicao tipoMedicao, Clube vencedor, double resultadoMandante, double resultadoVisitante, string formatacao)
+        public Indicador(TipoDeIndicador tipoDeIndicador, Clube vencedor, double resultadoMandante, double resultadoVisitante, string formatacao)
         {
-            TipoMedicao = tipoMedicao;
+            TipoDeIndicador = tipoDeIndicador;
             Descricao = ObterDescricao();
             Vencedor = vencedor;
             ResultadoMandante = resultadoMandante;
@@ -51,66 +51,66 @@ namespace Cartoleiro.Core.Confronto.Indicador
 
         private string ObterDescricao()
         {
-            switch (TipoMedicao)
+            switch (TipoDeIndicador)
             {
-                case TipoMedicao.PontosNoCampeonato:
+                case TipoDeIndicador.PontosNoCampeonato:
                     return MEDIDOR_PONTOS_CAMPEONATO;
 
-                case TipoMedicao.PontosNosUltimos5Jogos:
+                case TipoDeIndicador.PontosNosUltimos5Jogos:
                     return MEDIDOR_PONTOS_5_JOGOS;
 
-                case TipoMedicao.VitoriasEmCasa:
+                case TipoDeIndicador.VitoriasEmCasa:
                     return MEDIDOR_VITORIAS_CASA;
 
-                case TipoMedicao.VitoriasForaDeCasa:
+                case TipoDeIndicador.VitoriasForaDeCasa:
                     return MEDIDOR_VITORIAS_FORA;
 
-                case TipoMedicao.DerrotasEmCasa:
+                case TipoDeIndicador.DerrotasEmCasa:
                     return MEDIDOR_DERROTAS_CASA;
 
-                case TipoMedicao.DerrotasForaCasa:
+                case TipoDeIndicador.DerrotasForaCasa:
                     return MEDIDOR_DERROTAS_FORA;
 
-                case TipoMedicao.AproveitamentoEmCasa:
+                case TipoDeIndicador.AproveitamentoEmCasa:
                     return MEDIDOR_APROVEITAMENTO_CASA;
 
-                case TipoMedicao.AproveitamentoForaDeCasa:
+                case TipoDeIndicador.AproveitamentoForaDeCasa:
                     return MEDIDOR_APROVEITAMENTO_FORA;
 
-                case TipoMedicao.AproveitamentoNoCampeonato:
+                case TipoDeIndicador.AproveitamentoNoCampeonato:
                     return MEDIDOR_APROVEITAMENTO;
 
-                case TipoMedicao.GolsPro:
+                case TipoDeIndicador.GolsPro:
                     return MEDIDOR_GOLS_PRO;
 
-                case TipoMedicao.GolsContra:
+                case TipoDeIndicador.GolsContra:
                     return MEDIDOR_GOLS_CONTRA;
 
-                case TipoMedicao.SaldoDeGols:
+                case TipoDeIndicador.SaldoDeGols:
                     return MEDIDOR_SALDO_GOL;
 
-                case TipoMedicao.MediaDaDefesa:
+                case TipoDeIndicador.MediaDaDefesa:
                     return MEDIDOR_MEDIA_DEFESA;
 
-                case TipoMedicao.MediaDaMeioCampo:
+                case TipoDeIndicador.MediaDaMeioCampo:
                     return MEDIDOR_MEDIA_MEIOCAMPO;
 
-                case TipoMedicao.MediaDaAtaque:
+                case TipoDeIndicador.MediaDaAtaque:
                     return MEDIDOR_MEDIA_ATAQUE;
 
                 //case TipoMedicao.MediaDoClube:
                 //    return MEDIDOR_MEDIA_CLUBE;
 
-                case TipoMedicao.VitoriasEmConfrontosNoBrasileiro:
+                case TipoDeIndicador.VitoriasEmConfrontosNoBrasileiro:
                     return MEDIDOR_CONFRONTO_BRASILEIRO;
 
-                case TipoMedicao.VitoriasEmTodosOsConfronto:
+                case TipoDeIndicador.VitoriasEmTodosOsConfronto:
                     return MEDIDOR_CONFRONTO_TODOS;
 
-                case TipoMedicao.VitoriasSobreJogosNoBrasileiro:
+                case TipoDeIndicador.VitoriasSobreJogosNoBrasileiro:
                     return MEDIDOR_VITORIAS_BRASILEIRO;
 
-                case TipoMedicao.VitoriasSobreJogosNaHistoriaDoClube:
+                case TipoDeIndicador.VitoriasSobreJogosNaHistoriaDoClube:
                     return MEDIDOR_VITORIAS_HISTORIA;
 
                 default:

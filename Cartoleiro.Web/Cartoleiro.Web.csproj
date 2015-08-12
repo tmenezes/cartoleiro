@@ -2030,6 +2030,7 @@
     <Content Include="Views\Shared\_adQuadrado6.cshtml" />
     <Content Include="Views\Clube\Index.cshtml" />
     <Content Include="Views\Shared\_TabelaClubes.cshtml" />
+    <Content Include="Views\Confrontos\_TabelaProbabilidades.cshtml" />
   </ItemGroup>
   <ItemGroup />
   <ItemGroup>

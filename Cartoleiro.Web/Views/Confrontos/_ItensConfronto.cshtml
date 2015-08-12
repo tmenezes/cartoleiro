@@ -3,7 +3,7 @@
 <ul class="list-group">
     @if (Model != null)
     {
-        foreach (var item in Model.ResultadoDoConfronto.ItensDeMedicao)
+        foreach (var item in Model.Resultado.Indicadores)
         {
             <li class="list-group-item">
                 <div class="@Model.GetCssPosicaoResultado(item)" style="width: 98px"><span class="scouts-lista-time-total label @Model.GetCssLabelResultado(item)">@Model.GetResultado(item)</span></div> 

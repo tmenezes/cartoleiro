@@ -4,12 +4,12 @@ using Cartoleiro.Core.Cartola;
 
 namespace Cartoleiro.Core.Confronto.Indicador
 {
-    public class ResultadoDoConfronto
+    public class ResultadoDosIndicadores
     {
         // atributos
         private int? _totalMandante;
         private int? _totalVisitante;
-        private readonly IList<ItemDeMedicaoDeConfronto> _itensDeMedicao;
+        private readonly IList<Indicador> _indicadores;
 
         // propriedades
         public Clube Mandande { get; set; }
@@ -20,7 +20,7 @@ namespace Cartoleiro.Core.Confronto.Indicador
             get
             {
                 if (_totalMandante == null)
-                    _totalMandante = ItensDeMedicao.Count(i => i.Vencedor == Mandande);
+                    _totalMandante = Indicadores.Count(i => i.Vencedor == Mandande);
 
                 return _totalMandante.Value;
             }
@@ -30,31 +30,31 @@ namespace Cartoleiro.Core.Confronto.Indicador
             get
             {
                 if (_totalVisitante == null)
-                    _totalVisitante = ItensDeMedicao.Count(i => i.Vencedor == Visitante);
+                    _totalVisitante = Indicadores.Count(i => i.Vencedor == Visitante);
 
                 return _totalVisitante.Value;
             }
         }
 
-        public IEnumerable<ItemDeMedicaoDeConfronto> ItensDeMedicao
+        public IEnumerable<Indicador> Indicadores
         {
-            get { return _itensDeMedicao; }
+            get { return _indicadores; }
         }
 
 
         // construtor
-        public ResultadoDoConfronto(Clube mandande, Clube visitante)
+        public ResultadoDosIndicadores(Clube mandande, Clube visitante)
         {
             Mandande = mandande;
             Visitante = visitante;
 
-            _itensDeMedicao = new List<ItemDeMedicaoDeConfronto>();
+            _indicadores = new List<Indicador>();
         }
 
         // publico
-        public ResultadoDoConfronto AdicionarItemDeMedicao(ItemDeMedicaoDeConfronto item)
+        public ResultadoDosIndicadores AdicionarIndicador(Indicador indicador)
         {
-            _itensDeMedicao.Add(item);
+            _indicadores.Add(indicador);
 
             return this;
         }

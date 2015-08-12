@@ -1,6 +1,6 @@
 namespace Cartoleiro.Core.Confronto.Indicador
 {
-    public enum TipoMedicao
+    public enum TipoDeIndicador
     {
         PontosNoCampeonato,
         PontosNosUltimos5Jogos,
