@@ -3,14 +3,34 @@
 }
 
 <h2 class="page-header">Análise de @ViewBag.Title <small>veja os dados de cada clube e descubra quem é o mais provavél a vencer</small></h2>
-<div id="listaJogos" class="row">
-    @Html.Partial("_ListaConfrontos")
-</div>
-<div class="row">
-    @Html.Partial("_adHorizontalLinha")
-</div>
-<div class="row">
-    <div id="divLoading" class="text-center col-md-10" style="display: none"><img src="~/Images/loading.gif" alt="loading..." /></div>
-    <div id="divConfronto" class="scouts-confronto">
+<ul id="myTabs" class="nav nav-tabs" role="tablist">
+    <li role="presentation"><a href="#tabIndicadores" aria-controls="tabIndicadores" role="tab" data-toggle="tab">Indicadores</a></li>
+    <li role="presentation"><a href="#tabProbabilidades" aria-controls="tabProbabilidades" role="tab" data-toggle="tab">Probabilidades</a></li>
+</ul>
+<div class="tab-content">
+    <div role="tabpanel" class="tab-pane fade" id="tabIndicadores">
+        <div id="listaJogos" class="row">
+            @Html.Partial("_ListaConfrontos")
+        </div>
+        <div class="row">
+            @Html.Partial("_adHorizontalLinha")
+        </div>
+        <div class="row">
+            <div id="divLoading" class="text-center col-md-10" style="display: none">
+                <img src="~/Images/loading.gif" alt="loading..." />
+            </div>
+            <div id="divConfronto" class="scouts-confronto">
+            </div>
+        </div>
+    </div>
+    <div role="tabpanel" class="tab-pane fade" id="tabProbabilidades">
+
     </div>
 </div>
+@section scripts{
+    <script>
+        $(document).ready(function () {
+            $('#myTabs a:first').tab('show');
+        });
+    </script>
+}

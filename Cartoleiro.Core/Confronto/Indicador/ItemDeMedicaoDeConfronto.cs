@@ -1,6 +1,6 @@
 using Cartoleiro.Core.Cartola;
 
-namespace Cartoleiro.Core.Confronto
+namespace Cartoleiro.Core.Confronto.Indicador
 {
     public class ItemDeMedicaoDeConfronto
     {

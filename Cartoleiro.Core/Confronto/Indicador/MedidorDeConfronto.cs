@@ -6,7 +6,7 @@ using Cartoleiro.Core.Data;
 using Cartoleiro.Core.Extensions;
 using Cartoleiro.Core.Util;
 
-namespace Cartoleiro.Core.Confronto
+namespace Cartoleiro.Core.Confronto.Indicador
 {
     public class MedidorDeConfronto
     {

@@ -46,10 +46,10 @@
     <Compile Include="Cartola\Status.cs" />
     <Compile Include="Cartola\TipoCampeonato.cs" />
     <Compile Include="Cartola\UltimosJogos.cs" />
-    <Compile Include="Confronto\ItemDeMedicaoDeConfronto.cs" />
-    <Compile Include="Confronto\MedidorDeConfronto.cs" />
-    <Compile Include="Confronto\ResultadoDoConfronto.cs" />
-    <Compile Include="Confronto\TipoMedicao.cs" />
+    <Compile Include="Confronto\Indicador\ItemDeMedicaoDeConfronto.cs" />
+    <Compile Include="Confronto\Indicador\MedidorDeConfronto.cs" />
+    <Compile Include="Confronto\Indicador\ResultadoDoConfronto.cs" />
+    <Compile Include="Confronto\Indicador\TipoMedicao.cs" />
     <Compile Include="Data\CartolaData.cs" />
     <Compile Include="Escalador\Analizador\AnalisadorGenerico.cs" />
     <Compile Include="Escalador\Analizador\Campeonato\AnalisadorGolsContra.cs" />

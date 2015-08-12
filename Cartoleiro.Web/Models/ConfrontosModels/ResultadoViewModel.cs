@@ -1,5 +1,6 @@
 ﻿using Cartoleiro.Core.Cartola;
 using Cartoleiro.Core.Confronto;
+using Cartoleiro.Core.Confronto.Indicador;
 
 namespace Cartoleiro.Web.Models.ConfrontosModels
 {

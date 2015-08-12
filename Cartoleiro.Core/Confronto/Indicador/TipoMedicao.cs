@@ -1,4 +1,4 @@
-namespace Cartoleiro.Core.Confronto
+namespace Cartoleiro.Core.Confronto.Indicador
 {
     public enum TipoMedicao
     {

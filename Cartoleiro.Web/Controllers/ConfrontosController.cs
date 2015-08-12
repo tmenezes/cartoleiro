@@ -1,5 +1,6 @@
 ﻿using System.Web.Mvc;
 using Cartoleiro.Core.Confronto;
+using Cartoleiro.Core.Confronto.Indicador;
 using Cartoleiro.Web.AppCode;
 
 namespace Cartoleiro.Web.Controllers

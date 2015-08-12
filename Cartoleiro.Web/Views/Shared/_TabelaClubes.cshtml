@@ -27,8 +27,9 @@
                         </a>
                     </div>
                     <div class="media-body media-middle media-clube">
+                        <span class="hide">@clube.Campeonato.Posicao.ToString("00")</span>
                         <span class="text-muted">@clube.GetPosicaoFormatada() lugar</span><br />
-                        <a href="@Url.Action("Detalhe", "Clube", new { id = clube.GetNomeNormalizado() })"><strong>@clube.Nome</strong></a>
+                        <a href="@Url.Action("Detalhe", "Clube", new {id = clube.GetNomeNormalizado()})"><strong>@clube.Nome</strong></a>
                     </div>
                 </div>
             </td>

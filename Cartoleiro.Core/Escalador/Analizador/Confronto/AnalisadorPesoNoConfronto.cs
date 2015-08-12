@@ -2,6 +2,7 @@ using System.Collections.Generic;
 using System.Linq;
 using Cartoleiro.Core.Cartola;
 using Cartoleiro.Core.Confronto;
+using Cartoleiro.Core.Confronto.Indicador;
 
 namespace Cartoleiro.Core.Escalador.Analizador.Confronto
 {
