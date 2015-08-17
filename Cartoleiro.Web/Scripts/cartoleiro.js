@@ -14,10 +14,10 @@
 function setupCountDownScoutsAoVivo(urlResults, urlJogo) {
     $(".list-group-item").addClass("flash");
 
-    $('#spanCountDown').countdown(getNovaData(), function (event) {
+    $("#spanCountDown").countdown(getNovaData(), function (event) {
         $(this).html(event.strftime('%S')); //event.strftime('%D days %H:%M:%S')
     })
-    .on('finish.countdown', function (event) {
+    .on("finish.countdown", function (event) {
         $("#divLoading").css("display", "block");
 
         $("#listaJogos").load(urlResults);
@@ -34,4 +34,8 @@ function setupCountDownScoutsAoVivo(urlResults, urlJogo) {
 
 function scrolToDivConfronto() {
     $.scrollTo("#divConfronto", 800, { offset: -100 });
+}
+
+function showPopupDetalhesConfronto() {
+    $("#popupDetalhes").modal("show");
 }

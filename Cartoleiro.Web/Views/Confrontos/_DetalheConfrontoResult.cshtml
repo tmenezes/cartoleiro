@@ -1,0 +1,50 @@
+﻿@using Cartoleiro.Web.AppCode.Extensions
+@model Cartoleiro.Core.Confronto.Probabilidade.ProbabilidadeDeResultado
+
+@if (Model != null)
+{
+    <table class="table table-striped table-bordered table-cartoleiro">
+        <thead>
+            <tr>
+                <th class="text-center" style="width: 50%">Dado</th>
+                <th class="text-center" style="width: 20%">
+                    <a href="@Url.Action("Detalhe", "Clube", new { id = Model.Jogo.Mandante.GetNomeNormalizado() })">
+                        <img src="@Model.Jogo.Mandante.GetUrlImagem()" width="32" height="32" alt="@Model.Jogo.Mandante.Nome" data-toggle="tooltip" data-placement="left" title="@Model.Jogo.Mandante.GetTooltip()" />
+                        <br />@Model.Jogo.Mandante.Nome
+                    </a>
+                </th>
+                <th class="text-center" style="width: 20%">
+                    <a href="@Url.Action("Detalhe", "Clube", new { id = Model.Jogo.Visitante.GetNomeNormalizado() })">
+                        <img src="@Model.Jogo.Visitante.GetUrlImagem()" width="32" height="32" alt="@Model.Jogo.Visitante.Nome" data-toggle="tooltip" data-placement="left" title="@Model.Jogo.Visitante.GetTooltip()" />
+                        <br />@Model.Jogo.Visitante.Nome
+                    </a>
+                </th>
+                <th class="text-center" style="width: 10%">Empates</th>
+            </tr>
+        </thead>
+        <tr>
+            <td class="text-center">Total de vitórias gerais</td>
+            <td class="text-center">@Model.TotalDeVitoriasClubeMandante</td>
+            <td class="text-center">@Model.TotalDeVitoriasClubeVisitante</td>
+            <td class="text-center">@Model.TotalDeEmpates</td>
+        </tr>
+        <tr>
+            <td class="text-center">Total de vitórias como mandante</td>
+            <td class="text-center">@Model.TotalDeVitoriasClubeMandanteComoMandante</td>
+            <td class="text-center">@Model.TotalDeVitoriasClubeVisitanteComoMandante</td>
+            <td class="text-center">@Model.TotalDeEmpates</td>
+        </tr>
+        <tr>
+            <td class="text-center">Total de vitórias como visitante</td>
+            <td class="text-center">@Model.TotalDeVitoriasClubeMandanteComoVisitante</td>
+            <td class="text-center">@Model.TotalDeVitoriasClubeVisitanteComoVisitante</td>
+            <td class="text-center">@Model.TotalDeEmpates</td>
+        </tr>
+        <tr>
+            <td class="text-center">Total de empates por mando</td>
+            <td class="text-center">@Model.TotalDeEmpatesComoMandante</td>
+            <td class="text-center">@Model.TotalDeEmpatesComoVisitante</td>
+            <td class="text-center">@Model.TotalDeEmpates</td>
+        </tr>
+    </table>
+}

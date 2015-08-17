@@ -18,7 +18,7 @@
             @Html.Partial("_adHorizontalLinha")
         </div>
         <div class="row">
-            <div id="divLoading" class="text-center col-md-10" style="display: none">
+            <div id="divLoading" class="text-center col-md-12" style="display: none">
                 <img src="~/Images/loading.gif" alt="loading..." />
             </div>
             <div id="divConfronto" class="scouts-confronto">
@@ -26,9 +26,31 @@
         </div>
     </div>
     <div role="tabpanel" class="tab-pane fade" id="tabProbabilidades">
+        <div class="row">
+            <div id="divLoading2" class="text-center col-md-12" style="display: none">
+                <img src="~/Images/loading.gif" alt="loading..." />
+            </div>
+        </div>
+        <!-- Modal -->
+        <div class="modal fade" id="popupDetalhes">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                        <h4 class="modal-title">Detalhes dos confrontos passados</h4>
+                    </div>
+                    <div class="modal-body" id="popupDetalheCorpo">
+                        
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-outline" data-dismiss="modal">Fechar</button>
+                    </div>
+                </div>
+            </div>
+        </div>
         @{ int numeroRodada = (!string.IsNullOrEmpty(Request.QueryString["rodada"]))
-               ? Convert.ToInt32(Request.QueryString["rodada"])
-               : Campeonato.Rodadas.ProximaRodada.Numero; }
+                                  ? Convert.ToInt32(Request.QueryString["rodada"])
+                                  : Campeonato.Rodadas.ProximaRodada.Numero; }
         @Html.Partial("_TabelaProbabilidades", CalculadorDeProbabilidades.CalcularProbabilidade(Campeonato.Rodadas.FirstOrDefault(r => r.Numero == numeroRodada)))
     </div>
 </div>

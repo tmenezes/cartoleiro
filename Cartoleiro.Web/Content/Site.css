@@ -57,12 +57,12 @@ textarea {
     vertical-align: middle;
 }
 
-.table-cartoleiro a {
+.table-cartoleiro a:not(.btn) {
     color: #000;
 }
 
-    .table-cartoleiro a:hover,
-    .table-cartoleiro a:focus {
+    .table-cartoleiro a:not(.btn):hover,
+    .table-cartoleiro a:not(.btn):focus {
         color: #dd4814;
     }
 

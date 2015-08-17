@@ -1,13 +1,15 @@
 ﻿@using Cartoleiro.Web.AppCode.Extensions
+@using Cartoleiro.Web.AppCode.HtmlHelpers
 @model  IEnumerable<Cartoleiro.Core.Confronto.Probabilidade.ProbabilidadeDeResultado>
 
 <table class="table table-striped table-bordered table-cartoleiro">
     <thead>
         <tr>
-            <th style="width: 40%">Jogo</th>
+            <th style="width: 35%">Jogo</th>
             <th class="text-center" style="width: 20%">% Prob. vitória mandante</th>
             <th class="text-center" style="width: 20%">% Prob. empate</th>
             <th class="text-center" style="width: 20%">% Prob. vitória visitante</th>
+            <th class="text-center" style="width:  5%">&nbsp;</th>
         </tr>
     </thead>
     @foreach (var resultado in Model)
@@ -22,9 +24,16 @@
                     <img src="@resultado.Jogo.Visitante.GetUrlImagem()" width="32" height="32" alt="@resultado.Jogo.Visitante.Nome" data-toggle="tooltip" data-placement="right" title="@resultado.Jogo.Visitante.GetTooltip()" />
                 </a>
             </td>
-            <td class="text-center">@resultado.PercentualDeVitoriaMandante.ToString("P")</td>
-            <td class="text-center">@resultado.PercentualDeEmpate.ToString("P")</td>
-            <td class="text-center">@resultado.PercentualDeVitoriaVisitante.ToString("P")</td>
+            <td class="text-center">@resultado.ProbabilidadeDeVitoriaMandante.ToString("P")</td>
+            <td class="text-center">@resultado.ProbabilidadeDeEmpate.ToString("P")</td>
+            <td class="text-center">@resultado.ProbabilidadeDeVitoriaVisitante.ToString("P")</td>
+            <td class="text-center">
+                @Ajax.ActionLink(resultado,
+                @<span class="glyphicon glyphicon-zoom-in" aria-hidden="true"></span>
+                , "DetalheConfronto", "Confrontos", new { id = resultado.Jogo.GetIdJogo() },
+                 new AjaxOptions { UpdateTargetId = "popupDetalheCorpo", LoadingElementId = "divLoading2", OnSuccess = "showPopupDetalhesConfronto();" },
+                    new { @class = "btn btn-outline" })
+            </td>
         </tr>
     }
 </table>

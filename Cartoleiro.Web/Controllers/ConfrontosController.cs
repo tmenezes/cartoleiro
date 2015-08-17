@@ -1,5 +1,7 @@
 ﻿using System.Web.Mvc;
+using Cartoleiro.Core.Cartola;
 using Cartoleiro.Core.Confronto.Indicador;
+using Cartoleiro.Core.Confronto.Probabilidade;
 using Cartoleiro.Web.AppCode;
 
 namespace Cartoleiro.Web.Controllers
@@ -26,6 +28,22 @@ namespace Cartoleiro.Web.Controllers
             var resultadoDoConfronto = calculadorDeIndicadores.CalcularConfronto();
 
             return PartialView("_ConfrontoResult", resultadoDoConfronto);
+        }
+
+        public ActionResult DetalheConfronto(string id)
+        {
+            var mandante = ModelUtils.GetMandande(id);
+            var visitante = ModelUtils.GetVisitante(id);
+
+            if (mandante == null || visitante == null)
+            {
+                return PartialView("_DetalheConfrontoResult", null);
+            }
+
+            var jogo = new Jogo(0, mandante, visitante);
+            var resultadoDeProbabilidade = new ProbabilidadeDeResultado(jogo);
+
+            return PartialView("_DetalheConfrontoResult", resultadoDeProbabilidade);
         }
     }
 }
