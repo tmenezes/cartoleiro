@@ -12,5 +12,15 @@ namespace Cartoleiro.Web.AppCode.Extensions
             var idPartida = string.Format("{0}_{1}", nomeMandante, nomeVisitante);
             return idPartida;
         }
+
+        public static string GetCssDeIconeDoResultadoDoJogo(this Jogo jogo, Clube clube)
+        {
+            if (jogo.Empate())
+                return "icone-circulo-empate";
+
+            return jogo.Vencedor() == clube
+                ? "icone-circulo-vitoria"
+                : "icone-circulo-derrota";
+        }
     }
 }

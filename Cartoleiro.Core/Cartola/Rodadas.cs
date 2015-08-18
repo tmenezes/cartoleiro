@@ -46,6 +46,15 @@ namespace Cartoleiro.Core.Cartola
             return RodadasAtivas().Select(r => r.Jogos.FirstOrDefault(j => j.Visitante == clube)).Where(j => j != null);
         }
 
+        public IEnumerable<Jogo> Ultimos5Jogos(Clube clube)
+        {
+            return RodadasAtivas().OrderByDescending(r => r.Numero)
+                                  .Take(5)
+                                  .Select(r => r.Jogos.FirstOrDefault(j => j.ParticipaDesseJogo(clube)))
+                                  .OrderBy(j => j.NumeroDaRodada)
+                                  .ToList();
+        }
+
 
         private IEnumerable<Rodada> RodadasAtivas()
         {

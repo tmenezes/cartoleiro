@@ -112,6 +112,29 @@ textarea {
     font-size: 15px;
 }
 
+.icone-circulo {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    margin: 5px 5px 0 0;
+    display: inline-block
+}
+.icone-circulo-vitoria {
+    background-color: #51a81e;
+}
+.icone-circulo-empate {
+    background-color: #ccc;
+}
+.icone-circulo-derrota {
+    background-color: #f00;
+}
+.btn-jogos-zoom {
+    margin-left: 30px;
+}
+#wrap .popover {
+    width: 200px;
+}
+
 .countdown {
     float: left;
     margin-left: 48.5%;

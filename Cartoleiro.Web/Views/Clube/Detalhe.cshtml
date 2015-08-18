@@ -20,57 +20,81 @@
                 <br />
                 <table class="table">
                     <tbody>
-                    <tr>
-                        <td style="width: 42%">Posição</td>
-                        <td style="width: 58%">@string.Format("{0}º lugar", Model.Campeonato.Posicao)</td>
-                    </tr>
-                    <tr>
-                        <td>Pontos</td>
-                        <td>
-                            <div class="pull-left" style="width: 30px">@Model.Campeonato.Pontos</div>
-                            <span class="text-muted">( casa: @Model.Campeonato.PontosEmCasa - fora: @Model.Campeonato.PontosForaDeCasa )</span>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>Jogos</td>
-                        <td>
-                            <div class="pull-left" style="width: 30px">@Model.Campeonato.Jogos</div>
-                            <span class="text-muted">( casa: @Model.Campeonato.JogosEmCasa - fora: @Model.Campeonato.JogosForaDeCasa )</span>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>Vitórias</td>
-                        <td>
-                            <div class="pull-left" style="width: 30px">@Model.Campeonato.Vitorias</div>
-                            <span class="text-muted">( casa: @Model.Campeonato.VitoriasEmCasa - fora: @Model.Campeonato.VitoriasForaDeCasa )</span>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>Gols pró</td>
-                        <td>
-                            <div class="pull-left" style="width: 30px">@Model.Campeonato.GolsPro</div>
-                            <span class="text-muted">( casa: @Model.Campeonato.GolsProEmCasa - fora: @Model.Campeonato.GolsProForaDeCasa )</span>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>Gols contra</td>
-                        <td>
-                            <div class="pull-left" style="width: 30px">@Model.Campeonato.GolsContra</div>
-                            <span class="text-muted">( casa: @Model.Campeonato.GolsContraEmCasa - fora: @Model.Campeonato.GolsContraForaDeCasa )</span>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>Média da defesa</td>
-                        <td>@Model.GetMediaDaSetorDoCampo(SetorDoCampo.Defesa).ToString("F")</td>
-                    </tr>
-                    <tr>
-                        <td>Média meio campo</td>
-                        <td>@Model.GetMediaDaSetorDoCampo(SetorDoCampo.MeioCampo).ToString("F")</td>
-                    </tr>
-                    <tr>
-                        <td>Média do ataque</td>
-                        <td>@Model.GetMediaDaSetorDoCampo(SetorDoCampo.Ataque).ToString("F")</td>
-                    </tr>
+                        <tr>
+                            <td style="width: 42%">Posição</td>
+                            <td style="width: 58%">@string.Format("{0}º lugar", Model.Campeonato.Posicao)</td>
+                        </tr>
+                        <tr>
+                            <td>Pontos</td>
+                            <td>
+                                <div class="pull-left" style="width: 30px">@Model.Campeonato.Pontos</div>
+                                <span class="text-muted">( casa: @Model.Campeonato.PontosEmCasa - fora: @Model.Campeonato.PontosForaDeCasa )</span>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>Jogos</td>
+                            <td>
+                                <div class="pull-left" style="width: 30px">@Model.Campeonato.Jogos</div>
+                                <span class="text-muted">( casa: @Model.Campeonato.JogosEmCasa - fora: @Model.Campeonato.JogosForaDeCasa )</span>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>Vitórias</td>
+                            <td>
+                                <div class="pull-left" style="width: 30px">@Model.Campeonato.Vitorias</div>
+                                <span class="text-muted">( casa: @Model.Campeonato.VitoriasEmCasa - fora: @Model.Campeonato.VitoriasForaDeCasa )</span>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>Gols pró</td>
+                            <td>
+                                <div class="pull-left" style="width: 30px">@Model.Campeonato.GolsPro</div>
+                                <span class="text-muted">( casa: @Model.Campeonato.GolsProEmCasa - fora: @Model.Campeonato.GolsProForaDeCasa )</span>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>Gols contra</td>
+                            <td>
+                                <div class="pull-left" style="width: 30px">@Model.Campeonato.GolsContra</div>
+                                <span class="text-muted">( casa: @Model.Campeonato.GolsContraEmCasa - fora: @Model.Campeonato.GolsContraForaDeCasa )</span>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>Últ. 5 Jogos</td>
+                            <td>
+                                @foreach (var jogo in Campeonato.Rodadas.Ultimos5Jogos(Model))
+                                {
+                                    <span class="icone-circulo @jogo.GetCssDeIconeDoResultadoDoJogo(Model)"></span>
+                                }
+                                <ul class="list-group hide" id="ultimosJogosDetalhe">
+                                    @foreach (var jogo in Campeonato.Rodadas.Ultimos5Jogos(Model).OrderByDescending(j => j.NumeroDaRodada))
+                                    {
+                                        <li class="list-group-item text-center" style="width: 150px">
+                                            <img src="@jogo.Mandante.GetUrlImagem()" width="32" height="32" alt="@jogo.Mandante.Nome" title="@jogo.Mandante.Nome" />&nbsp;
+                                            <span><strong>@jogo.PlacarMandante</strong></span>
+                                            <span>x</span>
+                                            <span><strong>@jogo.PlacarVisitante</strong></span>&nbsp;
+                                            <img src="@jogo.Visitante.GetUrlImagem()" width="32" height="32" alt="@jogo.Visitante.Nome" title="@jogo.Visitante.Nome" />
+                                        </li>
+                                    }
+                                </ul>
+                                <button class="btn btn-outline btn-sm btn-jogos-zoom" id="btnUltimosJogosDetalhe">
+                                    <span class="glyphicon glyphicon-zoom-in" aria-hidden="true"></span>
+                                </button>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>Média da defesa</td>
+                            <td>@Model.GetMediaDaSetorDoCampo(SetorDoCampo.Defesa).ToString("F")</td>
+                        </tr>
+                        <tr>
+                            <td>Média meio campo</td>
+                            <td>@Model.GetMediaDaSetorDoCampo(SetorDoCampo.MeioCampo).ToString("F")</td>
+                        </tr>
+                        <tr>
+                            <td>Média do ataque</td>
+                            <td>@Model.GetMediaDaSetorDoCampo(SetorDoCampo.Ataque).ToString("F")</td>
+                        </tr>
                     </tbody>
                 </table>
                 <a class="btn btn-primary" href="@Url.Action("Index", "Clube")">Ver Clubes</a>
@@ -107,7 +131,23 @@
 </div>
 <div class="row">
     <div class="col-md-12">
-        <h3>Elenco <small>todos os jogadores do @Model.Nome</small></h3>
+        <h3>
+            Elenco <small>todos os jogadores do @Model.Nome</small>
+        </h3>
         @Html.Partial("_TabelaJogadores", ViewData.GetElencoDoClube())
     </div>
 </div>
+@section scripts{
+    <script>
+        $(document).ready(function () {
+            $('#btnUltimosJogosDetalhe').popover({
+                title: "Últimos 5 jogos",
+                html: true,
+                trigger: "focus",
+                content: function () {
+                    return $('#ultimosJogosDetalhe').html();
+                }
+            });
+        });
+    </script>
+}
