@@ -359,7 +359,7 @@ footer {
     }
 
 .splash {
-    padding: 9em 0 2em;
+    padding: 70px 0 15px;
     background-color: #141d27;
     background-image: url(../Images/bg_cabecalho_novo.png);
     background-size: cover;
@@ -369,11 +369,11 @@ footer {
 }
 
     .splash .logo {
-        width: 160px;
+        width: 128px;
     }
 
     .splash h1 {
-        font-size: 3em;
+        font-size: 3.5em;
     }
 
     .splash #social {
