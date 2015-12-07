@@ -13,7 +13,9 @@ namespace Cartoleiro.Web.Controllers
         // GET: Escalador
         public ActionResult Index()
         {
-            return View(new EscaladorViewModel());
+            return CartoleiroApp.CampeonatoIniciado
+                ? View(new EscaladorViewModel())
+                : View("AguardandoInicioDoCampeonato");
         }
 
         // GET: Escalador/Escalar
@@ -26,8 +28,12 @@ namespace Cartoleiro.Web.Controllers
         [HttpPost]
         public ActionResult Escalar(EscaladorViewModel escaladorViewModel)
         {
-            if (!this.ModelState.IsValid)
+            if (!CartoleiroApp.CampeonatoIniciado)
+                return RedirectToAction("Index");
+
+            if (!ModelState.IsValid)
                 return View(escaladorViewModel);
+
 
             var escalador = new EscaladorDeTime(CartoleiroApp.CartolaDataSource)
                 .ComEsquema(escaladorViewModel.EsquemaTatico)
@@ -64,6 +70,8 @@ namespace Cartoleiro.Web.Controllers
             return View("Index", escaladorViewModel);
         }
 
+
+        // privados
         private static Analisadores GetAnalisadores(EscaladorViewModel escaladorViewModel)
         {
             var analisadorBuilder = new AnalisadorBuilder();

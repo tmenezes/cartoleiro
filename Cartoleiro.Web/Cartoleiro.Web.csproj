@@ -2032,6 +2032,7 @@
     <Content Include="Views\Shared\_TabelaClubes.cshtml" />
     <Content Include="Views\Confrontos\_TabelaProbabilidades.cshtml" />
     <Content Include="Views\Confrontos\_DetalheConfrontoResult.cshtml" />
+    <Content Include="Views\Escalador\AguardandoInicioDoCampeonato.cshtml" />
   </ItemGroup>
   <ItemGroup />
   <ItemGroup>

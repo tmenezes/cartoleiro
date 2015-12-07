@@ -21,7 +21,7 @@ namespace Cartoleiro.Core.Cartola
 
         public Rodada ProximaRodada
         {
-            get { return this.FirstOrDefault(r => r.Numero == (RodadaAtual.Numero + 1)); }
+            get { return this.FirstOrDefault(r => r.Numero == (RodadaAtual.Numero + 1)) ?? RodadasAtivas().Last(); }
         }
 
 

@@ -18,17 +18,19 @@ namespace Cartoleiro.Crawler.Crawlers.GloboEsporte
         private const int APROVEITAMENTO = 8;
         private const int ULTIMOS_JOGOS = 9;
 
+
         public GloboEsporteClubeCrawler(IWebDriver webDriver)
             : base(webDriver)
         {
         }
+
 
         public override ClubeCrawler MapearElementoHtml(IWebElement elementoHtml)
         {
             var tds = elementoHtml.FindElements(By.TagName("td"));
 
             Posicao = Convert.ToInt32(tds[0].Text);
-            Nome = tds[1].FindElement(By.TagName("a")).GetAttribute("title");
+            Nome = ObterNomeDoClube(tds[1]);
 
             return this;
         }
@@ -39,9 +41,22 @@ namespace Cartoleiro.Crawler.Crawlers.GloboEsporte
             campeonato.Posicao = Posicao;
 
             return new Clube(Nome)
-                   {
-                       Campeonato = campeonato
-                   };
+            {
+                Campeonato = campeonato
+            };
+        }
+
+
+        private static string ObterNomeDoClube(IWebElement tdNomeClube)
+        {
+            try
+            {
+                return tdNomeClube.FindElement(By.TagName("a")).GetAttribute("title");
+            }
+            catch (Exception)
+            {
+                return tdNomeClube.FindElement(By.TagName("strong")).GetAttribute("innerHTML");
+            }
         }
 
         private Campeonato GetCampeonato(IWebElement dadosExtras)
@@ -51,16 +66,16 @@ namespace Cartoleiro.Crawler.Crawlers.GloboEsporte
                                                   .Select(i => string.IsNullOrWhiteSpace(i) ? 0 : Convert.ToInt32(i))
                                                   .ToArray();
             var campeonato = new Campeonato()
-                             {
-                                 Pontos = dadosCampeonato[PONTOS],
-                                 Jogos = dadosCampeonato[JOGOS],
-                                 Vitorias = dadosCampeonato[VITORIAS],
-                                 Empates = dadosCampeonato[EMPATES],
-                                 Derrotas = dadosCampeonato[DERROTAS],
-                                 GolsPro = dadosCampeonato[GOLS_PRO],
-                                 GolsContra = dadosCampeonato[GOLS_CONTRA],
-                                 SaldoDeGol = dadosCampeonato[SALDO_GOLS],
-                             };
+            {
+                Pontos = dadosCampeonato[PONTOS],
+                Jogos = dadosCampeonato[JOGOS],
+                Vitorias = dadosCampeonato[VITORIAS],
+                Empates = dadosCampeonato[EMPATES],
+                Derrotas = dadosCampeonato[DERROTAS],
+                GolsPro = dadosCampeonato[GOLS_PRO],
+                GolsContra = dadosCampeonato[GOLS_CONTRA],
+                SaldoDeGol = dadosCampeonato[SALDO_GOLS],
+            };
 
             var ultimosJogos = dadosExtras.FindElement(By.CssSelector(".tabela-pontos-ultimos-jogos")).FindElements(By.TagName("span"));
             var vitoriasNosUltimos5Jogos = ultimosJogos.Count(i => i.GetAttribute("class").Contains("tabela-icone-v"));

@@ -1,5 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Configuration;
+using System.Globalization;
 using System.IO;
 using System.Linq;
 using System.Text;
@@ -17,6 +19,7 @@ namespace Cartoleiro.Web.AppCode
 {
     public static class CartoleiroApp
     {
+        private static readonly DateTime INICIO_CAMPEONATO = DateTime.ParseExact(ConfigurationManager.AppSettings["INICIO_CAMPEONATO"], "yyyy-MM-dd", CultureInfo.GetCultureInfo("en-US"));
         private static Dictionary<Clube, string> _descricaoDosClubes;
         private static IEnumerable<Jogador> _jogadores;
 
@@ -109,6 +112,8 @@ namespace Cartoleiro.Web.AppCode
         {
             return _jogadores.DoClube(clube).DoAtaque().Media(j => j.Pontuacao.Media);
         }
+
+        public static bool CampeonatoIniciado => DateTime.Now > INICIO_CAMPEONATO;
 
 
         private static void Iniciar(ICartolaDataSource cartolaDataSource)

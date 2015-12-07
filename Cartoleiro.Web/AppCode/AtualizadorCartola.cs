@@ -15,7 +15,7 @@ namespace Cartoleiro.Web.AppCode
 {
     public static class AtualizadorCartola
     {
-        private const int DEZ_MINUTOS = 1000 * 60 * 1;
+        private const int DEZ_MINUTOS = 1000 * 60 * 10;
         private static bool _inicializado = false;
         private static string _pastaAppData;
         private static string ArquivoJogadores { get { return Path.Combine(_pastaAppData, "jogadores.json"); } }
@@ -38,6 +38,13 @@ namespace Cartoleiro.Web.AppCode
             {
                 while (true)
                 {
+
+                    if (!CartoleiroApp.CampeonatoIniciado)
+                    {
+                        Thread.Sleep(DEZ_MINUTOS);
+                        continue;
+                    }
+
                     try
                     {
                         Thread.Sleep(DEZ_MINUTOS);
