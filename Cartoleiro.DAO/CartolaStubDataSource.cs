@@ -1,5 +1,6 @@
 using System;
 using System.Collections.Generic;
+using System.Linq;
 using Cartoleiro.Core.Cartola;
 using Cartoleiro.Core.Data;
 using Ploeh.AutoFixture;
@@ -19,20 +20,23 @@ namespace Cartoleiro.DAO
             PopularClubes();
             PopularJogadores();
 
+            Rodadas = new List<Rodada>();
+            HistoricoDeJogos = new List<Jogo>();
+
             CartolaData.Iniciar(this);
         }
 
 
         private void PopularClubes()
         {
-            Fixture fixture = new Fixture();
+            var fixture = new Fixture();
 
-            Clubes = fixture.CreateMany<Clube>(20);
+            Clubes = fixture.CreateMany<Clube>(20).ToList();
         }
 
         private void PopularJogadores()
         {
-            Fixture fixture = new Fixture();
+            var fixture = new Fixture();
             fixture.Customizations.Add(new StringGenerator(() => Guid.NewGuid().ToString().Substring(0, 10)));
             fixture.Customizations.Add(new RandomDoubleSequenceGenerator(0, 15));
 
