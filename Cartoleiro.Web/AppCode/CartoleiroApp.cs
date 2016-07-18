@@ -113,7 +113,7 @@ namespace Cartoleiro.Web.AppCode
             return _jogadores.DoClube(clube).DoAtaque().Media(j => j.Pontuacao.Media);
         }
 
-        public static bool CampeonatoIniciado => DateTime.Now > INICIO_CAMPEONATO;
+        public static bool CampeonatoIniciado { get { return DateTime.Now > INICIO_CAMPEONATO; } }
 
 
         private static void Iniciar(ICartolaDataSource cartolaDataSource)
